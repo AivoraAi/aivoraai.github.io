@@ -1,0 +1,77 @@
+<svg width="480" height="160" viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gMark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f8eff"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="gCore" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a5c4ff"/>
+      <stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <linearGradient id="gText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f8eff"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── Logo Mark ── -->
+  <!-- Outer rings -->
+  <circle cx="72" cy="80" r="42" fill="none" stroke="url(#gMark)" stroke-width="1.2" opacity="0.25"/>
+  <circle cx="72" cy="80" r="32" fill="none" stroke="url(#gMark)" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Hexagonal shell -->
+  <polygon points="72,38 102,58 102,102 72,122 42,102 42,58"
+           fill="none" stroke="url(#gMark)" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- Filled inner diamond -->
+  <polygon points="72,52 96,72 96,88 72,108 48,88 48,72"
+           fill="url(#gMark)" opacity="0.1"/>
+
+  <!-- Spine lines -->
+  <line x1="72" y1="40"  x2="72" y2="120" stroke="url(#gMark)" stroke-width="1.2" opacity="0.3"/>
+  <line x1="42" y1="80"  x2="102" y2="80" stroke="url(#gMark)" stroke-width="1.2" opacity="0.3"/>
+  <line x1="47" y1="47"  x2="97" y2="113" stroke="url(#gMark)" stroke-width="0.8" opacity="0.18"/>
+  <line x1="97" y1="47"  x2="47" y2="113" stroke="url(#gMark)" stroke-width="0.8" opacity="0.18"/>
+
+  <!-- Core bright diamond -->
+  <polygon points="72,62 90,80 72,98 54,80" fill="url(#gMark)"/>
+  <!-- Highlight -->
+  <polygon points="72,70 82,80 72,90 62,80" fill="url(#gCore)" opacity="0.85"/>
+  <!-- White dot center -->
+  <circle cx="72" cy="80" r="3.5" fill="#ffffff" opacity="0.95"/>
+
+  <!-- Corner accent dots -->
+  <circle cx="72"  cy="38"  r="2.5" fill="url(#gMark)" opacity="0.7"/>
+  <circle cx="102" cy="58"  r="2"   fill="url(#gMark)" opacity="0.5"/>
+  <circle cx="102" cy="102" r="2"   fill="url(#gMark)" opacity="0.5"/>
+  <circle cx="72"  cy="122" r="2.5" fill="url(#gMark)" opacity="0.7"/>
+  <circle cx="42"  cy="102" r="2"   fill="url(#gMark)" opacity="0.5"/>
+  <circle cx="42"  cy="58"  r="2"   fill="url(#gMark)" opacity="0.5"/>
+
+  <!-- ── Wordmark "Aivora" ── -->
+  <text x="124" y="98"
+        font-family="'Syne', 'Arial Black', sans-serif"
+        font-weight="800" font-size="52"
+        letter-spacing="-1.5" fill="url(#gText)">Aivora</text>
+
+  <!-- ── "ai" pill tag ── -->
+  <rect x="363" y="62" width="44" height="24" rx="7"
+        fill="url(#gMark)" opacity="0.15"/>
+  <rect x="363" y="62" width="44" height="24" rx="7"
+        fill="none" stroke="url(#gMark)" stroke-width="1.2" opacity="0.6"/>
+  <text x="385" y="79"
+        font-family="'Syne', 'Arial Black', sans-serif"
+        font-weight="800" font-size="13"
+        letter-spacing="1" text-anchor="middle"
+        fill="url(#gText)">ai</text>
+
+  <!-- ── Tagline ── -->
+  <text x="125" y="120"
+        font-family="'DM Sans', Arial, sans-serif"
+        font-weight="300" font-size="10.5"
+        letter-spacing="3.5" fill="#6b7fa8">INTELLIGENCE UNLOCKED</text>
+
+  <!-- Under-wordmark line -->
+  <line x1="124" y1="125" x2="415" y2="125"
+        stroke="url(#gMark)" stroke-width="0.6" opacity="0.22"/>
+</svg>

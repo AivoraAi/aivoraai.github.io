@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Aivora ai – get in touch for AI services, partnerships, or support." />
+  <title>Contact – Aivora</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    .faq-section { padding: 80px 24px; background: var(--bg-surface); }
+    .faq-container { max-width: 700px; margin: 0 auto; }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: var(--bg-card);
+      transition: var(--transition);
+    }
+    .faq-item:hover { border-color: var(--border-hover); }
+    .faq-question {
+      width: 100%;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: none;
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-align: left;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .faq-question:hover { color: var(--accent); }
+    .faq-chevron { font-size: 0.8rem; transition: transform 0.3s ease; }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s ease;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .faq-answer.open { max-height: 200px; padding: 0 22px 18px; }
+    .faq-chevron.open { transform: rotate(180deg); }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <svg class="nav-logo-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="nlg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4f8eff"/><stop offset="100%" stop-color="#8b5cf6"/>
+            </linearGradient>
+            <linearGradient id="nlgc" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a5c4ff"/><stop offset="100%" stop-color="#c4b5fd"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="28" fill="none" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,8 54,22 54,42 32,56 10,42 10,22" fill="none" stroke="url(#nlg)" stroke-width="1.5" opacity="0.6"/>
+          <polygon points="32,14 50,26 50,38 32,50 14,38 14,26" fill="url(#nlg)" opacity="0.1"/>
+          <line x1="32" y1="10" x2="32" y2="54" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <line x1="10" y1="32" x2="54" y2="32" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,22 44,32 32,42 20,32" fill="url(#nlg)"/>
+          <polygon points="32,27 39,32 32,37 25,32" fill="url(#nlgc)" opacity="0.85"/>
+          <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.95"/>
+        </svg>
+        <span class="nav-brand-text">Aivora<span class="nav-ai-pill">ai</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="product.html" class="nav-link">AI Tools</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#blog" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-outline" onclick="window.location='product.html'">Browse Tools</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div style="position:relative;z-index:2">
+      <span class="section-tag">Get in Touch</span>
+      <h1>Let's Build Something <span class="gradient-text">Together</span></h1>
+      <p>Whether you need AI services, want to list your tool, or just want to say hi — we're here.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>We'd Love to <span class="gradient-text">Hear From You</span></h2>
+        <p>Reach out for project inquiries, partnerships, press, or general questions. We typically respond within 24 hours.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <h4>Email Us</h4>
+            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f8909d949497b899918e978a99d69991">[email&#160;protected]</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div>
+            <h4>Live Chat</h4>
+            <p>Available Mon–Fri, 9am–6pm IST</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🌍</div>
+          <div>
+            <h4>Headquartered in</h4>
+            <p>Bengaluru, India · Remote-first team</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🤝</div>
+          <div>
+            <h4>Partnerships</h4>
+            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e999889b9d878c9b9aa988809f869b88c78880">[email&#160;protected]</a></p>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div style="margin-top:32px">
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:14px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase">Follow Us</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon">𝕏</a>
+            <a href="#" class="social-icon">in</a>
+            <a href="#" class="social-icon">⌥</a>
+            <a href="#" class="social-icon">▶</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h3 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:24px">Send a Message</h3>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Arjun" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Kapoor" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="arjun@company.com" required />
+          </div>
+          <div class="form-group">
+            <label>Company / Website</label>
+            <input type="text" placeholder="YourCompany.com (optional)" />
+          </div>
+          <div class="form-group">
+            <label>What can we help with?</label>
+            <select>
+              <option value="">Select a topic…</option>
+              <option>AI Services / Automation</option>
+              <option>List My AI Tool</option>
+              <option>Partnership / Collab</option>
+              <option>Press Inquiry</option>
+              <option>General Question</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell us about your project, goals, or question…" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center">
+            Send Message →
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <div class="section-header" style="text-align:left;margin-bottom:36px">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title" style="text-align:left;font-size:1.8rem">Common Questions</h2>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I list my AI tool on Aivora?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">Contact us via the form above or email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d5b9bca6a1bcbbb2a695b4bca3baa7b4fbb4bc">[email&#160;protected]</a>. We review all submissions and typically respond within 3 business days. We only list tools that meet our quality bar.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Are the tool reviews paid or independent?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">All reviews and rankings are independent. We do not accept payment for placement or reviews. Our curation is based solely on quality, utility, and user feedback.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can Aivora build a custom AI solution for my business?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">Yes! We offer custom AI website creation, automation workflows, and LLM-powered tools. Use the contact form and select "AI Services / Automation" to get started.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How often is the tools directory updated?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">We add and review tools every week. Subscribe to our newsletter to get notified when new tools are added or when existing listings are updated.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+        <svg class="nav-logo-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="nlg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4f8eff"/><stop offset="100%" stop-color="#8b5cf6"/>
+            </linearGradient>
+            <linearGradient id="nlgc" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a5c4ff"/><stop offset="100%" stop-color="#c4b5fd"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="28" fill="none" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,8 54,22 54,42 32,56 10,42 10,22" fill="none" stroke="url(#nlg)" stroke-width="1.5" opacity="0.6"/>
+          <polygon points="32,14 50,26 50,38 32,50 14,38 14,26" fill="url(#nlg)" opacity="0.1"/>
+          <line x1="32" y1="10" x2="32" y2="54" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <line x1="10" y1="32" x2="54" y2="32" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,22 44,32 32,42 20,32" fill="url(#nlg)"/>
+          <polygon points="32,27 39,32 32,37 25,32" fill="url(#nlgc)" opacity="0.85"/>
+          <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.95"/>
+        </svg>
+        <span class="nav-brand-text">Aivora<span class="nav-ai-pill">ai</span></span>
+      </a>
+        <p>Your premium AI marketplace for tools, services, and intelligent digital products.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon">𝕏</a><a href="#" class="social-icon">in</a>
+          <a href="#" class="social-icon">⌥</a><a href="#" class="social-icon">▶</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Products</h4><a href="product.html">AI Tools</a><a href="#">Browse All</a><a href="#">Trending</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="#">Careers</a></div>
+      <div class="footer-col"><h4>Resources</h4><a href="index.html#blog">Blog</a><a href="#">Newsletter</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Aivora ai. All rights reserved.</p></div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const chevron = bt

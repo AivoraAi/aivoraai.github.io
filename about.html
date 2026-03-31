@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Aivora ai – the team behind the premium AI tools marketplace. Our mission, values, and story." />
+  <title>About Us – Aivora</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; margin-top: 48px; }
+    .team-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .team-card:hover { border-color: var(--border-hover); transform: translateY(-4px); box-shadow: var(--shadow-card); }
+    .team-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .team-card h4 { font-family: var(--font-display); font-size: 1rem; margin-bottom: 4px; }
+    .team-card span { font-size: 0.82rem; color: var(--text-muted); }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 22px; margin-top: 48px; }
+    .value-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: var(--transition);
+    }
+    .value-card:hover { border-color: rgba(79,142,255,0.2); transform: translateY(-3px); }
+    .value-card .icon { font-size: 2rem; margin-bottom: 14px; }
+    .value-card h3 { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 8px; }
+    .value-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <svg class="nav-logo-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="nlg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4f8eff"/><stop offset="100%" stop-color="#8b5cf6"/>
+            </linearGradient>
+            <linearGradient id="nlgc" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a5c4ff"/><stop offset="100%" stop-color="#c4b5fd"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="28" fill="none" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,8 54,22 54,42 32,56 10,42 10,22" fill="none" stroke="url(#nlg)" stroke-width="1.5" opacity="0.6"/>
+          <polygon points="32,14 50,26 50,38 32,50 14,38 14,26" fill="url(#nlg)" opacity="0.1"/>
+          <line x1="32" y1="10" x2="32" y2="54" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <line x1="10" y1="32" x2="54" y2="32" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,22 44,32 32,42 20,32" fill="url(#nlg)"/>
+          <polygon points="32,27 39,32 32,37 25,32" fill="url(#nlgc)" opacity="0.85"/>
+          <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.95"/>
+        </svg>
+        <span class="nav-brand-text">Aivora<span class="nav-ai-pill">ai</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="product.html" class="nav-link">AI Tools</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#blog" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-outline" onclick="window.location='contact.html'">Work With Us</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div style="position:relative;z-index:2">
+      <span class="section-tag">Our Story</span>
+      <h1>We're Building the Future of <span class="gradient-text">AI Discovery</span></h1>
+      <p>A small, passionate team obsessed with making AI tools accessible and understandable for everyone.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section">
+    <div class="about-grid">
+      <div class="about-content">
+        <span class="section-tag">Who We Are</span>
+        <h2>Built by AI Enthusiasts,<br/><span class="gradient-text">for Builders</span></h2>
+        <p>Aivora was founded in 2024 by a team of engineers, designers, and AI researchers who were frustrated by the noise in the AI space. Too many tools, too little signal.</p>
+        <p>We started with a simple mission: curate the best AI tools and services so you don't have to wade through hundreds of mediocre options to find what actually works.</p>
+        <p>Today, Aivora is trusted by 50,000+ makers, startups, and enterprise teams who rely on our recommendations to stay ahead of the AI curve.</p>
+        <br/>
+        <a href="contact.html" class="btn-primary">Get in Touch →</a>
+      </div>
+      <div class="about-visual">
+        <div class="about-stat-box"><strong>200+</strong><span>AI Tools Curated</span></div>
+        <div class="about-stat-box"><strong>50k+</strong><span>Active Users</span></div>
+        <div class="about-stat-box"><strong>98%</strong><span>Satisfaction Rate</span></div>
+        <div class="about-stat-box"><strong>2024</strong><span>Founded</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section style="background:var(--bg-surface);padding:0">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Our Values</span>
+        <h2 class="section-title">What We Stand For</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card"><div class="icon">🎯</div><h3>Ruthless Curation</h3><p>Every tool we list has been tested by our team. We remove listings that don't deliver on their promise.</p></div>
+        <div class="value-card"><div class="icon">🔍</div><h3>Radical Transparency</h3><p>Honest pricing, honest reviews. No paid placements. No affiliate-first rankings. Ever.</p></div>
+        <div class="value-card"><div class="icon">⚡</div><h3>Speed of Innovation</h3><p>We update our directory weekly because AI moves fast. You'll always find the latest and greatest here.</p></div>
+        <div class="value-card"><div class="icon">🤝</div><h3>Community First</h3><p>Our rankings are informed by real user feedback, not just our team's opinions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section style="background:var(--bg-base);padding:0">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">The Team</span>
+        <h2 class="section-title">Meet the Humans Behind Aivora</h2>
+      </div>
+      <div class="team-grid">
+        <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#4f8eff,#8b5cf6)">AK</div><h4>Arjun Kapoor</h4><span>Co-Founder & CEO</span></div>
+        <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#00b09b,#096c54)">SC</div><h4>Sofia Chen</h4><span>Co-Founder & CTO</span></div>
+        <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#f7971e,#a3410a)">MR</div><h4>Marcus Reid</h4><span>Head of Product</span></div>
+        <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#e96cde,#6d28d9)">AP</div><h4>Aisha Patel</h4><span>Lead Designer</span></div>
+        <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#0099f7,#023e7d)">JL</div><h4>James Liu</h4><span>AI Research Lead</span></div>
+        <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#11998e,#1a2a6c)">NV</div><h4>Nina Volkov</h4><span>Head of Marketing</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="newsletter-container">
+      <div class="nl-orb"></div>
+      <span class="section-tag">Join Us</span>
+      <h2>Be Part of the AI Revolution</h2>
+      <p>Get weekly AI tool roundups, industry insights, and exclusive deals.</p>
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit" class="btn-primary">Subscribe Free</button>
+      </form>
+      <p class="nl-note">✓ Free forever &nbsp;·&nbsp; ✓ No spam</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+        <svg class="nav-logo-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="nlg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4f8eff"/><stop offset="100%" stop-color="#8b5cf6"/>
+            </linearGradient>
+            <linearGradient id="nlgc" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a5c4ff"/><stop offset="100%" stop-color="#c4b5fd"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="28" fill="none" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,8 54,22 54,42 32,56 10,42 10,22" fill="none" stroke="url(#nlg)" stroke-width="1.5" opacity="0.6"/>
+          <polygon points="32,14 50,26 50,38 32,50 14,38 14,26" fill="url(#nlg)" opacity="0.1"/>
+          <line x1="32" y1="10" x2="32" y2="54" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <line x1="10" y1="32" x2="54" y2="32" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,22 44,32 32,42 20,32" fill="url(#nlg)"/>
+          <polygon points="32,27 39,32 32,37 25,32" fill="url(#nlgc)" opacity="0.85"/>
+          <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.95"/>
+        </svg>
+        <span class="nav-brand-text">Aivora<span class="nav-ai-pill">ai</span></span>
+      </a>
+        <p>Your premium AI marketplace for tools, services, and intelligent digital products.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon">𝕏</a><a href="#" class="social-icon">in</a>
+          <a href="#" class="social-icon">⌥</a><a href="#" class="social-icon">▶</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Products</h4><a href="product.html">AI Tools</a><a href="#">Browse All</a><a href="#">Trending</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="#">Careers</a></div>
+      <div class="footer-col"><h4>Resources</h4><a href="index.html#blog">Blog</a><a href="#">Newsletter</a><a href="#">API</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Aivora ai. All rights reserved.</p></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
