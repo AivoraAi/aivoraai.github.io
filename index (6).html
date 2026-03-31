@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="google7061fb8c95f025f1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aivora ai – Discover the best AI tools, services, and digital products. Your premium AI marketplace for automation, SEO, and intelligent workflows." />
+  <meta name="keywords" content="AI tools, AI services, artificial intelligence, automation, SEO, digital products, machine learning" />
+  <meta name="author" content="Aivora ai" />
+  <meta property="og:title" content="Aivora ai – Premium AI Tools & Services" />
+  <meta property="og:description" content="Discover, compare, and buy the best AI tools & services for your business." />
+  <meta property="og:type" content="website" />
+  <title>Aivora ai – Discover the Best AI Tools & Services</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <svg class="nav-logo-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="nlg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4f8eff"/><stop offset="100%" stop-color="#8b5cf6"/>
+            </linearGradient>
+            <linearGradient id="nlgc" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a5c4ff"/><stop offset="100%" stop-color="#c4b5fd"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="28" fill="none" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,8 54,22 54,42 32,56 10,42 10,22" fill="none" stroke="url(#nlg)" stroke-width="1.5" opacity="0.6"/>
+          <polygon points="32,14 50,26 50,38 32,50 14,38 14,26" fill="url(#nlg)" opacity="0.1"/>
+          <line x1="32" y1="10" x2="32" y2="54" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <line x1="10" y1="32" x2="54" y2="32" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,22 44,32 32,42 20,32" fill="url(#nlg)"/>
+          <polygon points="32,27 39,32 32,37 25,32" fill="url(#nlgc)" opacity="0.85"/>
+          <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.95"/>
+        </svg>
+        <span class="nav-brand-text">Aivora<span class="nav-ai-pill">ai</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="product.html" class="nav-link">AI Tools</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#blog" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-outline" onclick="window.location='product.html'">Explore Tools</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span> 200+ AI Tools Curated
+      </div>
+      <h1 class="hero-title">
+        Discover the Best<br/>
+        <span class="gradient-text">AI Tools & Services</span>
+      </h1>
+      <p class="hero-sub">
+        Your premium marketplace for AI-powered tools, automation services, and intelligent digital products. Cut through the noise — find what actually works.
+      </p>
+      <div class="hero-search-wrap">
+        <div class="search-bar">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="heroSearch" placeholder="Search AI tools, services, categories…" />
+          <button class="search-btn" onclick="handleSearch()">Search</button>
+        </div>
+      </div>
+      <div class="hero-filters">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="free">Free</button>
+        <button class="filter-chip" data-filter="paid">Paid</button>
+        <button class="filter-chip" data-filter="trending">🔥 Trending</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>200+</strong><span>AI Tools</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>50k+</strong><span>Users</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>98%</strong><span>Satisfaction</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">scroll ↓</div>
+  </section>
+
+  <!-- ========== TRUSTED BY ========== -->
+  <section class="trusted">
+    <p class="trusted-label">Trusted by teams at</p>
+    <div class="trusted-logos">
+      <span>Notion</span><span>Linear</span><span>Figma</span><span>Vercel</span><span>Stripe</span><span>OpenAI</span>
+    </div>
+  </section>
+
+  <!-- ========== AI TOOLS ========== -->
+  <section class="products" id="tools">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Featured Products</span>
+        <h2 class="section-title">Top AI Tools This Month</h2>
+        <p class="section-sub">Hand-picked, tested, and ranked by our team of AI experts.</p>
+      </div>
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All Tools</button>
+        <button class="filter-btn" data-filter="free">Free</button>
+        <button class="filter-btn" data-filter="paid">Paid</button>
+        <button class="filter-btn" data-filter="trending">Trending</button>
+      </div>
+      <div class="products-grid" id="productsGrid">
+
+        <article class="product-card" data-category="trending paid">
+          <div class="card-img" style="background:linear-gradient(135deg,#0f0c29,#302b63)">
+            <span class="card-emoji">🤖</span>
+            <span class="card-badge badge-trending">🔥 Trending</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag-cat">Automation</span><span class="tag-price paid">Paid</span></div>
+            <h3 class="card-title">NeuralFlow</h3>
+            <p class="card-desc">Build complex AI workflows without code. Connect LLMs, APIs, and automations in minutes.</p>
+            <div class="card-footer">
+              <span class="card-price">$29/mo</span>
+              <a href="product.html" class="btn-card">Buy Now →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="free trending">
+          <div class="card-img" style="background:linear-gradient(135deg,#00b09b,#096c54)">
+            <span class="card-emoji">✍️</span>
+            <span class="card-badge badge-free">Free</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag-cat">Writing</span><span class="tag-price free">Free</span></div>
+            <h3 class="card-title">ScribeAI</h3>
+            <p class="card-desc">AI-powered writing assistant that generates SEO articles, emails, and marketing copy instantly.</p>
+            <div class="card-footer">
+              <span class="card-price">Free</span>
+              <a href="product.html" class="btn-card">Explore →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="paid">
+          <div class="card-img" style="background:linear-gradient(135deg,#f7971e,#a3410a)">
+            <span class="card-emoji">📊</span>
+            <span class="card-badge badge-paid">Premium</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag-cat">Analytics</span><span class="tag-price paid">Paid</span></div>
+            <h3 class="card-title">InsightCore</h3>
+            <p class="card-desc">Turn raw data into actionable business insights with AI-driven dashboards and predictive models.</p>
+            <div class="card-footer">
+              <span class="card-price">$49/mo</span>
+              <a href="product.html" class="btn-card">Buy Now →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="free">
+          <div class="card-img" style="background:linear-gradient(135deg,#e96cde,#6d28d9)">
+            <span class="card-emoji">🎨</span>
+            <span class="card-badge badge-free">Free</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag-cat">Design</span><span class="tag-price free">Free</span></div>
+            <h3 class="card-title">PixelMind</h3>
+            <p class="card-desc">Generate stunning UI designs, logos, and brand assets with a single text prompt.</p>
+            <div class="card-footer">
+              <span class="card-price">Free</span>
+              <a href="product.html" class="btn-card">Explore →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="paid trending">
+          <div class="card-img" style="background:linear-gradient(135deg,#0099f7,#023e7d)">
+            <span class="card-emoji">🔍</span>
+            <span class="card-badge badge-trending">🔥 Trending</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag-cat">SEO</span><span class="tag-price paid">Paid</span></div>
+            <h3 class="card-title">RankGenius</h3>
+            <p class="card-desc">AI-powered SEO suite that audits, optimizes, and ranks your content on Google automatically.</p>
+            <div class="card-footer">
+              <span class="card-price">$39/mo</span>
+              <a href="product.html" class="btn-card">Buy Now →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="free paid">
+          <div class="card-img" style="background:linear-gradient(135deg,#11998e,#1a2a6c)">
+            <span class="card-emoji">💬</span>
+            <span class="card-badge badge-paid">Pro</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag-cat">Chat</span><span class="tag-price paid">Freemium</span></div>
+            <h3 class="card-title">ChatSphere</h3>
+            <p class="card-desc">Deploy customizable AI chatbots for your website, trained on your own business data.</p>
+            <div class="card-footer">
+              <span class="card-price">From $0</span>
+              <a href="product.html" class="btn-card">Explore →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="center-cta">
+        <a href="product.html" class="btn-primary">View All AI Tools →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services" id="services">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">AI Services Built for Scale</h2>
+        <p class="section-sub">From idea to launch, we provide end-to-end AI solutions for modern businesses.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🌐</div>
+          <h3>AI Website Creation</h3>
+          <p>Fully custom, SEO-optimized websites built and powered by AI — deployed in days, not months.</p>
+          <a href="contact.html" class="service-link">Get Started →</a>
+        </div>
+        <div class="service-card featured-service">
+          <span class="service-featured-tag">Most Popular</span>
+          <div class="service-icon">⚡</div>
+          <h3>AI Automation</h3>
+          <p>Automate repetitive workflows with intelligent agents. Save 20+ hours a week per team member.</p>
+          <a href="contact.html" class="service-link">Get Started →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📈</div>
+          <h3>AI-Powered SEO</h3>
+          <p>Content strategies, keyword clustering, and on-page optimization — all driven by AI insights.</p>
+          <a href="contact.html" class="service-link">Get Started →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧠</div>
+          <h3>Custom LLM Apps</h3>
+          <p>Build private AI assistants fine-tuned on your company knowledge base and workflows.</p>
+          <a href="contact.html" class="service-link">Get Started →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔗</div>
+          <h3>API & Integration</h3>
+          <p>Connect your existing stack with leading AI models via clean, reliable API integrations.</p>
+          <a href="contact.html" class="service-link">Get Started →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <h3>Data & Analytics</h3>
+          <p>AI-driven reporting dashboards that surface insights from your business data in real time.</p>
+          <a href="contact.html" class="service-link">Get Started →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Social Proof</span>
+        <h2 class="section-title">Loved by Builders & Teams</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Aivora ai completely changed how we discover AI tools. The curation is incredible — every tool listed actually works."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#6d28d9">S</div>
+            <div><strong>Sarah Chen</strong><span>Head of Product, Notion</span></div>
+          </div>
+        </div>
+        <div class="testi-card testi-featured">
+          <div class="testi-stars">★★★★★</div>
+          <p>"We saved 30+ hours a week after implementing AI automations recommended by Aivora ai. ROI was immediate."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#0099f7">M</div>
+            <div><strong>Marcus Reid</strong><span>CTO, GrowthStack</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"The AI website creation service was flawless. Our site was live in 3 days and ranks on page 1 for our main keywords."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#00b09b">A</div>
+            <div><strong>Aisha Patel</strong><span>Founder, LaunchFast</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOG ========== -->
+  <section class="blog" id="blog">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Resources</span>
+        <h2 class="section-title">AI Insights & Guides</h2>
+        <p class="section-sub">Deep dives, tutorials, and expert opinions on everything AI.</p>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card blog-featured">
+          <div class="blog-img" style="background:linear-gradient(135deg,#0f0c29,#302b63)">
+            <span class="blog-emoji">🚀</span>
+          </div>
+          <div class="blog-body">
+            <span class="blog-tag">Guide</span>
+            <h3>The Ultimate 2025 Guide to AI Automation for Small Businesses</h3>
+            <p>Learn how to cut operational costs by 40% using the right mix of AI tools, agents, and workflows.</p>
+            <div class="blog-meta"><span>Mar 28, 2025</span><span>8 min read</span></div>
+            <a href="#" class="service-link">Read Article →</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,#f7971e,#a3410a)">
+            <span class="blog-emoji">🔍</span>
+          </div>
+          <div class="blog-body">
+            <span class="blog-tag">SEO</span>
+            <h3>How AI Is Reshaping SEO in 2025</h3>
+            <p>Google's AI-powered search is changing the rules. Here's how to stay ahead.</p>
+            <div class="blog-meta"><span>Mar 21, 2025</span><span>5 min read</span></div>
+            <a href="#" class="service-link">Read Article →</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,#e96cde,#6d28d9)">
+            <span class="blog-emoji">🧠</span>
+          </div>
+          <div class="blog-body">
+            <span class="blog-tag">Tools</span>
+            <h3>Top 10 AI Writing Tools That Beat ChatGPT in 2025</h3>
+            <p>We tested 50+ writing tools — here are the only 10 worth your money.</p>
+            <div class="blog-meta"><span>Mar 15, 2025</span><span>6 min read</span></div>
+            <a href="#" class="service-link">Read Article →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section class="newsletter">
+    <div class="newsletter-container">
+      <div class="nl-orb"></div>
+      <span class="section-tag">Stay in the Loop</span>
+      <h2>Get the Best AI Tools Delivered Weekly</h2>
+      <p>Join 50,000+ builders who get our curated AI digest every Tuesday. No spam, ever.</p>
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" placeholder="Enter your email address" required />
+        <button type="submit" class="btn-primary">Subscribe Free</button>
+      </form>
+      <p class="nl-note">✓ Free forever &nbsp;·&nbsp; ✓ Unsubscribe anytime &nbsp;·&nbsp; ✓ No spam</p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <svg class="nav-logo-svg" width="28" height="28" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="flg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4f8eff"/><stop offset="100%" stop-color="#8b5cf6"/>
+              </linearGradient>
+              <linearGradient id="flgc" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#a5c4ff"/><stop offset="100%" stop-color="#c4b5fd"/>
+              </linearGradient>
+            </defs>
+            <polygon points="32,8 54,22 54,42 32,56 10,42 10,22" fill="none" stroke="url(#flg)" stroke-width="1.5" opacity="0.6"/>
+            <polygon points="32,22 44,32 32,42 20,32" fill="url(#flg)"/>
+            <polygon points="32,27 39,32 32,37 25,32" fill="url(#flgc)" opacity="0.85"/>
+            <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.95"/>
+          </svg>
+          <span class="nav-brand-text">Aivora<span class="nav-ai-pill">ai</span></span>
+        </a>
+        <p>Your premium AI marketplace. Discover, compare, and deploy the best AI tools for your business.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Twitter" class="social-icon">𝕏</a>
+          <a href="#" aria-label="LinkedIn" class="social-icon">in</a>
+          <a href="#" aria-label="GitHub" class="social-icon">⌥</a>
+          <a href="#" aria-label="YouTube" class="social-icon">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a href="product.html">AI Tools</a>
+        <a href="product.html">Browse All</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Trending</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+        <a href="#">Press Kit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#blog">Blog</a>
+        <a href="#">Documentation</a>
+        <a href="#">API Reference</a>
+        <a href="#">Newsletter</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Aivora ai. All rights reserved. Built with ♦ intelligence.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
