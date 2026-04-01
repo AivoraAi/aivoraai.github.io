@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="google7061fb8c95f025f1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aivora ai Blog – Expert guides on AI tools, automation, SEO, and the future of artificial intelligence." />
+  <meta name="keywords" content="AI blog, AI tools guide, AI automation tutorial, AI SEO 2025, ChatGPT alternatives" />
+  <meta property="og:title" content="Blog – Aivora ai" />
+  <meta property="og:description" content="Expert guides on AI tools, automation, SEO and more." />
+  <title>Blog – Aivora ai | AI Guides, Tools & SEO Insights</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    .blog-layout { max-width:1160px; margin:0 auto; padding:60px 24px 100px; display:grid; grid-template-columns:1fr 290px; gap:48px; align-items:start; }
+    .cat-filters { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:32px; }
+    .cat-pill { padding:6px 18px; border:1px solid var(--border); border-radius:100px; color:var(--text-secondary); font-size:0.85rem; font-weight:600; background:var(--bg-card); cursor:pointer; transition:var(--transition); font-family:var(--font-display); }
+    .cat-pill:hover,.cat-pill.active { border-color:var(--accent); color:var(--accent); background:rgba(79,142,255,0.08); }
+    .blog-featured-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-xl); overflow:hidden; margin-bottom:28px; display:grid; grid-template-columns:1.1fr 1fr; transition:var(--transition); text-decoration:none; }
+    .blog-featured-card:hover { border-color:var(--border-hover); transform:translateY(-4px); box-shadow:var(--shadow-card); }
+    .feat-img { min-height:240px; display:flex; align-items:center; justify-content:center; font-size:4rem; }
+    .feat-body { padding:32px 28px; display:flex; flex-direction:column; justify-content:center; gap:12px; }
+    .feat-label { font-size:0.72rem; font-weight:700; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase; }
+    .feat-body h2 { font-family:var(--font-display); font-size:1.35rem; line-height:1.3; color:var(--text-primary); }
+    .feat-body p { font-size:0.88rem; color:var(--text-secondary); line-height:1.65; }
+    .post-byline { display:flex; align-items:center; gap:10px; font-size:0.76rem; color:var(--text-muted); }
+    .byline-avatar { width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:700; font-size:0.7rem; color:#fff; flex-shrink:0; }
+    .read-more { font-size:0.85rem; font-weight:600; color:var(--accent); display:inline-flex; align-items:center; gap:4px; margin-top:4px; transition:var(--transition); }
+    .read-more:hover { gap:8px; }
+    .posts-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .post-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; transition:var(--transition); display:flex; flex-direction:column; text-decoration:none; }
+    .post-card:hover { border-color:var(--border-hover); transform:translateY(-4px); box-shadow:var(--shadow-card); }
+    .pc-img { height:145px; display:flex; align-items:center; justify-content:center; font-size:2.8rem; }
+    .pc-body { padding:20px; flex:1; display:flex; flex-direction:column; gap:9px; }
+    .pc-tag { display:inline-block; padding:3px 9px; background:rgba(79,142,255,0.1); color:var(--accent); border-radius:100px; font-size:0.68rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; width:fit-content; }
+    .pc-body h3 { font-family:var(--font-display); font-size:0.95rem; line-height:1.4; color:var(--text-primary); flex:1; }
+    .pc-body p { font-size:0.83rem; color:var(--text-secondary); line-height:1.6; }
+    .pc-foot { display:flex; justify-content:space-between; align-items:center; font-size:0.74rem; color:var(--text-muted); margin-top:auto; padding-top:12px; border-top:1px solid var(--border); }
+    .pc-read { font-size:0.82rem; font-weight:600; color:var(--accent); }
+    /* Sidebar */
+    .blog-sidebar { display:flex; flex-direction:column; gap:22px; position:sticky; top:88px; }
+    .sw { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:22px; }
+    .sw h4 { font-family:var(--font-display); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); margin-bottom:16px; }
+    .pop-post { display:flex; gap:11px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--border); text-decoration:none; }
+    .pop-post:last-child { border-bottom:none; padding-bottom:0; }
+    .pop-num { font-family:var(--font-display); font-weight:800; font-size:1rem; color:var(--border-hover); flex-shrink:0; min-width:22px; }
+    .pop-title { font-size:0.83rem; color:var(--text-secondary); line-height:1.4; font-weight:500; transition:var(--transition); }
+    .pop-post:hover .pop-title { color:var(--accent); }
+    .tag-cloud { display:flex; flex-wrap:wrap; gap:7px; }
+    .tag-chip { padding:4px 11px; background:rgba(255,255,255,0.04); border:1px solid var(--border); border-radius:100px; font-size:0.76rem; color:var(--text-muted); transition:var(--transition); cursor:pointer; }
+    .tag-chip:hover { border-color:var(--accent); color:var(--accent); }
+    .nl-inp { width:100%; padding:9px 13px; background:var(--bg-base); border:1px solid var(--border-hover); border-radius:var(--radius-sm); color:var(--text-primary); font-family:var(--font-body); font-size:0.86rem; outline:none; margin-bottom:9px; }
+    .nl-inp:focus { border-color:var(--accent); }
+    .nl-btn { width:100%; padding:10px; background:var(--accent-grad); color:#fff; border-radius:var(--radius-sm); font-family:var(--font-display); font-weight:700; font-size:0.86rem; border:none; cursor:pointer; transition:var(--transition); }
+    .nl-btn:hover { opacity:0.9; transform:translateY(-1px); }
+    #noResults { display:none; text-align:center; padding:60px 24px; color:var(--text-muted); grid-column:1/-1; }
+    @media (max-width:860px) { .blog-layout { grid-template-columns:1fr; } .blog-featured-card { grid-template-columns:1fr; } .feat-img { min-height:180px; } .blog-sidebar { position:static; } }
+    @media (max-width:560px) { .posts-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <svg class="nav-logo-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="nlg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4f8eff"/><stop offset="100%" stop-color="#8b5cf6"/></linearGradient>
+            <linearGradient id="nlgc" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#a5c4ff"/><stop offset="100%" stop-color="#c4b5fd"/></linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="28" fill="none" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,8 54,22 54,42 32,56 10,42 10,22" fill="none" stroke="url(#nlg)" stroke-width="1.5" opacity="0.6"/>
+          <polygon points="32,14 50,26 50,38 32,50 14,38 14,26" fill="url(#nlg)" opacity="0.1"/>
+          <line x1="32" y1="10" x2="32" y2="54" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <line x1="10" y1="32" x2="54" y2="32" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
+          <polygon points="32,22 44,32 32,42 20,32" fill="url(#nlg)"/>
+          <polygon points="32,27 39,32 32,37 25,32" fill="url(#nlgc)" opacity="0.85"/>
+          <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.95"/>
+        </svg>
+        <span class="nav-brand-text">Aivora<span class="nav-ai-pill">ai</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="product.html" class="nav-link">AI Tools</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-outline" onclick="window.location='product.html'">Explore Tools</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div style="position:relative;z-index:2">
+      <span class="section-tag">Aivora ai Blog</span>
+      <h1>AI Insights, Guides &amp; <span class="gradient-text">Deep Dives</span></h1>
+      <p>Expert articles on AI tools, automation, SEO, and everything to stay ahead of the curve.</p>
+    </div>
+  </section>
+
+  <div class="blog-layout">
+    <main>
+      <div class="cat-filters">
+        <button class="cat-pill active" data-cat="all">All Posts</button>
+        <button class="cat-pill" data-cat="guide">Guides</button>
+        <button class="cat-pill" data-cat="seo">SEO</button>
+        <button class="cat-pill" data-cat="tools">AI Tools</button>
+        <button class="cat-pill" data-cat="automation">Automation</button>
+        <button class="cat-pill" data-cat="business">Business</button>
+      </div>
+
+      <!-- Featured -->
+      <a href="blog-ai-automation-guide.html" class="blog-featured-card" data-cats="guide automation">
+        <div class="feat-img" style="background:linear-gradient(135deg,#0f0c29,#302b63)">🚀</div>
+        <div class="feat-body">
+          <span class="feat-label">⭐ Featured · Guide</span>
+          <h2>The Ultimate 2025 Guide to AI Automation for Small Businesses</h2>
+          <p>Learn how to cut operational costs by 40% using the right mix of AI tools, agents, and automated workflows — no coding required.</p>
+          <div class="post-byline">
+            <div class="byline-avatar" style="background:linear-gradient(135deg,#4f8eff,#8b5cf6)">AK</div>
+            <span>Arjun Kapoor · Apr 1, 2025 · 8 min read</span>
+          </div>
+          <span class="read-more">Read Article →</span>
+        </div>
+      </a>
+
+      <!-- Grid -->
+      <div class="posts-grid" id="blogGrid">
+
+        <a href="blog-ai-seo-2025.html" class="post-card" data-cats="seo">
+          <div class="pc-img" style="background:linear-gradient(135deg,#0099f7,#023e7d)">🔍</div>
+          <div class="pc-body">
+            <span class="pc-tag">SEO</span>
+            <h3>How AI Is Reshaping SEO in 2025: What You Need to Know</h3>
+            <p>Google's AI search is rewriting the rules. Here's how to adapt your strategy today.</p>
+            <div class="pc-foot"><span>Mar 21, 2025 · 5 min</span><span class="pc-read">Read →</span></div>
+          </div>
+        </a>
+
+        <a href="blog-ai-writing-tools.html" class="post-card" data-cats="tools">
+          <div class="pc-img" style="background:linear-gradient(135deg,#00b09b,#096c54)">✍️</div>
+          <div class="pc-body">
+            <span class="pc-tag">Tools</span>
+            <h3>Top 10 AI Writing Tools That Beat ChatGPT in 2025</h3>
+            <p>We tested 50+ tools — here are the only 10 actually worth your money.</p>
+            <div class="pc-foot"><span>Mar 15, 2025 · 6 min</span><span class="pc-read">Read →</span></div>
+          </div>
+        </a>
+
+        <a href="blog-best-ai-tools-2025.html" class="post-card" data-cats="tools guide">
+          <div class="pc-img" style="background:linear-gradient(135deg,#f7971e,#a3410a)">🏆</div>
+          <div class="pc-body">
+            <span class="pc-tag">Guide</span>
+            <h3>Best AI Tools of 2025: The Definitive Ranked List</h3>
+            <p>200+ tools tested. 12 survived. Our definitive 2025 ranking.</p>
+            <div class="pc-foot"><span>Apr 1, 2025 · 10 min</span><span class="pc-read">Read →</span></div>
+          </div>
+        </a>
+
+        <a href="blog-chatgpt-alternatives.html" class="post-card" data-cats="tools">
+          <div class="pc-img" style="background:linear-gradient(135deg,#e96cde,#6d28d9)">🤖</div>
+          <div class="pc-body">
+            <span class="pc-tag">Tools</span>
+            <h3>7 ChatGPT Alternatives That Are Actually Better for Business</h3>
+            <p>These 7 alternatives solve specific business problems better than ChatGPT.</p>
+            <div class="pc-foot"><span>Mar 10, 2025 · 7 min</span><span class="pc-read">Read →</span></div>
+          </div>
+        </a>
+
+        <a href="blog-ai-for-small-business.html" class="post-card" data-cats="business">
+          <div class="pc-img" style="background:linear-gradient(135deg,#11998e,#1a2a6c)">💼</div>
+          <div class="pc-body">
+            <span class="pc-tag">Business</span>
+            <h3>AI for Small Business: 15 Use Cases That Actually Make Money</h3>
+            <p>Real AI applications generating real revenue for small businesses in 2025.</p>
+            <div class="pc-foot"><span>Mar 5, 2025 · 9 min</span><span class="pc-read">Read →</span></div>
+          </div>
+        </a>
+
+        <a href="blog-ai-automation-guide.html" class="post-card" data-cats="automation">
+          <div class="pc-img" style="background:linear-gradient(135deg,#c33764,#1d2671)">⚡</div>
+          <div class="pc-body">
+            <span class="pc-tag">Automation</span>
+            <h3>How to Automate Your Entire Marketing Stack with AI in 2025</h3>
+            <p>Build a fully automated marketing engine from content to email — zero coding.</p>
+            <div class="pc-foot"><span>Feb 28, 2025 · 8 min</span><span class="pc-read">Read →</span></div>
+          </div>
+        </a>
+
+        <div id="noResults">
+          <div style="font-size:3rem;margin-bottom:12px">🔍</div>
+          <h3 style="font-family:'Syne',sans-serif;color:var(--text-secondary)">No articles found</h3>
+        </div>
+      </div>
+    </main>
+
+    <aside class="blog-sidebar">
+      <div class="sw">
+        <h4>Popular Posts</h4>
+        <a href="blog-best-ai-tools-2025.html" class="pop-post"><span class="pop-num">01</span><span class="pop-title">Best AI Tools of 2025: Definitive Ranked List</span></a>
+        <a href="blog-ai-automation-guide.html" class="pop-post"><span class="pop-num">02</span><span class="pop-title">Ultimate Guide to AI Automation</span></a>
+        <a href="blog-ai-seo-2025.html" class="pop-post"><span class="pop-num">03</span><span class="pop-title">How AI Is Reshaping SEO in 2025</span></a>
+        <a href="blog-chatgpt-alternatives.html" class="pop-post"><span class="pop-num">04</span><span class="pop-title">7 ChatGPT Alternatives for Business</span></a>
+        <a href="blog-ai-writing-tools.html" class="pop-post"><span class="pop-num">05</span><span class="pop-title">Top 10 AI Writing Tools 2025</span></a>
+      </div>
+      <div class="sw">
+        <h4>Newsletter</h4>
+        <p style="font-size:0.83rem;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">Best AI articles & tool launches every Tuesday.</p>
+        <form onsubmit="handleNewsletter(event)">
+          <input class="nl-inp" type="email" placeholder="your@email.com" required />
+          <button class="nl-btn" type="submit">Subscribe Free</button>
+        </form>
+        <p style="font-size:0.72rem;color:var(--text-muted);margin-top:9px">✓ No spam · ✓ Unsubscribe anytime</p>
+      </div>
+      <div class="sw">
+        <h4>Topics</h4>
+        <div class="tag-cloud">
+          <span class="tag-chip">AI Tools</span><span class="tag-chip">Automation</span><span class="tag-chip">SEO</span>
+          <span class="tag-chip">ChatGPT</span><span class="tag-chip">LLMs</span><span class="tag-chip">Marketing</span>
+          <span class="tag-chip">Productivity</span><span class="tag-chip">Small Business</span><span class="tag-chip">Writing</span>
+        </div>
+      </div>
+      <div class="sw" style="background:linear-gradient(145deg,#0d1a35,var(--bg-card));border-color:rgba(79,142,255,0.2);text-align:center">
+        <div style="font-size:2rem;margin-bottom:10px">🤖</div>
+        <h4 style="text-transform:none;font-size:0.95rem;letter-spacing:0;color:var(--text-primary);margin-bottom:8px">Browse AI Tools</h4>
+        <p style="font-size:0.81rem;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">200+ curated tools with honest reviews & deals.</p>
+        <a href="product.html" class="btn-primary" style="width:100%;justify-content:center;display:flex;font-size:0.88rem">Browse Tools →</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <svg class="nav-logo-svg" width="28" height="28" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="flg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4f8eff"/><stop offset="100%" stop-color="#8b5cf6"/></linearGradient></defs>
+            <polygon points="32,8 54,22 54,42 32,56 10,42 10,22" fill="none" stroke="url(#flg)" stroke-width="1.5" opacity="0.6"/>
+            <polygon points="32,22 44,32 32,42 20,32" fill="url(#flg)"/>
+            <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.95"/>
+          </svg>
+          <span class="nav-brand-text">Aivora<span class="nav-ai-pill">ai</span></span>
+        </a>
+        <p>Your premium AI marketplace and knowledge hub.</p>
+        <div class="social-icons"><a href="#" class="social-icon">𝕏</a><a href="#" class="social-icon">in</a><a href="#" class="social-icon">⌥</a></div>
+      </div>
+      <div class="footer-col"><h4>Products</h4><a href="product.html">AI Tools</a><a href="#">Browse All</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h4>Blog</h4><a href="blog.html">All Posts</a><a href="blog-ai-seo-2025.html">SEO Guide</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Aivora ai. All rights reserved.</p></div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.cat-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const cat = pill.dataset.cat;
+        let found = 0;
+        document.querySelectorAll('#blogGrid .post-card').forEach(card => {
+          const show = cat === 'all' || (card.dataset.cats || '').includes(cat);
+          card.style.display = show ? '' : 'none';
+          if (show) found++;
+        });
+        document.getElementById('noResults').style.display = found === 0 ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
