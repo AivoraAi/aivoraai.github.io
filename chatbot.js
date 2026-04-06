@@ -12,7 +12,7 @@
   const CONFIG = {
     // ⚠️ IMPORTANT: Replace with your OpenAI API key
     // For production, use a backend proxy to protect your key
-    apiKey: 'YOUR_OPENAI_API_KEY_HERE',
+    apiKey: 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
     model: 'gpt-3.5-turbo',
     maxTokens: 500,
     siteContext: `You are the Aivora AI assistant — a helpful, knowledgeable guide for the Aivora AI website (aivoraai.github.io). 
@@ -576,7 +576,7 @@
 
     try {
       // Check if API key is configured
-      if (CONFIG.apiKey === 'YOUR_OPENAI_API_KEY_HERE' || !CONFIG.apiKey) {
+      if (CONFIG.apiKey === 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 || !CONFIG.apiKey) {
         // Demo mode — smart fallback responses
         await new Promise(r => setTimeout(r, 1200));
         removeTypingIndicator();
