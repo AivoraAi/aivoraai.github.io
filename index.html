@@ -960,7 +960,7 @@
             <span class="acred-icon">📧</span>
             <div>
               <span class="acred-label">Email</span>
-              <span class="acred-val" style="font-size:.82rem">Aivoraai@outlook.com</span>
+              <span class="acred-val" style="font-size:.82rem"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d091b9a6bfa2b1b1b990bfa5a4bcbfbfbbfeb3bfbd">[email&#160;protected]</a></span>
             </div>
           </div>
           <div class="acred">
@@ -1035,7 +1035,7 @@
           How do I contact Aivora AI?
           <span class="faq-chev" aria-hidden="true">▼</span>
         </button>
-        <div class="faq-a">Email us at <a href="mailto:Aivoraai@outlook.com" style="color:var(--blue)">Aivoraai@outlook.com</a> or use the <a href="contact.html" style="color:var(--blue)">contact form</a>. We typically reply within 24 hours.</div>
+        <div class="faq-a">Email us at <a href="/cdn-cgi/l/email-protection#7a3b130c15081b1b133a150f0e1615151154191517" style="color:var(--blue)"><span class="__cf_email__" data-cfemail="c180a8b7aeb3a0a0a881aeb4b5adaeaeaaefa2aeac">[email&#160;protected]</span></a> or use the <a href="contact.html" style="color:var(--blue)">contact form</a>. We typically reply within 24 hours.</div>
       </div>
 
     </div>
@@ -1076,7 +1076,7 @@
         <span style="color:var(--text);font-family:var(--fh);font-weight:800;font-size:1.1rem">Aivora AI</span>
       </a>
       <p>India's trusted AI tools directory. Discover, compare, and earn with the best AI tools of 2026.</p>
-      <p style="font-size:.78rem;margin-top:-8px">✉️ <a href="mailto:Aivoraai@outlook.com" style="color:var(--blue)">Aivoraai@outlook.com</a><br/>👤 Director: Varun Lalwani</p>
+      <p style="font-size:.78rem;margin-top:-8px">✉️ <a href="/cdn-cgi/l/email-protection#d293bba4bda0b3b3bb92bda7a6bebdbdb9fcb1bdbf" style="color:var(--blue)"><span class="__cf_email__" data-cfemail="410028372e33202028012e34352d2e2e2a6f222e2c">[email&#160;protected]</span></a><br/>👤 Director: Varun Lalwani</p>
       <nav class="social-row" aria-label="Social">
         <a href="#" class="soc" aria-label="X / Twitter">𝕏</a>
         <a href="#" class="soc" aria-label="LinkedIn">in</a>
@@ -1115,7 +1115,7 @@
   </div>
 
   <div class="footer-bot">
-    <p>© 2026 <strong>Aivora AI</strong> · Director: Varun Lalwani · <a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a> · India 🇮🇳</p>
+    <p>© 2026 <strong>Aivora AI</strong> · Director: Varun Lalwani · <a href="/cdn-cgi/l/email-protection#6f2e0619001d0e0e062f001a1b03000004410c0002"><span class="__cf_email__" data-cfemail="3a7b534c55485b5b537a554f4e5655555114595557">[email&#160;protected]</span></a> · India 🇮🇳</p>
     <p>Some links are <a href="privacy.html">affiliate links</a>. We earn a commission at no extra cost to you.</p>
   </div>
 </footer>
@@ -1125,7 +1125,7 @@
 
 
 <!-- ══════════════ JAVASCRIPT ══════════════ -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Navbar solid on scroll
   const nav = document.getElementById('nav');
   addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 30), {passive:true});
@@ -1170,24 +1170,3 @@
     const isOpen = a.classList.contains('open');
     document.querySelectorAll('.faq-a').forEach(x => x.classList.remove('open'));
     document.querySelectorAll('.faq-chev').forEach(x => x.classList.remove('open'));
-    document.querySelectorAll('.faq-q').forEach(x => x.setAttribute('aria-expanded','false'));
-    if (!isOpen) {
-      a.classList.add('open'); c.classList.add('open');
-      btn.setAttribute('aria-expanded','true');
-    }
-  }
-
-  // Scroll fade-in
-  const io = new IntersectionObserver(entries => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => { e.target.classList.add('visible'); }, i * 60);
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
-</script>
-
-</body>
-</html>
