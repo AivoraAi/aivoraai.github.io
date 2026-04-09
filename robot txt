@@ -1,7 +1,0 @@
-# robots.txt — Aivoraai
-# https://aivoraai.github.io/aivora.ai/
-
-User-agent: *
-Allow: /
-
-Sitemap: https://aivoraai.github.io/aivora.ai/sitemap.xml
