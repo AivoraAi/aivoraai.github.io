@@ -1,128 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- ══ Core Pages ══ -->
+  <!--
+  ════════════════════════════════════════════════════════════
+   AIVORA AI — Complete XML Sitemap
+   Website : https://aivoraai.github.io/
+   Domain  : aivoraai.github.io  (NOT aivora.ai subfolder)
+   Director: Varun Lalwani | Aivoraai@outlook.com | India
+   Updated : 2026-04-10
+   Pages   : 6 core + 20 blog pages (all in /blog/ folder)
+   Total   : 26 URLs
+
+   FOLDER STRUCTURE:
+   /              → Core pages (index, blog, product, about, contact, privacy)
+   /blog/         → All 19 blog posts with proper SEO slugs
+   /blog/index.html → Redirects to ../blog.html
+  ════════════════════════════════════════════════════════════
+  -->
+
+  <!-- ══════════════════════════════
+       CORE PAGES
+  ══════════════════════════════ -->
 
   <url>
-    <loc>https://aivoraai.github.io/aivora.ai/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://aivoraai.github.io/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://aivoraai.github.io/aivora.ai/product.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://aivoraai.github.io/aivora.ai/about.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://aivoraai.github.io/aivora.ai/contact.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://aivoraai.github.io/aivora.ai/privacy.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- ══ Blog Posts ══ -->
-
-  <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-ai-growth-stack-2026.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://aivoraai.github.io/blog.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-ai-affiliate-marketing.html</loc>
-    <lastmod>2026-04-01</lastmod>
+    <loc>https://aivoraai.github.io/product.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-ai-niches-affiliate.html</loc>
-    <lastmod>2026-04-01</lastmod>
+    <loc>https://aivoraai.github.io/about.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://aivoraai.github.io/contact.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://aivoraai.github.io/privacy.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- ══════════════════════════════
+       /blog/ FOLDER — NEW REVIEWS (10)
+       All hrefs: /blog/[slug].html
+  ══════════════════════════════ -->
+
+  <!-- Blog 1: GPT Creator Club -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/gpt-creator-club-review-2026.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Blog 2: VIP Indicators -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/vip-indicators-review-2026.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <!-- Blog 3: AI in 30 Program -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/ai-in-30-program-review-2026.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog 4: AI Passive Income Tools -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/ai-passive-income-tools-2026.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Blog 5: AI Media Machine -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/ai-media-machine-review-2026.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Blog 6: 137 Secrets Universe -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/137-secrets-universe-review-2026.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
+  <!-- Blog 7: Grid Phantom AI Defence -->
   <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-passive-income-ai-website.html</loc>
-    <lastmod>2026-04-01</lastmod>
+    <loc>https://aivoraai.github.io/blog/grid-phantom-ai-defence-review-2026.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
+  <!-- Blog 8: FreeResume.Pro -->
   <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-best-ai-tools-2025.html</loc>
-    <lastmod>2026-04-01</lastmod>
+    <loc>https://aivoraai.github.io/blog/freeresumepr-ai-resume-builder-2026.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
+  <!-- Blog 9: AI Video Creator -->
   <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-ai-tools-freelancers.html</loc>
+    <loc>https://aivoraai.github.io/blog/ai-video-creator-review-2026.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <!-- Blog 10: Massive Passive Profits -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/massive-passive-profits-review-2026.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ══════════════════════════════
+       /blog/ FOLDER — EXISTING GUIDES (9)
+  ══════════════════════════════ -->
+
+  <!-- Blog 11: AI Affiliate Marketing Guide -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/ai-affiliate-marketing-guide-2026.html</loc>
     <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog 12: AI Growth Stack -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/ai-growth-stack-2026.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Blog 13: AI Niches Affiliate Commissions -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/ai-niches-affiliate-commissions-2026.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Blog 14: Passive Income AI Website -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/passive-income-ai-website-2026.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Blog 15: How AI Is Reshaping SEO -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/ai-reshaping-seo-2026.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+
+  <!-- Blog 16: AI Tools for Beginners -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/ai-tools-beginners-guide-2026.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+
+  <!-- Blog 17: AI Tools for Freelancers -->
+  <url>
+    <loc>https://aivoraai.github.io/blog/ai-tools-freelancers-2026.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog 18: Top AI Writing Tools -->
   <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-ai-tools-beginners.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <priority>0.8</priority>
+    <loc>https://aivoraai.github.io/blog/ai-writing-tools-2026.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
   </url>
 
+  <!-- Blog 19: Best AI Tools Ranked -->
   <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-ai-automation-guide.html</loc>
+    <loc>https://aivoraai.github.io/blog/best-ai-tools-ranked-2026.html</loc>
     <lastmod>2026-04-01</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
-
-  <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-ai-seo-2025.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-ai-writing-tools.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <priority>0.75</priority>
-  </url>
-
-  <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-chatgpt-alternatives.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <priority>0.75</priority>
-  </url>
-
-  <url>
-    <loc>https://aivoraai.github.io/aivora.ai/blog-ai-for-small-business.html</loc>
-    <lastmod>2026-04-01</lastmod>
-    <priority>0.75</priority>
-  </url>
-
-
-  <!-- ── New Affiliate Blog Posts — April 2026 ── -->
-  <url><loc>https://aivoraai.github.io/aivora.ai/blog1.html</loc><lastmod>2026-04-08</lastmod><priority>0.9</priority></url>
-  <url><loc>https://aivoraai.github.io/aivora.ai/blog2.html</loc><lastmod>2026-04-08</lastmod><priority>0.9</priority></url>
-  <url><loc>https://aivoraai.github.io/aivora.ai/blog3.html</loc><lastmod>2026-04-08</lastmod><priority>0.85</priority></url>
-  <url><loc>https://aivoraai.github.io/aivora.ai/blog4.html</loc><lastmod>2026-04-08</lastmod><priority>0.85</priority></url>
-  <url><loc>https://aivoraai.github.io/aivora.ai/blog5.html</loc><lastmod>2026-04-08</lastmod><priority>0.85</priority></url>
-  <url><loc>https://aivoraai.github.io/aivora.ai/blog6.html</loc><lastmod>2026-04-08</lastmod><priority>0.85</priority></url>
-  <url><loc>https://aivoraai.github.io/aivora.ai/blog7.html</loc><lastmod>2026-04-08</lastmod><priority>0.85</priority></url>
-  <url><loc>https://aivoraai.github.io/aivora.ai/blog8.html</loc><lastmod>2026-04-08</lastmod><priority>0.9</priority></url>
-  <url><loc>https://aivoraai.github.io/aivora.ai/blog9.html</loc><lastmod>2026-04-08</lastmod><priority>0.9</priority></url>
 
 </urlset>
