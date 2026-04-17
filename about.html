@@ -83,6 +83,11 @@
     .dir-val{color:var(--text);font-weight:500;word-break:break-word}
     .dir-val a{color:var(--em)}
     
+    /* Social Links */
+    .social-links{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;justify-content:center}
+    .social-link{width:40px;height:40px;min-width:40px;border-radius:12px;background:var(--card2);display:flex;align-items:center;justify-content:center;color:var(--text2);transition:0.3s;font-weight:600;font-size:1.1rem}
+    .social-link:hover{background:var(--em);color:#051a14;transform:translateY(-3px)}
+    
     /* ===== FOOTER ===== */
     .site-footer{padding:40px 16px 20px;text-align:center;color:var(--text3);font-size:0.85rem;border-top:1px solid var(--border);margin-top:30px}
     .footer-bottom a{color:var(--em)}
@@ -108,6 +113,7 @@
       .director-card{padding:20px}
       .btn{padding:11px 20px;font-size:0.95rem}
       .dir-avatar{width:70px;height:70px;font-size:1.3rem}
+      .social-link{width:36px;height:36px;min-width:36px;font-size:1rem}
     }
     
     /* ===== ACCESSIBILITY ===== */
@@ -199,7 +205,16 @@
             </div>
           </div>
           
-          <a href="contact.html" class="btn btn-em btn-block">Send Message →</a>
+          <!-- Social Links -->
+          <div class="social-links" aria-label="Social Media">
+            <a href="https://www.facebook.com/profile.php?id=61569221487849&sk=directory_links" class="social-link" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener">📘</a>
+            <a href="https://www.instagram.com/aivoraai.co/" class="social-link" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">📸</a>
+            <a href="https://www.youtube.com/@AivoraAITools" class="social-link" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">▶️</a>
+            <a href="https://x.com/varunaivoraAi" class="social-link" aria-label="Twitter/X" title="Twitter/X" target="_blank" rel="noopener">𝕏</a>
+            <a href="https://www.linkedin.com/in/varun-lalwani-67032b404/" class="social-link" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">in</a>
+          </div>
+
+          <a href="contact.html" class="btn btn-em btn-block" style="margin-top:20px">Send Message →</a>
         </aside>
         
       </div>
