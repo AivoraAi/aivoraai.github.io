@@ -85,8 +85,8 @@
     .quick-contact .btn{flex:1;min-width:calc(50% - 5px)}
     
     /* Social links */
-    .social-links{display:flex;gap:10px;margin-top:20px}
-    .social-link{width:40px;height:40px;min-width:40px;border-radius:12px;background:var(--card2);display:flex;align-items:center;justify-content:center;color:var(--text2);transition:0.3s;font-weight:600}
+    .social-links{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+    .social-link{width:40px;height:40px;min-width:40px;border-radius:12px;background:var(--card2);display:flex;align-items:center;justify-content:center;color:var(--text2);transition:0.3s;font-weight:600;font-size:1.1rem}
     .social-link:hover{background:var(--em);color:#051a14;transform:translateY(-3px)}
     
     /* ===== CONTACT FORM ===== */
@@ -170,7 +170,7 @@
     }
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     
-    /* Touch-friendly improvements */
+    /* Touch-friendly */
     @media(hover: none){
       .btn:hover{transform:none}
       .btn:active{transform:scale(0.98)}
@@ -252,10 +252,11 @@
           
           <!-- Social Links -->
           <div class="social-links" aria-label="Social Media">
-            <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">in</a>
-            <a href="#" class="social-link" aria-label="Twitter/X" title="Twitter/X">𝕏</a>
-            <a href="#" class="social-link" aria-label="GitHub" title="GitHub">⌘</a>
-            <a href="#" class="social-link" aria-label="Instagram" title="Instagram">📸</a>
+            <a href="https://www.facebook.com/profile.php?id=61569221487849&sk=directory_links" class="social-link" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener">📘</a>
+            <a href="https://www.instagram.com/aivoraai.co/" class="social-link" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">📸</a>
+            <a href="https://www.youtube.com/@AivoraAITools" class="social-link" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">▶️</a>
+            <a href="https://x.com/varunaivoraAi" class="social-link" aria-label="Twitter/X" title="Twitter/X" target="_blank" rel="noopener">𝕏</a>
+            <a href="https://www.linkedin.com/in/varun-lalwani-67032b404/" class="social-link" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">in</a>
           </div>
         </aside>
         
@@ -383,7 +384,6 @@
       navLinks.classList.toggle("active");
     });
     
-    // Close mobile menu when clicking a link
     document.querySelectorAll(".nav-links a").forEach(link => {
       link.addEventListener("click", () => {
         if(window.innerWidth <= 900) {
@@ -464,7 +464,6 @@
         }
       });
       
-      // Check phone if toggled
       if(showPhone?.checked) {
         const phone = document.getElementById("phone")?.value.trim();
         if(!phone || phone.length < 10) {
@@ -482,7 +481,6 @@
       submitBtn.innerHTML = "Sending… ✨";
       
       try {
-        // ✅ Submit to YOUR Formspree endpoint
         const formData = new FormData(form);
         const response = await fetch("https://formspree.io/f/mqewprnw", {
           method: "POST",
@@ -503,7 +501,6 @@
         }
       } catch(err) {
         console.error("Form error:", err);
-        // Fallback to mailto
         const email = document.getElementById("email")?.value || "";
         const subject = document.getElementById("subject")?.value || "Contact Inquiry";
         const message = document.getElementById("message")?.value || "";
@@ -515,7 +512,6 @@
       }
     });
 
-    // Accessibility: Close mobile menu on Escape
     document.addEventListener("keydown", (e) => {
       if(e.key === "Escape" && navLinks?.classList.contains("active")) {
         navLinks.classList.remove("active");
