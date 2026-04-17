@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Contact Us – Aivora AI | Varun Lalwani</title>
   <meta name="description" content="Contact Aivora AI - Director: Varun Lalwani"/>
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   
   <style>
@@ -22,75 +22,120 @@
       --em:#00c896;
       --text:#e8f4f0;
       --text2:#7fb3a0;
+      --r2:14px;
     }
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
-    .wrap{max-width:1200px;margin:0 auto;padding:0 20px;}
     
-    .contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;padding:60px 0;}
-    .contact-form{background:var(--card);padding:40px;border-radius:20px;border:1px solid rgba(0,200,150,0.2);}
-    
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-    .form-group{margin-bottom:20px;}
-    .form-group label{display:block;margin-bottom:8px;font-weight:600;color:var(--text2);font-size:0.9rem;}
-    .form-group input,
-    .form-group select,
-    .form-group textarea{
-      width:100%;padding:14px;background:#0a161d;border:1px solid rgba(0,200,150,0.3);
-      border-radius:10px;color:var(--text);font-size:1rem;
+    /* Navbar */
+    .navbar{
+      position:fixed; top:0; left:0; right:0; z-index:1000;
+      background:rgba(5,10,14,0.95); backdrop-filter:blur(20px);
+      border-bottom:1px solid rgba(0,200,150,0.2);
+      padding:15px 0;
     }
-    .form-group textarea{min-height:140px;resize:vertical;}
+    .nav-container{
+      max-width:1200px; margin:0 auto; padding:0 20px;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .nav-logo{
+      font-size:1.5rem; font-weight:800; color:var(--text); text-decoration:none;
+    }
+    .nav-logo span{color:var(--em);}
+    .nav-links{
+      display:flex; list-style:none; gap:25px;
+    }
+    .nav-links a{
+      color:var(--text2); text-decoration:none; font-weight:500;
+      transition:0.3s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active{color:var(--em);}
+    
+    .contact-layout{
+      display:grid; grid-template-columns:1fr 1.4fr; gap:50px; 
+      padding:100px 20px 80px; max-width:1200px; margin:0 auto;
+    }
+    .contact-form{
+      background:var(--card); padding:40px; border-radius:20px; 
+      border:1px solid rgba(0,200,150,0.2);
+    }
+    .form-row{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+    .form-group{margin-bottom:20px;}
+    .form-group label{
+      display:block; margin-bottom:8px; font-weight:600; color:var(--text2);
+    }
+    .form-group input, .form-group select, .form-group textarea{
+      width:100%; padding:14px; background:#0a161d; border:1px solid rgba(0,200,150,0.3);
+      border-radius:10px; color:var(--text); font-size:1rem;
+    }
+    .form-group textarea{min-height:140px; resize:vertical;}
     
     .btn{
-      width:100%;padding:16px;background:linear-gradient(135deg,#00c896,#0ea5e9);
-      color:white;border:none;border-radius:12px;font-size:1.05rem;font-weight:700;
-      cursor:pointer;transition:0.3s;
+      width:100%; padding:16px; background:linear-gradient(135deg,#00c896,#0ea5e9);
+      color:white; border:none; border-radius:12px; font-size:1.05rem; font-weight:700;
+      cursor:pointer; transition:0.3s;
     }
-    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,200,150,0.4);}
+    .btn:hover{transform:translateY(-3px);}
     
     #successMessage{
-      display:none;margin-top:25px;padding:20px;background:#10b981;color:white;
-      border-radius:12px;text-align:center;font-weight:600;
-    }
-    
-    @media(max-width:900px){
-      .contact-layout{grid-template-columns:1fr;}
+      display:none; margin-top:25px; padding:20px; background:#10b981; color:white;
+      border-radius:12px; text-align:center; font-weight:600;
     }
   </style>
 </head>
 <body>
 
-  <div class="wrap">
-    <h1 style="text-align:center;padding:40px 0 20px;font-size:2.8rem;">
-      Contact <span style="color:#00c896;">Aivora AI</span>
-    </h1>
-
-    <div class="contact-layout">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Aivora<span>ai</span></a>
       
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="product.html">AI Tools</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div style="padding-top:80px;">
+    <div class="wrap">
+      <h1 style="text-align:center; font-size:2.8rem; margin-bottom:10px;">
+        Contact <span style="color:#00c896;">Aivora AI</span>
+      </h1>
+      <p style="text-align:center; color:var(--text2); max-width:600px; margin:0 auto 50px;">
+        Questions, partnerships, tool listings, or general inquiries — we'll reply within 24 hours.
+      </p>
+    </div>
+
+    <div class="contact-layout wrap">
       <!-- Left Side -->
       <div>
         <h2>Let's Talk AI</h2>
-        <p style="margin:20px 0 30px;color:var(--text2);font-size:1.05rem;">
+        <p style="margin:20px 0 30px; color:var(--text2); font-size:1.05rem;">
           Whether you want to list your AI tool, explore affiliate opportunities, or ask a question — we'd love to hear from you.
         </p>
         
-        <div style="display:flex;flex-direction:column;gap:15px;">
-          <div style="background:var(--card);padding:18px;border-radius:12px;">
+        <div style="display:flex; flex-direction:column; gap:15px;">
+          <div style="background:var(--card); padding:18px; border-radius:12px;">
             👤 Director: Varun Lalwani
           </div>
-          <div style="background:var(--card);padding:18px;border-radius:12px;">
+          <div style="background:var(--card); padding:18px; border-radius:12px;">
             ✉️ Email: Aivoraai@outlook.com
           </div>
-          <div style="background:var(--card);padding:18px;border-radius:12px;">
+          <div style="background:var(--card); padding:18px; border-radius:12px;">
             📱 Phone: +91-XXXXXXXXXX
           </div>
-          <div style="background:var(--card);padding:18px;border-radius:12px;">
+          <div style="background:var(--card); padding:18px; border-radius:12px;">
             📍 India — Remote-first team
           </div>
         </div>
       </div>
 
-      <!-- Form -->
+      <!-- Contact Form -->
       <div class="contact-form">
         <h3 style="margin-bottom:25px;">Send a Message</h3>
         
@@ -118,7 +163,7 @@
               <option value="">Choose a topic…</option>
               <option value="List My AI Tool">List My AI Tool</option>
               <option value="Affiliate Program">Affiliate Program</option>
-              <option value="Partnership">Partnership / Collaboration</option>
+              <option value="Partnership">Partnership</option>
               <option value="Press">Press / Media</option>
               <option value="General">General Question</option>
               <option value="Bug">Bug Report</option>
@@ -138,7 +183,7 @@
         <!-- Success Message -->
         <div id="successMessage">
           ✅ Thank you! Your message has been received.<br>
-          We will reply to you within 24 hours.
+          We will reply within 24 hours.
         </div>
       </div>
     </div>
