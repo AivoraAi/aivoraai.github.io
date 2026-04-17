@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MJNHX96M');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MJNHX96M');</script>
 
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -16,7 +16,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet"/>
   
   <style>
-    /* Your original beautiful CSS (kept same) */
     :root{
       --bg:#050a0e;--bg2:#091014;--bg3:#0d1a1f;--bg4:#112028;
       --card:#0f1e26;--card2:#142530;
@@ -26,21 +25,72 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       --fh:'Outfit',sans-serif;--fb:'Space Grotesk',sans-serif;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.65}
-    a{color:var(--em);text-decoration:none}
-    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;background:rgba(5,10,14,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,200,150,.2)}
+    body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+    a{color:var(--em);text-decoration:none;transition:0.2s}
+    a:hover{color:var(--em2)}
+    
+    /* Navbar */
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;background:rgba(5,10,14,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,200,150,.2);transition:0.3s}
+    .navbar.solid{background:rgba(5,10,14,1);box-shadow:0 4px 20px rgba(0,0,0,.3)}
     .nav-container{max-width:1200px;margin:0 auto;height:100%;padding:0 22px;display:flex;align-items:center;justify-content:space-between}
-    .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none}
+    .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:800;font-size:1.25rem;color:var(--text)}
     .nav-links{display:flex;list-style:none;gap:8px}
     .nav-link{padding:8px 14px;color:var(--text2);font-weight:500;border-radius:8px;transition:0.3s}
     .nav-link:hover,.nav-link.active{color:var(--em);background:rgba(0,200,150,.1)}
-    .hamburger{display:none}
+    .hamburger{display:none;font-size:1.5rem;background:none;border:none;color:var(--text);cursor:pointer}
+    
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:12px;font-weight:600;font-family:var(--fh);cursor:pointer;transition:0.3s;border:none}
+    .btn-em{background:linear-gradient(135deg,var(--em),var(--em2));color:#051a14}
+    .btn-em:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,200,150,.3)}
+    .btn-sm{padding:8px 16px;font-size:0.9rem}
+    
+    /* Hero */
     .page-hero{padding:120px 22px 60px;text-align:center;background:linear-gradient(170deg,var(--bg),var(--bg3))}
-    .contact-form{background:var(--card);border:1.5px solid rgba(0,200,150,.15);border-radius:var(--r4);padding:36px 30px}
-    /* Rest of your styles remain same - I'm keeping it short for clarity */
+    .chip{display:inline-block;padding:6px 16px;background:rgba(0,200,150,.15);border:1px solid rgba(0,200,150,.3);border-radius:50px;font-size:0.85rem;color:var(--em);font-weight:500;margin-bottom:16px}
+    .page-hero h1{font-family:var(--fh);font-size:2.5rem;font-weight:800;margin:16px 0 12px;line-height:1.2}
+    .page-hero p{color:var(--text2);max-width:600px;margin:0 auto;font-size:1.1rem}
+    
+    /* Sections */
+    .sec{padding:60px 22px}
+    .wrap{max-width:1200px;margin:0 auto}
+    
+    /* About Grid */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+    .about-text h2{font-family:var(--fh);font-size:2rem;margin-bottom:20px}
+    .about-text p{color:var(--text2);margin-bottom:16px}
+    
+    /* Director Card */
+    .director-card{background:var(--card);border:1.5px solid rgba(0,200,150,.15);border-radius:var(--r4);padding:28px;text-align:center;position:sticky;top:100px}
+    .dir-avatar{width:80px;height:80px;margin:0 auto 16px;background:linear-gradient(135deg,var(--em),var(--em2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:800;font-size:1.5rem;color:#051a14}
+    .dir-name{font-family:var(--fh);font-weight:700;font-size:1.3rem;margin-bottom:4px}
+    .dir-title{color:var(--text2);font-size:0.95rem;margin-bottom:20px}
+    .dir-info{text-align:left;margin:20px 0}
+    .dir-row{display:flex;gap:12px;margin:12px 0;align-items:flex-start}
+    .dir-icon{font-size:1.2rem;min-width:24px}
+    .dir-label{display:block;color:var(--text3);font-size:0.85rem}
+    .dir-val{color:var(--text2);font-size:0.95rem}
+    .dir-val a{color:var(--em)}
+    
+    /* Footer */
+    .site-footer{padding:40px 22px 20px;text-align:center;color:var(--text3);font-size:0.9rem;border-top:1px solid var(--border);margin-top:40px}
+    .footer-bottom a{color:var(--em)}
+    
+    /* Responsive */
+    @media(max-width:900px){
+      .about-grid{grid-template-columns:1fr}
+      .director-card{position:static}
+      .nav-links{display:none}
+      .hamburger{display:block}
+      .page-hero h1{font-size:2rem}
+    }
   </style>
 </head>
 <body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJNHX96M"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Navbar -->
   <header class="navbar" id="mainNav">
@@ -48,8 +98,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="index.html" class="nav-logo">
         Aivora<span style="color:#00c896">ai</span>
       </a>
+      <button class="hamburger" id="hamburger">☰</button>
       <nav>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="product.html">AI Tools</a></li>
@@ -74,6 +125,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <h2>Built for People Who Want to <span style="color:#00c896">Win with AI</span></h2>
           <p><strong>Aivora AI</strong> was founded by Varun Lalwani with one mission: Help Indian creators and entrepreneurs easily find and use the best AI tools.</p>
           <p>We test every tool ourselves and give honest reviews — no paid rankings, no fake promotions.</p>
+          <p style="margin-top:20px">🎯 <strong>Our Promise:</strong> Transparent, practical, and India-focused AI guidance.</p>
         </div>
 
         <!-- Director Card -->
@@ -105,14 +157,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
           </div>
-          <a href="contact.html" class="btn btn-em" style="width:100%">Send Message →</a>
+          <a href="contact.html" class="btn btn-em" style="width:100%;margin-top:10px">Send Message →</a>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Rest of your sections (Stats, Values, CTA, Newsletter, Footer) remain same -->
-  <!-- ... (I kept your original content for Stats, Values, CTA, etc.) ... -->
 
   <footer class="site-footer">
     <div class="footer-bottom">
@@ -122,9 +171,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </footer>
 
   <script>
-    // Your existing navbar script
+    // Navbar scroll effect
     const nav = document.getElementById("mainNav");
-    window.addEventListener("scroll", () => nav.classList.toggle("solid", window.scrollY > 35));
+    window.addEventListener("scroll", () => {
+      nav.classList.toggle("solid", window.scrollY > 35);
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    if(hamburger){
+      hamburger.addEventListener("click", () => {
+        navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
+      });
+    }
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        if(window.innerWidth <= 900) {
+          navLinks.style.display = "none";
+        }
+      });
+    });
   </script>
 
 </body>
