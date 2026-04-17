@@ -6,12 +6,12 @@
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MJNHX96M');</script>
+  })(window,document,'script','dataLayer','GTM-NWSJTJ3M');</script>
 
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>About Us – Aivora AI | Director: Varun Lalwani</title>
-  <meta name="description" content="Learn about Aivora AI — India's leading AI tools directory. Founded by Varun Lalwani. Contact: Aivoraai@outlook.com"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  <title>About Us – Aivora AI | Varun Lalwani</title>
+  <meta name="description" content="Learn about Aivora AI — your trusted directory for AI tools. Founded by Varun Lalwani. Contact: Aivoraai@outlook.com"/>
   
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet"/>
   
@@ -23,82 +23,118 @@
       --border:rgba(0,200,150,.1);--text:#e8f4f0;--text2:#7fb3a0;--text3:#3d6b5a;
       --r2:14px;--r4:28px;
       --fh:'Outfit',sans-serif;--fb:'Space Grotesk',sans-serif;
+      --shadow:0 10px 40px rgba(0,0,0,.4);
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;-webkit-text-size-adjust:100%}
     a{color:var(--em);text-decoration:none;transition:0.2s}
     a:hover{color:var(--em2)}
+    img{max-width:100%;height:auto;display:block}
     
-    /* Navbar */
+    /* ===== NAVBAR ===== */
     .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;background:rgba(5,10,14,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,200,150,.2);transition:0.3s}
-    .navbar.solid{background:rgba(5,10,14,1);box-shadow:0 4px 20px rgba(0,0,0,.3)}
-    .nav-container{max-width:1200px;margin:0 auto;height:100%;padding:0 22px;display:flex;align-items:center;justify-content:space-between}
+    .navbar.solid{background:rgba(5,10,14,1);box-shadow:var(--shadow)}
+    .nav-container{max-width:1200px;margin:0 auto;height:100%;padding:0 16px;display:flex;align-items:center;justify-content:space-between}
     .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:800;font-size:1.25rem;color:var(--text)}
     .nav-links{display:flex;list-style:none;gap:8px}
-    .nav-link{padding:8px 14px;color:var(--text2);font-weight:500;border-radius:8px;transition:0.3s}
+    .nav-link{padding:8px 14px;color:var(--text2);font-weight:500;border-radius:8px;transition:0.3s;white-space:nowrap}
     .nav-link:hover,.nav-link.active{color:var(--em);background:rgba(0,200,150,.1)}
-    .hamburger{display:none;font-size:1.5rem;background:none;border:none;color:var(--text);cursor:pointer}
+    .hamburger{display:none;font-size:1.5rem;background:none;border:none;color:var(--text);cursor:pointer;padding:8px}
     
-    /* Buttons */
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:12px;font-weight:600;font-family:var(--fh);cursor:pointer;transition:0.3s;border:none}
+    /* ===== BUTTONS ===== */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:14px;font-weight:600;font-family:var(--fh);cursor:pointer;transition:0.3s;border:none;font-size:1rem;min-height:44px}
     .btn-em{background:linear-gradient(135deg,var(--em),var(--em2));color:#051a14}
-    .btn-em:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,200,150,.3)}
-    .btn-sm{padding:8px 16px;font-size:0.9rem}
+    .btn-em:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,200,150,.35)}
+    .btn-outline{background:transparent;border:1.5px solid var(--em);color:var(--em)}
+    .btn-outline:hover{background:rgba(0,200,150,.1);transform:translateY(-2px)}
+    .btn-sm{padding:10px 18px;font-size:0.9rem;min-height:40px}
+    .btn-block{width:100%}
     
-    /* Hero */
-    .page-hero{padding:120px 22px 60px;text-align:center;background:linear-gradient(170deg,var(--bg),var(--bg3))}
-    .chip{display:inline-block;padding:6px 16px;background:rgba(0,200,150,.15);border:1px solid rgba(0,200,150,.3);border-radius:50px;font-size:0.85rem;color:var(--em);font-weight:500;margin-bottom:16px}
-    .page-hero h1{font-family:var(--fh);font-size:2.5rem;font-weight:800;margin:16px 0 12px;line-height:1.2}
-    .page-hero p{color:var(--text2);max-width:600px;margin:0 auto;font-size:1.1rem}
+    /* ===== HERO ===== */
+    .page-hero{padding:120px 16px 40px;text-align:center;background:linear-gradient(170deg,var(--bg),var(--bg3));position:relative;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 30%,rgba(0,200,150,.08),transparent 60%);pointer-events:none}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(0,200,150,.15);border:1px solid rgba(0,200,150,.3);border-radius:50px;font-size:0.85rem;color:var(--em);font-weight:500;margin-bottom:20px}
+    .hero-title{font-family:var(--fh);font-size:clamp(1.75rem,5vw,2.75rem);font-weight:800;margin:12px 0 16px;line-height:1.2}
+    .hero-title span{color:var(--em)}
+    .hero-subtitle{color:var(--text2);max-width:600px;margin:0 auto;font-size:clamp(0.95rem,2vw,1.1rem)}
     
-    /* Sections */
-    .sec{padding:60px 22px}
+    /* ===== SECTIONS ===== */
+    .sec{padding:40px 16px 60px}
     .wrap{max-width:1200px;margin:0 auto}
     
-    /* About Grid */
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-    .about-text h2{font-family:var(--fh);font-size:2rem;margin-bottom:20px}
-    .about-text p{color:var(--text2);margin-bottom:16px}
+    /* ===== ABOUT GRID ===== */
+    .about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:32px;align-items:start}
+    .about-text h2{font-family:var(--fh);font-size:clamp(1.5rem,4vw,2rem);margin-bottom:16px;line-height:1.3}
+    .about-text p{color:var(--text2);margin-bottom:16px;font-size:1.05rem}
+    .about-text ul{list-style:none;margin:20px 0}
+    .about-text li{padding:8px 0;color:var(--text2);display:flex;align-items:center;gap:10px}
+    .about-text li::before{content:'✓';color:var(--em);font-weight:bold}
     
-    /* Director Card */
-    .director-card{background:var(--card);border:1.5px solid rgba(0,200,150,.15);border-radius:var(--r4);padding:28px;text-align:center;position:sticky;top:100px}
+    /* ===== DIRECTOR CARD ===== */
+    .director-card{background:var(--card);border:1.5px solid rgba(0,200,150,.15);border-radius:var(--r4);padding:24px;position:sticky;top:80px;box-shadow:0 4px 20px rgba(0,0,0,.2)}
     .dir-avatar{width:80px;height:80px;margin:0 auto 16px;background:linear-gradient(135deg,var(--em),var(--em2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:800;font-size:1.5rem;color:#051a14}
-    .dir-name{font-family:var(--fh);font-weight:700;font-size:1.3rem;margin-bottom:4px}
-    .dir-title{color:var(--text2);font-size:0.95rem;margin-bottom:20px}
+    .dir-name{font-family:var(--fh);font-weight:700;font-size:1.3rem;margin-bottom:4px;text-align:center}
+    .dir-title{color:var(--text2);font-size:0.95rem;margin-bottom:20px;text-align:center}
     .dir-info{text-align:left;margin:20px 0}
-    .dir-row{display:flex;gap:12px;margin:12px 0;align-items:flex-start}
-    .dir-icon{font-size:1.2rem;min-width:24px}
-    .dir-label{display:block;color:var(--text3);font-size:0.85rem}
-    .dir-val{color:var(--text2);font-size:0.95rem}
+    .dir-row{display:flex;gap:12px;margin:14px 0;align-items:flex-start}
+    .dir-icon{width:40px;height:40px;min-width:40px;background:rgba(0,200,150,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;color:var(--em)}
+    .dir-label{display:block;color:var(--text3);font-size:0.8rem;margin-bottom:2px}
+    .dir-val{color:var(--text);font-weight:500;word-break:break-word}
     .dir-val a{color:var(--em)}
     
-    /* Footer */
-    .site-footer{padding:40px 22px 20px;text-align:center;color:var(--text3);font-size:0.9rem;border-top:1px solid var(--border);margin-top:40px}
+    /* ===== FOOTER ===== */
+    .site-footer{padding:40px 16px 20px;text-align:center;color:var(--text3);font-size:0.85rem;border-top:1px solid var(--border);margin-top:30px}
     .footer-bottom a{color:var(--em)}
     
-    /* Responsive */
-    @media(max-width:900px){
-      .about-grid{grid-template-columns:1fr}
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media(max-width: 900px){
+      .about-grid{grid-template-columns:1fr;gap:24px}
       .director-card{position:static}
-      .nav-links{display:none}
+      .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:16px;border-bottom:1px solid var(--border);gap:4px}
+      .nav-links.active{display:flex}
+      .nav-links li{width:100%}
+      .nav-links a{display:block;padding:12px 16px;border-radius:8px}
       .hamburger{display:block}
-      .page-hero h1{font-size:2rem}
+      .hero-title{font-size:2rem}
+    }
+    
+    @media(max-width: 480px){
+      .navbar{height:56px}
+      .nav-container{padding:0 12px}
+      .nav-logo{font-size:1.1rem}
+      .page-hero{padding:100px 12px 32px}
+      .sec{padding:32px 12px 48px}
+      .director-card{padding:20px}
+      .btn{padding:11px 20px;font-size:0.95rem}
+      .dir-avatar{width:70px;height:70px;font-size:1.3rem}
+    }
+    
+    /* ===== ACCESSIBILITY ===== */
+    @media(prefers-reduced-motion:reduce){
+      *{animation:none!important;transition:none!important}
+      html{scroll-behavior:auto}
+    }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    
+    /* Touch-friendly */
+    @media(hover: none){
+      .btn:hover{transform:none}
+      .btn:active{transform:scale(0.98)}
     }
   </style>
 </head>
 <body>
 
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJNHX96M"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- Navbar -->
+  <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="mainNav">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        Aivora<span style="color:#00c896">ai</span>
-      </a>
-      <button class="hamburger" id="hamburger">☰</button>
+      <a href="index.html" class="nav-logo">Aivora<span style="color:#00c896">ai</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
       <nav>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
@@ -112,24 +148,36 @@
     </div>
   </header>
 
-  <div class="page-hero">
+  <!-- ===== HERO ===== -->
+  <section class="page-hero">
     <span class="chip">About Aivora AI</span>
-    <h1>India's Trusted <span style="color:#00c896">AI Tools Directory</span></h1>
-    <p>Built to help creators, freelancers, and entrepreneurs discover the best AI tools in 2026.</p>
-  </div>
+    <h1 class="hero-title">The Trusted <span>AI Tools Directory</span></h1>
+    <p class="hero-subtitle">Built to help creators, freelancers, and entrepreneurs discover the best AI tools in 2026.</p>
+  </section>
 
+  <!-- ===== ABOUT SECTION ===== -->
   <section class="sec">
     <div class="wrap">
       <div class="about-grid">
+        
+        <!-- Left: Mission & Story -->
         <div class="about-text">
           <h2>Built for People Who Want to <span style="color:#00c896">Win with AI</span></h2>
-          <p><strong>Aivora AI</strong> was founded by Varun Lalwani with one mission: Help Indian creators and entrepreneurs easily find and use the best AI tools.</p>
-          <p>We test every tool ourselves and give honest reviews — no paid rankings, no fake promotions.</p>
-          <p style="margin-top:20px">🎯 <strong>Our Promise:</strong> Transparent, practical, and India-focused AI guidance.</p>
+          <p><strong>Aivora AI</strong> was founded by Varun Lalwani with one mission: Help creators and entrepreneurs easily find, test, and use the best AI tools without the noise.</p>
+          <p>We test every tool ourselves and give honest reviews — no paid rankings, no fake promotions, just practical insights that save you time and money.</p>
+          
+          <ul>
+            <li>Curated AI tool directory with real user feedback</li>
+            <li>Transparent reviews & comparison guides</li>
+            <li>Focus on productivity, creativity & business growth</li>
+            <li>Updated weekly with new tools & trends</li>
+          </ul>
+          
+          <a href="product.html" class="btn btn-em" style="margin-top:16px">🔍 Explore AI Tools →</a>
         </div>
 
-        <!-- Director Card -->
-        <div class="director-card">
+        <!-- Right: Director Card -->
+        <aside class="director-card" aria-label="Director Information">
           <div class="dir-avatar">VL</div>
           <div class="dir-name">Varun Lalwani</div>
           <div class="dir-title">Founder & Director — Aivora AI</div>
@@ -146,53 +194,60 @@
               <span class="dir-icon">📱</span>
               <div>
                 <span class="dir-label">Phone / WhatsApp</span>
-                <span class="dir-val">+91-XXXXXXXXXX</span>
-              </div>
-            </div>
-            <div class="dir-row">
-              <span class="dir-icon">📍</span>
-              <div>
-                <span class="dir-label">Location</span>
-                <span class="dir-val">India 🇮🇳</span>
+                <span class="dir-val"><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">+91-XXXXXXXXXX</a></span>
               </div>
             </div>
           </div>
-          <a href="contact.html" class="btn btn-em" style="width:100%;margin-top:10px">Send Message →</a>
-        </div>
+          
+          <a href="contact.html" class="btn btn-em btn-block">Send Message →</a>
+        </aside>
+        
       </div>
     </div>
   </section>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="footer-bottom">
       <p>© 2026 <strong>Aivora AI</strong> · Director: Varun Lalwani · 
-         <a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a> · India 🇮🇳</p>
+         <a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a></p>
     </div>
   </footer>
 
+  <!-- ===== JAVASCRIPT ===== -->
   <script>
-    // Navbar scroll effect
+    // ===== Navbar Scroll Effect =====
     const nav = document.getElementById("mainNav");
     window.addEventListener("scroll", () => {
       nav.classList.toggle("solid", window.scrollY > 35);
-    });
+    }, {passive: true});
 
-    // Mobile menu toggle
+    // ===== Mobile Menu Toggle =====
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("navLinks");
-    if(hamburger){
-      hamburger.addEventListener("click", () => {
-        navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
-      });
-    }
-
-    // Close mobile menu when clicking a link
+    
+    hamburger?.addEventListener("click", () => {
+      const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+      hamburger.setAttribute("aria-expanded", !isExpanded);
+      navLinks.classList.toggle("active");
+    });
+    
     document.querySelectorAll(".nav-links a").forEach(link => {
       link.addEventListener("click", () => {
         if(window.innerWidth <= 900) {
-          navLinks.style.display = "none";
+          navLinks.classList.remove("active");
+          hamburger.setAttribute("aria-expanded", "false");
         }
       });
+    });
+
+    // Accessibility: Close mobile menu on Escape
+    document.addEventListener("keydown", (e) => {
+      if(e.key === "Escape" && navLinks?.classList.contains("active")) {
+        navLinks.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+        hamburger.focus();
+      }
     });
   </script>
 
