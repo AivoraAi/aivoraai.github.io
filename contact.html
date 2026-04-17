@@ -210,19 +210,11 @@
               <span class="contact-value"><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">+91-XXXXXXXXXX</a></span>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">📍</div>
-            <div class="contact-text">
-              <span class="contact-label">Location</span>
-              <span class="contact-value">India 🇮🇳 · Remote-first</span>
-            </div>
           </div>
-          
           <!-- Trust Badges -->
           <div class="trust-badges">
             <span class="trust-badge">🔒 Data encrypted</span>
             <span class="trust-badge">🚫 No spam, ever</span>
-            <span class="trust-badge">🇮🇳 Made in India</span>
           </div>
           
           <!-- Quick Contact Buttons -->
@@ -255,9 +247,13 @@
             </div>
           </div>
           
-          <!-- Form: Replace action with Formspree/EmailJS endpoint -->
-          <form id="contactForm" novalidate>
-            <!-- Name -->
+          <!-- Form with YOUR Formspree endpoint -->
+          <form id="contactForm" action="https://formspree.io/f/mqewprnw" method="POST" novalidate>
+            
+            <!-- Honeypot spam protection -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            
+            <!-- Name + Email Row -->
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Your Name *</label>
@@ -279,7 +275,7 @@
             
             <!-- Phone Toggle -->
             <label class="phone-toggle">
-              <input type="checkbox" id="showPhone"> 
+              <input type="checkbox" id="showPhone" name="whatsapp_opt_in" value="yes"> 
               <span>I'd like to be contacted via WhatsApp</span>
             </label>
             <div class="form-group" id="phoneField" hidden>
@@ -358,7 +354,6 @@
       hamburger.setAttribute("aria-expanded", navLinks.classList.contains("active"));
     });
     
-    // Close mobile menu when clicking a link
     document.querySelectorAll(".nav-links a").forEach(link => {
       link.addEventListener("click", () => {
         if(window.innerWidth <= 900) navLinks.classList.remove("active");
@@ -384,11 +379,11 @@
     const form = document.getElementById("contactForm");
     const successMsg = document.getElementById("successMsg");
     
-    // Real-time validation helpers
     const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    const showError = (id, show) => document.getElementById(id).classList.toggle("show", show);
+    const showError = (id, show) => document.getElementById(id)?.classList.toggle("show", show);
     const setFieldState = (id, state) => {
       const field = document.getElementById(id);
+      if(!field) return;
       field.classList.remove("error", "success");
       if(state) field.classList.add(state);
     };
@@ -398,94 +393,89 @@
       document.getElementById(field)?.addEventListener("blur", (e) => {
         const val = e.target.value.trim();
         let valid = true;
-        
         if(field === "email") valid = validateEmail(val);
         else if(field === "message") valid = val.length >= 20;
         else valid = val.length > 0;
-        
         setFieldState(field, valid ? "success" : "error");
         showError(field + "Error", !valid);
       });
     });
 
-    // Form submit handler
+    // Form submit handler with Formspree
     form?.addEventListener("submit", async (e) => {
       e.preventDefault();
       
-      // Validate all fields
+      // Validate
       let isValid = true;
       const fields = ["name", "email", "topic", "subject", "message"];
-      
       fields.forEach(field => {
         const el = document.getElementById(field);
-        const val = el.value.trim();
+        const val = el?.value.trim();
         let valid = true;
-        
         if(field === "email") valid = validateEmail(val);
-        else if(field === "message") valid = val.length >= 20;
-        else valid = val.length > 0;
-        
+        else if(field === "message") valid = val?.length >= 20;
+        else valid = val?.length > 0;
         if(!valid) {
           isValid = false;
           setFieldState(field, "error");
           showError(field + "Error", true);
-          if(!document.activeElement || document.activeElement !== el) el.focus();
         } else {
           setFieldState(field, "success");
           showError(field + "Error", false);
         }
       });
       
-      // Check phone if toggled
       if(showPhone?.checked) {
-        const phone = document.getElementById("phone").value.trim();
-        if(phone.length < 10) {
+        const phone = document.getElementById("phone")?.value.trim();
+        if(!phone || phone.length < 10) {
           isValid = false;
           setFieldState("phone", "error");
-          document.getElementById("phone").focus();
         }
       }
       
       if(!isValid) return;
       
-      // Show loading state
+      // Loading state
       const submitBtn = form.querySelector("button[type='submit']");
       const originalText = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = "Sending… ✨";
       
       try {
-        // 🔄 REPLACE THIS BLOCK WITH FORMSPREE/EMAILJS INTEGRATION
-        // Example for Formspree:
-        // const formData = new FormData(form);
-        // await fetch("https://formspree.io/f/YOUR_FORM_ID", {method: "POST", body: formData});
+        // ✅ Submit to YOUR Formspree endpoint
+        const formData = new FormData(form);
+        const response = await fetch("https://formspree.io/f/mqewprnw", {
+          method: "POST",
+          body: formData,
+          headers: {"Accept": "application/json"}
+        });
         
-        // Demo: Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1200));
-        
-        // Show success
-        document.getElementById("successEmail").textContent = 
-          `We'll reply to ${document.getElementById("email").value}`;
-        successMsg.classList.add("show");
-        form.reset();
-        document.querySelectorAll(".form-control").forEach(f => f.classList.remove("success"));
-        
-        // Scroll to success message
-        successMsg.scrollIntoView({behavior: "smooth", block: "center"});
-        
-        // Hide success after 8 seconds
-        setTimeout(() => successMsg.classList.remove("show"), 8000);
-        
+        if(response.ok) {
+          document.getElementById("successEmail").textContent = 
+            `We'll reply to ${document.getElementById("email").value}`;
+          successMsg.classList.add("show");
+          form.reset();
+          document.querySelectorAll(".form-control").forEach(f => f.classList.remove("success"));
+          successMsg.scrollIntoView({behavior: "smooth", block: "center"});
+          setTimeout(() => successMsg.classList.remove("show"), 8000);
+        } else {
+          throw new Error("Formspree error");
+        }
       } catch(err) {
         console.error("Form error:", err);
-        alert("⚠️ Something went wrong. Please try emailing us directly at Aivoraai@outlook.com");
+        // Fallback to mailto
+        const email = document.getElementById("email")?.value || "";
+        const subject = document.getElementById("subject")?.value || "Contact Inquiry";
+        const message = document.getElementById("message")?.value || "";
+        window.location.href = `mailto:Aivoraai@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + "\n\nFrom: " + email)}`;
+        alert("⚠️ Having trouble sending. Opening your email app as backup.");
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
       }
     });
 
-    // ===== Accessibility: Close mobile menu on escape =====
+    // Accessibility: Close mobile menu on Escape
     document.addEventListener("keydown", (e) => {
       if(e.key === "Escape" && navLinks?.classList.contains("active")) {
         navLinks.classList.remove("active");
