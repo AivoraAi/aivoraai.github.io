@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0LH3EN5QE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-N0LH3EN5QE');
-</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWSJTJ3M');</script>
+<!-- End Google Tag Manager -->
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <meta name="google-site-verification" content="google7061fb8c95f025f1"/>
@@ -24,17 +22,12 @@
   <meta property="og:description" content="India's #1 AI tools directory. Earn money online with AI in 2026."/>
   <meta property="og:url" content="https://aivoraai.github.io/"/>
   <meta property="og:site_name" content="Aivora AI"/>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Aivora AI","url":"https://aivoraai.github.io/aivora.ai/","founder":{"@type":"Person","name":"Varun Lalwani"},"contactPoint":{"@type":"ContactPoint","email":"Aivoraai@outlook.com"}}
-  </script>
-
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet"/>
-
+  
   <style>
   :root{
     --bg:#050a0e;--bg2:#091014;--bg3:#0d1a1f;--bg4:#112028;
@@ -55,13 +48,30 @@
   a{text-decoration:none;color:inherit}
   button{cursor:pointer;font-family:var(--fb);border:none}
   img{display:block;max-width:100%}
+
   .wrap{max-width:1200px;margin:0 auto;padding:0 22px}
   .sec{padding:88px 0}
   .sec-sm{padding:64px 0}
+
   .gt{background:var(--grad-em);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
   .gg{background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-  /* ── Buttons — ALL WORKING ── */
+  /* === NEW LOGO STYLING === */
+  .main-logo{
+    height: 78px;
+    width: auto;
+    filter: drop-shadow(0 0 20px rgba(0, 243, 255, 0.75));
+    transition: all 0.3s ease;
+  }
+  .main-logo:hover{
+    filter: drop-shadow(0 0 30px rgba(0, 243, 255, 0.95));
+    transform: scale(1.05);
+  }
+  @media (max-width: 768px) {
+    .main-logo { height: 62px; }
+  }
+
+  /* Rest of your original CSS (Buttons, Navbar, etc.) */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:13px 28px;border-radius:var(--r2);font-family:var(--fh);font-weight:700;font-size:.92rem;transition:var(--t);cursor:pointer;text-decoration:none}
   .btn-em{background:var(--grad-em);color:#fff;box-shadow:0 4px 20px rgba(0,200,150,.3);border:none}
   .btn-em:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,200,150,.45);color:#fff}
@@ -69,50 +79,66 @@
   .btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(240,180,41,.42);color:#fff}
   .btn-outline{border:1.5px solid rgba(0,200,150,.25);color:var(--em);background:transparent;font-family:var(--fh);font-weight:600;font-size:.9rem;padding:12px 24px;border-radius:var(--r2);transition:var(--t)}
   .btn-outline:hover{background:rgba(0,200,150,.08);border-color:var(--em);color:var(--em)}
-  .btn-ghost{border:1.5px solid rgba(255,255,255,.12);color:var(--text);background:transparent;font-family:var(--fh);font-weight:600;font-size:.9rem;padding:12px 24px;border-radius:var(--r2);transition:var(--t)}
-  .btn-ghost:hover{border-color:var(--em);color:var(--em)}
-  .btn-sm{padding:9px 20px;font-size:.84rem}
-
-  /* Chip/label */
-  .chip{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;background:rgba(0,200,150,.1);color:var(--em);border:1px solid rgba(0,200,150,.2);border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
-  .chip.gold{background:rgba(240,180,41,.1);color:var(--gold);border-color:rgba(240,180,41,.2)}
-
-  /* Section header */
-  .sh{text-align:center;margin-bottom:52px}
-  .sh h2{font-family:var(--fh);font-size:clamp(1.8rem,3.8vw,2.8rem);font-weight:800;margin:14px 0 12px;line-height:1.2}
-  .sh p{color:var(--text2);max-width:540px;margin:0 auto;font-size:.97rem}
-
-  /* ── NAVBAR ── */
   .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;background:rgba(5,10,14,.82);backdrop-filter:blur(22px);border-bottom:1px solid transparent;transition:var(--t)}
   .navbar.solid{background:rgba(5,10,14,.97);border-bottom-color:var(--border);box-shadow:0 4px 28px rgba(0,0,0,.4)}
   .nav-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-
-  /* Logo with SVG */
   .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:800;font-size:1.22rem;color:var(--text);text-decoration:none}
-  .nav-logo:hover{text-decoration:none;color:var(--text)}
-  .nav-logo-svg{flex-shrink:0;display:block}
-  .nav-brand-text{color:var(--text);letter-spacing:-.01em}
-  .nav-ai-pill{font-size:.58rem;font-weight:800;padding:2px 7px;background:rgba(0,200,150,.12);border:1px solid rgba(0,200,150,.25);border-radius:100px;color:var(--em);letter-spacing:.07em;margin-left:2px;vertical-align:middle}
-
-  /* Nav links — DIRECT PAGE LINKS (not anchors) */
   .nav-links{display:flex;list-style:none;gap:2px}
   .nav-link{padding:7px 13px;color:var(--text2);font-size:.88rem;font-weight:500;border-radius:var(--r1);transition:var(--t);text-decoration:none;display:block}
   .nav-link:hover,.nav-link.active{color:var(--em);background:rgba(0,200,150,.07)}
-
-  /* Hamburger */
   .hamburger{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer}
   .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:var(--t)}
-
-  /* Mobile nav */
   .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(5,10,14,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 20px 22px;z-index:999;flex-direction:column;gap:3px}
   .mobile-nav.open{display:flex}
-  .mobile-nav a{padding:12px 16px;color:var(--text2);font-size:.96rem;border-radius:var(--r1);transition:var(--t);text-decoration:none;display:block}
-  .mobile-nav a:hover{color:var(--em);background:rgba(0,200,150,.07)}
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-  /* Disclosure bar */
-  .disc-bar{background:rgba(0,200,150,.04);border-bottom:1px solid rgba(0,200,150,.1);padding:9px 22px;text-align:center;font-size:.75rem;color:var(--text3)}
-  .disc-bar a{color:var(--em)}
+<!-- Disclosure Bar -->
+<div class="disc-bar">
+  🔗 <strong style="color:var(--text2)">Affiliate Disclosure:</strong> Aivora AI may earn a commission when you buy through our links — at no extra cost to you. All tools independently tested.
+  <a href="privacy.html">Learn more</a>
+</div>
 
+<!-- NAVBAR -->
+<header class="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Aivora AI Home">
+      <img src="aivora-logo-primary.png" alt="AIVORA.AI" class="main-logo">
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="product.html" class="nav-link">AI Tools</a></li>
+        <li><a href="./blog.html" class="nav-link">Blog</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:10px">
+      <a href="product.html" class="btn btn-em btn-sm nav-desk-btn">🚀 Explore Tools</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="product.html">AI Tools</a>
+  <a href="./blog.html">Blog</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="product.html" style="margin-top:8px;padding:13px 16px;background:var(--grad-em);color:#fff;border-radius:14px;text-align:center;font-weight:700">🚀 Explore AI Tools</a>
+</nav>
   /* ── HERO ── */
   .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:130px 22px 80px;position:relative;overflow:hidden;background:var(--bg)}
   .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,200,150,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,150,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 80%)}
