@@ -16,19 +16,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="keywords" content="best AI tools 2026,earn money with AI,AI affiliate marketing,AI tools India,Aivora AI,Varun Lalwani"/>
   <meta name="author" content="Varun Lalwani – Aivora AI"/>
   <meta name="robots" content="index,follow"/>
-  <link rel="canonical" href="https://aivoraai.github.io/"/>
+  <link rel="canonical" href="https://aivoraai.github.io/aivora.ai/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Aivora AI – Best AI Tools 2026 | Earn Money Online"/>
   <meta property="og:description" content="India's #1 AI tools directory. Earn money online with AI in 2026."/>
-  <meta property="og:url" content="https://aivoraai.github.io/"/>
+  <meta property="og:url" content="https://aivoraai.github.io/aivora.ai/"/>
   <meta property="og:site_name" content="Aivora AI"/>
-  
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Aivora AI","url":"https://aivoraai.github.io/aivora.ai/","founder":{"@type":"Person","name":"Varun Lalwani"},"contactPoint":{"@type":"ContactPoint","email":"Aivoraai@outlook.com"}}
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet"/>
-  
+
   <style>
+  /* ══════════════════════════════════════════
+     AIVORA AI 2026 — index.html
+     Self-contained. No external CSS needed.
+     All buttons working. All links correct.
+  ══════════════════════════════════════════ */
   :root{
     --bg:#050a0e;--bg2:#091014;--bg3:#0d1a1f;--bg4:#112028;
     --card:#0f1e26;--card2:#142530;
@@ -48,30 +58,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   a{text-decoration:none;color:inherit}
   button{cursor:pointer;font-family:var(--fb);border:none}
   img{display:block;max-width:100%}
-
   .wrap{max-width:1200px;margin:0 auto;padding:0 22px}
   .sec{padding:88px 0}
   .sec-sm{padding:64px 0}
-
   .gt{background:var(--grad-em);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
   .gg{background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-  /* === NEW LOGO STYLING === */
-  .main-logo{
-    height: 78px;
-    width: auto;
-    filter: drop-shadow(0 0 20px rgba(0, 243, 255, 0.75));
-    transition: all 0.3s ease;
-  }
-  .main-logo:hover{
-    filter: drop-shadow(0 0 30px rgba(0, 243, 255, 0.95));
-    transform: scale(1.05);
-  }
-  @media (max-width: 768px) {
-    .main-logo { height: 62px; }
-  }
-
-  /* Rest of your original CSS (Buttons, Navbar, etc.) */
+  /* ── Buttons — ALL WORKING ── */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:13px 28px;border-radius:var(--r2);font-family:var(--fh);font-weight:700;font-size:.92rem;transition:var(--t);cursor:pointer;text-decoration:none}
   .btn-em{background:var(--grad-em);color:#fff;box-shadow:0 4px 20px rgba(0,200,150,.3);border:none}
   .btn-em:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,200,150,.45);color:#fff}
@@ -79,66 +72,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(240,180,41,.42);color:#fff}
   .btn-outline{border:1.5px solid rgba(0,200,150,.25);color:var(--em);background:transparent;font-family:var(--fh);font-weight:600;font-size:.9rem;padding:12px 24px;border-radius:var(--r2);transition:var(--t)}
   .btn-outline:hover{background:rgba(0,200,150,.08);border-color:var(--em);color:var(--em)}
-  .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;background:rgba(5,10,14,.82);backdrop-filter:blur(22px);border-bottom:1px solid transparent;transition:var(--t)}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,.12);color:var(--text);background:transparent;font-family:var(--fh);font-weight:600;font-size:.9rem;padding:12px 24px;border-radius:var(--r2);transition:var(--t)}
+  .btn-ghost:hover{border-color:var(--em);color:var(--em)}
+  .btn-sm{padding:9px 20px;font-size:.84rem}
+
+  /* Chip/label */
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;background:rgba(0,200,150,.1);color:var(--em);border:1px solid rgba(0,200,150,.2);border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .chip.gold{background:rgba(240,180,41,.1);color:var(--gold);border-color:rgba(240,180,41,.2)}
+
+  /* Section header */
+  .sh{text-align:center;margin-bottom:52px}
+  .sh h2{font-family:var(--fh);font-size:clamp(1.8rem,3.8vw,2.8rem);font-weight:800;margin:14px 0 12px;line-height:1.2}
+  .sh p{color:var(--text2);max-width:540px;margin:0 auto;font-size:.97rem}
+
+  /* ── NAVBAR ── */
+  .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba(5,10,14,.82);backdrop-filter:blur(22px);border-bottom:1px solid transparent;transition:var(--t)}
   .navbar.solid{background:rgba(5,10,14,.97);border-bottom-color:var(--border);box-shadow:0 4px 28px rgba(0,0,0,.4)}
   .nav-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+
+  /* Logo with IMAGE */
   .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:800;font-size:1.22rem;color:var(--text);text-decoration:none}
+  .nav-logo:hover{text-decoration:none;color:var(--text)}
+  .nav-logo-img{flex-shrink:0;display:block;height:42px;width:auto;object-fit:contain}
+  .nav-brand-text{color:var(--text);letter-spacing:-.01em}
+  .nav-ai-pill{font-size:.58rem;font-weight:800;padding:2px 7px;background:rgba(0,200,150,.12);border:1px solid rgba(0,200,150,.25);border-radius:100px;color:var(--em);letter-spacing:.07em;margin-left:2px;vertical-align:middle}
+
+  /* Nav links — DIRECT PAGE LINKS (not anchors) */
   .nav-links{display:flex;list-style:none;gap:2px}
   .nav-link{padding:7px 13px;color:var(--text2);font-size:.88rem;font-weight:500;border-radius:var(--r1);transition:var(--t);text-decoration:none;display:block}
   .nav-link:hover,.nav-link.active{color:var(--em);background:rgba(0,200,150,.07)}
+
+  /* Hamburger */
   .hamburger{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer}
   .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:var(--t)}
-  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(5,10,14,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 20px 22px;z-index:999;flex-direction:column;gap:3px}
+
+  /* Mobile nav */
+  .mobile-nav{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(5,10,14,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 20px 22px;z-index:999;flex-direction:column;gap:3px}
   .mobile-nav.open{display:flex}
-  </style>
-</head>
-<body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  .mobile-nav a{padding:12px 16px;color:var(--text2);font-size:.96rem;border-radius:var(--r1);transition:var(--t);text-decoration:none;display:block}
+  .mobile-nav a:hover{color:var(--em);background:rgba(0,200,150,.07)}
 
-<!-- Disclosure Bar -->
-<div class="disc-bar">
-  🔗 <strong style="color:var(--text2)">Affiliate Disclosure:</strong> Aivora AI may earn a commission when you buy through our links — at no extra cost to you. All tools independently tested.
-  <a href="privacy.html">Learn more</a>
-</div>
+  /* Disclosure bar */
+  .disc-bar{background:rgba(0,200,150,.04);border-bottom:1px solid rgba(0,200,150,.1);padding:9px 22px;text-align:center;font-size:.75rem;color:var(--text3)}
+  .disc-bar a{color:var(--em)}
 
-<!-- NAVBAR -->
-<header class="navbar" id="mainNav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="Aivora AI Home">
-      <img src="aivora-logo-primary.png" alt="AIVORA.AI" class="main-logo">
-    </a>
-
-    <nav aria-label="Main navigation">
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="product.html" class="nav-link">AI Tools</a></li>
-        <li><a href="./blog.html" class="nav-link">Blog</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div style="display:flex;align-items:center;gap:10px">
-      <a href="product.html" class="btn btn-em btn-sm nav-desk-btn">🚀 Explore Tools</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<!-- Mobile Nav -->
-<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-  <a href="index.html">Home</a>
-  <a href="product.html">AI Tools</a>
-  <a href="./blog.html">Blog</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="product.html" style="margin-top:8px;padding:13px 16px;background:var(--grad-em);color:#fff;border-radius:14px;text-align:center;font-weight:700">🚀 Explore AI Tools</a>
-</nav>
   /* ── HERO ── */
   .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:130px 22px 80px;position:relative;overflow:hidden;background:var(--bg)}
   .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,200,150,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,150,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 80%)}
@@ -251,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .abox strong{display:block;font-family:var(--fh);font-size:1.9rem;font-weight:800;background:var(--grad-em);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
   .abox span{font-size:.76rem;color:var(--text3);margin-top:4px;display:block}
 
-  /* ── FAQ ── */
+  /* ── FAQ ─ */
   .faq-sec{background:var(--bg2);border-top:1px solid var(--border)}
   .faq-wrap{max-width:760px;margin:0 auto}
   .faq-item{border:1px solid var(--border);border-radius:var(--r2);margin-bottom:10px;background:var(--card);overflow:hidden;transition:var(--t)}
@@ -316,10 +293,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     .hero-stats{gap:16px}
     .sdiv{display:none}
     .earn-banner{flex-direction:column;text-align:center}
+    .navbar{height:68px}
+    .mobile-nav{top:68px}
+    .nav-logo-img{height:38px}
   }
   @media(max-width:480px){
     .hero-btns{flex-direction:column;align-items:center}
     .steps-grid{grid-template-columns:1fr}
+    .nav-logo-img{height:36px}
   }
   </style>
 </head>
@@ -328,6 +309,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <!-- Disclosure Bar -->
 <div class="disc-bar">
   🔗 <strong style="color:var(--text2)">Affiliate Disclosure:</strong> Aivora AI may earn a commission when you buy through our links — at no extra cost to you. All tools independently tested.
@@ -339,20 +321,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="nav-inner">
 
     <a href="index.html" class="nav-logo" aria-label="Aivora AI Home">
-      <svg class="nav-logo-svg" width="34" height="34" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="nlg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00c896"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient>
-          <linearGradient id="nlgc" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6ee7d4"/><stop offset="100%" stop-color="#93c5fd"/></linearGradient>
-        </defs>
-        <circle cx="32" cy="32" r="28" fill="none" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
-        <polygon points="32,8 54,22 54,42 32,56 10,42 10,22" fill="none" stroke="url(#nlg)" stroke-width="1.5" opacity="0.6"/>
-        <polygon points="32,14 50,26 50,38 32,50 14,38 14,26" fill="url(#nlg)" opacity="0.1"/>
-        <line x1="32" y1="10" x2="32" y2="54" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
-        <line x1="10" y1="32" x2="54" y2="32" stroke="url(#nlg)" stroke-width="1" opacity="0.3"/>
-        <polygon points="32,22 44,32 32,42 20,32" fill="url(#nlg)"/>
-        <polygon points="32,27 39,32 32,37 25,32" fill="url(#nlgc)" opacity="0.85"/>
-        <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.95"/>
-      </svg>
+      <img src="aivora-logo-primary.png" alt="Aivora AI" class="nav-logo-img"/>
       <span class="nav-brand-text">Aivora<span class="nav-ai-pill">ai</span></span>
     </a>
 
@@ -361,7 +330,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="product.html" class="nav-link">AI Tools</a></li>
-        <li><a href="./blog.html" class="nav-link">Blog</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
@@ -380,7 +349,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
   <a href="index.html">Home</a>
   <a href="product.html">AI Tools</a>
-  <a href="./blog.html">Blog</a>
+  <a href="blog.html">Blog</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
   <a href="product.html" style="margin-top:8px;padding:13px 16px;background:var(--grad-em);color:#fff;border-radius:var(--r2);text-align:center;font-weight:700;font-family:var(--fh)">🚀 Explore AI Tools</a>
@@ -408,10 +377,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Hero buttons — navigate to PAGES, not anchors -->
     <div class="hero-btns">
       <a href="product.html" class="btn btn-em">🚀 Explore AI Tools</a>
-      <a href="./blog.html" class="btn btn-gold">📖 Read Our Blog</a>
+      <a href="blog.html" class="btn btn-gold">📖 Read Our Blog</a>
       <a href="about.html" class="btn btn-outline">💰 Earn with AI</a>
     </div>
-    <p class="hero-note">✓ 200+ tools reviewed &nbsp;·&nbsp; ✓ 100% free guides &nbsp;·&nbsp; ✓ Updated weekly</p>
+    <p class="hero-note">✓ 200+ tools reviewed  ·  ✓ 100% free guides  ·  ✓ Updated weekly</p>
     <div class="hero-stats" role="list">
       <div class="hstat" role="listitem"><strong>200+</strong><span>AI Tools</span></div>
       <div class="sdiv" aria-hidden="true"></div>
@@ -453,7 +422,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div style="flex:1;min-width:200px">
         <div style="font-size:.7rem;font-weight:800;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px">⭐ #1 Recommended — April 2026</div>
         <h3 style="font-family:var(--fh);font-size:1.1rem;font-weight:800;margin-bottom:6px">The GPT Creator Club</h3>
-        <p style="font-size:.86rem;color:var(--text2);line-height:1.58;margin:0">Learn to build passive income with ChatGPT. 1,000+ members earning online. <a href="./blog-gpt-creator-club-review.html" style="color:var(--gold);font-weight:700">Read our full honest review →</a></p>
+        <p style="font-size:.86rem;color:var(--text2);line-height:1.58;margin:0">Learn to build passive income with ChatGPT. 1,000+ members earning online. <a href="blog-gpt-creator-club-review.html" style="color:var(--gold);font-weight:700">Read our full honest review →</a></p>
       </div>
       <a href="https://11cb9qmgw900qspaydh585ay9p.hop.clickbank.net" target="_blank" rel="noopener sponsored" class="btn btn-gold" onclick="track('Hero-GPT-Banner')" style="flex-shrink:0">Join GPT Creator Club →</a>
     </div>
@@ -601,7 +570,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3>How Affiliate Marketing Works</h3>
         <p>Join a tool's free affiliate program → Get your unique link → Share on blog, YouTube, or social media → Earn commission every month the customer stays subscribed. 100% passive income.</p>
       </div>
-      <a href="./blog-ai-affiliate-marketing.html" class="btn btn-gold btn-sm" style="flex-shrink:0">Learn How →</a>
+      <a href="blog-ai-affiliate-marketing.html" class="btn btn-gold btn-sm" style="flex-shrink:0">Learn How →</a>
     </div>
     <div class="tools-grid">
       <article class="pcard">
@@ -636,8 +605,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </article>
     </div>
     <div style="text-align:center;margin-top:40px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="./blog-gpt-creator-club-review.html" class="btn btn-gold">⭐ GPT Creator Club Full Review →</a>
-      <a href="./blog-ai-affiliate-marketing.html" class="btn btn-outline">📖 Full Affiliate Guide</a>
+      <a href="blog-gpt-creator-club-review.html" class="btn btn-gold">⭐ GPT Creator Club Full Review →</a>
+      <a href="blog-ai-affiliate-marketing.html" class="btn btn-outline">📖 Full Affiliate Guide</a>
     </div>
   </div>
 </section>
@@ -667,7 +636,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div style="text-align:center;margin-top:40px">
-      <a href="./blog-ai-affiliate-marketing.html" class="btn btn-em">🚀 Start Earning with AI →</a>
+      <a href="blog-ai-affiliate-marketing.html" class="btn btn-em">🚀 Start Earning with AI →</a>
     </div>
   </div>
 </section>
@@ -689,7 +658,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>The GPT Creator Club Review 2026: Earn ₹50,000+/Month with ChatGPT?</h3>
           <p>Full honest review after 30 days inside — features, pricing, real earning potential &amp; our final verdict.</p>
           <div class="bmeta"><span>📅 Apr 2026</span><span>⏱ 12 min</span><span>✍️ Varun Lalwani</span></div>
-          <a href="./blog-gpt-creator-club-review.html" class="bread">Read Full Review →</a>
+          <a href="blog-gpt-creator-club-review.html" class="bread">Read Full Review →</a>
         </div>
       </article>
       <!-- Blog 2 -->
@@ -700,7 +669,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>How to Make Money with AI Affiliate Marketing in 2026</h3>
           <p>Step-by-step guide. Top 5 programs paying 30–75% recurring commissions.</p>
           <div class="bmeta"><span>📅 Apr 2026</span><span>⏱ 10 min</span></div>
-          <a href="./blog-ai-affiliate-marketing.html" class="bread">Read Article →</a>
+          <a href="blog-ai-affiliate-marketing.html" class="bread">Read Article →</a>
         </div>
       </article>
       <!-- Blog 3 -->
@@ -708,10 +677,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="bimg" style="background:linear-gradient(135deg,#001428,#002a50)">📈<span class="btag">Trading AI</span></div>
         <div class="bbody">
           <span class="bcat">Trading &amp; Finance</span>
-          <h3>VIP Indicators Review 2026</h3>
+          <h3>VIP Indicators Review 2026: AI Trading Signals That Actually Work?</h3>
           <p>Can AI-powered signals beat the market? Full review with honest verdict.</p>
           <div class="bmeta"><span>📅 Apr 2026</span><span>⏱ 9 min</span></div>
-          <a href="./blog-vip-indicators-review-2026.html" class="bread">Read Review →</a>
+          <a href="blog-vip-indicators-review-2026.html" class="bread">Read Review →</a>
         </div>
       </article>
       <!-- Blog 4 -->
@@ -722,7 +691,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>AI Video Creator Review 2026: Make YouTube Videos Without Your Face</h3>
           <p>Faceless YouTube with AI — no camera, no editing skills. Full review.</p>
           <div class="bmeta"><span>📅 Apr 2026</span><span>⏱ 9 min</span></div>
-          <a href="./blog-ai-video-creator.html" class="bread">Read Review →</a>
+          <a href="blog-ai-video-creator-review-2026.html" class="bread">Read Review →</a>
         </div>
       </article>
       <!-- Blog 5 -->
@@ -733,12 +702,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>AI Tools for Beginners: No-Jargon Guide 2026</h3>
           <p>Zero tech skills needed. Start using AI in 30 minutes.</p>
           <div class="bmeta"><span>📅 Apr 2026</span><span>⏱ 7 min</span></div>
-          <a href="./blog-ai-tools-beginners.html" class="bread">Read Article →</a>
+          <a href="blog-ai-tools-beginners.html" class="bread">Read Article →</a>
         </div>
       </article>
     </div>
     <div style="text-align:center;margin-top:44px">
-      <a href="./blog.html" class="btn btn-outline">View All 19 Articles →</a>
+      <a href="blog.html" class="btn btn-outline">View All 19 Articles →</a>
     </div>
   </div>
 </section>
@@ -755,7 +724,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="cred-grid">
           <div class="cred"><span class="cred-icon">👤</span><div><span class="cred-lbl">Director</span><span class="cred-val">Varun Lalwani</span></div></div>
           <div class="cred"><span class="cred-icon">🏢</span><div><span class="cred-lbl">Company</span><span class="cred-val">Aivora AI</span></div></div>
-          <div class="cred"><span class="cred-icon">📧</span><div><span class="cred-lbl">Email</span><span class="cred-val"><a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a></span></div></div>
+          <div class="cred"><span class="cred-icon">📧</span><div><span class="cred-lbl">Email</span><span class="cred-val"><a href="/cdn-cgi/l/email-protection#e0a189968f92818189a08f95948c8f8f8bce838f8d"><span class="__cf_email__" data-cfemail="13527a657c6172727a537c66677f7c7c78ce838f8d">[email&#160;protected]</span></a></span></div></div>
           <div class="cred"><span class="cred-icon">📍</span><div><span class="cred-lbl">Location</span><span class="cred-val">India 🇮🇳</span></div></div>
         </div>
         <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap">
@@ -791,15 +760,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How do I earn money with AI affiliate marketing?<span class="faq-chev">▼</span></button>
-        <div class="faq-a">Join any tool's affiliate program for free → get your tracking link → share it in your blog, YouTube, or social media → earn 20–75% commission every month the customer stays subscribed. Read our <a href="./blog-ai-affiliate-marketing.html" style="color:var(--em)">complete guide</a>.</div>
+        <div class="faq-a">Join any tool's affiliate program for free → get your tracking link → share it in your blog, YouTube, or social media → earn 20–75% commission every month the customer stays subscribed. Read our <a href="blog-ai-affiliate-marketing.html" style="color:var(--em)">complete guide</a>.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do I need technical skills?<span class="faq-chev">▼</span></button>
-        <div class="faq-a">No. All tools are beginner-friendly. If you can type a sentence, you can use these tools. Check our <a href="./blog-ai-tools-beginners.html" style="color:var(--em)">AI for Beginners guide</a> to get started in 30 minutes.</div>
+        <div class="faq-a">No. All tools are beginner-friendly. If you can type a sentence, you can use these tools. Check our <a href="blog-ai-tools-beginners.html" style="color:var(--em)">AI for Beginners guide</a> to get started in 30 minutes.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How do I contact Aivora AI?<span class="faq-chev">▼</span></button>
-        <div class="faq-a">Email us at <a href="mailto:Aivoraai@outlook.com" style="color:var(--em)">Aivoraai@outlook.com</a> or use the <a href="contact.html" style="color:var(--em)">contact form</a>. Director Varun Lalwani replies within 24 hours.</div>
+        <div class="faq-a">Email us at <a href="/cdn-cgi/l/email-protection#1b5a726d74697a7a725b746e6f7774747035787476" style="color:var(--em)"><span class="__cf_email__" data-cfemail="1c5d756a736e7d7d755c73696870737377327f7371">[email&#160;protected]</span></a> or use the <a href="contact.html" style="color:var(--em)">contact form</a>. Director Varun Lalwani replies within 24 hours.</div>
       </div>
     </div>
   </div>
@@ -815,7 +784,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input class="nl-input" type="email" placeholder="your@email.com" required aria-label="Your email"/>
       <button type="submit" class="btn btn-em">Subscribe Free →</button>
     </form>
-    <p class="nl-note">✓ Free forever &nbsp;·&nbsp; ✓ No spam &nbsp;·&nbsp; ✓ Unsubscribe anytime</p>
+    <p class="nl-note">✓ Free forever  ·  ✓ No spam  ·  ✓ Unsubscribe anytime</p>
   </div>
 </section>
 
@@ -826,17 +795,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="footer-grid">
     <div class="fbrand">
       <a href="index.html" class="nav-logo">
-        <svg width="28" height="28" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <defs><linearGradient id="flg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00c896"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient></defs>
-          <polygon points="32,8 54,22 54,42 32,56 10,42 10,22" fill="none" stroke="url(#flg)" stroke-width="1.5" opacity="0.6"/>
-          <polygon points="32,22 44,32 32,42 20,32" fill="url(#flg)"/>
-          <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.95"/>
-        </svg>
+        <img src="aivora-logo-primary.png" alt="Aivora AI" class="nav-logo-img" style="height:38px"/>
         <span class="nav-brand-text">Aivora<span class="nav-ai-pill">ai</span></span>
       </a>
       <p>India's trusted AI tools directory. Discover, compare and earn with the best AI tools of 2026.</p>
       <div class="contact-info">
-        ✉️ <a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a><br/>
+        ✉️ <a href="/cdn-cgi/l/email-protection#55143c233a2734343c153a2021393a3a3e7b363a38"><span class="__cf_email__" data-cfemail="9ddcf4ebf2effcfcf4ddf2e8e9f1f2f2f6b3fef2f0">[email&#160;protected]</span></a><br/>
         👤 Director: Varun Lalwani · 📍 India 🇮🇳
       </div>
       <div class="soc-row">
@@ -850,17 +814,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h4>AI Tools</h4>
       <a href="product.html">Browse All Tools</a>
       <a href="product.html">Free AI Tools</a>
-      <a href="./blog-vip-indicators-review-2026.html">VIP Indicators</a>
-      <a href="./blog8.html">AI Video Creator</a>
-      <a href="./blog9.html">Massive Passive Profits</a>
+      <a href="blog-vip-indicators-review-2026.html">VIP Indicators</a>
+      <a href="blog-ai-video-creator-review-2026.html">AI Video Creator</a>
+      <a href="blog-massive-passive-profits-review-2026.html">Massive Passive Profits</a>
     </div>
     <div class="fc">
       <h4>Blog</h4>
-      <a href="./blog.html">All Articles</a>
-      <a href="./blog-gpt-creator-club-review.html">GPT Creator Club Review</a>
-      <a href="./blog-ai-affiliate-marketing.html">Affiliate Guide</a>
-      <a href="./blog-ai-tools-beginners.html">AI for Beginners</a>
-      <a href="./blog-ai-growth-stack-2026.html">AI Growth Stack</a>
+      <a href="blog.html">All Articles</a>
+      <a href="blog-gpt-creator-club-review.html">GPT Creator Club Review</a>
+      <a href="blog-ai-affiliate-marketing.html">Affiliate Guide</a>
+      <a href="blog-ai-tools-beginners.html">AI for Beginners</a>
+      <a href="blog-ai-growth-stack-2026.html">AI Growth Stack</a>
     </div>
     <div class="fc">
       <h4>Company</h4>
@@ -871,7 +835,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="footer-bot">
-    <p>© 2026 <strong>Aivora AI</strong> · Director: Varun Lalwani · <a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a> · India 🇮🇳</p>
+    <p>© 2026 <strong>Aivora AI</strong> · Director: Varun Lalwani · <a href="/cdn-cgi/l/email-protection#f9b8908f968b989890b9968c8d95969692d79a9694"><span class="__cf_email__" data-cfemail="3879514e574a59595178574d4c54575753165b5755">[email&#160;protected]</span></a> · India 🇮🇳</p>
     <p>Some links are <a href="privacy.html">affiliate links</a>. Commission at no extra cost to you.</p>
   </div>
 </footer>
@@ -957,7 +921,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
     document.querySelectorAll('.faq-q').forEach(function(q) { q.setAttribute('aria-expanded', 'false'); });
 
-    // Open clicked one if it was closed
+    // If it wasn't open before, open it now
     if (!isOpen) {
       answer.classList.add('open');
       chev.classList.add('open');
@@ -966,15 +930,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   }
 
-  // 6. Affiliate click tracker — FIXED (no syntax error)
-  function track(name) {
-    console.log('[Aivora AI] Affiliate click:', name);
-    if (typeof gtag === 'function') {
-      gtag('event', 'affiliate_click', { tool_name: name });
+  // 6. Tracking function (for affiliate links)
+  function track(label) {
+    console.log('Tracking:', label);
+    // Add Google Analytics or other tracking here
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'click', {
+        'event_category': 'affiliate',
+        'event_label': label
+      });
     }
   }
+
+  // 7. Active nav link based on current page
+  document.addEventListener('DOMContentLoaded', function() {
+    var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
 </script>
 
-<script src="chatbot.js"></script>
 </body>
 </html>
