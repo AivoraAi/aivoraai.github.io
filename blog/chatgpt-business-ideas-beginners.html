@@ -500,7 +500,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="popup-close" onclick="closePopup()">✕</button>
     <h3>🎁 Special Offer!</h3>
     <p>Get our FREE ChatGPT Business Starter Kit worth $97 - limited time only!</p>
-    <form class="popup-form" onsubmit="event.preventDefault(); alert('Thank you! Check your email for instant access. 🎉'); closePopup(); this.reset();">
+    
+    <form action="https://formspree.io/f/mqewprnw" method="POST" class="popup-form">
+      <input type="hidden" name="_subject" value="New Popup Signup - ChatGPT Business Guide"/>
+      <input type="hidden" name="_next" value="https://aivoraai.github.io/thank-you.html"/>
+      
       <div class="form-group">
         <label for="popupName">Your Name</label>
         <input type="text" id="popupName" name="name" required placeholder="Enter your name"/>
@@ -511,6 +515,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <button type="submit" class="form-submit">Get Free Access Now →</button>
     </form>
+    
     <p style="font-size:.78rem;color:var(--text3);text-align:center;margin-top:14px">✓ Instant delivery · ✓ No spam · ✓ Unsubscribe anytime</p>
   </div>
 </div>
