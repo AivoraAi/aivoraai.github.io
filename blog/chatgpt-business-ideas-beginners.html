@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NWSJTJ3M');</script>
-<!-- End Google Tag Manager -->
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   
@@ -59,11 +52,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;background:rgba(5,10,14,.95);backdrop-filter:blur(22px);border-bottom:1px solid transparent;transition:all .28s ease}
     .nav.solid{background:rgba(5,10,14,.98);border-bottom-color:var(--border);box-shadow:0 4px 28px rgba(0,0,0,.4)}
     .nw{max-width:1200px;margin:0 auto;height:100%;padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .logo{display:flex;align-items:center;gap:12px;font-family:var(--fh);font-weight:800;font-size:1.25rem;color:var(--text);transition:all .28s ease}
+    .logo{display:flex;align-items:center;gap:12px;font-family:var(--fh);font-weight:800;font-size:1.25rem;color:var(--text);transition:all .28s ease;white-space:nowrap}
     .logo:hover{opacity:.9}
-    .logo img{width:42px;height:42px;border-radius:50%;object-fit:cover}
-    .logo-text{display:flex;flex-direction:column;line-height:1.2}
-    .logo-main{font-size:1.25rem;letter-spacing:-.02em}
+    .logo img{width:45px;height:45px;border-radius:50%;object-fit:contain;flex-shrink:0}
+    .logo-text{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+    .logo-main{font-size:1.25rem;letter-spacing:-.02em;display:flex;align-items:center}
     .logo-sub{font-size:.65rem;color:var(--em);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
     .bp{font-size:.56rem;font-weight:800;padding:2px 7px;background:rgba(0,200,150,.12);border:1px solid rgba(0,200,150,.25);border-radius:100px;color:var(--em);letter-spacing:.07em;margin-left:4px;vertical-align:middle}
     .nav-ul{display:flex;list-style:none;gap:2px}
@@ -162,10 +155,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .hero h1{font-size:1.9rem}
       .art{padding:35px 18px 55px}
       .social-links{flex-direction:column;align-items:center}
-      .logo img{width:38px;height:38px}
+      .logo img{width:40px;height:40px}
       .logo-main{font-size:1.1rem}
     }
-    
     @media(max-width:480px){
       .hero h1{font-size:1.6rem}
       .idea-card{padding:20px}
@@ -174,18 +166,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </style>
 </head>
 <body>
- <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
 <!-- NAVIGATION HEADER -->
 <header class="nav" id="N">
   <div class="nw">
     <a href="../index.html" class="logo" aria-label="Aivora AI Home">
-      <img src="../assets/images/aivora-logo.png" alt="Aivora AI Logo"/>
+      <img src="../assets/images/aivora-logo.png" alt="Aivora AI Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <svg width="45" height="45" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="display:none;flex-shrink:0">
+        <defs><linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00c896"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient></defs>
+        <circle cx="32" cy="32" r="28" fill="none" stroke="url(#logoGrad)" stroke-width="1.5" opacity="0.3"/>
+        <polygon points="32,18 46,32 32,46 18,32" fill="url(#logoGrad)"/>
+        <circle cx="32" cy="32" r="4" fill="#fff" opacity="0.95"/>
+      </svg>
       <div class="logo-text">
         <span class="logo-main">Aivora<span class="bp">ai</span></span>
-        <span class="logo-sub">AI Tools & Income</span>
+        <span class="logo-sub">AI TOOLS & INCOME</span>
       </div>
     </a>
     <nav>
@@ -219,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="chip">🚀 AI Business Guide</span>
     <h1>ChatGPT Business Ideas for Beginners 2026</h1>
     <p>Start earning with AI today. No coding, no experience needed. Just your ideas + ChatGPT = 💰 Real strategies that work in 2026.</p>
-    <img src="../assets/images/chatgpt-business-banner.png" alt="ChatGPT Business Ideas Banner" class="hero-img"/>
+    <img src="https://via.placeholder.com/950x400/050a0e/00c896?text=ChatGPT+Business+Ideas+2026" alt="ChatGPT Business Ideas Banner" class="hero-img" onerror="this.src='https://via.placeholder.com/950x400/050a0e/00c896?text=Aivora+AI'"/>
   </div>
 </header>
 
@@ -249,7 +244,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><strong>Automation Potential:</strong> Once systems are set up, income becomes semi-passive</li>
   </ul>
 
-  <img src="../assets/images/chatgpt-7-ideas-infographic.png" alt="7 ChatGPT Business Ideas Infographic"/>
+  <img src="https://via.placeholder.com/860x400/0f1e26/00c896?text=7+AI+Business+Ideas+Infographic" alt="7 ChatGPT Business Ideas Infographic" onerror="this.style.display='none'"/>
 
   <h2>The 7 Best ChatGPT Business Ideas for Beginners in 2026</h2>
 
@@ -453,7 +448,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="contact-wrap">
     <h3>💬 Have Questions?</h3>
     <p>Not sure which ChatGPT business idea fits you best? Drop us a message—we'll help you choose!</p>
-    <form onsubmit="event.preventDefault(); alert('Thanks! We\\'ll respond within 24 hours. 🙌'); this.reset();">
+    
+    <form action="https://formspree.io/f/mqewprnw" method="POST">
+      <input type="hidden" name="_subject" value="New Contact Form Message - ChatGPT Business Guide"/>
+      <input type="hidden" name="_next" value="https://aivoraai.github.io/thank-you.html"/>
+      
       <div class="form-group">
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" required placeholder="e.g. Priya Sharma"/>
@@ -562,10 +561,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   });
   
-  // Popup modal - show after 5 seconds
+  // Popup modal - show after 5 seconds (only once per session)
   setTimeout(function(){
-    document.getElementById('popupOverlay').classList.add('show');
-    document.body.style.overflow='hidden';
+    if(!sessionStorage.getItem('popupShown')){
+      document.getElementById('popupOverlay').classList.add('show');
+      document.body.style.overflow='hidden';
+      sessionStorage.setItem('popupShown','true');
+    }
   },5000);
   
   function closePopup(){
