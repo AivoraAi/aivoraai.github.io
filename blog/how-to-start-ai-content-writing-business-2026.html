@@ -512,3 +512,94 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
       <div class="form-group">
         <label for="name">Your Namename">Your Name
+           <input type="text" id="popupName" name="name" required placeholder="Enter your name"/>
+      </div>
+      <div class="form-group">
+        <label for="popupEmail">Email Address</label>
+        <input type="email" id="popupEmail" name="email" required placeholder="Enter your email"/>
+      </div>
+      <button type="submit" class="form-submit">🚀 Get Free Starter Kit →</button>
+    </form>
+    
+    <div class="popup-guarantee">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      <span>No spam · Unsubscribe anytime</span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 <strong>Aivora AI</strong> · Director: Varun Lalwani · <a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a> · India 🇮</p>
+  <p><a href="../privacy.html">Privacy Policy</a> · <a href="../terms.html">Terms of Service</a> · <a href="../disclosure.html">Affiliate Disclosure</a></p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+  // Navigation scroll effect
+  var nav=document.getElementById('N');
+  window.addEventListener('scroll',function(){
+    nav.classList.toggle('solid',window.scrollY>50);
+  },{passive:true});
+  
+  // Mobile menu toggle
+  var ham=document.getElementById('H'),mob=document.getElementById('M');
+  ham.addEventListener('click',function(){
+    var open=mob.classList.toggle('open');
+    ham.setAttribute('aria-expanded',open?'true':'false');
+    var s=ham.querySelectorAll('span');
+    if(open){
+      s[0].style.transform='translateY(7px) rotate(45deg)';
+      s[1].style.opacity='0';
+      s[2].style.transform='translateY(-7px) rotate(-45deg)';
+    } else {
+      s[0].style.transform='';
+      s[1].style.opacity='';
+      s[2].style.transform='';
+    }
+  });
+  
+  // Close mobile menu on link click
+  mob.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      mob.classList.remove('open');
+      var s=ham.querySelectorAll('span');
+      s[0].style.transform='';
+      s[1].style.opacity='';
+      s[2].style.transform='';
+    });
+  });
+  
+  // Popup modal - show after 5 seconds (only once per session)
+  setTimeout(function(){
+    if(!sessionStorage.getItem('popupShown')){
+      document.getElementById('popupOverlay').classList.add('show');
+      document.body.style.overflow='hidden';
+      sessionStorage.setItem('popupShown','true');
+    }
+  },5000);
+  
+  function closePopup(){
+    document.getElementById('popupOverlay').classList.remove('show');
+    document.body.style.overflow='';
+  }
+  
+  // Close popup on outside click
+  document.getElementById('popupOverlay').addEventListener('click',function(e){
+    if(e.target===this) closePopup();
+  });
+  
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var href=this.getAttribute('href');
+      if(href!=='#'){
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({behavior:'smooth'});
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
