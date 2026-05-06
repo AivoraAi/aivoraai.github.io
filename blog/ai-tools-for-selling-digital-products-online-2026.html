@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
+  <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -89,18 +89,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .hero p{color:var(--text2);font-size:1.15rem;max-width:750px;margin:0 auto 28px;line-height:1.75}
     .hero-img{width:100%;max-width:950px;border-radius:var(--r3);margin:35px auto 0;display:block;border:1px solid var(--border);box-shadow:0 8px 32px rgba(0,0,0,.4)}
     
-    /* TABLE OF CONTENTS */
-    .toc{max-width:860px;margin:40px auto 0;padding:0 22px}
-    .toc-box{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:28px}
-    .toc h3{font-family:var(--fh);font-size:1.25rem;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:10px}
-    .toc ul{list-style:none;margin:0}
-    .toc li{margin:12px 0;padding-left:24px;position:relative}
-    .toc li::before{content:'→';position:absolute;left:0;color:var(--em);font-weight:700}
-    .toc a{color:var(--text2);transition:color .28s;font-weight:500}
-    .toc a:hover{color:var(--em)}
-    
-    /* ARTICLE */
-    .art{max-width:860px;margin:0 auto;padding:45px 22px 65px}
+    /* ARTICLE LAYOUT WITH SIDEBAR */
+    .article-wrapper{max-width:1200px;margin:0 auto;padding:45px 22px 65px;display:grid;grid-template-columns:1fr 320px;gap:40px}
+    .art{max-width:860px}
     .art h2{font-family:var(--fh);font-size:1.55rem;font-weight:800;margin:50px 0 18px;padding-top:26px;border-top:1px solid var(--border);line-height:1.25;color:var(--text)}
     .art h3{font-family:var(--fh);font-size:1.18rem;font-weight:700;margin:30px 0 14px;color:var(--em)}
     .art p{font-size:1.02rem;color:var(--text2);margin-bottom:20px;line-height:1.88}
@@ -108,6 +99,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .art li{font-size:1rem;color:var(--text2);line-height:1.85;margin-bottom:11px}
     .art strong{color:var(--text);font-weight:600}
     .art img{width:100%;border-radius:var(--r2);margin:26px 0;border:1px solid var(--border);box-shadow:0 4px 16px rgba(0,0,0,.3)}
+    
+    /* SIDEBAR TABLE OF CONTENTS */
+    .sidebar{position:sticky;top:100px;height:fit-content}
+    .toc-sidebar{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:24px;position:sticky;top:100px}
+    .toc-sidebar h3{font-family:var(--fh);font-size:1.1rem;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+    .toc-sidebar ul{list-style:none;margin:0}
+    .toc-sidebar li{margin:10px 0;padding-left:20px;position:relative}
+    .toc-sidebar li::before{content:'→';position:absolute;left:0;color:var(--em);font-weight:700;font-size:.9rem}
+    .toc-sidebar a{color:var(--text2);transition:all .28s;font-size:.9rem;font-weight:500;display:block;padding:4px 0}
+    .toc-sidebar a:hover{color:var(--em);padding-left:4px}
     
     .idea-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:24px;margin:26px 0;transition:all .3s ease}
     .idea-card:hover{transform:translateY(-4px);border-color:var(--em);box-shadow:0 8px 24px rgba(0,200,150,.1)}
@@ -172,6 +173,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .footer a{color:var(--em);transition:color .28s}
     .footer a:hover{color:var(--gold)}
     
+    @media(max-width:1024px){
+      .article-wrapper{grid-template-columns:1fr}
+      .sidebar{display:none}
+    }
     @media(max-width:820px){
       .nav-ul,.btn-cta{display:none}
       .ham{display:flex}
@@ -191,7 +196,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -243,257 +248,260 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="chip">💻 Digital Products + AI</span>
     <h1>Best AI Tools for Selling Digital Products Online (2026 Guide)</h1>
     <p>Discover the complete AI toolkit to create, market, and sell digital products on autopilot. From ebooks to courses, templates to software — learn how AI can automate your entire digital business.</p>
-    <img src="https://via.placeholder.com/950x400/050a0e/00c896?text=AI+Tools+Selling+Digital+Products" alt="AI Tools for Selling Digital Products Online Banner" class="hero-img" onerror="this.src='https://via.placeholder.com/950x400/050a0e/00c896?text=Digital+Products+AI'"/>
+    <img src="../assets/images/ai-tools-selling-digital-products-banner.png" alt="AI Tools for Selling Digital Products Online Banner" class="hero-img" onerror="this.src='https://via.placeholder.com/950x400/050a0e/00c896?text=AI+Tools+Selling+Digital+Products'"/>
   </div>
 </header>
 
-<!-- TABLE OF CONTENTS -->
-<nav class="toc">
-  <div class="toc-box">
-    <h3>📑 Table of Contents</h3>
+<!-- MAIN CONTENT WITH SIDEBAR -->
+<div class="article-wrapper">
+  
+  <!-- MAIN ARTICLE -->
+  <article class="art">
+    
+    <div class="callout call-em">
+      <p>💡 <strong>Quick Summary:</strong> AI has revolutionized digital product creation and sales. This guide reveals the exact tools, platforms, and workflows to build, launch, and scale digital products with AI automation — from ideation to first sale in days, not months.</p>
+    </div>
+
+    <p>The digital product market is exploding — projected to reach <strong>$256 billion by 2027</strong>. And AI is making it easier than ever to create, market, and sell digital products without technical skills or massive upfront investment.</p>
+    
+    <p>Whether you want to sell ebooks, online courses, templates, software, or digital art, AI tools can handle 80% of the heavy lifting: creation, design, marketing, customer support, and even sales automation.</p>
+    
+    <p>In this comprehensive 2026 guide, you'll discover:</p>
     <ul>
-      <li><a href="#what-are-digital-products">What are digital products?</a></li>
-      <li><a href="#best-ai-tools">Best AI tools for selling digital products</a></li>
-      <li><a href="#product-creation-process">Product creation process with AI</a></li>
-      <li><a href="#selling-platforms">Best selling platforms</a></li>
-      <li><a href="#final-strategy">Final strategy & scaling tips</a></li>
+      <li>📚 The best AI tools for every stage of digital product creation</li>
+      <li>🛒 Top platforms to sell your digital products</li>
+      <li>⚡ Step-by-step workflows to launch faster</li>
+      <li>💰 Proven strategies to automate sales and scale revenue</li>
     </ul>
-  </div>
-</nav>
+    
+    <p>Let's build your AI-powered digital product business.</p>
 
-<!-- ARTICLE CONTENT -->
-<article class="art">
-  
-  <div class="callout call-em">
-    <p>💡 <strong>Quick Summary:</strong> AI has revolutionized digital product creation and sales. This guide reveals the exact tools, platforms, and workflows to build, launch, and scale digital products with AI automation — from ideation to first sale in days, not months.</p>
-  </div>
+    <h2 id="what-are-digital-products">What are digital products?</h2>
+    
+    <p>Digital products are intangible goods delivered electronically. Unlike physical products, they require no inventory, shipping, or manufacturing — making them perfect for AI automation and passive income.</p>
+    
+    <h3>Popular Types of Digital Products:</h3>
+    <ul>
+      <li><strong>Ebooks & Guides:</strong> PDFs, Kindle books, whitepapers</li>
+      <li><strong>Online Courses:</strong> Video courses, workshops, masterclasses</li>
+      <li><strong>Templates & Tools:</strong> Notion templates, Canva designs, spreadsheets</li>
+      <li><strong>Software & Apps:</strong> SaaS tools, browser extensions, mobile apps</li>
+      <li><strong>Digital Art & Media:</strong> Stock photos, music, graphics, NFTs</li>
+      <li><strong>Printables:</strong> Planners, worksheets, checklists, wall art</li>
+    </ul>
+    
+    <div class="idea-card">
+      <h4>✅ Why Digital Products + AI = Perfect Match</h4>
+      <p>AI can create, optimize, and sell digital products 24/7 without human intervention. Once set up, your AI systems handle creation, marketing, delivery, and customer support — generating revenue while you sleep.</p>
+      <span class="tag">🎯 Result: True passive income at scale</span>
+    </div>
 
-  <p><strong>Keywords:</strong> AI tools for selling digital products online, sell digital products AI, AI product creation, digital product automation, AI ecommerce tools, sell online with AI, digital products 2026, AI business tools, passive income AI, automated sales AI</p>
+    <h2 id="best-ai-tools">Best AI tools for selling digital products</h2>
+    
+    <p>Here are the essential AI tools organized by function:</p>
+    
+    <h3>🎨 Product Creation Tools</h3>
+    <ul>
+      <li><strong>ChatGPT/Claude:</strong> Write ebooks, course scripts, templates, and documentation</li>
+      <li><strong>Jasper/Copy.ai:</strong> Create marketing copy, product descriptions, sales pages</li>
+      <li><strong>Canva AI/Midjourney:</strong> Design covers, graphics, templates, and visual assets</li>
+      <li><strong>Descript/Runway:</strong> Edit videos, create course content, generate subtitles</li>
+      <li><strong>Murf.ai/ElevenLabs:</strong> Generate professional voiceovers for courses and videos</li>
+    </ul>
+    
+    <h3>📦 Product Management & Delivery</h3>
+    <ul>
+      <li><strong>Gumroad/LemonSqueezy:</strong> All-in-one platforms with AI-powered analytics</li>
+      <li><strong>Teachable/Thinkific:</strong> Course platforms with AI student engagement tools</li>
+      <li><strong>SendOwl:</strong> Automated digital delivery with fraud protection</li>
+    </ul>
+    
+    <h3>📢 Marketing & Sales Automation</h3>
+    <ul>
+      <li><strong>ConvertKit/MailerLite:</strong> AI email sequences and audience segmentation</li>
+      <li><strong>ManyChat/Chatfuel:</strong> AI chatbots for sales and support</li>
+      <li><strong>Buffer/Later:</strong> AI social media scheduling and content optimization</li>
+      <li><strong>AdCreative.ai:</strong> Generate high-converting ad creatives automatically</li>
+    </ul>
+    
+    <h3>📊 Analytics & Optimization</h3>
+    <ul>
+      <li><strong>Google Analytics 4:</strong> AI-powered insights and predictions</li>
+      <li><strong>Hotjar:</strong> AI heatmaps and user behavior analysis</li>
+      <li><strong>Optimizely:</strong> AI-driven A/B testing for conversion optimization</li>
+    </ul>
 
-  <p>The digital product market is exploding — projected to reach <strong>$256 billion by 2027</strong>. And AI is making it easier than ever to create, market, and sell digital products without technical skills or massive upfront investment.</p>
-  
-  <p>Whether you want to sell ebooks, online courses, templates, software, or digital art, AI tools can handle 80% of the heavy lifting: creation, design, marketing, customer support, and even sales automation.</p>
-  
-  <p>In this comprehensive 2026 guide, you'll discover:</p>
-  <ul>
-    <li>📚 The best AI tools for every stage of digital product creation</li>
-    <li>🛒 Top platforms to sell your digital products</li>
-    <li>⚡ Step-by-step workflows to launch faster</li>
-    <li>💰 Proven strategies to automate sales and scale revenue</li>
-  </ul>
-  
-  <p>Let's build your AI-powered digital product business.</p>
+    <h2 id="product-creation-process">Product creation process with AI</h2>
+    
+    <p>Follow this proven 5-step workflow to create and launch digital products using AI:</p>
+    
+    <h3>Step 1: Market Research & Validation (AI-Powered)</h3>
+    <ul>
+      <li>Use <strong>Google Trends</strong> and <strong>AnswerThePublic</strong> to find trending topics</li>
+      <li>Analyze competitors with <strong>SEMrush</strong> or <strong>Ahrefs</strong></li>
+      <li>Survey your audience using <strong>Typeform</strong> with AI analysis</li>
+      <li>Validate demand before creating anything</li>
+    </ul>
+    
+    <h3>Step 2: Product Creation (AI-Assisted)</h3>
+    <ul>
+      <li><strong>Outline:</strong> Use ChatGPT to create detailed structure</li>
+      <li><strong>Content:</strong> Generate drafts with AI, then add your expertise</li>
+      <li><strong>Design:</strong> Use Canva AI for professional layouts and visuals</li>
+      <li><strong>Quality Check:</strong> Use Grammarly and Hemingway for polish</li>
+    </ul>
+    
+    <h3>Step 3: Pricing Strategy (AI-Optimized)</h3>
+    <ul>
+      <li>Research competitor pricing</li>
+      <li>Use <strong>Price Intelligently</strong> or similar AI tools for optimal pricing</li>
+      <li>Test different price points with A/B testing</li>
+      <li>Consider tiered pricing (Basic, Pro, Premium)</li>
+    </ul>
+    
+    <h3>Step 4: Sales Page & Marketing (AI-Generated)</h3>
+    <ul>
+      <li>Write compelling copy with <strong>Jasper</strong> or <strong>Copy.ai</strong></li>
+      <li>Create visuals with <strong>Midjourney</strong> or <strong>Canva</strong></li>
+      <li>Set up automated email sequences</li>
+      <li>Schedule social media posts with AI tools</li>
+    </ul>
+    
+    <h3>Step 5: Launch & Automate</h3>
+    <ul>
+      <li>Set up payment processing (Stripe, PayPal)</li>
+      <li>Configure automated delivery systems</li>
+      <li>Enable AI customer support chatbots</li>
+      <li>Monitor analytics and optimize</li>
+    </ul>
+    
+    <div class="callout call-gold">
+      <p>⭐ <strong>Pro Tip:</strong> Start with one simple digital product (like a $7-27 ebook or template). Validate demand, then expand to higher-ticket items like courses or software.</p>
+    </div>
 
-  <h2 id="what-are-digital-products">What are digital products?</h2>
-  
-  <p>Digital products are intangible goods delivered electronically. Unlike physical products, they require no inventory, shipping, or manufacturing — making them perfect for AI automation and passive income.</p>
-  
-  <h3>Popular Types of Digital Products:</h3>
-  <ul>
-    <li><strong>Ebooks & Guides:</strong> PDFs, Kindle books, whitepapers</li>
-    <li><strong>Online Courses:</strong> Video courses, workshops, masterclasses</li>
-    <li><strong>Templates & Tools:</strong> Notion templates, Canva designs, spreadsheets</li>
-    <li><strong>Software & Apps:</strong> SaaS tools, browser extensions, mobile apps</li>
-    <li><strong>Digital Art & Media:</strong> Stock photos, music, graphics, NFTs</li>
-    <li><strong>Printables:</strong> Planners, worksheets, checklists, wall art</li>
-  </ul>
-  
-  <div class="idea-card">
-    <h4>✅ Why Digital Products + AI = Perfect Match</h4>
-    <p>AI can create, optimize, and sell digital products 24/7 without human intervention. Once set up, your AI systems handle creation, marketing, delivery, and customer support — generating revenue while you sleep.</p>
-    <span class="tag">🎯 Result: True passive income at scale</span>
-  </div>
+    <h2 id="selling-platforms">Best selling platforms</h2>
+    
+    <p>Choose the right platform based on your product type and goals:</p>
+    
+    <h3>All-in-One Platforms (Best for Beginners)</h3>
+    <ul>
+      <li><strong>Gumroad:</strong> Simple setup, handles payments & delivery, 10% fee</li>
+      <li><strong>LemonSqueezy:</strong> Modern interface, built-in affiliates, 5% + $0.50</li>
+      <li><strong>Payhip:</strong> EU VAT handling, coupons, 5% fee (free plan)</li>
+    </ul>
+    
+    <h3>Course Platforms</h3>
+    <ul>
+      <li><strong>Teachable:</strong> Best for video courses, $39+/month</li>
+      <li><strong>Thinkific:</strong> Robust features, free plan available</li>
+      <li><strong>Kajabi:</strong> All-in-one marketing, $149+/month</li>
+    </ul>
+    
+    <h3>Marketplace Platforms</h3>
+    <ul>
+      <li><strong>Etsy:</strong> Great for printables and templates</li>
+      <li><strong>Creative Market:</strong> Design assets and templates</li>
+      <li><strong>Udemy:</strong> Course marketplace (but they take 50-75%)</li>
+    </ul>
+    
+    <h3>Self-Hosted Solutions</h3>
+    <ul>
+      <li><strong>WordPress + WooCommerce:</strong> Full control, more technical</li>
+      <li><strong>Shopify:</strong> Easy setup, $29+/month + apps</li>
+    </ul>
+    
+    <div class="idea-card">
+      <h4>✅ Platform Recommendation</h4>
+      <p>Start with <strong>Gumroad</strong> or <strong>LemonSqueezy</strong> for simplicity. Once you're making $1K+/month, consider upgrading to Teachable or self-hosted solutions for more control and lower fees.</p>
+      <span class="tag">🚀 Start simple, scale smart</span>
+    </div>
 
-  <h2 id="best-ai-tools">Best AI tools for selling digital products</h2>
-  
-  <p>Here are the essential AI tools organized by function:</p>
-  
-  <h3>🎨 Product Creation Tools</h3>
-  <ul>
-    <li><strong>ChatGPT/Claude:</strong> Write ebooks, course scripts, templates, and documentation</li>
-    <li><strong>Jasper/Copy.ai:</strong> Create marketing copy, product descriptions, sales pages</li>
-    <li><strong>Canva AI/Midjourney:</strong> Design covers, graphics, templates, and visual assets</li>
-    <li><strong>Descript/Runway:</strong> Edit videos, create course content, generate subtitles</li>
-    <li><strong>Murf.ai/ElevenLabs:</strong> Generate professional voiceovers for courses and videos</li>
-  </ul>
-  
-  <h3>📦 Product Management & Delivery</h3>
-  <ul>
-    <li><strong>Gumroad/LemonSqueezy:</strong> All-in-one platforms with AI-powered analytics</li>
-    <li><strong>Teachable/Thinkific:</strong> Course platforms with AI student engagement tools</li>
-    <li><strong>SendOwl:</strong> Automated digital delivery with fraud protection</li>
-  </ul>
-  
-  <h3>📢 Marketing & Sales Automation</h3>
-  <ul>
-    <li><strong>ConvertKit/MailerLite:</strong> AI email sequences and audience segmentation</li>
-    <li><strong>ManyChat/Chatfuel:</strong> AI chatbots for sales and support</li>
-    <li><strong>Buffer/Later:</strong> AI social media scheduling and content optimization</li>
-    <li><strong>AdCreative.ai:</strong> Generate high-converting ad creatives automatically</li>
-  </ul>
-  
-  <h3>📊 Analytics & Optimization</h3>
-  <ul>
-    <li><strong>Google Analytics 4:</strong> AI-powered insights and predictions</li>
-    <li><strong>Hotjar:</strong> AI heatmaps and user behavior analysis</li>
-    <li><strong>Optimizely:</strong> AI-driven A/B testing for conversion optimization</li>
-  </ul>
+    <h2 id="final-strategy">Final strategy & scaling tips</h2>
+    
+    <p>Once you've launched your first digital product, use these strategies to scale:</p>
+    
+    <h3>1. Build an Email List (Your Most Valuable Asset)</h3>
+    <ul>
+      <li>Offer a free lead magnet (checklist, mini-guide, template)</li>
+      <li>Use AI to write automated email sequences</li>
+      <li>Segment your audience for targeted offers</li>
+      <li>Send weekly value emails to build trust</li>
+    </ul>
+    
+    <h3>2. Create a Product Ecosystem</h3>
+    <ul>
+      <li>Start with a low-ticket product ($7-27)</li>
+      <li>Upsell to mid-tier ($47-97)</li>
+      <li>Offer premium product or coaching ($197+)</li>
+      <li>Use AI to repurpose content across products</li>
+    </ul>
+    
+    <h3>3. Automate Everything</h3>
+    <ul>
+      <li><strong>Marketing:</strong> AI social media scheduling, email automation</li>
+      <li><strong>Sales:</strong> Chatbots for FAQs, automated checkout</li>
+      <li><strong>Delivery:</strong> Instant digital downloads, automated access</li>
+      <li><strong>Support:</strong> AI chatbots, knowledge base, FAQ automation</li>
+    </ul>
+    
+    <h3>4. Leverage User-Generated Content</h3>
+    <ul>
+      <li>Encourage reviews and testimonials</li>
+      <li>Create case studies from successful customers</li>
+      <li>Use AI to analyze feedback and improve products</li>
+      <li>Build community around your brand</li>
+    </ul>
+    
+    <h3>5. Scale with Paid Advertising</h3>
+    <ul>
+      <li>Start with small budgets ($5-10/day)</li>
+      <li>Use AI tools like <strong>AdCreative.ai</strong> for ad creation</li>
+      <li>Retarget website visitors</li>
+      <li>Scale what works, cut what doesn't</li>
+    </ul>
+    
+    <div class="callout call-em">
+      <p>💡 <strong>Key Metric to Track:</strong> Customer Lifetime Value (LTV) vs. Customer Acquisition Cost (CAC). Aim for LTV:CAC ratio of 3:1 or higher.</p>
+    </div>
 
-  <h2 id="product-creation-process">Product creation process with AI</h2>
-  
-  <p>Follow this proven 5-step workflow to create and launch digital products using AI:</p>
-  
-  <h3>Step 1: Market Research & Validation (AI-Powered)</h3>
-  <ul>
-    <li>Use <strong>Google Trends</strong> and <strong>AnswerThePublic</strong> to find trending topics</li>
-    <li>Analyze competitors with <strong>SEMrush</strong> or <strong>Ahrefs</strong></li>
-    <li>Survey your audience using <strong>Typeform</strong> with AI analysis</li>
-    <li>Validate demand before creating anything</li>
-  </ul>
-  
-  <h3>Step 2: Product Creation (AI-Assisted)</h3>
-  <ul>
-    <li><strong>Outline:</strong> Use ChatGPT to create detailed structure</li>
-    <li><strong>Content:</strong> Generate drafts with AI, then add your expertise</li>
-    <li><strong>Design:</strong> Use Canva AI for professional layouts and visuals</li>
-    <li><strong>Quality Check:</strong> Use Grammarly and Hemingway for polish</li>
-  </ul>
-  
-  <h3>Step 3: Pricing Strategy (AI-Optimized)</h3>
-  <ul>
-    <li>Research competitor pricing</li>
-    <li>Use <strong>Price Intelligently</strong> or similar AI tools for optimal pricing</li>
-    <li>Test different price points with A/B testing</li>
-    <li>Consider tiered pricing (Basic, Pro, Premium)</li>
-  </ul>
-  
-  <h3>Step 4: Sales Page & Marketing (AI-Generated)</h3>
-  <ul>
-    <li>Write compelling copy with <strong>Jasper</strong> or <strong>Copy.ai</strong></li>
-    <li>Create visuals with <strong>Midjourney</strong> or <strong>Canva</strong></li>
-    <li>Set up automated email sequences</li>
-    <li>Schedule social media posts with AI tools</li>
-  </ul>
-  
-  <h3>Step 5: Launch & Automate</h3>
-  <ul>
-    <li>Set up payment processing (Stripe, PayPal)</li>
-    <li>Configure automated delivery systems</li>
-    <li>Enable AI customer support chatbots</li>
-    <li>Monitor analytics and optimize</li>
-  </ul>
-  
-  <div class="callout call-gold">
-    <p>⭐ <strong>Pro Tip:</strong> Start with one simple digital product (like a $7-27 ebook or template). Validate demand, then expand to higher-ticket items like courses or software.</p>
-  </div>
+    <h2>Internal Resources to Accelerate Your Digital Product Business</h2>
+    
+    <p>Check out these related guides on Aivora AI:</p>
+    <ul>
+      <li><a href="how-to-automate-income-using-ai-step-by-step-2026.html" class="internal-link">How to Automate Income Using AI Step by Step →</a></li>
+      <li><a href="how-to-start-ai-blogging-and-earn-money-2026.html" class="internal-link">How to Start AI Blogging and Earn Money →</a></li>
+      <li><a href="ai-content-vs-human-content-seo-2026.html" class="internal-link">AI Content vs Human Content SEO 2026 →</a></li>
+      <li><a href="how-to-grow-blog-traffic-using-ai-tools-2026.html" class="internal-link">How to Grow Blog Traffic Using AI Tools →</a></li>
+    </ul>
 
-  <h2 id="selling-platforms">Best selling platforms</h2>
-  
-  <p>Choose the right platform based on your product type and goals:</p>
-  
-  <h3>All-in-One Platforms (Best for Beginners)</h3>
-  <ul>
-    <li><strong>Gumroad:</strong> Simple setup, handles payments & delivery, 10% fee</li>
-    <li><strong>LemonSqueezy:</strong> Modern interface, built-in affiliates, 5% + $0.50</li>
-    <li><strong>Payhip:</strong> EU VAT handling, coupons, 5% fee (free plan)</li>
-  </ul>
-  
-  <h3>Course Platforms</h3>
-  <ul>
-    <li><strong>Teachable:</strong> Best for video courses, $39+/month</li>
-    <li><strong>Thinkific:</strong> Robust features, free plan available</li>
-    <li><strong>Kajabi:</strong> All-in-one marketing, $149+/month</li>
-  </ul>
-  
-  <h3>Marketplace Platforms</h3>
-  <ul>
-    <li><strong>Etsy:</strong> Great for printables and templates</li>
-    <li><strong>Creative Market:</strong> Design assets and templates</li>
-    <li><strong>Udemy:</strong> Course marketplace (but they take 50-75%)</li>
-  </ul>
-  
-  <h3>Self-Hosted Solutions</h3>
-  <ul>
-    <li><strong>WordPress + WooCommerce:</strong> Full control, more technical</li>
-    <li><strong>Shopify:</strong> Easy setup, $29+/month + apps</li>
-  </ul>
-  
-  <div class="idea-card">
-    <h4>✅ Platform Recommendation</h4>
-    <p>Start with <strong>Gumroad</strong> or <strong>LemonSqueezy</strong> for simplicity. Once you're making $1K+/month, consider upgrading to Teachable or self-hosted solutions for more control and lower fees.</p>
-    <span class="tag">🚀 Start simple, scale smart</span>
-  </div>
+    <div class="cta-box">
+      <h3>🎁 Free Resource: Digital Product Launch Checklist</h3>
+      <p>Download our free PDF with the complete digital product launch checklist, AI prompt templates for product creation, pricing calculators, and a 30-day launch plan — everything you need to launch your first AI-powered digital product.</p>
+      <a href="https://aivoraai.github.io/resources/digital-product-launch-checklist.pdf" class="btn" target="_blank" rel="noopener">Download Free Checklist →</a>
+      <p style="font-size:.8rem;color:var(--text3);margin-top:14px">✓ Instant download · ✓ No email required · ✓ Updated for 2026</p>
+    </div>
 
-  <h2 id="final-strategy">Final strategy & scaling tips</h2>
-  
-  <p>Once you've launched your first digital product, use these strategies to scale:</p>
-  
-  <h3>1. Build an Email List (Your Most Valuable Asset)</h3>
-  <ul>
-    <li>Offer a free lead magnet (checklist, mini-guide, template)</li>
-    <li>Use AI to write automated email sequences</li>
-    <li>Segment your audience for targeted offers</li>
-    <li>Send weekly value emails to build trust</li>
-  </ul>
-  
-  <h3>2. Create a Product Ecosystem</h3>
-  <ul>
-    <li>Start with a low-ticket product ($7-27)</li>
-    <li>Upsell to mid-tier ($47-97)</li>
-    <li>Offer premium product or coaching ($197+)</li>
-    <li>Use AI to repurpose content across products</li>
-  </ul>
-  
-  <h3>3. Automate Everything</h3>
-  <ul>
-    <li><strong>Marketing:</strong> AI social media scheduling, email automation</li>
-    <li><strong>Sales:</strong> Chatbots for FAQs, automated checkout</li>
-    <li><strong>Delivery:</strong> Instant digital downloads, automated access</li>
-    <li><strong>Support:</strong> AI chatbots, knowledge base, FAQ automation</li>
-  </ul>
-  
-  <h3>4. Leverage User-Generated Content</h3>
-  <ul>
-    <li>Encourage reviews and testimonials</li>
-    <li>Create case studies from successful customers</li>
-    <li>Use AI to analyze feedback and improve products</li>
-    <li>Build community around your brand</li>
-  </ul>
-  
-  <h3>5. Scale with Paid Advertising</h3>
-  <ul>
-    <li>Start with small budgets ($5-10/day)</li>
-    <li>Use AI tools like <strong>AdCreative.ai</strong> for ad creation</li>
-    <li>Retarget website visitors</li>
-    <li>Scale what works, cut what doesn't</li>
-  </ul>
-  
-  <div class="callout call-em">
-    <p>💡 <strong>Key Metric to Track:</strong> Customer Lifetime Value (LTV) vs. Customer Acquisition Cost (CAC). Aim for LTV:CAC ratio of 3:1 or higher.</p>
-  </div>
+    <div class="callout call-gold">
+      <p>⭐ <strong>Final Thought:</strong> The barrier to entry for digital products has never been lower. With AI handling creation, marketing, and sales automation, you can build a profitable digital product business in weeks — not years. Start small, validate fast, and scale smart.</p>
+    </div>
 
-  <h2>Internal Resources to Accelerate Your Digital Product Business</h2>
-  
-  <p>Check out these related guides on Aivora AI:</p>
-  <ul>
-    <li><a href="how-to-automate-income-using-ai-step-by-step-2026.html" class="internal-link">How to Automate Income Using AI Step by Step →</a></li>
-    <li><a href="how-to-start-ai-blogging-and-earn-money-2026.html" class="internal-link">How to Start AI Blogging and Earn Money →</a></li>
-    <li><a href="ai-content-vs-human-content-seo-2026.html" class="internal-link">AI Content vs Human Content SEO 2026 →</a></li>
-    <li><a href="how-to-grow-blog-traffic-using-ai-tools-2026.html" class="internal-link">How to Grow Blog Traffic Using AI Tools →</a></li>
-  </ul>
+  </article>
 
-  <div class="cta-box">
-    <h3>🎁 Free Resource: Digital Product Launch Checklist</h3>
-    <p>Download our free PDF with the complete digital product launch checklist, AI prompt templates for product creation, pricing calculators, and a 30-day launch plan — everything you need to launch your first AI-powered digital product.</p>
-    <a href="https://aivoraai.github.io/resources/digital-product-launch-checklist.pdf" class="btn" target="_blank" rel="noopener">Download Free Checklist →</a>
-    <p style="font-size:.8rem;color:var(--text3);margin-top:14px">✓ Instant download · ✓ No email required · ✓ Updated for 2026</p>
-  </div>
+  <!-- SIDEBAR WITH TABLE OF CONTENTS -->
+  <aside class="sidebar">
+    <div class="toc-sidebar">
+      <h3>📑 Table of Contents</h3>
+      <ul>
+        <li><a href="#what-are-digital-products">What are digital products?</a></li>
+        <li><a href="#best-ai-tools">Best AI tools for selling digital products</a></li>
+        <li><a href="#product-creation-process">Product creation process with AI</a></li>
+        <li><a href="#selling-platforms">Best selling platforms</a></li>
+        <li><a href="#final-strategy">Final strategy & scaling tips</a></li>
+      </ul>
+    </div>
+  </aside>
 
-  <div class="callout call-gold">
-    <p>⭐ <strong>Final Thought:</strong> The barrier to entry for digital products has never been lower. With AI handling creation, marketing, and sales automation, you can build a profitable digital product business in weeks — not years. Start small, validate fast, and scale smart.</p>
-  </div>
-
-</article>
+</div>
 
 <!-- CONTACT SECTION -->
 <section class="contact-section" id="contact">
