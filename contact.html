@@ -12,514 +12,460 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
   <title>Contact Us – Aivora AI | Varun Lalwani</title>
   <meta name="description" content="Contact Aivora AI for AI tool listings, partnerships, or support. Director: Varun Lalwani. Email: Aivoraai@outlook.com"/>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet"/>
-  
+  <link rel="canonical" href="https://aivoraai.github.io/contact.html"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
   <style>
     :root{
-      --bg:#050a0e;--bg2:#091014;--bg3:#0d1a1f;--bg4:#112028;
-      --card:#0f1e26;--card2:#142530;
-      --em:#00c896;--em2:#00a87a;--gold:#f0b429;--gold2:#e6a010;
-      --border:rgba(0,200,150,.1);--text:#e8f4f0;--text2:#7fb3a0;--text3:#3d6b5a;
-      --r2:14px;--r4:28px;
-      --fh:'Outfit',sans-serif;--fb:'Space Grotesk',sans-serif;
-      --shadow:0 10px 40px rgba(0,0,0,.4);
+      --bg:#04080b;--bg2:#070f14;--bg3:#0b1820;
+      --card:#0d1e28;--card2:#112434;
+      --em:#00e5a0;--em2:#00b87a;--em3:rgba(0,229,160,.12);
+      --border:rgba(0,229,160,.12);
+      --text:#dff0ea;--text2:#7aada0;--text3:#2e5c50;
+      --fh:'Syne',sans-serif;--fb:'DM Sans',sans-serif;
+      --r:16px;--rl:28px;
+      --glow:0 0 40px rgba(0,229,160,.15);
+      --shadow:0 20px 60px rgba(0,0,0,.5);
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;-webkit-text-size-adjust:100%}
-    a{color:var(--em);text-decoration:none;transition:0.2s}
+    body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;-webkit-text-size-adjust:100%}
+    a{color:var(--em);text-decoration:none;transition:.2s}
     a:hover{color:var(--em2)}
     img{max-width:100%;height:auto;display:block}
-    
-    /* ===== NAVBAR ===== */
-    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;background:rgba(5,10,14,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,200,150,.2);transition:0.3s}
-    .navbar.solid{background:rgba(5,10,14,1);box-shadow:var(--shadow)}
-    .nav-container{max-width:1200px;margin:0 auto;height:100%;padding:0 16px;display:flex;align-items:center;justify-content:space-between}
-    .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:800;font-size:1.25rem;color:var(--text)}
-    .nav-links{display:flex;list-style:none;gap:8px}
-    .nav-link{padding:8px 14px;color:var(--text2);font-weight:500;border-radius:8px;transition:0.3s;white-space:nowrap}
-    .nav-link:hover,.nav-link.active{color:var(--em);background:rgba(0,200,150,.1)}
-    .hamburger{display:none;font-size:1.5rem;background:none;border:none;color:var(--text);cursor:pointer;padding:8px}
-    
-    /* ===== BUTTONS ===== */
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:14px;font-weight:600;font-family:var(--fh);cursor:pointer;transition:0.3s;border:none;font-size:1rem;min-height:44px}
-    .btn-em{background:linear-gradient(135deg,var(--em),var(--em2));color:#051a14}
-    .btn-em:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,200,150,.35)}
+
+    /* ── NAVBAR ── */
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;
+      background:rgba(4,8,11,.92);backdrop-filter:blur(24px);
+      border-bottom:1px solid var(--border);transition:.3s}
+    .navbar.solid{background:rgba(4,8,11,1);box-shadow:var(--shadow)}
+    .nav-container{max-width:1200px;margin:0 auto;height:100%;padding:0 20px;
+      display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .nav-logo{font-family:var(--fh);font-weight:800;font-size:1.2rem;color:var(--text);letter-spacing:-.02em}
+    .nav-logo span{color:var(--em)}
+    .nav-links{display:flex;list-style:none;gap:4px}
+    .nav-link{padding:7px 13px;color:var(--text2);font-weight:500;font-size:.95rem;
+      border-radius:8px;transition:.25s;white-space:nowrap}
+    .nav-link:hover,.nav-link.active{color:var(--em);background:var(--em3)}
+    .hamburger{display:none;font-size:1.4rem;background:none;border:none;color:var(--text);cursor:pointer;padding:8px}
+
+    /* ── BUTTONS ── */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 24px;border-radius:var(--r);font-weight:600;font-family:var(--fh);
+      cursor:pointer;transition:.3s;border:none;font-size:.95rem;min-height:44px;letter-spacing:-.01em}
+    .btn-em{background:linear-gradient(135deg,var(--em),var(--em2));color:#021a10}
+    .btn-em:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(0,229,160,.3);color:#021a10}
     .btn-outline{background:transparent;border:1.5px solid var(--em);color:var(--em)}
-    .btn-outline:hover{background:rgba(0,200,150,.1);transform:translateY(-2px)}
-    .btn-sm{padding:10px 18px;font-size:0.9rem;min-height:40px}
+    .btn-outline:hover{background:var(--em3);transform:translateY(-2px)}
+    .btn-sm{padding:9px 18px;font-size:.88rem;min-height:40px}
     .btn-block{width:100%}
-    
-    /* ===== HERO ===== */
-    .page-hero{padding:120px 16px 40px;text-align:center;background:linear-gradient(170deg,var(--bg),var(--bg3));position:relative;overflow:hidden}
-    .page-hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 30%,rgba(0,200,150,.08),transparent 60%);pointer-events:none}
-    .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(0,200,150,.15);border:1px solid rgba(0,200,150,.3);border-radius:50px;font-size:0.85rem;color:var(--em);font-weight:500;margin-bottom:20px}
-    .hero-title{font-family:var(--fh);font-size:clamp(1.75rem,5vw,2.75rem);font-weight:800;margin:12px 0 16px;line-height:1.2}
-    .hero-title span{color:var(--em)}
-    .hero-subtitle{color:var(--text2);max-width:600px;margin:0 auto;font-size:clamp(0.95rem,2vw,1.1rem)}
-    
-    /* ===== SECTIONS ===== */
-    .sec{padding:40px 16px 60px}
-    .wrap{max-width:1200px;margin:0 auto}
-    
-    /* ===== CONTACT GRID ===== */
-    .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:32px;align-items:start}
-    
-    /* ===== CONTACT INFO CARD ===== */
-    .contact-card{background:var(--card);border:1.5px solid rgba(0,200,150,.15);border-radius:var(--r4);padding:24px;position:sticky;top:80px;box-shadow:0 4px 20px rgba(0,0,0,.2)}
-    .contact-card h3{font-family:var(--fh);font-size:1.3rem;margin-bottom:20px;display:flex;align-items:center;gap:10px}
-    .contact-item{display:flex;gap:12px;margin:16px 0;align-items:flex-start}
-    .contact-icon{width:40px;height:40px;min-width:40px;background:rgba(0,200,150,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;color:var(--em)}
-    .contact-text span{display:block}
-    .contact-label{color:var(--text3);font-size:0.8rem;margin-bottom:2px}
-    .contact-value{color:var(--text);font-weight:500;word-break:break-word}
+
+    /* ── HERO ── */
+    .page-hero{padding:120px 20px 52px;text-align:center;position:relative;overflow:hidden;
+      background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,229,160,.07),transparent)}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;
+      background:var(--em3);border:1px solid rgba(0,229,160,.25);
+      border-radius:50px;font-size:.82rem;color:var(--em);font-weight:600;
+      margin-bottom:22px;letter-spacing:.04em;text-transform:uppercase}
+    .hero-title{font-family:var(--fh);font-size:clamp(2rem,5.5vw,3rem);
+      font-weight:800;margin:0 0 16px;line-height:1.15;letter-spacing:-.03em}
+    .hero-title em{font-style:normal;color:var(--em)}
+    .hero-subtitle{color:var(--text2);max-width:520px;margin:0 auto;
+      font-size:clamp(.95rem,2vw,1.1rem)}
+
+    /* ── SECTIONS ── */
+    .sec{padding:48px 20px 72px}
+    .wrap{max-width:1160px;margin:0 auto}
+
+    /* ── CONTACT GRID ── */
+    .contact-grid{display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:start}
+
+    /* ── CONTACT CARD ── */
+    .contact-card{background:var(--card);border:1.5px solid var(--border);
+      border-radius:var(--rl);padding:28px;position:sticky;top:80px;
+      box-shadow:0 8px 32px rgba(0,0,0,.3)}
+    .contact-card h3{font-family:var(--fh);font-size:1.1rem;font-weight:700;
+      margin-bottom:22px;letter-spacing:-.01em}
+    .contact-item{display:flex;gap:12px;margin:14px 0;align-items:flex-start}
+    .contact-icon{width:38px;height:38px;min-width:38px;background:var(--em3);
+      border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+    .contact-label{display:block;color:var(--text3);font-size:.77rem;
+      margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em}
+    .contact-value{color:var(--text);font-weight:500;font-size:.92rem;word-break:break-word}
     .contact-value a{color:var(--em)}
-    
-    /* Trust badges */
-    .trust-badges{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
-    .trust-badge{display:flex;align-items:center;gap:6px;background:rgba(0,200,150,.08);padding:6px 10px;border-radius:8px;font-size:0.85rem;color:var(--text2)}
-    
-    /* Quick contact buttons */
+
+    .divider{height:1px;background:var(--border);margin:20px 0}
+
+    .trust-badges{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+    .trust-badge{display:flex;align-items:center;gap:5px;
+      background:var(--em3);padding:5px 10px;border-radius:8px;
+      font-size:.8rem;color:var(--text2)}
+
     .quick-contact{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
     .quick-contact .btn{flex:1;min-width:calc(50% - 5px)}
-    
-    /* Social links */
-    .social-links{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
-    .social-link{width:40px;height:40px;min-width:40px;border-radius:12px;background:var(--card2);display:flex;align-items:center;justify-content:center;color:var(--text2);transition:0.3s;font-weight:600;font-size:1.1rem}
-    .social-link:hover{background:var(--em);color:#051a14;transform:translateY(-3px)}
-    
-    /* ===== CONTACT FORM ===== */
-    .form-card{background:var(--card);border:1.5px solid rgba(0,200,150,.15);border-radius:var(--r4);padding:24px}
-    .form-card h3{font-family:var(--fh);font-size:1.3rem;margin-bottom:8px}
-    .form-card > p{color:var(--text2);margin-bottom:20px;font-size:0.95rem}
-    
-    /* Success message */
-    .form-success{display:none;background:rgba(0,200,150,.12);border:1px solid var(--em);border-radius:14px;padding:16px;color:var(--text);text-align:center;margin-bottom:20px}
-    .form-success.show{display:block;animation:slideIn 0.35s ease}
-    .form-success strong{color:var(--em);display:block;font-size:1.1rem;margin-bottom:4px}
-    @keyframes slideIn{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
-    
+
+    .social-links{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+    .social-link{width:40px;height:40px;border-radius:10px;background:var(--card2);
+      display:flex;align-items:center;justify-content:center;
+      color:var(--text2);transition:.3s;font-size:1rem}
+    .social-link:hover{background:var(--em);color:#021a10;transform:translateY(-3px)}
+
+    /* ── FORM CARD ── */
+    .form-card{background:var(--card);border:1.5px solid var(--border);
+      border-radius:var(--rl);padding:32px}
+    .form-card>h3{font-family:var(--fh);font-size:1.25rem;font-weight:700;
+      margin-bottom:6px;letter-spacing:-.01em}
+    .form-card>.form-desc{color:var(--text2);margin-bottom:24px;font-size:.93rem}
+
+    /* Success */
+    .form-success{display:none;background:rgba(0,229,160,.1);
+      border:1px solid rgba(0,229,160,.3);border-radius:14px;padding:20px;
+      text-align:center;margin-bottom:20px}
+    .form-success.show{display:block;animation:fadeUp .35s ease}
+    .form-success strong{color:var(--em);display:block;font-size:1.1rem;margin-bottom:4px;font-family:var(--fh)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+
     /* Form layout */
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
-    .form-group{margin-bottom:16px}
-    .form-group label{display:block;margin-bottom:6px;color:var(--text2);font-size:0.9rem;font-weight:500}
-    .form-hint{color:var(--text3);font-size:0.8rem;margin-top:4px;display:block}
-    
-    /* Form controls */
-    .form-control{width:100%;padding:12px 14px;background:var(--bg2);border:1.5px solid var(--border);border-radius:12px;color:var(--text);font-family:var(--fb);font-size:1rem;transition:0.25s;min-height:44px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:0}
+    .form-group{margin-bottom:18px}
+    .form-group label{display:block;margin-bottom:7px;color:var(--text2);
+      font-size:.88rem;font-weight:500;letter-spacing:.01em}
+    .form-hint{color:var(--text3);font-size:.78rem;margin-top:4px;display:block}
+
+    .form-control{width:100%;padding:12px 14px;background:var(--bg2);
+      border:1.5px solid var(--border);border-radius:12px;color:var(--text);
+      font-family:var(--fb);font-size:.97rem;transition:.25s;min-height:44px}
     .form-control::placeholder{color:var(--text3)}
-    .form-control:focus{outline:none;border-color:var(--em);box-shadow:0 0 0 3px rgba(0,200,150,.15)}
-    .form-control.error{border-color:#ff6b6b;box-shadow:0 0 0 3px rgba(255,107,107,.15)}
+    .form-control:focus{outline:none;border-color:var(--em);box-shadow:0 0 0 3px rgba(0,229,160,.12)}
+    .form-control.error{border-color:#ff6b6b;box-shadow:0 0 0 3px rgba(255,107,107,.12)}
     .form-control.success{border-color:var(--em)}
-    textarea.form-control{min-height:120px;resize:vertical;line-height:1.6}
-    select.form-control{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237fb3a0' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px}
-    
-    /* Phone field toggle */
-    .phone-toggle{display:flex;align-items:center;gap:10px;margin:8px 0 14px;color:var(--text2);font-size:0.9rem;cursor:pointer}
-    .phone-toggle input{width:18px;height:18px;accent-color:var(--em)}
-    #phoneField{margin-top:8px;animation:slideIn 0.25s ease}
-    
-    /* Submit */
-    .form-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:8px}
-    .form-note{font-size:0.85rem;color:var(--text3)}
-    
-    /* Error message */
-    .error-msg{color:#ff8a8a;font-size:0.85rem;margin-top:4px;display:none}
+    textarea.form-control{min-height:130px;resize:vertical;line-height:1.65}
+    select.form-control{appearance:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237aada0' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;background-position:right 12px center;padding-right:38px}
+
+    .phone-toggle{display:flex;align-items:center;gap:10px;margin:4px 0 16px;
+      color:var(--text2);font-size:.9rem;cursor:pointer}
+    .phone-toggle input{width:16px;height:16px;accent-color:var(--em)}
+    #phoneField{animation:fadeUp .25s ease}
+
+    .form-footer{display:flex;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;gap:12px;margin-top:4px}
+    .form-note{font-size:.83rem;color:var(--text3)}
+
+    .error-msg{color:#ff8a8a;font-size:.82rem;margin-top:4px;display:none}
     .error-msg.show{display:block}
-    
-    /* ===== FOOTER ===== */
-    .site-footer{padding:40px 16px 20px;text-align:center;color:var(--text3);font-size:0.85rem;border-top:1px solid var(--border);margin-top:30px}
-    .footer-bottom a{color:var(--em)}
-    
-    /* ===== MOBILE RESPONSIVE ===== */
-    @media(max-width: 900px){
+
+    /* ── FOOTER ── */
+    .site-footer{padding:32px 20px 20px;text-align:center;
+      color:var(--text3);font-size:.85rem;border-top:1px solid var(--border)}
+    .site-footer a{color:var(--em)}
+
+    /* ── MOBILE ── */
+    @media(max-width:960px){
       .contact-grid{grid-template-columns:1fr;gap:24px}
       .contact-card{position:static}
-      .form-row{grid-template-columns:1fr}
-      .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:16px;border-bottom:1px solid var(--border);gap:4px}
-      .nav-links.active{display:flex}
-      .nav-links li{width:100%}
-      .nav-links a{display:block;padding:12px 16px;border-radius:8px}
-      .hamburger{display:block}
-      .hero-title{font-size:2rem}
-      .quick-contact .btn{min-width:100%}
       .form-footer{flex-direction:column;align-items:stretch}
       .form-note{text-align:center}
     }
-    
-    @media(max-width: 480px){
+    @media(max-width:768px){
+      .nav-links{display:none;position:absolute;top:64px;left:0;right:0;
+        background:var(--bg2);flex-direction:column;padding:12px;
+        border-bottom:1px solid var(--border);gap:2px}
+      .nav-links.active{display:flex}
+      .nav-links li{width:100%}
+      .nav-links a{display:block;padding:11px 14px;border-radius:8px}
+      .hamburger{display:block}
+      .form-row{grid-template-columns:1fr}
+      .quick-contact .btn{min-width:100%}
+    }
+    @media(max-width:480px){
       .navbar{height:56px}
-      .nav-container{padding:0 12px}
-      .nav-logo{font-size:1.1rem}
-      .page-hero{padding:100px 12px 32px}
-      .sec{padding:32px 12px 48px}
+      .page-hero{padding:96px 14px 40px}
+      .sec{padding:32px 14px 52px}
+      .form-card{padding:22px}
       .contact-card{padding:20px}
-      .form-card{padding:20px}
-      .btn{padding:11px 20px;font-size:0.95rem}
-      .contact-item{gap:10px}
-      .contact-icon{width:36px;height:36px;min-width:36px;font-size:0.9rem}
-      .social-link{width:36px;height:36px;min-width:36px}
-      .trust-badge{font-size:0.8rem;padding:5px 8px}
     }
-    
-    /* ===== ACCESSIBILITY ===== */
-    @media(prefers-reduced-motion:reduce){
-      *{animation:none!important;transition:none!important}
-      html{scroll-behavior:auto}
-    }
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    
-    /* Touch-friendly */
-    @media(hover: none){
-      .btn:hover{transform:none}
-      .btn:active{transform:scale(0.98)}
-    }
+    @media(hover:none){.btn:hover{transform:none}.btn:active{transform:scale(.98)}}
   </style>
 </head>
 <body>
 
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar" id="mainNav">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Aivora<span style="color:#00c896">ai</span></a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="product.html">AI Tools</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" class="nav-link active">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="product.html" class="btn btn-em btn-sm">🚀 Explore Tools</a>
-    </div>
-  </header>
+<!-- NAVBAR -->
+<header class="navbar" id="mainNav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Aivora<span>AI</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="product.html" class="nav-link">AI Tools</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="product.html" class="btn btn-em btn-sm">🚀 Explore Tools</a>
+  </div>
+</header>
 
-  <!-- ===== HERO ===== -->
-  <section class="page-hero">
-    <span class="chip">💬 Get in Touch</span>
-    <h1 class="hero-title">Let's Talk <span>AI</span></h1>
-    <p class="hero-subtitle">Whether you want to list your AI tool, explore affiliate opportunities, or ask a question — we'd love to hear from you. <strong>Response within 24 hours.</strong></p>
-  </section>
+<!-- HERO -->
+<section class="page-hero">
+  <span class="chip">💬 Get in Touch</span>
+  <h1 class="hero-title">Let's Talk <em>AI</em></h1>
+  <p class="hero-subtitle">List your AI tool, explore affiliate opportunities, or just ask a question. We reply within 24 hours.</p>
+</section>
 
-  <!-- ===== CONTACT SECTION ===== -->
-  <section class="sec">
-    <div class="wrap">
-      <div class="contact-grid">
-        
-        <!-- ===== CONTACT INFO ===== -->
-        <aside class="contact-card" aria-label="Contact Information">
-          <h3>👤 Director</h3>
-          <div class="contact-item">
-            <div class="contact-icon">👤</div>
-            <div class="contact-text">
-              <span class="contact-label">Name</span>
-              <span class="contact-value">Varun Lalwani</span>
-            </div>
+<!-- CONTACT SECTION -->
+<section class="sec">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- LEFT: Contact Info -->
+      <aside class="contact-card" aria-label="Contact Information">
+        <h3>👤 Reach Us Directly</h3>
+
+        <div class="contact-item">
+          <div class="contact-icon">👤</div>
+          <div>
+            <span class="contact-label">Director</span>
+            <div class="contact-value">Varun Lalwani</div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">✉️</div>
-            <div class="contact-text">
-              <span class="contact-label">Email</span>
-              <span class="contact-value"><a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a></span>
-            </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <span class="contact-label">Email</span>
+            <div class="contact-value"><a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a></div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">📱</div>
-            <div class="contact-text">
-              <span class="contact-label">WhatsApp</span>
-              <span class="contact-value"><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">+91-XXXXXXXXXX</a></span>
-            </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div>
+            <span class="contact-label">WhatsApp</span>
+            <div class="contact-value"><a href="https://wa.me/919999999999" target="_blank" rel="noopener">+91 99999 99999</a></div>
           </div>
-          
-          <!-- Trust Badges -->
-          <div class="trust-badges">
-            <span class="trust-badge">🔒 Data encrypted</span>
-            <span class="trust-badge">🚫 No spam</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="trust-badges">
+          <span class="trust-badge">🔒 Data encrypted</span>
+          <span class="trust-badge">🚫 No spam</span>
+          <span class="trust-badge">⚡ 24hr reply</span>
+        </div>
+
+        <div class="quick-contact">
+          <a href="mailto:Aivoraai@outlook.com" class="btn btn-outline btn-sm">✉️ Email Us</a>
+          <a href="https://wa.me/919999999999" class="btn btn-outline btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="social-links" aria-label="Social Media">
+          <a href="https://www.facebook.com/profile.php?id=61569221487849" class="social-link" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener">📘</a>
+          <a href="https://www.instagram.com/aivoraai.co/" class="social-link" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">📸</a>
+          <a href="https://www.youtube.com/@AivoraAITools" class="social-link" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">▶️</a>
+          <a href="https://x.com/varunaivoraAi" class="social-link" aria-label="Twitter/X" title="Twitter/X" target="_blank" rel="noopener">𝕏</a>
+          <a href="https://www.linkedin.com/in/varun-lalwani-67032b404/" class="social-link" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">in</a>
+        </div>
+      </aside>
+
+      <!-- RIGHT: Form -->
+      <main class="form-card">
+        <h3>✉️ Send a Message</h3>
+        <p class="form-desc">Fields marked * are required. We typically reply within 24 hours.</p>
+
+        <div class="form-success" id="successMsg" role="alert" aria-live="polite">
+          <strong>✅ Message Sent!</strong>
+          <span id="successEmail"></span><br>
+          We'll reply within 24 hours.
+          <div style="margin-top:14px">
+            <a href="product.html" class="btn btn-outline btn-sm">🔍 Browse AI Tools</a>
           </div>
-          
-          <!-- Quick Contact Buttons -->
-          <div class="quick-contact">
-            <a href="mailto:Aivoraai@outlook.com" class="btn btn-outline btn-sm">✉️ Email</a>
-            <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-outline btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
-          </div>
-          
-          <!-- Social Links -->
-          <div class="social-links" aria-label="Social Media">
-            <a href="https://www.facebook.com/profile.php?id=61569221487849&sk=directory_links" class="social-link" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener">📘</a>
-            <a href="https://www.instagram.com/aivoraai.co/" class="social-link" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">📸</a>
-            <a href="https://www.youtube.com/@AivoraAITools" class="social-link" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">▶️</a>
-            <a href="https://x.com/varunaivoraAi" class="social-link" aria-label="Twitter/X" title="Twitter/X" target="_blank" rel="noopener">𝕏</a>
-            <a href="https://www.linkedin.com/in/varun-lalwani-67032b404/" class="social-link" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">in</a>
-          </div>
-        </aside>
-        
-        <!-- ===== CONTACT FORM ===== -->
-        <main class="form-card">
-          <h3>✉️ Send a Message</h3>
-          <p>Fill out the form below. Fields marked with * are required.</p>
-          
-          <!-- Success Message -->
-          <div class="form-success" id="successMsg" role="alert" aria-live="polite">
-            <strong>✅ Message Sent!</strong>
-            <span id="successEmail"></span><br>
-            We'll reply within 24 hours.
-            <div style="margin-top:16px">
-              <a href="product.html" class="btn btn-outline btn-sm">🔍 Browse AI Tools</a>
-            </div>
-          </div>
-          
-          <!-- Form with YOUR Formspree endpoint -->
-          <form id="contactForm" action="https://formspree.io/f/mqewprnw" method="POST" novalidate>
-            
-            <!-- Honeypot spam protection -->
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-            
-            <!-- Name + Email Row -->
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Your Name *</label>
-                <input type="text" id="name" name="name" class="form-control" 
-                       required placeholder="e.g., Varun Lalwani" 
-                       autocomplete="name">
-                <span class="error-msg" id="nameError">Please enter your name</span>
-              </div>
-              
-              <!-- Email -->
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" class="form-control" 
-                       required placeholder="you@company.com" 
-                       autocomplete="email" inputmode="email">
-                <span class="error-msg" id="emailError">Please enter a valid email</span>
-              </div>
-            </div>
-            
-            <!-- Phone Toggle -->
-            <label class="phone-toggle">
-              <input type="checkbox" id="showPhone" name="whatsapp_opt_in" value="yes"> 
-              <span>I'd like to be contacted via WhatsApp</span>
-            </label>
-            <div class="form-group" id="phoneField" hidden>
-              <label for="phone">Phone / WhatsApp</label>
-              <input type="tel" id="phone" name="phone" class="form-control" 
-                     placeholder="+91 XXXXX XXXXX" autocomplete="tel" inputmode="tel">
-            </div>
-            
-            <!-- Topic + Subject Row -->
-            <div class="form-row">
-              <div class="form-group">
-                <label for="topic">Topic *</label>
-                <select id="topic" name="topic" class="form-control" required>
-                  <option value="" disabled selected>Choose a topic…</option>
-                  <option value="list-tool">🛠️ List My AI Tool</option>
-                  <option value="affiliate">💰 Affiliate Program</option>
-                  <option value="partnership">🤝 Partnership</option>
-                  <option value="press">📰 Press / Media</option>
-                  <option value="general">❓ General Question</option>
-                  <option value="bug">🐛 Bug Report</option>
-                </select>
-                <span class="error-msg" id="topicError">Please select a topic</span>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject *</label>
-                <input type="text" id="subject" name="subject" class="form-control" 
-                       required placeholder="e.g., Partnership Inquiry" 
-                       autocomplete="off">
-                <span class="error-msg" id="subjectError">Please enter a subject</span>
-              </div>
-            </div>
-            
-            <!-- Message -->
+        </div>
+
+        <form id="contactForm" action="https://formspree.io/f/mqewprnw" method="POST" novalidate>
+          <!-- Honeypot -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+          <!-- Name + Email -->
+          <div class="form-row">
             <div class="form-group">
-              <label for="message">Your Message *</label>
-              <textarea id="message" name="message" class="form-control" 
-                        required placeholder="Tell us how we can help… 💡 Tip: Include your website or tool name"
-                        minlength="20"></textarea>
-              <span class="form-hint">Minimum 20 characters</span>
-              <span class="error-msg" id="messageError">Please write at least 20 characters</span>
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" class="form-control"
+                     required placeholder="Varun Lalwani" autocomplete="name">
+              <span class="error-msg" id="nameError">Please enter your name</span>
             </div>
-            
-            <!-- Submit -->
-            <div class="form-footer">
-              <button type="submit" class="btn btn-em btn-block">Send Message →</button>
-              <span class="form-note">🔒 Your data is protected</span>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-control"
+                     required placeholder="you@example.com" autocomplete="email" inputmode="email">
+              <span class="error-msg" id="emailError">Please enter a valid email</span>
             </div>
-          </form>
-        </main>
-        
-      </div>
+          </div>
+
+          <!-- WhatsApp toggle -->
+          <label class="phone-toggle">
+            <input type="checkbox" id="showPhone" name="whatsapp_opt_in" value="yes">
+            <span>I'd like to be contacted via WhatsApp</span>
+          </label>
+          <div class="form-group" id="phoneField" hidden>
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" class="form-control"
+                   placeholder="+91 99999 99999" autocomplete="tel" inputmode="tel">
+          </div>
+
+          <!-- Topic + Subject -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="topic">Topic *</label>
+              <select id="topic" name="topic" class="form-control" required>
+                <option value="" disabled selected>Choose a topic…</option>
+                <option value="list-tool">🛠️ List My AI Tool</option>
+                <option value="affiliate">💰 Affiliate Program</option>
+                <option value="partnership">🤝 Partnership</option>
+                <option value="press">📰 Press / Media</option>
+                <option value="general">❓ General Question</option>
+                <option value="bug">🐛 Bug Report</option>
+              </select>
+              <span class="error-msg" id="topicError">Please select a topic</span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" class="form-control"
+                     required placeholder="e.g., Partnership Inquiry" autocomplete="off">
+              <span class="error-msg" id="subjectError">Please enter a subject</span>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label for="message">Your Message *</label>
+            <textarea id="message" name="message" class="form-control"
+                      required placeholder="Tell us how we can help… Include your website or tool name if relevant."
+                      minlength="20"></textarea>
+            <span class="form-hint">Minimum 20 characters</span>
+            <span class="error-msg" id="messageError">Please write at least 20 characters</span>
+          </div>
+
+          <!-- Submit -->
+          <div class="form-footer">
+            <button type="submit" class="btn btn-em btn-block">Send Message →</button>
+            <span class="form-note">🔒 Your data is protected</span>
+          </div>
+        </form>
+      </main>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <div class="footer-bottom">
-      <p>© 2026 <strong>Aivora AI</strong> · Director: Varun Lalwani · 
-         <a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a></p>
-    </div>
-  </footer>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>© 2026 <strong>Aivora AI</strong> · Director: Varun Lalwani ·
+     <a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a></p>
+</footer>
 
-  <!-- ===== JAVASCRIPT ===== -->
-  <script>
-    // ===== Navbar Scroll Effect =====
-    const nav = document.getElementById("mainNav");
-    window.addEventListener("scroll", () => {
-      nav.classList.toggle("solid", window.scrollY > 35);
-    }, {passive: true});
+<script>
+  // Navbar scroll
+  const nav = document.getElementById("mainNav");
+  window.addEventListener("scroll", () => nav.classList.toggle("solid", scrollY > 35), {passive:true});
 
-    // ===== Mobile Menu Toggle =====
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("navLinks");
-    
-    hamburger?.addEventListener("click", () => {
-      const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
-      hamburger.setAttribute("aria-expanded", !isExpanded);
-      navLinks.classList.toggle("active");
+  // Mobile menu
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+  hamburger?.addEventListener("click", () => {
+    const open = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", !open);
+    navLinks.classList.toggle("active");
+  });
+  document.querySelectorAll(".nav-links a").forEach(l => l.addEventListener("click", () => {
+    if(innerWidth <= 768){ navLinks.classList.remove("active"); hamburger.setAttribute("aria-expanded","false"); }
+  }));
+  document.addEventListener("keydown", e => {
+    if(e.key === "Escape" && navLinks?.classList.contains("active")){
+      navLinks.classList.remove("active"); hamburger.setAttribute("aria-expanded","false"); hamburger.focus();
+    }
+  });
+
+  // Phone toggle
+  const showPhone = document.getElementById("showPhone");
+  const phoneField = document.getElementById("phoneField");
+  showPhone?.addEventListener("change", e => {
+    phoneField.hidden = !e.target.checked;
+    const ph = document.getElementById("phone");
+    if(e.target.checked){ ph.required = true; setTimeout(() => ph.focus(), 80); }
+    else { ph.required = false; ph.value = ""; }
+  });
+
+  // Validation helpers
+  const validateEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  const showErr = (id, show) => document.getElementById(id)?.classList.toggle("show", show);
+  const setField = (id, state) => {
+    const f = document.getElementById(id); if(!f) return;
+    f.classList.remove("error","success"); if(state) f.classList.add(state);
+  };
+
+  ["name","email","topic","subject","message"].forEach(f => {
+    document.getElementById(f)?.addEventListener("blur", e => {
+      const v = e.target.value.trim();
+      let ok = f === "email" ? validateEmail(v) : f === "message" ? v.length >= 20 : v.length > 0;
+      setField(f, ok ? "success" : "error");
+      showErr(f+"Error", !ok);
     });
-    
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        if(window.innerWidth <= 900) {
-          navLinks.classList.remove("active");
-          hamburger.setAttribute("aria-expanded", "false");
-        }
+  });
+
+  // Form submit
+  const form = document.getElementById("contactForm");
+  const successMsg = document.getElementById("successMsg");
+
+  form?.addEventListener("submit", async e => {
+    e.preventDefault();
+    let valid = true;
+    ["name","email","topic","subject","message"].forEach(f => {
+      const el = document.getElementById(f);
+      const v = el?.value.trim();
+      let ok = f === "email" ? validateEmail(v) : f === "message" ? v?.length >= 20 : v?.length > 0;
+      if(!ok){ valid = false; setField(f,"error"); showErr(f+"Error",true); }
+      else { setField(f,"success"); showErr(f+"Error",false); }
+    });
+    if(showPhone?.checked){
+      const ph = document.getElementById("phone")?.value.trim();
+      if(!ph || ph.length < 10){ valid = false; setField("phone","error"); }
+    }
+    if(!valid) return;
+
+    const btn = form.querySelector("button[type='submit']");
+    const orig = btn.innerHTML;
+    btn.disabled = true; btn.innerHTML = "Sending… ✨";
+
+    try {
+      const res = await fetch("https://formspree.io/f/mqewprnw", {
+        method:"POST", body:new FormData(form), headers:{"Accept":"application/json"}
       });
-    });
-
-    // ===== Phone Field Toggle =====
-    const showPhone = document.getElementById("showPhone");
-    const phoneField = document.getElementById("phoneField");
-    
-    showPhone?.addEventListener("change", (e) => {
-      phoneField.hidden = !e.target.checked;
-      const phoneInput = document.getElementById("phone");
-      if(e.target.checked) {
-        phoneInput.required = true;
-        setTimeout(() => phoneInput.focus(), 100);
-      } else {
-        phoneInput.required = false;
-        phoneInput.value = "";
-      }
-    });
-
-    // ===== Form Validation & Submission =====
-    const form = document.getElementById("contactForm");
-    const successMsg = document.getElementById("successMsg");
-    
-    const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    const showError = (id, show) => {
-      const el = document.getElementById(id);
-      if(el) el.classList.toggle("show", show);
-    };
-    const setFieldState = (id, state) => {
-      const field = document.getElementById(id);
-      if(!field) return;
-      field.classList.remove("error", "success");
-      if(state) field.classList.add(state);
-    };
-
-    // Validate on blur
-    ["name", "email", "topic", "subject", "message"].forEach(field => {
-      document.getElementById(field)?.addEventListener("blur", (e) => {
-        const val = e.target.value.trim();
-        let valid = true;
-        if(field === "email") valid = validateEmail(val);
-        else if(field === "message") valid = val.length >= 20;
-        else valid = val.length > 0;
-        setFieldState(field, valid ? "success" : "error");
-        showError(field + "Error", !valid);
-      });
-    });
-
-    // Form submit handler with Formspree
-    form?.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      
-      // Validate
-      let isValid = true;
-      const fields = ["name", "email", "topic", "subject", "message"];
-      
-      fields.forEach(field => {
-        const el = document.getElementById(field);
-        const val = el?.value.trim();
-        let valid = true;
-        if(field === "email") valid = validateEmail(val);
-        else if(field === "message") valid = val?.length >= 20;
-        else valid = val?.length > 0;
-        
-        if(!valid) {
-          isValid = false;
-          setFieldState(field, "error");
-          showError(field + "Error", true);
-        } else {
-          setFieldState(field, "success");
-          showError(field + "Error", false);
-        }
-      });
-      
-      if(showPhone?.checked) {
-        const phone = document.getElementById("phone")?.value.trim();
-        if(!phone || phone.length < 10) {
-          isValid = false;
-          setFieldState("phone", "error");
-        }
-      }
-      
-      if(!isValid) return;
-      
-      // Loading state
-      const submitBtn = form.querySelector("button[type='submit']");
-      const originalText = submitBtn.innerHTML;
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = "Sending… ✨";
-      
-      try {
-        const formData = new FormData(form);
-        const response = await fetch("https://formspree.io/f/mqewprnw", {
-          method: "POST",
-          body: formData,
-          headers: {"Accept": "application/json"}
-        });
-        
-        if(response.ok) {
-          document.getElementById("successEmail").textContent = 
-            `We'll reply to ${document.getElementById("email").value}`;
-          successMsg.classList.add("show");
-          form.reset();
-          document.querySelectorAll(".form-control").forEach(f => f.classList.remove("success"));
-          successMsg.scrollIntoView({behavior: "smooth", block: "center"});
-          setTimeout(() => successMsg.classList.remove("show"), 8000);
-        } else {
-          throw new Error("Formspree error");
-        }
-      } catch(err) {
-        console.error("Form error:", err);
-        const email = document.getElementById("email")?.value || "";
-        const subject = document.getElementById("subject")?.value || "Contact Inquiry";
-        const message = document.getElementById("message")?.value || "";
-        window.location.href = `mailto:Aivoraai@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + "\n\nFrom: " + email)}`;
-        alert("⚠️ Having trouble sending. Opening your email app.");
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      }
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if(e.key === "Escape" && navLinks?.classList.contains("active")) {
-        navLinks.classList.remove("active");
-        hamburger.setAttribute("aria-expanded", "false");
-        hamburger.focus();
-      }
-    });
-  </script>
-
+      if(res.ok){
+        document.getElementById("successEmail").textContent = `We'll reply to ${document.getElementById("email").value}`;
+        successMsg.classList.add("show");
+        form.reset();
+        document.querySelectorAll(".form-control").forEach(f => f.classList.remove("success"));
+        successMsg.scrollIntoView({behavior:"smooth",block:"center"});
+        setTimeout(() => successMsg.classList.remove("show"), 8000);
+      } else { throw new Error(); }
+    } catch {
+      const subj = document.getElementById("subject")?.value || "Contact Inquiry";
+      const msg  = document.getElementById("message")?.value || "";
+      const em   = document.getElementById("email")?.value || "";
+      window.location.href = `mailto:Aivoraai@outlook.com?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(msg+"\n\nFrom: "+em)}`;
+    } finally {
+      btn.disabled = false; btn.innerHTML = orig;
+    }
+  });
+</script>
 </body>
 </html>
