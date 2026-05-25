@@ -438,23 +438,46 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- NAVIGATION HEADER -->
-  <header class="nav" id="N">
+ <header class="nav" id="N">
     <div class="nw">
       <a href="../index.html" class="logo" aria-label="Aivora AI Home">
-        <img src="../assets/images/aivora-logo.png" alt="Aivora AI Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <svg width="45" height="45" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="display:none;flex-shrink:0">
-          <defs><linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00c896"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient></defs>
+        <!-- Fallback Image -->
+        <img src="../assets/images/aivora-logo.png" alt="Aivora AI Logo" 
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+
+        <!-- SVG Logo Fallback -->
+        <svg width="45" height="45" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="display:none; flex-shrink:0">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00c896"/>
+              <stop offset="100%" stop-color="#0ea5e9"/>
+            </linearGradient>
+          </defs>
           <circle cx="32" cy="32" r="28" fill="none" stroke="url(#logoGrad)" stroke-width="1.5" opacity="0.3"/>
           <polygon points="32,18 46,32 32,46 18,32" fill="url(#logoGrad)"/>
           <circle cx="32" cy="32" r="4" fill="#fff" opacity="0.95"/>
         </svg>
+
         <div class="logo-text">
           <span class="logo-main">Aivora<span class="bp">ai</span></span>
           <span class="logo-sub">AI TOOLS & INCOME</span>
         </div>
       </a>
-      <nav>
+
+      <nav class="main-nav">
+        <!-- Add your menu items here -->
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="customer-support.html" class="nav-link">Customer Support</a>
+        <a href="copywriting.html" class="nav-link">Copywriting</a>
+        <a href="#" class="nav-link">Tools</a>
+        <a href="#" class="nav-link">Pricing</a>
+        <a href="#" class="nav-link">Blog</a>
+      </nav>
+
+      <!-- Optional: CTA Button -->
+      <a href="#" class="cta-button">Try Free</a>
+    </div>
+</header>
         <ul class="nav-ul">
           <li><a href="../index.html">🏠 Home</a></li>
           <li><a href="../blog.html" style="color:var(--em)">📝 Blog</a></li>
