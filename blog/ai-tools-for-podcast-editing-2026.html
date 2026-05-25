@@ -412,6 +412,27 @@
     .disclosure-box strong{color:var(--text2)}
     .footer{text-align:center;padding:28px;font-size:.85rem;color:var(--text3);border-top:1px solid var(--border);background:var(--bg2)}
     .footer a{color:var(--em);transition:color .28s}
+    
+    /* ✅ FIXED LOGO STYLES */
+    .logo-img{height:45px;width:auto;display:block;transition:opacity .2s}
+    .logo-svg{display:none;flex-shrink:0}
+    .logo-svg.active{display:block}
+    
+    /* Small Popup Styles */
+    .popup-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px}
+    .popup-overlay.active{display:flex}
+    .popup{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:24px;max-width:400px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.5);animation:popupSlide .3s ease}
+    @keyframes popupSlide{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+    .popup-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .popup-title{font-family:var(--fh);font-size:1.1rem;font-weight:700;color:var(--text)}
+    .popup-close{background:none;border:none;color:var(--text2);font-size:1.5rem;cursor:pointer;padding:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:var(--r1);transition:all .28s}
+    .popup-close:hover{background:rgba(255,255,255,.1);color:var(--text)}
+    .popup-content{color:var(--text2);font-size:.9rem;line-height:1.6}
+    .popup-btn{display:inline-block;margin-top:16px;padding:10px 20px;background:var(--grad-gold);color:#fff;border-radius:var(--r1);font-weight:600;font-size:.85rem;text-decoration:none;transition:all .28s}
+    .popup-btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(240,180,41,.3)}
+    .popup-trigger{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(0,200,150,.1);border:1px solid rgba(0,200,150,.25);border-radius:var(--r1);color:var(--em);font-size:.85rem;font-weight:600;cursor:pointer;transition:all .28s}
+    .popup-trigger:hover{background:rgba(0,200,150,.2)}
+    
     @media(max-width:1024px){.article-wrapper{grid-template-columns:1fr}.sidebar{display:none}.hero-thumbnail{height:300px}}
     @media(max-width:820px){.nav-ul,.btn-cta{display:none}.ham{display:flex}.tool-grid,.pros-cons{grid-template-columns:1fr}.author-box{flex-direction:column}.hero-thumbnail{height:250px}}
     @media(max-width:480px){.hero h1{font-size:1.65rem}.tool-header{flex-direction:column}.hero-thumbnail{height:200px}.thumbnail-overlay{padding:20px}.thumbnail-title{font-size:1.2rem}}
@@ -422,12 +443,13 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- NAVIGATION HEADER -->
+  <!-- ✅ FIXED NAVIGATION HEADER -->
   <header class="nav" id="N">
     <div class="nw">
       <a href="../index.html" class="logo" aria-label="Aivora AI Home">
-        <img src="../assets/images/aivora-logo.png" alt="Aivora AI Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <svg width="45" height="45" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="display:none;flex-shrink:0">
+        <!-- ✅ FIXED LOGO with robust fallback -->
+        <img class="logo-img" src="../assets/images/aivora-logo.png" alt="Aivora AI Logo" onerror="this.style.display='none';document.querySelector('.logo-svg').classList.add('active')"/>
+        <svg class="logo-svg" width="45" height="45" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
           <defs><linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00c896"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient></defs>
           <circle cx="32" cy="32" r="28" fill="none" stroke="url(#logoGrad)" stroke-width="1.5" opacity="0.3"/>
           <polygon points="32,18 46,32 32,46 18,32" fill="url(#logoGrad)"/>
@@ -758,6 +780,27 @@
     </aside>
   </div>
 
+  <!-- POPUPS -->
+  <div class="popup-overlay" id="quickSummary">
+    <div class="popup">
+      <div class="popup-header">
+        <h3 class="popup-title">📊 Quick Summary</h3>
+        <button class="popup-close" onclick="hidePopup('quickSummary')">×</button>
+      </div>
+      <div class="popup-content">
+        <p><strong>Top 3 Tools:</strong></p>
+        <ul style="margin:10px 0 15px 20px">
+          <li>Descript - All-in-one editing</li>
+          <li>Adobe Podcast - Audio enhancement</li>
+          <li>Riverside - Recording & editing</li>
+        </ul>
+        <p><strong>Average Time Saved:</strong> 80% faster editing</p>
+        <p><strong>Starting Cost:</strong> $0/month (free tiers available)</p>
+        <a href="https://www.checkout-ds24.com/redir/611044/lalwanivarun526982b/" target="_blank" class="popup-btn">Get Started Now →</a>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer">
     <p>© 2026 <strong>Aivora AI</strong> · Director: Varun Lalwani · <a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a> · India 🇮🇳</p>
@@ -785,6 +828,32 @@
         var t=document.querySelector(this.getAttribute('href'));
         if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}
       });
+    });
+    
+    // ✅ FIXED POPUP FUNCTIONS
+    function showPopup(popupId){
+      document.getElementById(popupId).classList.add('active');
+      document.body.style.overflow='hidden';
+    }
+    function hidePopup(popupId){
+      document.getElementById(popupId).classList.remove('active');
+      document.body.style.overflow='';
+    }
+    // Close popup when clicking outside
+    document.querySelectorAll('.popup-overlay').forEach(function(overlay){
+      overlay.addEventListener('click',function(e){
+        if(e.target===overlay){
+          hidePopup(overlay.id);
+        }
+      });
+    });
+    // Close popup with Escape key
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){
+        document.querySelectorAll('.popup-overlay.active').forEach(function(popup){
+          hidePopup(popup.id);
+        });
+      }
     });
   </script>
 </body>
