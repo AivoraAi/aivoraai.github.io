@@ -1,0 +1,35 @@
+{
+  "name": "Aivora AI – Best AI Tools 2026",
+  "short_name": "Aivora AI",
+  "description": "Independent AI tools reviews and affiliate marketing guides. 200+ tools reviewed by Varun Lalwani.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050a0e",
+  "theme_color": "#00c896",
+  "orientation": "portrait-primary",
+  "lang": "en-US",
+  "categories": ["technology", "education", "productivity"],
+  "icons": [
+    {
+      "src": "/assets/images/aivora-favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/aivora-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/images/aivora-og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Aivora AI – AI Tools Directory"
+    }
+  ]
+}
