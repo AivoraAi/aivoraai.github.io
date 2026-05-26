@@ -200,7 +200,7 @@
     .nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;background:rgba(5,10,14,.95);backdrop-filter:blur(22px);border-bottom:1px solid transparent;transition:all .28s}
     .nav.solid{background:rgba(5,10,14,.98);border-bottom-color:var(--border);box-shadow:0 4px 28px rgba(0,0,0,.4)}
     .nw{max-width:1200px;margin:0 auto;height:100%;padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    ..logo{display:flex;align-items:center;gap:12px;font-family:var(--fh);font-weight:800;font-size:1.25rem;color:var(--text)}
+    .logo{display:flex;align-items:center;gap:12px;font-family:var(--fh);font-weight:800;font-size:1.25rem;color:var(--text)}
     .logo-text{display:flex;flex-direction:column;line-height:1.2}
     .logo-main{font-size:1.25rem;letter-spacing:-.02em}
     .logo-sub{font-size:.65rem;color:var(--em);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
@@ -333,12 +333,17 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-     <!-- NAVIGATION HEADER -->
-  <header class="nav" id="N">
-    <div class="nw">
-      <a href="../index.html" class="logo" aria-label="Aivora AI Home" style="gap: 10px; align-items: center;">
-        <!-- SVG Logo Detail (Sized to 32px to fit perfectly) -->
-        <svg class="logo-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; display: block;">
+  <!-- NAVIGATION HEADER -->
+        <a href="../index.html" class="logo" aria-label="Aivora AI Home" style="gap: 10px; align-items: center;">
+
+        <!-- 1. ORIGINAL PNG IMAGE (Added & Scaled) -->
+        <img src="https://aivoraai.github.io/assets/images/aivora-logo.png"
+             alt="Aivora AI Logo"
+             style="height: 40px; width: auto; display: block;"
+             onerror="this.style.display='none'; document.getElementById('logo-svg').style.display='block'">
+
+        <!-- 2. SVG FALLBACK (Sirf tab dikhega agar image load nahi hogi) -->
+        <svg id="logo-svg" width="38" height="38" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="display: none; flex-shrink: 0;">
           <defs>
             <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#00c896"/>
@@ -349,37 +354,23 @@
           <polygon points="32,18 46,32 32,46 18,32" fill="url(#logoGrad)"/>
           <circle cx="32" cy="32" r="4" fill="#fff" opacity="0.95"/>
         </svg>
-        
+
+        <!-- 3. TEXT -->
         <div class="logo-text">
-          <span class="logo-main" style="font-size: 1.15rem; color: var(--text);">Aivora<span class="bp">ai</span></span>
+          <span class="logo-main">Aivora<span class="bp">ai</span></span>
           <span class="logo-sub">AI TOOLS & INCOME</span>
         </div>
+
       </a>
       <nav>
         <ul class="nav-ul">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../blog.html" style="color:var(--em)">Blog</a></li>
-          <li><a href="../product.html">AI Tools</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../index.html"> Home</a></li>
+          <li><a href="../blog.html" style="color:var(--em)">📝 Blog</a></li>
+          <li><a href="../product.html"> AI Tools</a></li>
+          <li><a href="../about.html"> About</a></li>
+          <li><a href="../contact.html"> Contact</a></li>
         </ul>
       </nav>
-      <div style="display:flex;align-items:center;gap:12px">
-        <a href="https://www.checkout-ds24.com/redir/611044/lalwanivarun526982b/" target="_blank" rel="noopener sponsored" class="btn-cta">Get AI Tools →</a>
-        <button class="ham" id="H" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <!-- MOBILE MENU -->
-  <nav class="mnav" id="M" aria-label="Mobile">
-    <a href="../index.html">Home</a>
-    <a href="../blog.html">Blog</a>
-    <a href="../product.html">AI Tools</a>
-    <a href="../about.html">About</a>
-    <a href="../contact.html">Contact</a>
-    <a href="https://www.checkout-ds24.com/redir/611044/lalwanivarun526982b/" target="_blank" rel="noopener sponsored" style="margin-top:10px;padding:13px;background:var(--grad-gold);color:#fff;border-radius:var(--r2);text-align:center;font-weight:700;font-family:var(--fh)">Get AI Tools →</a>
-  </nav>
       <div style="display:flex;align-items:center;gap:12px">
         <a href="https://www.checkout-ds24.com/redir/611044/lalwanivarun526982b/" target="_blank" rel="noopener sponsored" class="btn-cta">Get AI Tools →</a>
         <button class="ham" id="H" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
