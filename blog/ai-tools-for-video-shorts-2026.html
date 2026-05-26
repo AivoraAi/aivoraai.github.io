@@ -449,6 +449,12 @@
       <a href="../index.html" class="logo" aria-label="Aivora AI Home">
         <!-- ✅ FIXED LOGO with robust fallback -->
         <img class="logo-img" src="../assets/images/aivora-logo.png" alt="Aivora AI Logo" onerror="this.style.display='none';document.querySelector('.logo-svg').classList.add('active')"/>
+       .logo-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 6px;
+}
         <svg class="logo-svg" width="45" height="45" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
           <defs><linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00c896"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient></defs>
           <circle cx="32" cy="32" r="28" fill="none" stroke="url(#logoGrad)" stroke-width="1.5" opacity="0.3"/>
