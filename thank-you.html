@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Thank You! | Aivora AI</title>
+  <meta name="description" content="Thank you for contacting Aivora AI. We'll get back to you within 24 hours."/>
+  <meta name="robots" content="noindex,follow"/>
+  <link rel="canonical" href="https://aivoraai.github.io/thank-you.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bg:#050a0e;--card:#0f1e26;--em:#00c896;--gold:#f0b429;--text:#e8f4f0;--text2:#7fb3a0;--text3:#3d6b5a;--border:rgba(0,200,150,.1);--grad-em:linear-gradient(135deg,#00c896,#0ea5e9);--grad-gold:linear-gradient(135deg,#f0b429,#f97316);--fh:'Outfit',sans-serif;--fb:'Space Grotesk',sans-serif}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--fb);background:var(--bg);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+    .wrap{max-width:520px;width:100%;text-align:center}
+    .icon-ring{width:90px;height:90px;border-radius:50%;background:rgba(0,200,150,.12);border:2px solid rgba(0,200,150,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:2.5rem;animation:pop .5s cubic-bezier(.34,1.56,.64,1) both}
+    @keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+    h1{font-family:var(--fh);font-size:clamp(1.8rem,5vw,2.4rem);font-weight:800;margin-bottom:14px;background:linear-gradient(135deg,var(--text),var(--em));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    p{color:var(--text2);font-size:1.05rem;line-height:1.75;margin-bottom:22px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;margin:28px 0;text-align:left}
+    .card h3{font-family:var(--fh);font-size:1rem;color:var(--gold);margin-bottom:14px}
+    .card ul{list-style:none}
+    .card li{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--text2);margin-bottom:10px}
+    .card li::before{content:'→';color:var(--em);font-weight:700}
+    .card li a{color:var(--em);text-decoration:none;border-bottom:1px dotted var(--em)}
+    .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-block;padding:13px 28px;border-radius:12px;font-family:var(--fh);font-weight:700;font-size:.92rem;text-decoration:none;transition:all .28s}
+    .btn-primary{background:var(--grad-gold);color:#fff}
+    .btn-primary:hover{opacity:.9;transform:translateY(-2px)}
+    .btn-secondary{background:transparent;border:1px solid var(--border);color:var(--text2)}
+    .btn-secondary:hover{border-color:var(--em);color:var(--em)}
+    .footer-note{font-size:.8rem;color:var(--text3);margin-top:28px}
+    .countdown{font-size:.85rem;color:var(--em);font-weight:600;margin-top:8px}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Thank You – Aivora AI","url":"https://aivoraai.github.io/thank-you.html","description":"Thank you for contacting Aivora AI.","isPartOf":{"@type":"WebSite","name":"Aivora AI","url":"https://aivoraai.github.io/"}}
+  </script>
+</head>
+<body>
+<div class="wrap">
+  <div class="icon-ring">✅</div>
+  <h1>Message Received!</h1>
+  <p>Thank you for reaching out to <strong style="color:var(--em)">Aivora AI</strong>. Varun will personally review your message and get back to you within <strong style="color:var(--text)">24 hours</strong>.</p>
+
+  <div class="card">
+    <h3>⚡ While you wait — explore these:</h3>
+    <ul>
+      <li><a href="blog.html">Read our latest AI tools reviews</a></li>
+      <li><a href="product.html">Browse 200+ AI tools directory</a></li>
+      <li><a href="blog/ai-tools-real-estate-marketing-2026.html">AI Tools for Real Estate Marketing 2026</a></li>
+      <li><a href="blog/ai-tools-video-editing-2026.html">AI Tools for Video Editing 2026</a></li>
+    </ul>
+  </div>
+
+  <div class="btn-row">
+    <a href="index.html" class="btn btn-primary">Back to Home →</a>
+    <a href="blog.html" class="btn btn-secondary">Read the Blog</a>
+  </div>
+
+  <p class="footer-note">📧 You'll receive a reply at the email you provided.<br/>Check your spam folder if you don't hear back within 24 hours.</p>
+  <p class="countdown" id="cd"></p>
+</div>
+<script>
+  var s=8;
+  var t=setInterval(function(){
+    s--;
+    document.getElementById('cd').textContent='Redirecting to homepage in '+s+'s…';
+    if(s<=0){clearInterval(t);window.location.href='index.html';}
+  },1000);
+</script>
+</body>
+</html>
