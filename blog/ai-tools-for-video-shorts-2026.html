@@ -127,7 +127,7 @@
         "name": "What are the best AI tools for video shorts in 2026?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The best AI tools for video shorts in 2026 include OpusClip (AI video clipping), Descript (video editing), InVideo AI (AI video creation), Pictory (text-to-video), and CapCut (mobile editing with AI). Each tool excels at different aspects of short-form video creation for TikTok, Reels, and YouTube Shorts."
+          "text": "The best AI tools for video shorts in 2026 include OpusClip (AI video clipping), Descript (video editing), InVideo AI (AI video creation), Pictory (text-to-video), and CapCut (mobile editing). Each tool excels at different aspects of short-form video creation for TikTok, Reels, and YouTube Shorts."
         }
       },
       {
@@ -412,6 +412,11 @@
     .disclosure-box strong{color:var(--text2)}
     .footer{text-align:center;padding:28px;font-size:.85rem;color:var(--text3);border-top:1px solid var(--border);background:var(--bg2)}
     .footer a{color:var(--em);transition:color .28s}
+    
+    /* ✅ FIXED LOGO STYLES */
+    .logo-img{height:45px;width:auto;display:block;transition:opacity .2s}
+    .logo-svg{display:none;flex-shrink:0}
+    .logo-svg.active{display:block}
     
     /* Small Popup Styles */
     .popup-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px}
@@ -825,7 +830,7 @@
       });
     });
     
-    // Popup Functions
+    // ✅ FIXED POPUP FUNCTIONS
     function showPopup(popupId){
       document.getElementById(popupId).classList.add('active');
       document.body.style.overflow='hidden';
