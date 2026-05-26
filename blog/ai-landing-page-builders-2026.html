@@ -333,13 +333,25 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-    <!-- NAVIGATION HEADER -->
+     <!-- NAVIGATION HEADER -->
   <header class="nav" id="N">
     <div class="nw">
-      <a href="../index.html" class="logo" aria-label="Aivora AI Home" style="gap: 0;">
+      <a href="../index.html" class="logo" aria-label="Aivora AI Home" style="gap: 10px; align-items: center;">
+        <!-- SVG Logo Detail (Sized to 32px to fit perfectly) -->
+        <svg class="logo-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; display: block;">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00c896"/>
+              <stop offset="100%" stop-color="#0ea5e9"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="28" fill="none" stroke="url(#logoGrad)" stroke-width="1.5" opacity="0.3"/>
+          <polygon points="32,18 46,32 32,46 18,32" fill="url(#logoGrad)"/>
+          <circle cx="32" cy="32" r="4" fill="#fff" opacity="0.95"/>
+        </svg>
+        
         <div class="logo-text">
-          <!-- Simple White Text (No Gradient) -->
-          <span class="logo-main" style="font-size: 1.2rem; color: var(--text);">Aivora<span class="bp">ai</span></span>
+          <span class="logo-main" style="font-size: 1.15rem; color: var(--text);">Aivora<span class="bp">ai</span></span>
           <span class="logo-sub">AI TOOLS & INCOME</span>
         </div>
       </a>
