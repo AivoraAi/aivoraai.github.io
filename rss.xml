@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+  <channel>
+    <title>Aivora AI – Best AI Tools 2026</title>
+    <link>https://aivoraai.github.io/</link>
+    <description>Independent AI tools reviews, affiliate marketing guides, and passive income strategies for creators worldwide. 200+ tools reviewed by Varun Lalwani.</description>
+    <language>en-us</language>
+    <copyright>© 2026 Aivora AI. All rights reserved.</copyright>
+    <managingEditor>Aivoraai@outlook.com (Varun Lalwani)</managingEditor>
+    <webMaster>Aivoraai@outlook.com (Varun Lalwani)</webMaster>
+    <lastBuildDate>Mon, 25 May 2026 00:00:00 +0000</lastBuildDate>
+    <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+    <ttl>7</ttl>
+    <image>
+      <url>https://aivoraai.github.io/assets/images/aivora-logo.png</url>
+      <title>Aivora AI</title>
+      <link>https://aivoraai.github.io/</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
+    <atom:link href="https://aivoraai.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>AI Tools for Real Estate Marketing 2026: Top 10 Tested &amp; Ranked</title>
+      <link>https://aivoraai.github.io/blog/ai-tools-real-estate-marketing-2026.html</link>
+      <guid isPermaLink="true">https://aivoraai.github.io/blog/ai-tools-real-estate-marketing-2026.html</guid>
+      <pubDate>Tue, 20 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Varun Lalwani</dc:creator>
+      <category>AI Tools</category>
+      <category>Real Estate Marketing</category>
+      <description><![CDATA[We tested 10+ AI tools for real estate marketing in 2026. Here are the best for listing copy, lead generation, virtual tours, and social media — honest, independent reviews by Varun Lalwani at Aivora AI.]]></description>
+      <content:encoded><![CDATA[
+        <p>Real estate marketing in 2026 has changed dramatically. Agents who used to spend hours writing listing descriptions, designing flyers, and manually following up with leads are now using AI tools to do all of that in minutes.</p>
+        <p>We tested 10+ AI tools over 30 days specifically for real estate marketing tasks. Here are our top picks: ChatGPT, Canva AI, Jasper AI, Matterport, and Lofty CRM.</p>
+        <p><a href="https://aivoraai.github.io/blog/ai-tools-real-estate-marketing-2026.html">Read the full review →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>AI Tools for Video Editing 2026: Edit 10x Faster &amp; Go Viral</title>
+      <link>https://aivoraai.github.io/blog/ai-tools-video-editing-2026.html</link>
+      <guid isPermaLink="true">https://aivoraai.github.io/blog/ai-tools-video-editing-2026.html</guid>
+      <pubDate>Mon, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Varun Lalwani</dc:creator>
+      <category>AI Tools</category>
+      <category>Video Editing</category>
+      <description><![CDATA[Discover the best AI tools for video editing in 2026. Automate cuts, remove backgrounds, generate B-roll, and edit videos 10x faster with top AI video editors including Descript, RunwayML, and Opus Clip.]]></description>
+      <content:encoded><![CDATA[
+        <p>Video editing has always been one of the most time-consuming parts of content creation. But in 2026, AI has completely transformed the editing workflow.</p>
+        <p>Top tools: Descript, RunwayML, Pictory, InVideo AI, Adobe Podcast, and Opus Clip.</p>
+        <p><a href="https://aivoraai.github.io/blog/ai-tools-video-editing-2026.html">Read the full guide →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Best AI Email Marketing Tools 2026: Automate &amp; Convert</title>
+      <link>https://aivoraai.github.io/ai-email-marketing-tools-2026.html</link>
+      <guid isPermaLink="true">https://aivoraai.github.io/ai-email-marketing-tools-2026.html</guid>
+      <pubDate>Sat, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Varun Lalwani</dc:creator>
+      <category>AI Tools</category>
+      <category>Email Marketing</category>
+      <description><![CDATA[The best AI email marketing tools in 2026 reviewed and ranked. Automate campaigns, personalize at scale, and boost conversions with AI-powered email platforms.]]></description>
+    </item>
+
+  </channel>
+</rss>
