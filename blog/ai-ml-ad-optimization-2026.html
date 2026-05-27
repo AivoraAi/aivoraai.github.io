@@ -290,7 +290,7 @@
     .cta-box{background:linear-gradient(135deg,rgba(240,180,41,.1),rgba(240,120,20,.06));border:1.5px solid rgba(240,180,41,.28);border-radius:var(--r3);padding:36px;text-align:center;margin:48px 0}
     .cta-box h3{font-family:var(--fh);font-size:1.4rem;margin-bottom:12px;color:var(--gold)}
     .cta-box p{color:var(--text2);margin-bottom:22px;max-width:500px;margin-left:auto;margin-right:auto}
-    .btn{display:inline-block;padding:15px 36px;background:var(--grad-gold);color:#fff;border-radius:var(--r2);font-family:var(--font-weight:700;font-size:.98rem;transition:all .28s}
+    .btn{display:inline-block;padding:15px 36px;background:var(--grad-gold);color:#fff;border-radius:var(--r2);font-family:var(--fh);font-weight:700;font-size:.98rem;transition:all .28s}
     .btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(240,180,41,.35)}
     .sidebar{position:relative}
     .sidebar-sticky{position:sticky;top:90px;display:flex;flex-direction:column;gap:18px}
@@ -309,7 +309,7 @@
     .footer{text-align:center;padding:28px;font-size:.85rem;color:var(--text3);border-top:1px solid var(--border);background:var(--bg2)}
     .footer a{color:var(--em);transition:color .28s}
     
-    /* LOGO STYLES */
+    /* ✅ FIXED LOGO STYLES */
     .logo-img{height:45px;width:auto;display:block;transition:opacity .2s}
     .logo-svg{display:none;flex-shrink:0}
     .logo-svg.active{display:block}
@@ -342,19 +342,11 @@
   <!-- NAVIGATION HEADER -->
   <header class="nav" id="N">
     <div class="nw">
-      <!-- LOGO LINK WITH IMAGE AND FALLBACK -->
-      <a href="../index.html" class="logo" aria-label="Aivora AI Home" style="gap: 10px; align-items: center;">
-        <img class="logo-img" 
-             src="https://aivoraai.github.io/assets/images/aivora-logo.png" 
-             alt="Aivora AI Logo"
-             onerror="this.style.display='none'; document.getElementById('logo-svg').style.display='block'">
-        <svg id="logo-svg" width="45" height="45" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="display: none; flex-shrink: 0;">
-          <defs>
-            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#00c896"/>
-              <stop offset="100%" stop-color="#0ea5e9"/>
-            </linearGradient>
-          </defs>
+      <!-- ✅ FIXED LOGO with robust fallback -->
+      <a href="../index.html" class="logo" aria-label="Aivora AI Home">
+        <img class="logo-img" src="../assets/images/aivora-logo.png" alt="Aivora AI Logo" onerror="this.style.display='none';document.querySelector('.logo-svg').classList.add('active')"/>
+        <svg class="logo-svg" width="45" height="45" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00c896"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient></defs>
           <circle cx="32" cy="32" r="28" fill="none" stroke="url(#logoGrad)" stroke-width="1.5" opacity="0.3"/>
           <polygon points="32,18 46,32 32,46 18,32" fill="url(#logoGrad)"/>
           <circle cx="32" cy="32" r="4" fill="#fff" opacity="0.95"/>
@@ -366,11 +358,11 @@
       </a>
       <nav>
         <ul class="nav-ul">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../blog.html" style="color:var(--em)">Blog</a></li>
-          <li><a href="../product.html">AI Tools</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../index.html">🏠 Home</a></li>
+          <li><a href="../blog.html" style="color:var(--em)">📝 Blog</a></li>
+          <li><a href="../product.html">🤖 AI Tools</a></li>
+          <li><a href="../about.html">👤 About</a></li>
+          <li><a href="../contact.html">✉️ Contact</a></li>
         </ul>
       </nav>
       <div style="display:flex;align-items:center;gap:12px">
@@ -381,17 +373,17 @@
   </header>
 
   <nav class="mnav" id="M" aria-label="Mobile">
-    <a href="../index.html">Home</a>
-    <a href="../blog.html">Blog</a>
-    <a href="../product.html">AI Tools</a>
-    <a href="../about.html">About</a>
-    <a href="../contact.html">Contact</a>
+    <a href="../index.html">🏠 Home</a>
+    <a href="../blog.html">📝 Blog</a>
+    <a href="../product.html">🤖 AI Tools</a>
+    <a href="../about.html">👤 About</a>
+    <a href="../contact.html">✉️ Contact</a>
     <a href="https://www.checkout-ds24.com/redir/611044/lalwanivarun526982b/" target="_blank" rel="noopener sponsored" style="margin-top:10px;padding:13px;background:var(--grad-gold);color:#fff;border-radius:var(--r2);text-align:center;font-weight:700;font-family:var(--fh)">Get AI Tools →</a>
   </nav>
 
   <!-- BREADCRUMB -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="../index.html">Learning</a>
+    <a href="../index.html">Home</a>
     <span>›</span>
     <a href="../blog.html">Blog</a>
     <span>›</span>
@@ -443,7 +435,7 @@
       <!-- TOOL 1: Google Performance Max -->
       <div class="tool-card" id="pmax">
         <div class="tool-header">
-          <div class="tool-name">🚀 Google Performance Max <span class="text-badge" style="background:var(--em);color:#fff;border-radius:4px;padding:2px 8px;font-size:0.7rem;vertical-align:middle; font-weight:700;">GOOGLE</span></div>
+          <div class="tool-name">🚀 Google Performance Max <span class="tool-badge">⭐ Editor's Pick</span></div>
           <div class="tool-rating"><span class="stars">★★★★★</span> <strong style="color:var(--text)">4.9/5</strong></div>
         </div>
         <p style="font-size:.95rem;color:var(--text2);margin-bottom:16px">PMax is the ultimate ML tool. It combines Google's search, display, and YouTube inventory into a single campaign. The ML algorithm analyzes your historical data and the context of a user to determine the best ad to show, to whom, and at what price.</p>
@@ -451,11 +443,10 @@
           <div class="tool-detail"><div class="lbl">Best for</div><div class="val">Full-funnel Google Ads optimization</div></div>
           <div class="tool-detail"><div class="lbl">Price</div><div class="val">Spend-based (No sub fee)</div></div>
           <div class="tool-detail"><div class="lbl">Skill level</div><div class="val">Intermediate</div></div>
-          <div class="tool-detail"><div class="val">Tested result</div><div class="val">20% higher ROAS vs Search only</div></div>
+          <div class="tool-detail"><div class="lbl">Tested result</div><div class="val">20% higher ROAS vs Search only</div></div>
         </div>
         <div class="pros-cons">
           <div class="pros">
-            <div class="pc-title">Pros</div>
             <div class="pc-title">Pros</div>
             <ul>
               <li>Access to Google's vast user data</li>
@@ -465,7 +456,6 @@
             </ul>
           </div>
           <div class="cons">
-            <div class="pc-title">Cons</div>
             <div class="pc-title">Cons</div>
             <ul>
               <li>Lack of transparency in bidding logic</li>
@@ -477,27 +467,20 @@
       </div>
 
       <!-- TOOL 2: Meta Advantage+ -->
-      <div class="code-block" style="background:rgba(0,0,0,0.3); padding: 4px 8px; border-radius: 4px; border-left: 3px solid #1877F2; margin-bottom: 20px;">
-      <p style="font-family:var(--fb); font-size:0.9rem; color: var(--text2);">
-        <strong style="color: #1877F2;">Meta (Facebook/Instagram) Note:</strong> While you can still edit manual campaigns, we recommend Advantage+ for ML optimization as it uses Facebook's data to predict who will click.
-      </p>
-      </div>
-
       <div class="tool-card" id="meta">
         <div class="tool-header">
-          <div class="tool-name">📱 Meta Advantage+ <span class="text-badge" style="background:#1877F2;color:#fff;border-radius:4px;padding:2px 8px;font-size:0.7rem;vertical-align:middle; font-weight:700;">META</span></div>
+          <div class="tool-name">📱 Meta Advantage+ <span class="tool-badge gold">🏆 Best for Social</span></div>
           <div class="tool-rating"><span class="stars">★★★★★</span> <strong style="color:var(--text)">4.8/5</strong></div>
         </div>
-        <p style="fontachine >:font-size:.95rem;color:var(--text2);margin-bottom:16px">Meta's ML is focused on "Prospecting" and "Advantage+." It finds people who are likely to take action (like installing your app) based on their behavior on Instagram and Facebook. It is incredibly good at scaling campaigns once the pixel is firing correctly.</p>
+        <p style="font-size:.95rem;color:var(--text2);margin-bottom:16px">Meta's ML is focused on "Prospecting" and "Advantage+." It finds people who are likely to take action (like installing your app) based on their behavior on Instagram and Facebook. It is incredibly good at scaling campaigns once the pixel is firing correctly.</p>
         <div class="tool-grid">
           <div class="tool-detail"><div class="lbl">Best for</div><div class="val">Social media retargeting & lookalikes</div></div>
           <div class="tool-detail"><div class="lbl">Price</div><div class="val">Spend-based</div></div>
           <div class="tool-detail"><div class="lbl">Skill level</div><div class="val">Beginner-friendly</div></div>
-          <div class="tool-detail"><div class="val">Tested result</div><div class="val">Scaled lead gen by 3x automatically</div></div>
+          <div class="tool-detail"><div class="lbl">Tested result</div><div class="val">Scaled lead gen by 3x automatically</div></div>
         </div>
         <div class="pros-cons">
           <div class="pros">
-            <div class="pc-title">Pros</div>
             <div class="pc-title">Pros</div>
             <ul>
               <li>Uses rich data from Meta's user base</li>
@@ -508,10 +491,9 @@
           </div>
           <div class="cons">
             <div class="pc-title">Cons</div>
-            <div class="pc-title">Cons</div>
-            <div class="li">Cons</div>
-            <li>Highly dependent on the pixel</li>
-            <li>Can become expensive quickly if not capped</li>
+            <ul>
+              <li>Highly dependent on the pixel</li>
+              <li>Can become expensive quickly if not capped</li>
               <li>Lack of reporting detail compared to Google</li>
             </ul>
           </div>
@@ -521,38 +503,32 @@
       <!-- TOOL 3: Albert.ai -->
       <div class="tool-card" id="albert">
         <div class="tool-header">
-          <div class="name">🤖 Albert.ai</div>
+          <div class="tool-name">🤖 Albert.ai <span class="tool-badge">🌐 Best Cross-Platform</span></div>
           <div class="tool-rating"><span class="stars">★★★★☆</span> <strong style="color:var(--text)">4.5/5</strong></div>
         </div>
-        <p style="font-size:.95rem;color:var="text2);margin-bottom:16px">If you run ads on multiple platforms (Google, Meta, TikTok), managing ML for each one separately is a nightmare. Albert.ai acts as a central "AI Brain" that sits on top of all your ad accounts to optimize bids across channels simultaneously.</p>
+        <p style="font-size:.95rem;color:var(--text2);margin-bottom:16px">If you run ads on multiple platforms (Google, Meta, TikTok), managing ML for each one separately is a nightmare. Albert.ai acts as a central "AI Brain" that sits on top of all your ad accounts to optimize bids across channels simultaneously.</p>
         <div class="tool-grid">
           <div class="tool-detail"><div class="lbl">Best for</div><div class="val">Cross-channel management</div></div>
-          <div class="tool-detail"><div class="lbl">Price</li>
-          <div class="val">From $900/mo (Enterprise)</div></div>
-          <div class="tool-detail"><div class="lbl">Skill level</div>
-          <div class="val">Advanced</div>
-div>
-          <div class="tool-detail"><div class="val">Tested result</div>
-          <div class="val">Lowered CPA by 30% via cross-channel bidding</div></div>
+          <div class="tool-detail"><div class="lbl">Price</div><div class="val">From $900/mo (Enterprise)</div></div>
+          <div class="tool-detail"><div class="lbl">Skill level</div><div class="val">Advanced</div></div>
+          <div class="tool-detail"><div class="lbl">Tested result</div><div class="val">Lowered CPA by 30% via cross-channel bidding</div></div>
         </div>
         <div class="pros-cons">
           <div class="pros">
-            <div class="pct-title">Pros</div>
-            <div class="pct-title">Pros</div>
+            <div class="pc-title">Pros</div>
             <ul>
               <li>Unified dashboard for all platforms</li>
-              <li>Autonomous daily budget allocation</div>
+              <li>Autonomous daily budget allocation</li>
               <li>Competitive intelligence on bidding</li>
               <li>Human-in-the-loop for approvals</li>
             </ul>
           </div>
           <div class="cons">
-            <div class="pct-title">Cons</div>
-            <div class="pct-title">Cons</div>
+            <div class="pc-title">Cons</div>
             <ul>
               <li>High price point for small businesses</li>
               <li>Requires data history to start learning</li>
-              <li">Complex to set up initially</li>
+              <li>Complex to set up initially</li>
             </ul>
           </div>
         </div>
@@ -573,9 +549,9 @@ div>
           <tbody>
             <tr><td><strong style="color:var(--text)">Google PMax</strong></td><td>Google Ecosystem</td><td>Automated (Black Box)</td><td style="color:var(--text3)">Low Control</td></tr>
             <tr><td><strong style="color:var(--text)">Meta Advantage+</strong></td><td>Facebook/Insta</td><td>Automated (Enhanced Manual)</td><td style="color:var(--text3)">Low Control</td></tr>
-            <td><strong style="color:var(--text)">Albert.ai</strong></td><td>Cross-Channel</td><td>Autonomous (Hybrid)</td><td style="color:var(--em)">High Control</td></tr>
-            <tr><td><strong style="var(--text)">Marin Software</strong></td><td>Google/Meta</td><param>Automated</td><td style="var(--text3)">Medium Control</td></tr>
-            <tr><td><strong style="var(--text)">Smartly.io</strong></td><td>Social/Display</td><td><strong>Automated</strong></td><td style="var(--text3)">Low-Medium Control</td></tr>
+            <tr><td><strong style="color:var(--text)">Albert.ai</strong></td><td>Cross-Channel</td><td>Autonomous (Hybrid)</td><td style="color:var(--em)">High Control</td></tr>
+            <tr><td><strong style="color:var(--text)">Marin Software</strong></td><td>Google/Meta</td><td>Automated</td><td style="color:var(--text3)">Medium Control</td></tr>
+            <tr><td><strong style="color:var(--text)">Smartly.io</strong></td><td>Social/Display</td><td>Automated</td><td style="color:var(--text3)">Low-Medium Control</td></tr>
           </tbody>
         </table>
       </div>
@@ -604,14 +580,29 @@ div>
       <h3>2. Feed the Data</h3>
       <p>ML needs history to learn. If your campaign is new, start with a manual phase (2-4 weeks) to generate data points. Once you have ~50 conversions, switch to a "Target CPA" bidding strategy to let the ML take over.</p>
 
-      <h3>3. Review Negative Keywords</h4>
+      <h3>3. Review Negative Keywords</h3>
       <p>ML is smart, but it's not a mind reader. You must provide "Negative Keywords" to prevent it from spending on irrelevant searches. For example, tell ML "Don't show my ads for 'free cracks' or 'reviews' if you are selling software."</p>
 
       <h2 id="faq">Frequently Asked Questions</h2>
 
-      <div class="file-item">
+      <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Is machine learning optimization better than manual bidding? <span class="faq-icon">+</span></button>
-        <div class="file-a"><p>In 2026, yes. The volume of data is too large for humans to process manually. ML can react to auction changes in milliseconds, whereas manual adjustments are too slow. However, manual bidding is still useful for very small, low-volume campaigns where data is scarce.</p></div>
+        <div class="faq-a"><p>In 2026, yes. The volume of data is too large for humans to process manually. ML can react to auction changes in milliseconds, whereas manual adjustments are too slow. However, manual bidding is still useful for very small, low-volume campaigns where data is scarce.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I need a lot of data for ML optimization to work? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes, ML needs data to learn. Google recommends at least 15-30 conversions per month for Smart Bidding to work effectively. If you're just starting, begin with manual bidding to gather data, then switch to ML once you have enough conversion history.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I still make manual adjustments with ML bidding? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes, but with limitations. You can set bid caps, target ROAS/CPA goals, and exclude placements. However, you can't adjust individual keyword bids in Performance Max. The trade-off is less control for better automation and performance.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How long does it take for ML to optimize my campaigns? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>ML typically needs a 2-4 week "learning phase" to gather enough data. During this time, avoid making major changes to your campaigns. After the learning phase, you should see improved performance as the algorithm refines its predictions.</p></div>
       </div>
 
       <!-- AUTHOR BIO BOX -->
@@ -689,12 +680,13 @@ div>
     <div class="popup">
       <div class="popup-header">
         <h3 class="popup-title">📊 Platform Breakdown</h3>
-        <p class="popup-content">
-          <p><strong>Google Ads:</strong> Use Performance Max for maximum automation.</p>
-          <p><strong>Meta Ads:</strong> Use Advantage+ for social engagement.</p>
-          <p><strong>Cross-Platform:</strong> Use Albert.ai for centralized control.</p>
-          <a href="https://www.checkout-ds24.com/redir/611044/lalwanivarun526982b/" target="_blank" class="popup-btn">Start Optimizing →</a>
-        </div>
+        <button class="popup-close" onclick="hidePopup('quickSummary')">×</button>
+      </div>
+      <div class="popup-content">
+        <p><strong>Google Ads:</strong> Use Performance Max for maximum automation.</p>
+        <p><strong>Meta Ads:</strong> Use Advantage+ for social engagement.</p>
+        <p><strong>Cross-Platform:</strong> Use Albert.ai for centralized control.</p>
+        <a href="https://www.checkout-ds24.com/redir/611044/lalwanivarun526982b/" target="_blank" class="popup-btn">Start Optimizing →</a>
       </div>
     </div>
   </div>
@@ -707,7 +699,7 @@ div>
 
   <script>
     var nav=document.getElementById('N');
-    window.addEventListener('scroll',function(){nav.classList.toggle('solid',type="window.scrollY>50)},{passive:true});
+    window.addEventListener('scroll',function(){nav.classList.toggle('solid',window.scrollY>50)},{passive:true});
     var ham=document.getElementById('H'),mob=document.getElementById('M');
     ham.addEventListener('click',function(){
       var open=mob.classList.toggle('open');
@@ -728,6 +720,7 @@ div>
       });
     });
     
+    // ✅ FIXED POPUP FUNCTIONS
     function showPopup(popupId){
       document.getElementById(popupId).classList.add('active');
       document.body.style.overflow='hidden';
@@ -736,6 +729,7 @@ div>
       document.getElementById(popupId).classList.remove('active');
       document.body.style.overflow='';
     }
+    // Close popup when clicking outside
     document.querySelectorAll('.popup-overlay').forEach(function(overlay){
       overlay.addEventListener('click',function(e){
         if(e.target===overlay){
@@ -743,6 +737,7 @@ div>
         }
       });
     });
+    // Close popup with Escape key
     document.addEventListener('keydown',function(e){
       if(e.key==='Escape'){
         document.querySelectorAll('.popup-overlay.active').forEach(function(popup){
