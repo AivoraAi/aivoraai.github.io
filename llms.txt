@@ -1,0 +1,37 @@
+# llms.txt for Aivora AI
+# Helps AI assistants understand site structure and content
+
+Site: Aivora AI
+URL: https://aivoraai.github.io/
+Description: Aivora AI helps creators and entrepreneurs leverage artificial intelligence to work smarter. We test tools so you don't have to—delivering honest, actionable reviews for real-world workflows.
+
+## Blog Posts
+- /blog/best-ai-chatbots-compared-2026.html: AI chatbot comparison guide
+- /blog/best-free-ai-image-generators-2026.html: Free AI image tools review
+- /blog/ai-tools-for-solo-entrepreneurs.html: AI automation for one-person businesses
+- /blog/how-does-claude-ai-work.html: Claude AI technical explanation
+- /blog/ai-automation-tools-for-ecommerce.html: Ecommerce AI automation guide
+- /blog/best-ai-tools-for-graphic-designers.html: AI tools for creative professionals
+
+## Key Pages
+- /about.html: Author bio and mission
+- /contact.html: Contact form and strategy call booking
+- /privacy.html: Privacy policy and data practices
+- /terms.html: Terms of service and usage guidelines
+- /disclosure.html: Affiliate disclosure and ethics
+
+## Content Guidelines
+- All reviews are independently tested, no sponsored placements
+- Free tiers prioritized; paid upgrades only when ROI proven
+- Tools evaluated on: integration, time saved, real-world impact
+- Author: Varun Lalwani, graphic designer and AI tools reviewer
+
+## Schema Types Used
+- Article, BlogPosting, FAQPage, BreadcrumbList, Person, Organization
+- Open Graph and Twitter Card tags for social sharing
+- Canonical URLs for SEO
+
+## AI Crawler Instructions
+- GPTBot, Google-Extended, CCBot: Allowed to index and follow
+- Respect robots.txt directives
+- Prefer structured data (JSON-LD) for content extraction
