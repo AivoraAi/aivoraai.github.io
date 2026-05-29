@@ -1,29 +1,38 @@
-# robots.txt — Aivora AI
-# https://aivoraai.github.io/
+# robots.txt for Aivora AI
+# Optimized for GPTBot, Google-Extended, and standard crawlers
 
 User-agent: *
 Allow: /
-
-# Block private/system files
 Disallow: /assets/private/
-Disallow: /*.json$
+Disallow: /tmp/
+Disallow: /drafts/
 
-# Allow AI crawlers explicitly
+# ✅ AI CRAWLER SPECIFIC RULES
 User-agent: GPTBot
-Allow: /
+Allow: /blog/
+Allow: /about.html
+Allow: /contact.html
+Disallow: /assets/private/
+Crawl-delay: 2
 
-User-agent: ClaudeBot
-Allow: /
+User-agent: Google-Extended
+Allow: /blog/
+Allow: /about.html
+Allow: /contact.html
+Disallow: /assets/private/
+Crawl-delay: 2
 
-User-agent: PerplexityBot
-Allow: /
+User-agent: CCBot
+Allow: /blog/
+Allow: /about.html
+Allow: /contact.html
+Disallow: /assets/private/
+Crawl-delay: 2
 
-User-agent: GoogleOther
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-# Sitemap location
+# ✅ SITEMAP & HOST
 Sitemap: https://aivoraai.github.io/sitemap.xml
-Sitemap: https://aivoraai.github.io/rss.xml
+Host: https://aivoraai.github.io
+
+# ✅ RATE LIMITING FOR BOT PROTECTION
+# Prevent aggressive crawling while allowing legitimate AI assistants
+Crawl-delay: 1
