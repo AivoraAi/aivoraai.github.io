@@ -1,0 +1,205 @@
+# ═══════════════════════════════════════════════════════════════════
+# AIVORA AI — Full Auto Deploy Workflow
+# File path in your repo: .github/workflows/deploy.yml
+#
+# WHAT THIS DOES AUTOMATICALLY ON EVERY PUSH:
+# ✅ 1. Injects Google Tag Manager (GTM-NWSJTJ3M) into ALL pages
+# ✅ 2. Injects GA4 (G-N0LH3EN5QE) into ALL pages
+# ✅ 3. Injects favicon into ALL pages
+# ✅ 4. Auto-generates sitemap.xml from ALL HTML pages
+# ✅ 5. Commits sitemap back to repo automatically
+# ✅ 6. Deploys everything live to GitHub Pages
+# ═══════════════════════════════════════════════════════════════════
+
+name: Aivora AI — Auto GTM + Favicon + Sitemap + Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+
+  # ══════════════════════════════════════════════════════════
+  # JOB 1: PROCESS ALL HTML FILES + GENERATE SITEMAP
+  # ══════════════════════════════════════════════════════════
+  process:
+    name: Process HTML + Sitemap
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Inject GTM + Favicon + Build Sitemap
+        run: |
+          python3 - << 'PYEOF'
+          import os, re
+          from datetime import date
+
+          BASE_URL  = "https://aivoraai.github.io"
+          GTM_ID    = "GTM-NWSJTJ3M"
+          GA_ID     = "G-N0LH3EN5QE"
+          FAVICON   = "https://aivoraai.github.io/assets/images/aivora-logo.png"
+          TODAY     = date.today().isoformat()
+
+          GTM_HEAD = (
+            "<!-- Google Tag Manager -->\n"
+            "  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n"
+            "  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
+            "  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n"
+            f"  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
+            f"  }})(window,document,'script','dataLayer','{GTM_ID}');</script>\n"
+            "  <!-- End Google Tag Manager -->\n"
+            f"  <script async src=\"https://www.googletagmanager.com/gtag/js?id={GA_ID}\"></script>\n"
+            "  <script>window.dataLayer=window.dataLayer||[];\n"
+            "  function gtag(){dataLayer.push(arguments);}\n"
+            f"  gtag('js',new Date());gtag('config','{GA_ID}');</script>"
+          )
+
+          GTM_BODY = (
+            "<!-- Google Tag Manager (noscript) -->\n"
+            f"<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id={GTM_ID}\"\n"
+            "height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n"
+            "<!-- End Google Tag Manager (noscript) -->"
+          )
+
+          FAV_TAG = (
+            f"  <link rel=\"icon\" type=\"image/png\" href=\"{FAVICON}\"/>\n"
+            f"  <link rel=\"apple-touch-icon\" href=\"{FAVICON}\"/>"
+          )
+
+          html_files = []
+          for root, dirs, files in os.walk("."):
+              dirs[:] = [d for d in dirs if not d.startswith('.')]
+              for f in files:
+                  if f.endswith(".html"):
+                      html_files.append(os.path.join(root, f))
+
+          print(f"Found {len(html_files)} HTML files")
+          gtm_added = 0
+          fav_added = 0
+          sitemap_urls = []
+
+          for fpath in html_files:
+              with open(fpath,"r",encoding="utf-8",errors="ignore") as fh:
+                  c = fh.read()
+              changed = False
+
+              if GTM_ID not in c:
+                  c = re.sub(r'(<head[^>]*>)',r'\1\n'+GTM_HEAD,c,count=1,flags=re.IGNORECASE)
+                  c = re.sub(r'(<body[^>]*>)',r'\1\n'+GTM_BODY,c,count=1,flags=re.IGNORECASE)
+                  gtm_added += 1
+                  changed = True
+                  print(f"  GTM -> {fpath}")
+
+              if 'aivora-logo.png' not in c and '<head' in c.lower():
+                  c = re.sub(r'(</head>)',FAV_TAG+'\n'+r'\1',c,count=1,flags=re.IGNORECASE)
+                  fav_added += 1
+                  changed = True
+                  print(f"  FAV -> {fpath}")
+
+              if changed:
+                  with open(fpath,"w",encoding="utf-8") as fh:
+                      fh.write(c)
+
+              url_path = fpath.replace("\\","/").lstrip("./")
+              skip = ["404","privacy","terms","disclosure"]
+              if any(s in url_path.lower() for s in skip):
+                  continue
+
+              if url_path == "index.html":
+                  full_url = BASE_URL+"/"
+                  pri,freq = "1.0","daily"
+              elif url_path in ["blog.html","product.html","about.html","contact.html"]:
+                  full_url = BASE_URL+"/"+url_path
+                  pri,freq = "0.9","weekly"
+              elif url_path.startswith("blog/"):
+                  full_url = BASE_URL+"/"+url_path
+                  pri,freq = "0.8","monthly"
+              else:
+                  full_url = BASE_URL+"/"+url_path
+                  pri,freq = "0.6","monthly"
+
+              sitemap_urls.append((full_url,pri,freq))
+
+          sitemap_urls.sort(key=lambda x: float(x[1]),reverse=True)
+
+          xml  = '<?xml version="1.0" encoding="UTF-8"?>\n'
+          xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n'
+          xml += f'  <!-- Aivora AI Sitemap | Auto-generated: {TODAY} | URLs: {len(sitemap_urls)} -->\n\n'
+          for url,pri,freq in sitemap_urls:
+              xml += '  <url>\n'
+              xml += f'    <loc>{url}</loc>\n'
+              xml += f'    <lastmod>{TODAY}</lastmod>\n'
+              xml += f'    <changefreq>{freq}</changefreq>\n'
+              xml += f'    <priority>{pri}</priority>\n'
+              xml += '  </url>\n'
+          xml += '\n</urlset>'
+
+          with open("sitemap.xml","w",encoding="utf-8") as f:
+              f.write(xml)
+
+          print("")
+          print("═══════════════════════════════════")
+          print("  AIVORA AI Processing Complete")
+          print("═══════════════════════════════════")
+          print(f"  HTML files      : {len(html_files)}")
+          print(f"  GTM injected    : {gtm_added} pages")
+          print(f"  Favicon injected: {fav_added} pages")
+          print(f"  Sitemap URLs    : {len(sitemap_urls)}")
+          print("═══════════════════════════════════")
+          PYEOF
+
+      - name: Commit sitemap + processed files back to repo
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "Aivora AI Bot"
+          git add -A
+          git diff --staged --quiet || git commit -m "🤖 Auto: GTM+Favicon injected | Sitemap updated $(date '+%Y-%m-%d')"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+  # ══════════════════════════════════════════════════════════
+  # JOB 2: DEPLOY TO GITHUB PAGES
+  # ══════════════════════════════════════════════════════════
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: process
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Done
+        run: |
+          echo "✅ Aivora AI live at https://aivoraai.github.io"
