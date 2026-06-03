@@ -1,0 +1,173 @@
+#!/usr/bin/env python3
+"""
+====================================================
+AIVORA AI — TAG & KEYWORD GENERATOR (Phase 12)
+====================================================
+Generates SEO tags, AI-visibility tags, NLP keywords,
+LSI keywords, and semantic keyword clusters for any
+page or blog post.
+Usage: python tag_generator.py --title "Your Page Title" --content "body text..."
+====================================================
+"""
+
+import re
+import json
+import argparse
+from collections import Counter
+from pathlib import Path
+
+# ── Stopwords ───────────────────────────────────────
+STOPWORDS = {
+    "a","an","the","and","or","but","in","on","at","to",
+    "for","of","with","by","from","is","are","was","were",
+    "be","been","being","have","has","had","do","does","did",
+    "will","would","could","should","may","might","shall",
+    "this","that","these","those","i","we","you","he","she",
+    "it","they","my","your","our","its","their","what","which",
+    "who","how","when","where","why","all","any","both","each",
+    "more","most","other","some","such","than","too","very","can",
+    "just","not","no","so","up","out","if","about","into","then",
+    "there","also","as","after","before","through","over","under"
+}
+
+# ── AI-specific seed tags ───────────────────────────
+AI_VISIBILITY_TAGS = [
+    "ai search",
+    "generative engine optimization",
+    "answer engine optimization",
+    "google ai overviews",
+    "chatgpt",
+    "claude ai",
+    "gemini",
+    "perplexity",
+    "ai tools 2026",
+    "ai affiliate marketing",
+    "geo optimization",
+    "aeo optimization",
+    "ai search visibility",
+    "llm seo",
+    "featured snippet",
+    "voice search optimization"
+]
+
+# ── LSI seed mapping ────────────────────────────────
+LSI_MAP = {
+    "ai tools":   ["artificial intelligence software","machine learning tools",
+                   "automation platforms","ai apps 2026","best ai software"],
+    "affiliate":  ["commission","passive income","recurring revenue",
+                   "referral program","affiliate marketing"],
+    "seo":        ["search engine optimization","organic traffic","keyword ranking",
+                   "backlinks","serp","on-page seo","technical seo"],
+    "writing":    ["content creation","copywriting","ai writer",
+                   "blog post generator","content ai"],
+    "video":      ["video creation","ai video generator","faceless youtube",
+                   "text to video","video automation"],
+    "income":     ["make money online","earn online","passive revenue",
+                   "side hustle","financial freedom"],
+    "chatgpt":    ["openai","gpt-4","gpt model","large language model",
+                   "conversational ai","llm"],
+}
+
+def extract_keywords(text: str, top_n: int = 20) -> list[str]:
+    """Extract top keywords from raw text."""
+    words = re.findall(r'\b[a-zA-Z]{3,}\b', text.lower())
+    words = [w for w in words if w not in STOPWORDS]
+    counts = Counter(words)
+    return [kw for kw, _ in counts.most_common(top_n)]
+
+def generate_long_tail(primary: str, secondary: list[str]) -> list[str]:
+    """Create long-tail keyword variations."""
+    modifiers = [
+        "best", "top", "how to use", "guide to", "review of",
+        "vs", "for beginners", "2026", "free", "paid",
+        "tool for", "with", "without", "complete guide"
+    ]
+    tails = []
+    for mod in modifiers[:6]:
+        tails.append(f"{mod} {primary}")
+    for sec in secondary[:3]:
+        tails.append(f"{primary} {sec}")
+        tails.append(f"{sec} with {primary}")
+    return list(dict.fromkeys(tails))[:15]
+
+def generate_nlp_keywords(primary: str, keywords: list[str]) -> list[str]:
+    """NLP/entity-style keyword phrases."""
+    entities = [f"{primary} tool", f"{primary} software",
+                f"{primary} platform", f"{primary} for business",
+                f"{primary} for creators", f"{primary} pricing",
+                f"{primary} alternative", f"how does {primary} work",
+                f"is {primary} worth it", f"{primary} pros and cons"]
+    semantic = [k for k in keywords if k not in primary.lower().split()][:5]
+    return entities[:8] + semantic
+
+def lsi_keywords(text: str) -> list[str]:
+    """Return LSI keywords based on text content."""
+    lsi = set()
+    for seed, variants in LSI_MAP.items():
+        if seed in text.lower():
+            lsi.update(variants)
+    return list(lsi)[:20]
+
+def generate_tags(title: str, content: str = "", url: str = "") -> dict:
+    full_text = f"{title} {content}"
+    keywords  = extract_keywords(full_text, top_n=30)
+    primary   = keywords[0] if keywords else title.split()[0].lower()
+    secondary = keywords[1:6]
+
+    result = {
+        "primary_keyword":     primary,
+        "secondary_keywords":  secondary,
+        "long_tail_keywords":  generate_long_tail(primary, secondary),
+        "nlp_keywords":        generate_nlp_keywords(primary, keywords),
+        "lsi_keywords":        lsi_keywords(full_text),
+        "ai_visibility_tags":  AI_VISIBILITY_TAGS,
+        "semantic_keywords":   list(set(keywords[6:20])),
+        "meta_keywords_tag":   ", ".join([primary] + secondary[:4]),
+        "url":                 url,
+        "generated_title":     f"{title} | Aivora AI",
+        "generated_description": (
+            f"Discover {primary} and the best AI tools in 2026. "
+            f"Expert reviews, affiliate programs, and step-by-step guides. "
+            f"Trusted by 80,000+ creators worldwide."
+        )[:165]
+    }
+    return result
+
+def process_all_html(root: Path = Path(".")):
+    """Process every HTML file and write a sidecar .tags.json."""
+    for fpath in root.rglob("*.html"):
+        text = fpath.read_text(encoding="utf-8", errors="replace")
+        # Strip HTML tags for content
+        clean = re.sub(r'<[^>]+>', ' ', text)
+        clean = re.sub(r'\s+', ' ', clean).strip()
+        title_m = re.search(r'<title>([^<]+)</title>', text, re.I)
+        title   = title_m.group(1) if title_m else fpath.stem
+        url     = f"https://aivoraai.github.io/{fpath.as_posix().lstrip('./')}"
+        tags    = generate_tags(title, clean[:2000], url)
+        out = fpath.with_suffix(".tags.json")
+        out.write_text(json.dumps(tags, indent=2), encoding="utf-8")
+        print(f"  Tagged: {fpath.name}")
+
+def main():
+    parser = argparse.ArgumentParser(description="Aivora Tag Generator")
+    parser.add_argument("--title",   default="AI Tools Directory 2026")
+    parser.add_argument("--content", default="")
+    parser.add_argument("--url",     default="https://aivoraai.github.io/")
+    parser.add_argument("--all",     action="store_true",
+                        help="Process all HTML files in current dir")
+    parser.add_argument("--output",  default="tags_output.json")
+    args = parser.parse_args()
+
+    if args.all:
+        print("📎 Tagging all HTML files…")
+        process_all_html(Path("."))
+        print("✅ Done")
+    else:
+        tags = generate_tags(args.title, args.content, args.url)
+        out  = Path(args.output)
+        out.write_text(json.dumps(tags, indent=2), encoding="utf-8")
+        print(json.dumps(tags, indent=2))
+        print(f"\n✅ Saved to {out}")
+
+if __name__ == "__main__":
+    main()
