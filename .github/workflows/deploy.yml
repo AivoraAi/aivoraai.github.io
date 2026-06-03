@@ -56,7 +56,7 @@ jobs:
           BASE_URL    = "https://aivoraai.github.io"
           GTM_ID      = "GTM-NWSJTJ3M"
           GA_ID       = "G-N0LH3EN5QE"
-          FAVICON_URL = "https://aivoraai.github.io/assets/images/aivora-logo.png"
+          FAVICON_URL = "https://aivoraai.github.io/assets/images/aivora-logo-primary.png"
           TWITTER     = "https://x.com/aivoraai_co"
           INSTAGRAM   = "https://www.instagram.com/aivoraai.co"
           FACEBOOK    = "https://www.facebook.com/profile.php?id=61569221487849"
