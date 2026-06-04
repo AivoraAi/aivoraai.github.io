@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Visibility (GEO) Guide 2026 | Aivora AI</title>
-    <meta name="description" content="Real, proven Generative Engine Optimization (GEO) strategies for 2026. Learn how to get your content cited by ChatGPT, Perplexity, Gemini & AI Overviews. No gimmicks, just facts.">
-    <meta name="keywords" content="AI visibility, GEO, generative engine optimization, ChatGPT citations, Perplexity SEO, AI search optimization, AI Overviews, LLM optimization">
+    <title>Varun Lalwani – AI Tools Reviewer | Aivora AI</title>
+    <meta name="description" content="Meet Varun Lalwani, founder of Aivora AI. Independent AI tools reviewer since 2019. Expert in AI writing, video editing, SEO, affiliate marketing, and YouTube automation.">
+    <meta name="keywords" content="Varun Lalwani, Aivora AI founder, AI tools reviewer, AI expert, digital marketing, AI writing tools, AI video editing, affiliate marketing">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -162,112 +162,213 @@
             color: var(--text-muted);
         }
 
-        /* Hero Section */
-        .hero {
-            padding: 100px 0 80px;
+        /* Hero Profile Section */
+        .hero-profile {
+            padding: 80px 0 60px;
             text-align: center;
             position: relative;
         }
 
-        .hero-badge {
-            display: inline-flex;
+        .profile-avatar {
+            width: 150px; height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--purple), var(--cyan));
+            padding: 4px;
+            margin: 0 auto 30px;
+            animation: avatarPulse 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        .profile-avatar::before {
+            content: '';
+            position: absolute;
+            top: -10px; left: -10px; right: -10px; bottom: -10px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--cyan), var(--purple));
+            opacity: 0.3;
+            animation: avatarGlow 3s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes avatarPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        @keyframes avatarGlow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+
+        .profile-avatar-inner {
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            background: var(--bg);
+            display: flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(233,69,96,0.15);
-            border: 1px solid rgba(233,69,96,0.3);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 30px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(233,69,96,0.4); }
-            50% { box-shadow: 0 0 0 10px rgba(233,69,96,0); }
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
+            justify-content: center;
+            font-size: 4rem;
             font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 24px;
+            color: var(--accent);
+        }
+
+        .profile-logo {
+            width: 180px; height: 180px;
+            margin: 0 auto 30px;
+            position: relative;
+            animation: logoFloat 4s ease-in-out infinite;
+        }
+
+        .profile-logo::before {
+            content: '';
+            position: absolute;
+            top: -15px; left: -15px; right: -15px; bottom: -15px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--cyan), var(--purple));
+            opacity: 0.2;
+            animation: logoGlow 4s ease-in-out infinite;
+            z-index: -1;
+            filter: blur(20px);
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.08); }
+        }
+
+        .logo-img {
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(0,212,255,0.3);
+            box-shadow: 0 0 40px rgba(0,212,255,0.2);
+            transition: all 0.4s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 60px rgba(0,212,255,0.4);
+            border-color: rgba(0,212,255,0.6);
+        }
+
+        .hero-profile h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
             background: linear-gradient(135deg, #fff 0%, var(--accent-light) 50%, var(--cyan) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .hero p {
-            font-size: 1.25rem;
+        .hero-profile .role {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-profile .bio {
+            font-size: 1.1rem;
             color: var(--text-muted);
             max-width: 700px;
-            margin: 0 auto 40px;
+            margin: 0 auto 30px;
         }
 
-        .hero-stats {
+        .profile-stats {
             display: flex;
             justify-content: center;
-            gap: 60px;
-            margin-top: 50px;
+            gap: 50px;
+            margin-top: 40px;
         }
 
-        .stat {
+        .p-stat {
             text-align: center;
         }
 
-        .stat-number {
-            font-size: 2.5rem;
+        .p-stat-number {
+            font-size: 2.2rem;
             font-weight: 800;
             color: var(--accent);
             display: block;
+            animation: countUp 2s ease-out forwards;
         }
 
-        .stat-label {
-            font-size: 0.9rem;
+        .p-stat-label {
+            font-size: 0.85rem;
             color: var(--text-muted);
         }
 
-        /* Content Layout */
-        .content-layout {
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 40px;
-            align-items: start;
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        @media (max-width: 1024px) {
-            .content-layout { grid-template-columns: 1fr; }
+        /* About Section */
+        .about-section {
+            padding: 60px 0;
         }
 
-        /* Article Body */
-        .article-body {
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--cyan));
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+
+        .about-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: conic-gradient(from 0deg, transparent, var(--accent), transparent, var(--cyan), transparent);
+            animation: rotate 10s linear infinite;
+            opacity: 0.03;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-content p {
             font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
             line-height: 1.9;
         }
 
-        .article-body h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin: 50px 0 25px;
-            color: var(--text);
-        }
-
-        .article-body h3 {
-            font-size: 1.4rem;
-            margin: 35px 0 15px;
-            color: var(--accent);
-        }
-
-        .article-body p {
-            margin-bottom: 20px;
-            color: var(--text-muted);
-        }
-
-        .article-body strong {
+        .about-content strong {
             color: var(--text);
         }
 
@@ -285,28 +386,18 @@
             font-style: italic;
         }
 
-        .warning-box {
-            background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(233,69,96,0.1));
-            border-left: 4px solid var(--gold);
-            padding: 25px 30px;
-            border-radius: 0 15px 15px 0;
-            margin: 30px 0;
+        /* Expertise Grid */
+        .expertise-section {
+            padding: 60px 0;
         }
 
-        .warning-box p {
-            margin: 0;
-            color: var(--text);
-        }
-
-        /* Strategy Cards */
-        .strategy-grid {
+        .expertise-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
-            margin: 40px 0;
         }
 
-        .strategy-card {
+        .expertise-card {
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 20px;
@@ -316,7 +407,7 @@
             overflow: hidden;
         }
 
-        .strategy-card::before {
+        .expertise-card::before {
             content: '';
             position: absolute;
             top: 0; left: 0;
@@ -327,165 +418,242 @@
             transition: transform 0.4s ease;
         }
 
-        .strategy-card:hover::before { transform: scaleX(1); }
+        .expertise-card:hover::before { transform: scaleX(1); }
 
-        .strategy-card:hover {
+        .expertise-card:hover {
             transform: translateY(-5px);
             border-color: rgba(233,69,96,0.3);
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
-        .strategy-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--accent);
-            opacity: 0.3;
-            line-height: 1;
-            margin-bottom: 15px;
+        .expertise-icon {
+            width: 60px; height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            animation: iconFloat 3s ease-in-out infinite;
         }
 
-        .strategy-card h3 {
+        .expertise-card:nth-child(1) .expertise-icon { background: rgba(0,212,255,0.15); animation-delay: 0s; }
+        .expertise-card:nth-child(2) .expertise-icon { background: rgba(179,71,217,0.15); animation-delay: 0.5s; }
+        .expertise-card:nth-child(3) .expertise-icon { background: rgba(233,69,96,0.15); animation-delay: 1s; }
+        .expertise-card:nth-child(4) .expertise-icon { background: rgba(0,255,136,0.15); animation-delay: 1.5s; }
+        .expertise-card:nth-child(5) .expertise-icon { background: rgba(255,215,0,0.15); animation-delay: 2s; }
+        .expertise-card:nth-child(6) .expertise-icon { background: rgba(0,212,255,0.15); animation-delay: 2.5s; }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .expertise-card h3 {
             font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 12px;
-            color: var(--text);
         }
 
-        .strategy-card p {
+        .expertise-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.7;
         }
 
-        .strategy-card .tag {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-top: 15px;
-            background: rgba(0,255,136,0.15);
-            color: var(--green);
-        }
-
-        .tag-moderate { background: rgba(255,215,0,0.15) !important; color: var(--gold) !important; }
-        .tag-advanced { background: rgba(233,69,96,0.15) !important; color: var(--accent) !important; }
-
-        /* Comparison Table */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            margin: 30px 0;
-        }
-
-        .comparison-table th {
-            background: rgba(233,69,96,0.1);
-            padding: 20px;
-            text-align: left;
-            font-weight: 600;
-            color: var(--accent);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .comparison-table td {
-            padding: 18px 20px;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-muted);
-        }
-
-        .comparison-table tr:hover td {
-            background: rgba(255,255,255,0.02);
-            color: var(--text);
-        }
-
-        .comparison-table tr:last-child td { border-bottom: none; }
-
-        /* Checklist */
-        .checklist {
-            list-style: none;
-            margin: 20px 0;
-        }
-
-        .checklist li {
-            padding: 12px 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            color: var(--text-muted);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .checklist li:last-child { border-bottom: none; }
-
-        .checklist li::before {
-            content: '✓';
-            color: var(--green);
-            font-weight: 700;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        /* TOC */
-        .toc {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 30px;
-            position: sticky;
-            top: 100px;
-        }
-
-        .toc h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: var(--accent);
-        }
-
-        .toc ul {
-            list-style: none;
-        }
-
-        .toc li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .toc li:last-child { border-bottom: none; }
-
-        .toc a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.9rem;
-        }
-
-        .toc a:hover { color: var(--accent); }
-
-        .toc a::before {
-            content: '#';
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        /* Related Section */
-        .related-section {
+        /* Review Process Timeline */
+        .process-section {
             padding: 60px 0;
         }
 
-        .related-grid {
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--accent), var(--cyan), var(--purple));
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50%;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 50%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            width: 24px; height: 24px;
+            background: var(--accent);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 4px solid var(--bg);
+            box-shadow: 0 0 20px rgba(233,69,96,0.5);
+            animation: dotPulse 2s infinite;
+            z-index: 2;
+        }
+
+        @keyframes dotPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(233,69,96,0.5); }
+            50% { box-shadow: 0 0 0 15px rgba(233,69,96,0); }
+        }
+
+        .timeline-content {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 25px 30px;
+            max-width: 350px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            border-color: var(--accent);
+            transform: scale(1.02);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* AI Visibility & SEO Section */
+        .aivis-section {
+            padding: 60px 0;
+        }
+
+        .aivis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .aivis-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .aivis-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--cyan));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .aivis-card:hover::before { transform: scaleX(1); }
+
+        .aivis-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(233,69,96,0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .aivis-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .aivis-card h3 .icon {
+            width: 40px; height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            background: rgba(233,69,96,0.15);
+        }
+
+        .aivis-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .aivis-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .aivis-card li {
+            padding: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .aivis-card li::before {
+            content: '✓';
+            color: var(--green);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .aivis-card .note {
+            background: rgba(255,215,0,0.1);
+            border-left: 3px solid var(--gold);
+            padding: 12px 15px;
+            border-radius: 0 10px 10px 0;
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: var(--text);
+        }
+
+        /* Articles Section */
+        .articles-section {
+            padding: 60px 0 80px;
+        }
+
+        .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
 
-        .related-card {
+        .article-card {
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 20px;
@@ -498,7 +666,7 @@
             display: block;
         }
 
-        .related-card::after {
+        .article-card::after {
             content: '→';
             position: absolute;
             right: 30px;
@@ -510,25 +678,37 @@
             transition: all 0.3s;
         }
 
-        .related-card:hover {
+        .article-card:hover {
             border-color: var(--accent);
             transform: translateX(5px);
         }
 
-        .related-card:hover::after {
+        .article-card:hover::after {
             opacity: 1;
             right: 20px;
         }
 
-        .related-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+        .article-card .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            background: rgba(233,69,96,0.15);
             color: var(--accent);
         }
 
-        .related-card p {
+        .article-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .article-card .date {
+            font-size: 0.85rem;
             color: var(--text-muted);
-            font-size: 0.9rem;
         }
 
         /* CTA Section */
@@ -670,11 +850,19 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero-stats { flex-direction: column; gap: 30px; }
+            .hero-profile h1 { font-size: 2rem; }
+            .profile-stats { flex-direction: column; gap: 20px; }
+            .timeline::before { left: 20px; }
+            .timeline-item, .timeline-item:nth-child(even) {
+                justify-content: flex-start;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+            .timeline-dot { left: 20px; }
             .aivora-footer-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
-            .strategy-grid { grid-template-columns: 1fr; }
+            .expertise-grid { grid-template-columns: 1fr; }
+            .aivis-grid { grid-template-columns: 1fr; }
         }
 
         /* Scroll Animations */
@@ -741,382 +929,228 @@
         <div class="breadcrumb">
             <a href="https://aivoraai.github.io/index.html">Home</a>
             <span class="breadcrumb-separator">/</span>
-            <a href="https://aivoraai.github.io/blog/">Blog</a>
+            <a href="https://aivoraai.github.io/author/varun.html">Author</a>
             <span class="breadcrumb-separator">/</span>
-            <span>AI Visibility Guide</span>
+            <span>Varun Lalwani</span>
         </div>
     </div>
 
-    <section class="hero">
+    <!-- Hero Profile Section -->
+    <section class="hero-profile">
         <div class="container">
-            <div class="hero-badge">
-                <span>🎯</span> Based on Princeton Research & 2026 Industry Data
+            <div class="profile-logo">
+                <img src="https://aivoraai.github.io/images/aivora-logo.png" alt="Aivora AI Logo" class="logo-img">
             </div>
-            <h1>
-                AI Visibility (GEO) Guide 2026
-            </h1>
-            <p>Real, proven strategies to get your content cited by ChatGPT, Perplexity, Gemini, and AI Overviews. No gimmicks. No fake hacks. Just what actually works according to research and real-world testing.</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">40%</span>
-                    <span class="stat-label">Visibility Boost Possible</span>
+            <h1>Varun Lalwani</h1>
+            <div class="role">Founder & Lead AI Tools Reviewer</div>
+            <p class="bio">Independent AI tools reviewer since 2019. I personally test every tool I review — signing up, using it for real tasks, and reporting exactly what I find. No paid placements. No inflated scores.</p>
+            <div class="profile-stats">
+                <div class="p-stat">
+                    <span class="p-stat-number">200+</span>
+                    <span class="p-stat-label">Tools Reviewed</span>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">6+</span>
-                    <span class="stat-label">AI Platforms to Optimize</span>
+                <div class="p-stat">
+                    <span class="p-stat-number">7+</span>
+                    <span class="p-stat-label">Years Experience</span>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">3-6</span>
-                    <span class="stat-label">Months to See Results</span>
+                <div class="p-stat">
+                    <span class="p-stat-number">80K+</span>
+                    <span class="p-stat-label">Monthly Readers</span>
+                </div>
+                <div class="p-stat">
+                    <span class="p-stat-number">100%</span>
+                    <span class="p-stat-label">Independent</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container">
-        <div class="content-layout">
-            <div class="main-content">
-                <section class="article-body">
-                    <h2 id="what-is-geo">What Is Generative Engine Optimization (GEO)?</h2>
-                    <p><strong>Generative Engine Optimization (GEO)</strong> is the practice of optimizing your content so AI-powered search engines — ChatGPT, Perplexity, Gemini, Google AI Overviews, Microsoft Copilot — can discover, understand, and <strong>cite</strong> it in their answers.</p>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Varun</h2>
+            <div class="about-card">
+                <div class="about-content">
+                    <p>I started my digital marketing journey in <strong>2019</strong>, and quickly became fascinated by how AI tools were changing the way content creators, freelancers, and entrepreneurs work. In <strong>2023</strong>, I founded <strong>Aivora AI</strong> with a simple mission: give honest, independent reviews of AI tools so creators can make confident decisions without wasting money on the wrong tools.</p>
 
-                    <p>Unlike traditional SEO where you fight for position #1 on Google, GEO is about becoming the <strong>source AI chooses to reference</strong> when someone asks a question. Princeton University researchers formalized this term and proved that targeted GEO strategies can boost source visibility in AI responses by up to <strong>40%</strong>.</p>
-
-                    <div class="highlight-box">
-                        <p>"GEO is not a replacement for SEO but an extension. SEO gets you on search pages; GEO puts your content inside AI answers themselves." — Princeton University Research, 2024</p>
-                    </div>
-
-                    <h3>GEO vs. SEO vs. AEO: The Real Difference</h3>
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Dimension</th>
-                                <th>Traditional SEO</th>
-                                <th>AEO</th>
-                                <th>GEO</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Goal</strong></td>
-                                <td>Rank in SERP top 10</td>
-                                <td>Appear in featured snippets</td>
-                                <td>Be cited in AI-generated answers</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Target</strong></td>
-                                <td>Google, Bing crawlers</td>
-                                <td>Featured snippets, voice search</td>
-                                <td>ChatGPT, Gemini, Perplexity, Copilot</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Key Metric</strong></td>
-                                <td>Position, CTR, traffic</td>
-                                <td>Position zero rate</td>
-                                <td>Mention rate, citation count</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Content Format</strong></td>
-                                <td>Keyword-optimized pages</td>
-                                <td>Q&A formatted content</td>
-                                <td>Definition Lead + Schema + Citations</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Authority Signal</strong></td>
-                                <td>Backlinks, DA</td>
-                                <td>Concise answers</td>
-                                <td>Third-party mentions, entity consistency</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <h2 id="why-matters">Why AI Visibility Matters in 2026</h2>
-                    <p>The search landscape has fundamentally shifted. AI-generated summaries are reducing traditional click-through behavior significantly. A growing percentage of queries now trigger AI-powered responses instead of traditional blue links. Users are shifting toward conversational and long-tail queries.</p>
-
-                    <p>This means <strong>visibility is no longer about ranking pages</strong> — it's about whether your content can be understood, trusted, and surfaced by AI. If ChatGPT recommends your competitor when someone asks "What's the best AI tool for X?" and never mentions you, you've lost that customer before they even visit Google.</p>
-
-                    <div class="warning-box">
-                        <p><strong>Warning:</strong> Some brands with strong SEO performance are entirely absent in AI responses. One agency tested buyer-intent prompts and learned LLMs consistently recommended two competitors (but not them) despite ranking well on Google. Don't assume SEO = AI visibility.</p>
-                    </div>
-
-                    <h2 id="strategies">12 Proven GEO Strategies That Actually Work</h2>
-                    <p>These strategies are validated against real citation performance data from cross-platform monitoring (February–March 2026). Brands implementing all 12 achieve an average mention rate of <strong>21.4%</strong> on Google Gemini and <strong>20.0%</strong> on Microsoft Copilot — compared to near-zero for brands without systematic GEO.</p>
-
-                    <div class="strategy-grid">
-                        <div class="strategy-card">
-                            <div class="strategy-number">01</div>
-                            <h3>Definition Lead Architecture</h3>
-                            <p>Start every section with a concise, self-contained definition: "[Subject] is a [category] that [purpose]." AI models extract these preferentially because they're semantically complete and quotable.</p>
-                            <span class="tag">Easy</span>
-                        </div>
-                        <div class="strategy-card">
-                            <div class="strategy-number">02</div>
-                            <h3>Stacked JSON-LD Schema</h3>
-                            <p>Deploy Article + ItemList + FAQPage + Organization schema on every page. Structured data helps AI parse meaning and understand relationships between entities.</p>
-                            <span class="tag tag-moderate">Moderate</span>
-                        </div>
-                        <div class="strategy-card">
-                            <div class="strategy-number">03</div>
-                            <h3>Quick Answer Blocks</h3>
-                            <p>Write direct answers in the first 200 words. AI Overviews cite from the first 30% of content 55% of the time. Don't bury key information deep in your article.</p>
-                            <span class="tag">Easy</span>
-                        </div>
-                        <div class="strategy-card">
-                            <div class="strategy-number">04</div>
-                            <h3>External Authority Citations</h3>
-                            <p>Embed 3-5 external citations per article. Link to academic research, official docs, recognized industry publications. Citations boost AI visibility up to 40%.</p>
-                            <span class="tag">Easy</span>
-                        </div>
-                        <div class="strategy-card">
-                            <div class="strategy-number">05</div>
-                            <h3>Content Freshness Protocol</h3>
-                            <p>Update content quarterly with version history signals. Un-updated pages lose citations at 3x the normal rate. Show AI your content is maintained and current.</p>
-                            <span class="tag">Easy</span>
-                        </div>
-                        <div class="strategy-card">
-                            <div class="strategy-number">06</div>
-                            <h3>Content Type Diversification</h3>
-                            <p>Balance content types 3:1 — every 3 listicles should be paired with 1 how-to or best practices article. AI needs variety to cite for different query types.</p>
-                            <span class="tag">Easy</span>
-                        </div>
-                        <div class="strategy-card">
-                            <div class="strategy-number">07</div>
-                            <h3>Conversational Query Alignment</h3>
-                            <p>Map headings to exact conversational queries users type into AI. Use "What is GEO?" instead of "Introduction." Use "How to measure GEO success" instead of "Metrics."</p>
-                            <span class="tag">Easy</span>
-                        </div>
-                        <div class="strategy-card">
-                            <div class="strategy-number">08</div>
-                            <h3>Third-Party Mention Strategy</h3>
-                            <p>85% of AI brand mentions come from off-site sources. Build mentions on Reddit, LinkedIn, Quora, industry forums, and PR coverage. AI uses these as primary sources.</p>
-                            <span class="tag tag-moderate">Moderate</span>
-                        </div>
-                        <div class="strategy-card">
-                            <div class="strategy-number">09</div>
-                            <h3>Structured Comparison Tables</h3>
-                            <p>AI models strongly prefer tabular data for multi-entity queries. Include comparison tables with clear headers, data points, and sources. This is highly extractable.</p>
-                            <span class="tag">Easy</span>
-                        </div>
-                        <div class="strategy-card">
-                            <div class="strategy-number">10</div>
-                            <h3>Methodology Sections</h3>
-                            <p>Add "How We Evaluated" or "Our Process" sections. These embed informational triggers that signal credibility and help AI understand your expertise.</p>
-                            <span class="tag">Easy</span>
-                        </div>
-                        <div class="strategy-card">
-                            <div class="strategy-number">11</div>
-                            <h3>Multi-Platform Monitoring</h3>
-                            <p>Monitor visibility across 5+ AI platforms weekly. Each platform has different citation behaviors. ChatGPT, Gemini, Perplexity, Copilot, and AI Overviews all differ.</p>
-                            <span class="tag tag-advanced">Advanced</span>
-                        </div>
-                        <div class="strategy-card">
-                            <div class="strategy-number">12</div>
-                            <h3>Link Policy Enforcement</h3>
-                            <p>Use internal links with target="_blank" and external links with rel="nofollow". This protects your authority while ensuring good user experience.</p>
-                            <span class="tag tag-moderate">Moderate</span>
-                        </div>
-                    </div>
-
-                    <h2 id="chunk-level">Optimize for Chunk-Level Retrieval</h2>
-                    <p>AI systems don't read entire articles. They break content into smaller chunks and pick the best sections. This is called <strong>chunk-level retrieval</strong>.</p>
-
-                    <p>Make each section understandable on its own. Use clear, descriptive subheadings. Stick to <strong>one main idea per section</strong>. If AI pulls just one paragraph from your 3,000-word article, that paragraph needs to make sense independently.</p>
+                    <p>Unlike review sites that accept payments for rankings, I personally test every tool I review. I sign up, use it for real tasks — writing, video editing, social media, real estate marketing, SEO — and report exactly what I find. No paid placements. No inflated scores.</p>
 
                     <div class="highlight-box">
-                        <p><strong>Good:</strong> H2: What is predictive maintenance?<br>H2: Benefits of predictive maintenance for manufacturers<br>H2: How to implement predictive maintenance<br><br><strong>Bad:</strong> H2: Predictive maintenance<br>H2: More about predictive maintenance<br>H2: Other maintenance tips</p>
+                        <p>"Every review on Aivora AI follows a strict process: sign up personally, test for 7-30 days, compare against competitors, document time saved and quality of output, and update when tools change."</p>
                     </div>
-
-                    <h2 id="citations">The Power of Statistics, Quotes & Citations</h2>
-                    <p>Websites with quotes and stats appear more often in AI responses. This isn't speculation — it's backed by data. Websites that included quotes, statistics, and citations were most commonly referenced in search-augmented LLMs, seeing a <strong>30-40% uplift</strong> in visibility.</p>
-
-                    <p>Include in every article:</p>
-                    <ul class="checklist">
-                        <li>Expert quotes with proper attribution (name, title, source)</li>
-                        <li>Unique statistics from your business or research</li>
-                        <li>Reliable third-party research with links</li>
-                        <li>Specific numbers, percentages, and data points</li>
-                        <li>Clear source dates so AI knows the data is current</li>
-                    </ul>
-
-                    <h2 id="technical">Technical Foundations for AI Indexing</h2>
-                    <p>Before anything else, AI systems need to read your pages. This is the most common problem — and the most overlooked.</p>
-
-                    <h3>Check Your robots.txt</h3>
-                    <p>Many sites block AI crawlers without realizing it. Cloudflare recently changed its default configuration to block AI bots. If you use Cloudflare, your AI bot traffic may have been shut off automatically.</p>
-
-                    <p><strong>Check your server logs</strong> for the "ChatGPT-User" user agent. If you don't see it, AI can't read your content.</p>
-
-                    <h3>Avoid Client-Side Rendering for Key Content</h3>
-                    <p>AI crawlers don't browse like humans. They can only read the HTML your server returns. If your content loads via JavaScript after page render, AI bots cannot see it. Content behind tabs, sliders, or accordions is invisible to AI.</p>
-
-                    <h3>Keep Content Accessible</h3>
-                    <p>Information behind logins, paywalls, or complex navigation is not accessible to AI crawlers. If you want it cited, it needs to be in the HTML, freely accessible, with clear internal links pointing to it.</p>
-
-                    <h2 id="authority">Build Real Authority (E-E-A-T)</h2>
-                    <p>AI systems prioritize content from trusted, authoritative sources. This isn't about fake signals — it's about <strong>genuine credibility</strong>.</p>
-
-                    <ul class="checklist">
-                        <li>Include author credentials, case studies, and third-party citations</li>
-                        <li>Publish original data, research, and benchmarks</li>
-                        <li>Cultivate inbound links from relevant, high-trust domains</li>
-                        <li>Encourage social proof, validation, and testimonials</li>
-                        <li>Maintain consistency across your content (tone, depth, domain coverage)</li>
-                        <li>Keep active profiles across platforms (Website, LinkedIn, YouTube, Quora)</li>
-                    </ul>
-
-                    <p>AI engines sense domain trust through patterns. A brand with consistent, deep coverage of AI tools over 3 years signals more authority than a site with 50 shallow posts published last month.</p>
-
-                    <h2 id="measure">How to Measure AI Visibility</h2>
-                    <p>GEO is not "set it and forget it." You need to track, iterate, and optimize continuously.</p>
-
-                    <h3>Short-Term (1-3 Months)</h3>
-                    <ul class="checklist">
-                        <li>Content depth and readability scores</li>
-                        <li>Increased brand mentions across the web</li>
-                        <li>Structured data implementation completeness</li>
-                        <li>Internal link structure improvements</li>
-                    </ul>
-
-                    <h3>Medium-Term (3-6 Months)</h3>
-                    <ul class="checklist">
-                        <li>More frequent AI citations in manual tests</li>
-                        <li>Growth in brand searches (Google Search Console)</li>
-                        <li>Featured snippet appearances</li>
-                        <li>Improved content engagement metrics</li>
-                    </ul>
-
-                    <h3>Long-Term (6+ Months)</h3>
-                    <ul class="checklist">
-                        <li>Higher direct traffic from AI mentions</li>
-                        <li>Improved quality of leads</li>
-                        <li>Stronger brand authority signals</li>
-                        <li>Consistent appearance across multiple AI platforms</li>
-                    </ul>
-
-                    <h3>Manual Tracking Protocol</h3>
-                    <p>Before buying expensive tools, use simple manual tracking. Feed relevant user queries into ChatGPT, Gemini, Perplexity, and Claude. Record:</p>
-                    <ul class="checklist">
-                        <li>Whether your brand appears at all</li>
-                        <li>Tone of mention (positive, neutral, negative)</li>
-                        <li>Factual accuracy of AI's description</li>
-                        <li>Hallucinations or errors about your brand</li>
-                        <li>Competitors mentioned alongside you</li>
-                        <li>Changes in responses over time</li>
-                    </ul>
-
-                    <h2 id="mistakes">Common GEO Mistakes to Avoid</h2>
-
-                    <div class="warning-box">
-                        <p><strong>Mistake 1:</strong> Assuming traditional SEO is sufficient. SEO is the foundation, but GEO requires additional structuring for AI synthesis.</p>
-                    </div>
-
-                    <div class="warning-box">
-                        <p><strong>Mistake 2:</strong> Making claims without citations. AI engines prefer verifiable information over unsourced claims. Always link to sources.</p>
-                    </div>
-
-                    <div class="warning-box">
-                        <p><strong>Mistake 3:</strong> Burying key information deep in content. AI extracts from the first 30% of pages 55% of the time. Lead with answers.</p>
-                    </div>
-
-                    <div class="warning-box">
-                        <p><strong>Mistake 4:</strong> Optimizing for only one AI platform. ChatGPT, Gemini, Perplexity, and Copilot all behave differently. Test across all of them.</p>
-                    </div>
-
-                    <div class="warning-box">
-                        <p><strong>Mistake 5:</strong> Expecting immediate results. GEO takes 3-6 months of consistent effort. Plan for the long term, not quick wins.</p>
-                    </div>
-
-                    <h2 id="roadmap">Your 6-Month GEO Roadmap</h2>
-
-                    <h3>Month 1: Foundation</h3>
-                    <ul class="checklist">
-                        <li>Audit current AI visibility via manual prompt testing</li>
-                        <li>Implement basic structured data (Article, FAQ, Organization)</li>
-                        <li>Optimize top 10 most important pages for Definition Lead</li>
-                        <li>Fix robots.txt and technical crawlability issues</li>
-                    </ul>
-
-                    <h3>Months 2-3: Content Transformation</h3>
-                    <ul class="checklist">
-                        <li>Rewrite top 20 pages with Quick Answer blocks</li>
-                        <li>Build comprehensive FAQ sections on pillar pages</li>
-                        <li>Create first content clusters around core topics</li>
-                        <li>Add statistics and citations to existing content</li>
-                    </ul>
-
-                    <h3>Months 4-6: Scale & Optimize</h3>
-                    <ul class="checklist">
-                        <li>Diversify content formats (guides, comparisons, case studies)</li>
-                        <li>Start systematic AI monitoring across 5+ platforms</li>
-                        <li>Build third-party mentions through PR and community</li>
-                        <li>Refine based on performance data and citation patterns</li>
-                    </ul>
-
-                    <div class="highlight-box">
-                        <p><strong>Reality Check:</strong> Early wins appear in 2-3 months, but full impact takes 6-12 months of iteration. GEO is a discipline, not a one-time project. Brands that start now will have structural advantages that competitors can't easily replicate later.</p>
-                    </div>
-                </section>
-
-                <section id="related" class="related-section">
-                    <h2 style="font-family:'Playfair Display',serif;font-size:2rem;text-align:center;margin-bottom:40px;">Related Articles</h2>
-                    <div class="related-grid">
-                        <a href="https://aivoraai.github.io/blog/kimi-ai-for-ai-visibility-strategies.html" class="related-card">
-                            <h3>Kimi AI for AI Visibility Strategies</h3>
-                            <p>Learn how to use Kimi AI specifically for improving your content's visibility in AI search engines and generative platforms.</p>
-                        </a>
-                        <a href="https://aivoraai.github.io/blog/kimi-ai-for-topical-authority-building.html" class="related-card">
-                            <h3>Kimi AI for Topical Authority Building</h3>
-                            <p>Build genuine topical authority using Kimi AI to create comprehensive, interconnected content clusters that AI engines trust.</p>
-                        </a>
-                        <a href="https://aivoraai.github.io/blog/how-to-rank-ai-blogs-google-2026.html" class="related-card">
-                            <h3>How to Rank AI Blogs on Google 2026</h3>
-                            <p>Practical strategies for getting AI-generated and AI-assisted content to rank well in traditional search while maintaining quality.</p>
-                        </a>
-                        <a href="https://aivoraai.github.io/blog/ai-reshaping-seo-2026.html" class="related-card">
-                            <h3>AI Reshaping SEO in 2026</h3>
-                            <p>How artificial intelligence is fundamentally changing search engine optimization and what you need to adapt.</p>
-                        </a>
-                        <a href="https://aivoraai.github.io/blog/kimi-ai-for-technical-seo-content.html" class="related-card">
-                            <h3>Kimi AI for Technical SEO Content</h3>
-                            <p>Use Kimi AI to create technically accurate, well-structured SEO content that both humans and AI search engines love.</p>
-                        </a>
-                        <a href="https://aivoraai.github.io/blog/why-my-ai-content-is-not-ranking-2026.html" class="related-card">
-                            <h3>Why My AI Content Is Not Ranking 2026</h3>
-                            <p>Common mistakes that prevent AI-generated content from ranking and how to fix them with real, tested solutions.</p>
-                        </a>
-                    </div>
-                </section>
-            </div>
-
-            <aside class="sidebar">
-                <div class="toc">
-                    <h3>Table of Contents</h3>
-                    <ul>
-                        <li><a href="#what-is-geo">What Is GEO?</a></li>
-                        <li><a href="#why-matters">Why AI Visibility Matters</a></li>
-                        <li><a href="#strategies">12 Proven Strategies</a></li>
-                        <li><a href="#chunk-level">Chunk-Level Retrieval</a></li>
-                        <li><a href="#citations">Statistics & Citations</a></li>
-                        <li><a href="#technical">Technical Foundations</a></li>
-                        <li><a href="#authority">Build Real Authority</a></li>
-                        <li><a href="#measure">How to Measure</a></li>
-                        <li><a href="#mistakes">Common Mistakes</a></li>
-                        <li><a href="#roadmap">6-Month Roadmap</a></li>
-                        <li><a href="#related">Related Articles</a></li>
-                    </ul>
                 </div>
-            </aside>
+            </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Expertise Section -->
+    <section class="expertise-section">
+        <div class="container">
+            <h2 class="section-title">Expertise Areas</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-icon">✍️</div>
+                    <h3>AI Writing Tools</h3>
+                    <p>ChatGPT, Jasper, Copy.ai, Writesonic, Claude, Gemini and more. Testing content quality, speed, and accuracy across all major AI writers.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">🎬</div>
+                    <h3>AI Video Editing</h3>
+                    <p>Descript, RunwayML, Opus Clip, Pictory, Synthesia. Evaluating video generation, editing speed, and output quality for creators.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">🏠</div>
+                    <h3>AI for Real Estate</h3>
+                    <p>Listing copy generation, virtual tours, lead generation tools, and automated marketing for real estate professionals.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">💰</div>
+                    <h3>Affiliate Marketing</h3>
+                    <p>Building passive income through AI tool promotions. Finding high-commission programs and creating converting content.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">📺</div>
+                    <h3>YouTube Automation</h3>
+                    <p>Faceless channels, AI voiceover, AI B-roll, script generation, and thumbnail creation for automated YouTube growth.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">🔍</div>
+                    <h3>AI SEO Tools</h3>
+                    <p>Content optimization, keyword research, GEO/AEO (Generative Engine Optimization), and AI-powered ranking strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Process Timeline -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">My Review Process</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>1. Sign Up Personally</h3>
+                        <p>I sign up for the free trial or purchase a plan with my own money. No free review copies that bias opinions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2. Real-World Testing</h3>
+                        <p>Test the tool on actual tasks for a minimum of 7-30 days. Writing articles, editing videos, generating images — real work.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>3. Compare Competitors</h3>
+                        <p>Test against 3-5 competing tools in the same category to understand relative strengths and weaknesses.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>4. Document Everything</h3>
+                        <p>Record time saved, quality of output, limitations, pricing value, and ease of use. No detail is too small.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>5. Update Regularly</h3>
+                        <p>Reviews are updated when tools change features, pricing, or AI models. Old reviews are re-tested quarterly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Visibility & SEO Section -->
+    <section class="aivis-section">
+        <div class="container">
+            <h2 class="section-title">How I Approach AI Visibility & SEO</h2>
+            <div class="aivis-grid">
+                <div class="aivis-card">
+                    <h3><span class="icon">🎯</span> AI Visibility (GEO)</h3>
+                    <p>I don't chase fake hacks. I build content that AI engines can actually understand, trust, and cite. This means:</p>
+                    <ul>
+                        <li>Clear definitions at the start of every section</li>
+                        <li>Structured data (JSON-LD) on every page</li>
+                        <li>Real statistics and citations from trusted sources</li>
+                        <li>Content updated quarterly to stay current</li>
+                        <li>Comparison tables AI can easily extract</li>
+                        <li>FAQ sections that match real user questions</li>
+                    </ul>
+                    <p>Results take <strong>3-6 months</strong> — not overnight. I track manually across ChatGPT, Gemini, Perplexity, and Copilot to see if Aivora AI gets mentioned.</p>
+                    <div class="note">Based on Princeton GEO research: targeted optimization can boost AI citation rates by up to 40%.</div>
+                </div>
+                <div class="aivis-card">
+                    <h3><span class="icon">🔍</span> Traditional SEO</h3>
+                    <p>SEO is the foundation. Without it, GEO doesn't work. My approach is straightforward:</p>
+                    <ul>
+                        <li>Keyword research using real search data</li>
+                        <li>Internal linking between related articles</li>
+                        <li>Fast page speed and mobile optimization</li>
+                        <li>Quality content that answers real questions</li>
+                        <li>Backlinks from relevant, trusted sites</li>
+                        <li>Regular content audits and updates</li>
+                    </ul>
+                    <p>I don't use black-hat techniques, AI-generated spam, or keyword stuffing. Every article is written to help readers first, rank second.</p>
+                    <div class="note">SEO gets you on search pages. GEO gets you inside AI answers. Both matter.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles-section">
+        <div class="container">
+            <h2 class="section-title">Articles by Varun Lalwani</h2>
+            <div class="articles-grid">
+                <a href="https://aivoraai.github.io/blog/ai-tools-for-journalists.html" class="article-card">
+                    <span class="tag">AI Tools</span>
+                    <h3>AI Tools for Journalists: Complete Guide 2026</h3>
+                    <span class="date">June 2026</span>
+                </a>
+                <a href="https://aivoraai.github.io/blog/kimi-ai-prompt-engineering-guide.html" class="article-card">
+                    <span class="tag">Prompt Engineering</span>
+                    <h3>Kimi AI Prompt Engineering Guide</h3>
+                    <span class="date">May 2026</span>
+                </a>
+                <a href="https://aivoraai.github.io/blog/master-ai-30-days-productivity-toolkit-review-2026.html" class="article-card">
+                    <span class="tag">Review</span>
+                    <h3>Master AI: 30-Day Productivity Toolkit Review 2026</h3>
+                    <span class="date">May 2026</span>
+                </a>
+                <a href="https://aivoraai.github.io/blog/7-ai-side-hustles-earn-80-percent-commission-2026.html" class="article-card">
+                    <span class="tag">Income</span>
+                    <h3>7 AI Side Hustles: Earn 80% Commission in 2026</h3>
+                    <span class="date">April 2026</span>
+                </a>
+                <a href="https://aivoraai.github.io/blog/best-ai-tools-ranked-2026.html" class="article-card">
+                    <span class="tag">Ranking</span>
+                    <h3>Best AI Tools Ranked 2026</h3>
+                    <span class="date">March 2026</span>
+                </a>
+                <a href="https://aivoraai.github.io/blog/ai-master-dashboard-business-owners-review-2026.html" class="article-card">
+                    <span class="tag">Review</span>
+                    <h3>AI Master Dashboard Business Owners Review 2026</h3>
+                    <span class="date">March 2026</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-box">
                 <div class="cta-content">
-                    <h2>Start Your GEO Journey Today</h2>
-                    <p>AI search is not the future — it's the present. Brands that optimize for AI visibility now will have structural advantages that last for years. Don't wait for your competitors to figure this out first.</p>
+                    <h2>Want Honest AI Tool Reviews?</h2>
+                    <p>Join 80,000+ creators and entrepreneurs who trust Aivora AI for independent, tested AI tool recommendations. No pay-to-rank. No sponsored positions. Just real testing.</p>
                     <a href="https://aivoraai.github.io/index.html#tools" class="btn btn-primary">
-                        Explore AI SEO Tools
+                        Explore AI Tools
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
                 </div>
@@ -1187,20 +1221,9 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.strategy-card, .related-card').forEach(el => {
+        document.querySelectorAll('.expertise-card, .timeline-item, .article-card, .about-card, .aivis-card').forEach(el => {
             el.classList.add('fade-in');
             observer.observe(el);
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
         });
 
         // Parallax effect for particles
