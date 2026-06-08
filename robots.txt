@@ -1,35 +1,48 @@
 # robots.txt for Aivora AI
-# Optimized for GPTBot, Google-Extended, and standard crawlers
+# https://aivoraai.github.io
+# Optimized for Googlebot and AI crawlers
 
+# ─── STANDARD CRAWLERS ───────────────────────────────
 User-agent: *
 Allow: /
 Disallow: /assets/private/
 Disallow: /tmp/
 Disallow: /drafts/
-Crawl-delay: 1
 
-# ✅ AI CRAWLER SPECIFIC RULES
+# ─── GOOGLE SPECIFIC ─────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /assets/private/
+Disallow: /tmp/
+Disallow: /drafts/
+
+# ─── AI CRAWLER SPECIFIC RULES ───────────────────────
 User-agent: GPTBot
 Allow: /blog/
 Allow: /about.html
 Allow: /contact.html
 Disallow: /assets/private/
-Crawl-delay: 2
 
 User-agent: Google-Extended
 Allow: /blog/
 Allow: /about.html
 Allow: /contact.html
 Disallow: /assets/private/
-Crawl-delay: 2
 
-User-agent: CCBot
+User-agent: ClaudeBot
 Allow: /blog/
 Allow: /about.html
 Allow: /contact.html
 Disallow: /assets/private/
-Crawl-delay: 2
 
-# ✅ SITEMAP & HOST
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Allow: /blog/
+Allow: /about.html
+Allow: /contact.html
+Disallow: /assets/private/
+
+# ─── SITEMAP ─────────────────────────────────────────
 Sitemap: https://aivoraai.github.io/sitemap.xml
-Host: https://aivoraai.github.io
