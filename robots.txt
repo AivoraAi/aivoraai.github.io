@@ -6,6 +6,7 @@ Allow: /
 Disallow: /assets/private/
 Disallow: /tmp/
 Disallow: /drafts/
+Crawl-delay: 1
 
 # ✅ AI CRAWLER SPECIFIC RULES
 User-agent: GPTBot
@@ -32,7 +33,3 @@ Crawl-delay: 2
 # ✅ SITEMAP & HOST
 Sitemap: https://aivoraai.github.io/sitemap.xml
 Host: https://aivoraai.github.io
-
-# ✅ RATE LIMITING FOR BOT PROTECTION
-# Prevent aggressive crawling while allowing legitimate AI assistants
-Crawl-delay: 1
