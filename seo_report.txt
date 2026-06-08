@@ -3,10 +3,10 @@ Generated: 2026-06-08
 =============================================
 
 Files processed:       266
-Dates fixed:           12
+Dates fixed:           0
 Canonicals fixed:      0
-Meta descs added:      7
-Internal links added:  222
+Meta descs added:      0
+Internal links added:  0
 Sitemap URLs:          266
 
 NEXT STEPS:
