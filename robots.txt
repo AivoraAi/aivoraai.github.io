@@ -1,22 +1,18 @@
-# robots.txt for Aivora AI
+# robots.txt — Aivora AI
 # https://aivoraai.github.io
-# Optimized for Googlebot and AI crawlers
+# Auto-generated: 2026-06-08
 
-# ─── STANDARD CRAWLERS ───────────────────────────────
 User-agent: *
 Allow: /
 Disallow: /assets/private/
 Disallow: /tmp/
 Disallow: /drafts/
+Disallow: /_seo_backups/
 
-# ─── GOOGLE SPECIFIC ─────────────────────────────────
 User-agent: Googlebot
 Allow: /
 Disallow: /assets/private/
-Disallow: /tmp/
-Disallow: /drafts/
 
-# ─── AI CRAWLER SPECIFIC RULES ───────────────────────
 User-agent: GPTBot
 Allow: /blog/
 Allow: /about.html
@@ -26,23 +22,14 @@ Disallow: /assets/private/
 User-agent: Google-Extended
 Allow: /blog/
 Allow: /about.html
-Allow: /contact.html
-Disallow: /assets/private/
 
 User-agent: ClaudeBot
 Allow: /blog/
-Allow: /about.html
-Allow: /contact.html
-Disallow: /assets/private/
+
+User-agent: anthropic-ai
+Allow: /blog/
 
 User-agent: CCBot
 Disallow: /
 
-User-agent: anthropic-ai
-Allow: /blog/
-Allow: /about.html
-Allow: /contact.html
-Disallow: /assets/private/
-
-# ─── SITEMAP ─────────────────────────────────────────
 Sitemap: https://aivoraai.github.io/sitemap.xml

@@ -1,0 +1,23 @@
+AIVORA AI — SEO AUTO-FIX REPORT
+Generated: 2026-06-08
+=============================================
+
+Files processed:       266
+Dates fixed:           12
+Canonicals fixed:      0
+Meta descs added:      7
+Internal links added:  222
+Sitemap URLs:          266
+
+NEXT STEPS:
+─────────────────────────────────────────────
+1. git add .
+2. git commit -m "SEO auto-fix 2026-06-08"
+3. git push
+
+4. Google Search Console:
+   → Sitemaps: https://aivoraai.github.io/sitemap.xml
+   → URL Inspection → Request Indexing:
+     https://aivoraai.github.io/
+     https://aivoraai.github.io/blog.html
+     https://aivoraai.github.io/blog/gpt-creator-club-review-2026.html
