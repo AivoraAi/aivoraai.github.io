@@ -1,6 +1,6 @@
 name: 🤖 Aivora SEO Mega Fix
 
-on:
+on: 
   push:
     branches: [ main ]
   workflow_dispatch:
