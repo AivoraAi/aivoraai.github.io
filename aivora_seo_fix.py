@@ -4,7 +4,7 @@
   AIVORA AI — MEGA SEO AUTO-FIX SCRIPT v3.0
   Site: https://aivoraai.github.io
   By: Varun Lalwani — Aivora AI
-====================================================
+====================================================    
   WHAT THIS SCRIPT DOES:
   [1]  Future dates → today's real date
   [2]  Canonical /index.html → /
