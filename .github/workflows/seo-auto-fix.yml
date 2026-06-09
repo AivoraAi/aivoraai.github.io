@@ -1,44 +1,42 @@
-name: SEO Auto Fix — Aivora AI
+name: 🤖 Aivora SEO Mega Fix
 
-# Kab chalega yeh action?
 on:
   push:
-    branches: [ main ]        # Jab bhi koi file push karo
-  workflow_dispatch:           # Ya manually GitHub pe se button dabao
+    branches: [ main ]
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 1'       # Aur har Somwar raat ko automatically
+    - cron: '0 2 * * 1'   # Har Somwar raat 2 baje
 
 jobs:
   seo-fix:
     runs-on: ubuntu-latest
-    name: Fix SEO Issues Automatically
+    name: SEO Auto Fix — Dates, Links, Sitemap, Sort
 
     permissions:
-      contents: write           # GitHub ko files likhne ki permission
+      contents: write
 
     steps:
 
-      # Step 1: Repo download karo
-      - name: Checkout repository
+      - name: 📥 Checkout repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Step 2: Python setup karo
-      - name: Set up Python
+      - name: 🐍 Setup Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # Step 3: SEO fix script chalao
-      - name: Run SEO Fix Script
+      - name: 🔧 Run SEO Mega Fix Script
         run: python aivora_seo_fix.py
 
-      # Step 4: Jo bhi fix hua, woh commit aur push karo
-      - name: Commit and Push fixes
+      - name: 📤 Commit and Push all fixes
         run: |
           git config user.name "Aivora SEO Bot"
           git config user.email "aivoraai@outlook.com"
-          git add .
-          git diff --staged --quiet || git commit -m "🤖 Auto SEO Fix: dates, canonicals, internal links, sitemap — $(date +'%Y-%m-%d')"
+          git add -A
+          git diff --staged --quiet || git commit -m "🤖 SEO Auto Fix: dates+links+sitemap+sort — $(date +'%d %b %Y')"
           git push
+
+      - name: 📋 Show fix report
+        run: cat seo_report.txt || echo "Report not found"
