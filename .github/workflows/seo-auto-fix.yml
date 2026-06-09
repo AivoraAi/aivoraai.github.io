@@ -1,44 +1,84 @@
-name: SEO Auto Fix — Aivora AI
+name: 🤖 Aivora SEO Mega Fix v3
 
-# Kab chalega yeh action?
 on:
   push:
-    branches: [ main ]        # Jab bhi koi file push karo
-  workflow_dispatch:           # Ya manually GitHub pe se button dabao
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run — show what would change, do not commit'
+        required: false
+        default: 'false'
   schedule:
-    - cron: '0 0 * * 1'       # Aur har Somwar raat ko automatically
+    - cron: '0 2 * * 1'   # Every Monday at 2am IST (UTC+5:30 → UTC 20:30 Sunday)
 
 jobs:
   seo-fix:
     runs-on: ubuntu-latest
-    name: Fix SEO Issues Automatically
+    name: SEO Auto Fix — Design Safe v3
 
     permissions:
-      contents: write           # GitHub ko files likhne ki permission
+      contents: write
 
     steps:
 
-      # Step 1: Repo download karo
-      - name: Checkout repository
+      - name: 📥 Checkout repo (full history)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Step 2: Python setup karo
-      - name: Set up Python
+      - name: 🐍 Setup Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # Step 3: SEO fix script chalao
-      - name: Run SEO Fix Script
+      - name: 🔍 Verify script exists
+        run: |
+          if [ ! -f aivora_seo_fix.py ]; then
+            echo "ERROR: aivora_seo_fix.py not found in repo root!"
+            echo "Please commit the script file first."
+            exit 1
+          fi
+          echo "Script found. Python version:"
+          python --version
+
+      - name: 🔧 Run SEO Mega Fix Script
         run: python aivora_seo_fix.py
 
-      # Step 4: Jo bhi fix hua, woh commit aur push karo
-      - name: Commit and Push fixes
+      - name: 📋 Show fix report
+        run: |
+          echo "==========================================="
+          cat seo_report.txt || echo "Report not generated"
+          echo "==========================================="
+
+      - name: 📊 Count changed files
+        id: changes
+        run: |
+          CHANGED=$(git diff --name-only | wc -l)
+          echo "changed=$CHANGED" >> $GITHUB_OUTPUT
+          echo "Files changed: $CHANGED"
+          if [ "$CHANGED" -gt "0" ]; then
+            echo "Changed files:"
+            git diff --name-only
+          fi
+
+      - name: 📤 Commit and Push all fixes
+        if: steps.changes.outputs.changed != '0' && github.event.inputs.dry_run != 'true'
         run: |
           git config user.name "Aivora SEO Bot"
           git config user.email "aivoraai@outlook.com"
-          git add .
-          git diff --staged --quiet || git commit -m "🤖 Auto SEO Fix: dates, canonicals, internal links, sitemap — $(date +'%Y-%m-%d')"
+          git add -A
+          git diff --staged --quiet || git commit -m "🤖 SEO Auto Fix v3: dates+links+sitemap+sort — $(date +'%d %b %Y')"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: ✅ Done — no changes needed
+        if: steps.changes.outputs.changed == '0'
+        run: echo "Everything already up to date. No changes committed."
+
+      - name: 🧪 Dry run summary
+        if: github.event.inputs.dry_run == 'true'
+        run: |
+          echo "DRY RUN MODE — changes NOT committed"
+          git diff --stat
