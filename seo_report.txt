@@ -12,7 +12,7 @@ INTERNAL LINKS ADDED:    0
 ANCHOR LINKS ADDED:      0
 BROKEN LINKS FIXED:      0
 BLOG CARDS SORTED:       0 pages
-SITEMAP URLs:            34
+SITEMAP URLs:            35
 
 BROKEN LINKS FOUND (manual fix needed):
   ✅ None found!
