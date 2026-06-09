@@ -1,13 +1,11 @@
 # robots.txt — Aivora AI
-# https://aivoraai.github.io
-# Auto-generated: 2026-06-08
+# Auto-generated: 2026-06-09
 
 User-agent: *
 Allow: /
 Disallow: /assets/private/
-Disallow: /tmp/
-Disallow: /drafts/
 Disallow: /_seo_backups/
+Disallow: /drafts/
 
 User-agent: Googlebot
 Allow: /
@@ -17,16 +15,11 @@ User-agent: GPTBot
 Allow: /blog/
 Allow: /about.html
 Allow: /contact.html
-Disallow: /assets/private/
 
 User-agent: Google-Extended
 Allow: /blog/
-Allow: /about.html
 
 User-agent: ClaudeBot
-Allow: /blog/
-
-User-agent: anthropic-ai
 Allow: /blog/
 
 User-agent: CCBot

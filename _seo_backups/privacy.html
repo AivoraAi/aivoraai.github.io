@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy & Affiliate Disclosure | Aivora AI</title>
+    <meta name="description" content="Privacy Policy, Disclaimer & Affiliate Disclosure for Aivora AI. Learn how we protect your data, our affiliate relationships, and your rights.">
+    <meta name="keywords" content="privacy policy, affiliate disclosure, Aivora AI, data protection, cookie policy, FTC compliance">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --accent-light: #ff6b6b;
+            --gold: #ffd700;
+            --cyan: #00d4ff;
+            --green: #00ff88;
+            --purple: #b347d9;
+            --text: #f1f1f1;
+            --text-muted: #a0a0b0;
+            --bg: #0f0f1a;
+            --card-bg: rgba(255,255,255,0.03);
+            --border: rgba(255,255,255,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            width: 200%; height: 200%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(233,69,96,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0,212,255,0.06) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(179,71,217,0.06) 0%, transparent 50%);
+            animation: bgMove 20s ease-in-out infinite;
+        }
+
+        @keyframes bgMove {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-5%, -5%); }
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 15s infinite;
+        }
+
+        .particle:nth-child(2n) { background: var(--cyan); animation-duration: 20s; }
+        .particle:nth-child(3n) { background: var(--purple); animation-duration: 25s; }
+        .particle:nth-child(4n) { background: var(--green); animation-duration: 18s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15,15,26,0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo svg {
+            width: 32px; height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .breadcrumb a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .breadcrumb a:hover { opacity: 0.8; }
+
+        .breadcrumb-separator {
+            color: var(--text-muted);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, var(--accent-light) 50%, var(--cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* TOC */
+        .toc-section {
+            padding: 40px 0;
+        }
+
+        .toc-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 35px;
+        }
+
+        .toc-card h3 {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .toc-list li {
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .toc-list li:hover {
+            background: rgba(233,69,96,0.08);
+        }
+
+        .toc-list a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+
+        .toc-list a:hover {
+            color: var(--accent);
+        }
+
+        .toc-list a::before {
+            content: '#';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 40px 0;
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--cyan));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .section-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .section-card:hover {
+            border-color: rgba(233,69,96,0.3);
+        }
+
+        .section-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-card h2 .icon {
+            width: 40px; height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            background: rgba(233,69,96,0.15);
+            flex-shrink: 0;
+        }
+
+        .section-card h3 {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin: 25px 0 15px;
+        }
+
+        .section-card p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .section-card strong {
+            color: var(--text);
+        }
+
+        .section-card ul {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .section-card ul li {
+            padding: 8px 0;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.6;
+        }
+
+        .section-card ul li::before {
+            content: '•';
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background: linear-gradient(135deg, rgba(0,255,136,0.1), rgba(0,212,255,0.1));
+            border-left: 4px solid var(--green);
+            padding: 20px 25px;
+            border-radius: 0 15px 15px 0;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .summary-box p {
+            margin: 0;
+            color: var(--text);
+        }
+
+        .summary-box strong {
+            color: var(--green);
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(233,69,96,0.1));
+            border-left: 4px solid var(--gold);
+            padding: 20px 25px;
+            border-radius: 0 15px 15px 0;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: var(--text);
+        }
+
+        /* Aivora AI Footer */
+        .aivora-footer {
+            background: rgba(15,15,26,0.98);
+            border-top: 1px solid var(--border);
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+
+        .aivora-footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--accent); }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 30px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .aivora-footer-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .toc-list { grid-template-columns: 1fr; }
+            .hero-meta { flex-direction: column; gap: 10px; }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="particles">
+        <div class="particle" style="left:10%;animation-delay:0s;"></div>
+        <div class="particle" style="left:20%;animation-delay:2s;"></div>
+        <div class="particle" style="left:30%;animation-delay:4s;"></div>
+        <div class="particle" style="left:40%;animation-delay:1s;"></div>
+        <div class="particle" style="left:50%;animation-delay:3s;"></div>
+        <div class="particle" style="left:60%;animation-delay:5s;"></div>
+        <div class="particle" style="left:70%;animation-delay:2.5s;"></div>
+        <div class="particle" style="left:80%;animation-delay:4.5s;"></div>
+        <div class="particle" style="left:90%;animation-delay:1.5s;"></div>
+        <div class="particle" style="left:15%;animation-delay:6s;"></div>
+        <div class="particle" style="left:25%;animation-delay:7s;"></div>
+        <div class="particle" style="left:35%;animation-delay:8s;"></div>
+        <div class="particle" style="left:45%;animation-delay:9s;"></div>
+        <div class="particle" style="left:55%;animation-delay:10s;"></div>
+        <div class="particle" style="left:65%;animation-delay:11s;"></div>
+        <div class="particle" style="left:75%;animation-delay:12s;"></div>
+        <div class="particle" style="left:85%;animation-delay:13s;"></div>
+        <div class="particle" style="left:95%;animation-delay:14s;"></div>
+        <div class="particle" style="left:5%;animation-delay:15s;"></div>
+        <div class="particle" style="left:50%;animation-delay:16s;"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="https://aivoraai.github.io/index.html" class="logo">
+                    <svg viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" stroke="#e94560" stroke-width="2"/>
+                        <path d="M10 16h12M16 10v12" stroke="#e94560" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Aivora AI
+                </a>
+                <ul class="nav-links">
+                    <li><a href="https://aivoraai.github.io/index.html">Home</a></li>
+                    <li><a href="https://aivoraai.github.io/index.html#tools">AI Tools</a></li>
+                    <li><a href="https://aivoraai.github.io/index.html#guides">Guides</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/">Blog</a></li>
+                    <li><a href="https://aivoraai.github.io/index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="https://aivoraai.github.io/index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span>Privacy Policy</span>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Privacy Policy & Affiliate Disclosure</h1>
+            <p>How we protect your data, our affiliate relationships, and your rights as a visitor.</p>
+            <div class="hero-meta">
+                <span>📅 Last updated: April 1, 2026</span>
+                <span>👤 Director: Varun Lalwani</span>
+                <span>📧 Aivoraai@outlook.com</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="toc-section">
+            <div class="toc-card">
+                <h3>📋 Contents</h3>
+                <ul class="toc-list">
+                    <li><a href="#affiliate">1. Affiliate Disclosure</a></li>
+                    <li><a href="#disclaimer">2. Disclaimer</a></li>
+                    <li><a href="#privacy">3. Privacy Policy</a></li>
+                    <li><a href="#collect">4. Information We Collect</a></li>
+                    <li><a href="#cookies">5. Cookies</a></li>
+                    <li><a href="#third-party">6. Third-Party Links</a></li>
+                    <li><a href="#rights">7. Your Rights</a></li>
+                    <li><a href="#contact">8. Contact for Legal Queries</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <!-- Affiliate Disclosure -->
+            <div class="section-card" id="affiliate">
+                <h2><span class="icon">🎯</span>1. Affiliate Disclosure</h2>
+
+                <div class="summary-box">
+                    <p><strong>Simple summary:</strong> Some links on Aivora AI are affiliate links. We earn a small commission if you buy through them — at no extra cost to you. Our reviews are always honest and independent.</p>
+                </div>
+
+                <p>Aivora AI participates in affiliate marketing programs. This means that when you click on certain links on our website and make a purchase, sign up for a service, or take a specified action, we may receive a commission or compensation from the third-party company.</p>
+
+                <h3>What This Means for You</h3>
+                <ul>
+                    <li>Affiliate links are clearly indicated with 🎯 or "Affiliate" badges on our website</li>
+                    <li>You pay <strong>exactly the same price</strong> whether or not you use our affiliate link</li>
+                    <li>In some cases, our affiliate relationships grant us access to <strong>exclusive discounts</strong> that benefit you</li>
+                    <li>Our editorial rankings and reviews are <strong>never influenced</strong> by affiliate relationships</li>
+                    <li>We only recommend tools we have tested and genuinely believe are useful</li>
+                </ul>
+
+                <h3>FTC Compliance</h3>
+                <p>In accordance with the US Federal Trade Commission (FTC) guidelines and equivalent regulations in India and other jurisdictions, Aivora AI discloses all material connections between our site and the companies whose products we recommend. This disclosure appears on all relevant pages and in our global disclosure bar.</p>
+                <p>If you have any questions about our affiliate relationships, please contact us at <strong>Aivoraai@outlook.com</strong>.</p>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="section-card" id="disclaimer">
+                <h2><span class="icon">⚠️</span>2. Disclaimer</h2>
+
+                <div class="warning-box">
+                    <p><strong>Simple summary:</strong> The information on Aivora AI is for educational purposes. We try our best to be accurate, but we cannot guarantee results. Always do your own research before purchasing any AI tool.</p>
+                </div>
+
+                <h3>General Disclaimer</h3>
+                <p>The information provided on Aivora AI (aivoraai.github.io) is for <strong>general informational and educational purposes only</strong>. While we make every effort to ensure that the information is accurate, up-to-date, and complete, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on the website.</p>
+
+                <h3>No Earnings Guarantee</h3>
+                <p>Any income figures mentioned on Aivora AI (such as affiliate commission examples) are <strong>illustrative only</strong> and do not represent guaranteed earnings. Individual results will vary significantly based on effort, experience, audience size, and many other factors. We make no guarantee that you will earn any specific amount of money by using the strategies or tools described on our website.</p>
+
+                <h3>Tool Accuracy</h3>
+                <p>AI tools and their features, pricing, and affiliate program terms change frequently. While we update our content regularly, some information may become outdated. We recommend visiting the official website of each AI tool for the most current pricing and feature information before making a purchase decision.</p>
+
+                <h3>Professional Advice</h3>
+                <p>Nothing on Aivora AI constitutes financial, legal, investment, or professional advice. Always consult qualified professionals for decisions that affect your business, finances, or legal standing.</p>
+
+                <h3>Limitation of Liability</h3>
+                <p>To the maximum extent permitted by applicable law, Aivora AI, its director Varun Lalwani, and its contributors shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of this website or the information contained herein.</p>
+            </div>
+
+            <!-- Privacy Policy -->
+            <div class="section-card" id="privacy">
+                <h2><span class="icon">🔒</span>3. Privacy Policy</h2>
+
+                <div class="summary-box">
+                    <p><strong>Simple summary:</strong> We respect your privacy. We only collect information needed to operate our website. We do not sell your personal data to third parties. Ever.</p>
+                </div>
+
+                <p>This Privacy Policy describes how Aivora AI ("we," "us," or "our") collects, uses, and protects information when you visit our website at <strong>aivoraai.github.io</strong>.</p>
+
+                <p><strong>Website Owner:</strong> Varun Lalwani<br>
+                <strong>Company:</strong> Aivora AI<br>
+                <strong>Contact:</strong> Aivoraai@outlook.com<br>
+                <strong>Location:</strong> India</p>
+            </div>
+
+            <!-- Information We Collect -->
+            <div class="section-card" id="collect">
+                <h2><span class="icon">📊</span>4. Information We Collect</h2>
+
+                <h3>Information You Provide</h3>
+                <ul>
+                    <li><strong>Contact form submissions:</strong> Name, email address, phone number (optional), message content</li>
+                    <li><strong>Newsletter sign-ups:</strong> Email address</li>
+                    <li><strong>Comments or feedback:</strong> Any information you voluntarily provide</li>
+                </ul>
+
+                <h3>Information Collected Automatically</h3>
+                <ul>
+                    <li><strong>Usage data:</strong> Pages visited, time spent, referring website, browser type, device type</li>
+                    <li><strong>IP address:</strong> Collected for security and analytics purposes</li>
+                    <li><strong>Cookies:</strong> See the Cookies section below</li>
+                </ul>
+
+                <h3>How We Use Your Information</h3>
+                <ul>
+                    <li>To respond to your messages and inquiries</li>
+                    <li>To send newsletters (only if you subscribed — you can unsubscribe anytime)</li>
+                    <li>To improve our website content and user experience</li>
+                    <li>To comply with legal obligations</li>
+                    <li>To detect and prevent fraud or abuse</li>
+                </ul>
+
+                <h3>What We Do NOT Do</h3>
+                <ul>
+                    <li>We do <strong>not</strong> sell your personal data to third parties</li>
+                    <li>We do <strong>not</strong> share your email with advertisers</li>
+                    <li>We do <strong>not</strong> use your data for automated decision-making that affects you significantly</li>
+                </ul>
+            </div>
+
+            <!-- Cookies -->
+            <div class="section-card" id="cookies">
+                <h2><span class="icon">🍪</span>5. Cookies</h2>
+
+                <p>Aivora AI uses cookies — small text files stored on your device — to improve your experience on our website.</p>
+
+                <h3>Types of Cookies We Use</h3>
+                <ul>
+                    <li><strong>Essential cookies:</strong> Required for the website to function correctly</li>
+                    <li><strong>Analytics cookies:</strong> Help us understand how visitors use our website (Google Analytics, if enabled)</li>
+                    <li><strong>Affiliate tracking cookies:</strong> Used by our affiliate partners to track referrals. These are set when you click an affiliate link.</li>
+                </ul>
+
+                <h3>Managing Cookies</h3>
+                <p>You can control and delete cookies through your browser settings. Disabling cookies may affect the functionality of some parts of the website. Most browsers allow you to: view cookies stored, delete individual or all cookies, and block cookies from specific sites.</p>
+            </div>
+
+            <!-- Third-Party Links -->
+            <div class="section-card" id="third-party">
+                <h2><span class="icon">🔗</span>6. Third-Party Links</h2>
+
+                <p>Aivora AI contains links to third-party websites, including AI tool vendors and affiliate programs. When you click these links, you leave our website and are subject to the privacy policies and terms of those third-party websites.</p>
+
+                <p>We are not responsible for the privacy practices or content of third-party websites. We encourage you to read their privacy policies before providing any personal information.</p>
+
+                <h3>Third-Party Services We May Use</h3>
+                <ul>
+                    <li><strong>Google Analytics:</strong> Website traffic analysis (privacy.google.com)</li>
+                    <li><strong>GitHub Pages:</strong> Website hosting (docs.github.com/privacy)</li>
+                    <li><strong>Google Fonts:</strong> Font delivery (policies.google.com/privacy)</li>
+                    <li><strong>Affiliate networks:</strong> Tracking for commission attribution</li>
+                </ul>
+            </div>
+
+            <!-- Your Rights -->
+            <div class="section-card" id="rights">
+                <h2><span class="icon">✅</span>7. Your Rights</h2>
+
+                <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+
+                <ul>
+                    <li><strong>Right to access:</strong> Request a copy of the personal data we hold about you</li>
+                    <li><strong>Right to rectification:</strong> Request correction of inaccurate data</li>
+                    <li><strong>Right to erasure:</strong> Request deletion of your personal data ("right to be forgotten")</li>
+                    <li><strong>Right to opt-out:</strong> Unsubscribe from our newsletter at any time using the unsubscribe link in any email</li>
+                    <li><strong>Right to complain:</strong> Lodge a complaint with your local data protection authority</li>
+                </ul>
+
+                <p>To exercise any of these rights, contact us at <strong>Aivoraai@outlook.com</strong>.</p>
+
+                <h3>Data Retention</h3>
+                <p>We retain your personal data only as long as necessary to fulfill the purposes for which it was collected, or as required by applicable laws. Newsletter subscribers' email addresses are retained until they unsubscribe.</p>
+
+                <h3>Changes to This Policy</h3>
+                <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. We encourage you to review this page periodically. Continued use of Aivora AI after changes constitutes acceptance of the updated policy.</p>
+            </div>
+
+            <!-- Contact -->
+            <div class="section-card" id="contact">
+                <h2><span class="icon">📧</span>8. Contact for Legal Queries</h2>
+
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy, Affiliate Disclosure, or Disclaimer, please contact us:</p>
+
+                <ul>
+                    <li><strong>Email:</strong> Aivoraai@outlook.com</li>
+                    <li><strong>Website:</strong> aivoraai.github.io</li>
+                    <li><strong>Director:</strong> Varun Lalwani</li>
+                    <li><strong>Location:</strong> India</li>
+                </ul>
+
+                <p>We aim to respond to all inquiries within 48 hours. For legal matters, please include "Legal Query" in your subject line.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Aivora AI Footer -->
+    <footer class="aivora-footer">
+        <div class="container">
+            <div class="aivora-footer-grid">
+                <div class="footer-brand">
+                    <h3>
+                        <svg viewBox="0 0 32 32" fill="none" style="width:24px;height:24px;">
+                            <circle cx="16" cy="16" r="14" stroke="#e94560" stroke-width="2"/>
+                            <path d="M10 16h12M16 10v12" stroke="#e94560" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Aivora AI
+                    </h3>
+                    <p>The world's trusted AI tools directory. Discover, learn & earn with the power of AI. 200+ tools tested, 80k+ monthly readers, 60+ countries served.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="https://aivoraai.github.io/index.html">Home</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#tools">AI Tools</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#guides">Guides</a></li>
+                        <li><a href="https://aivoraai.github.io/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://aivoraai.github.io/index.html#about">About Us</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#contact">Contact</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#faq">FAQ</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#community">Join Community</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#newsletter">Newsletter</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#affiliate">Affiliate Program</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Aivora AI. All rights reserved. | <a href="https://aivoraai.github.io/index.html">Aivora AI - Best AI Tools Directory 2026</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-card, .toc-card').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+
+        // Smooth Scroll for TOC links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Parallax effect for particles
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelectorAll('.particle').forEach((p, i) => {
+                const speed = 0.5 + (i * 0.1);
+                p.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

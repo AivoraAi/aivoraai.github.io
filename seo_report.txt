@@ -1,23 +1,51 @@
-AIVORA AI — SEO AUTO-FIX REPORT
-Generated: 2026-06-08
-=============================================
 
-Files processed:       266
-Dates fixed:           0
-Canonicals fixed:      0
-Meta descs added:      0
-Internal links added:  0
-Sitemap URLs:          266
+╔══════════════════════════════════════════════════╗
+║      AIVORA AI — SEO MEGA FIX REPORT v2.0       ║
+║      Generated: 2026-06-09                    ║
+╚══════════════════════════════════════════════════╝
 
-NEXT STEPS:
-─────────────────────────────────────────────
+FILES PROCESSED:         266
+DATES FIXED:             0
+CANONICALS FIXED:        249
+META DESCS ADDED:        0
+INTERNAL LINKS ADDED:    122
+ANCHOR LINKS ADDED:      235
+BROKEN LINKS FIXED:      0
+BLOG CARDS SORTED:       0 pages
+SITEMAP URLs:            266
+
+BROKEN LINKS FOUND (manual fix needed):
+  ✅ None found!
+
+══════════════════════════════════════════════════
+  NEXT STEPS — DO THIS NOW!
+══════════════════════════════════════════════════
+
 1. git add .
-2. git commit -m "SEO auto-fix 2026-06-08"
+2. git commit -m "🤖 SEO Mega Fix v2: dates, links, sitemap, sort — 2026-06-09"
 3. git push
 
-4. Google Search Console:
-   → Sitemaps: https://aivoraai.github.io/sitemap.xml
-   → URL Inspection → Request Indexing:
-     https://aivoraai.github.io/
-     https://aivoraai.github.io/blog.html
-     https://aivoraai.github.io/blog/gpt-creator-club-review-2026.html
+4. GOOGLE SEARCH CONSOLE:
+   a) Sitemaps → Submit: https://aivoraai.github.io/sitemap.xml
+   b) URL Inspection → Request Indexing:
+      https://aivoraai.github.io/
+      https://aivoraai.github.io/blog.html
+      https://aivoraai.github.io/blog/gpt-creator-club-review-2026.html
+      https://aivoraai.github.io/blog/ai-passive-income-tools-2026.html
+      https://aivoraai.github.io/blog/ai-affiliate-marketing-guide-2026.html
+      https://aivoraai.github.io/blog/sam-altman-ai-predictions-2026.html
+      https://aivoraai.github.io/blog/vip-indicators-review-2026.html
+
+5. Wait 48–72 hours → check GSC for indexing
+
+WHY NOT INDEXED YET?
+══════════════════════════════════════════════════
+• Future dates were telling Google "not published yet"
+• This script fixes all future dates → Google can now index
+• After git push + sitemap submit → 48–72 hours
+• Impressions visible in GSC → 2–3 weeks
+
+INDEXING TIMELINE:
+• Homepage:     24–48 hours after Request Indexing
+• Blog posts:   3–7 days after sitemap submit
+• Impressions:  2–4 weeks in GSC Performance report

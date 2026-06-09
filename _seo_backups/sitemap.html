@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap | Aivora AI - Best AI Tools Directory 2026</title>
+    <meta name="description" content="Complete sitemap of Aivora AI. Browse all 259+ pages including AI tools, guides, blog posts, and resources organized by category.">
+    <meta name="keywords" content="sitemap, AI tools directory, Aivora AI, AI tools list, AI guides, AI blog, 259 pages">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --accent-light: #ff6b6b;
+            --gold: #ffd700;
+            --cyan: #00d4ff;
+            --green: #00ff88;
+            --purple: #b347d9;
+            --text: #f1f1f1;
+            --text-muted: #a0a0b0;
+            --bg: #0f0f1a;
+            --card-bg: rgba(255,255,255,0.03);
+            --border: rgba(255,255,255,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            width: 200%; height: 200%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(233,69,96,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0,212,255,0.06) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(179,71,217,0.06) 0%, transparent 50%);
+            animation: bgMove 20s ease-in-out infinite;
+        }
+
+        @keyframes bgMove {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-5%, -5%); }
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 15s infinite;
+        }
+
+        .particle:nth-child(2n) { background: var(--cyan); animation-duration: 20s; }
+        .particle:nth-child(3n) { background: var(--purple); animation-duration: 25s; }
+        .particle:nth-child(4n) { background: var(--green); animation-duration: 18s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15,15,26,0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo svg {
+            width: 32px; height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .breadcrumb a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .breadcrumb a:hover { opacity: 0.8; }
+
+        .breadcrumb-separator {
+            color: var(--text-muted);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, var(--accent-light) 50%, var(--cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Sitemap Stats */
+        .sitemap-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 40px 0 60px;
+        }
+
+        .stat-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .stat-box .number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-box .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        /* Sitemap Grid */
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .sitemap-category {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sitemap-category::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--cyan));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .sitemap-category:hover::before { transform: scaleX(1); }
+
+        .sitemap-category:hover {
+            border-color: rgba(233,69,96,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .category-icon {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .category-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .category-count {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: rgba(255,255,255,0.05);
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-left: auto;
+        }
+
+        .sitemap-links {
+            list-style: none;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .sitemap-links::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .sitemap-links::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .sitemap-links::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        .sitemap-links li {
+            margin-bottom: 6px;
+        }
+
+        .sitemap-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .sitemap-links a:hover {
+            background: rgba(233,69,96,0.08);
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .sitemap-links a::before {
+            content: '→';
+            font-size: 0.75rem;
+            color: var(--accent);
+            opacity: 0;
+            transition: opacity 0.3s;
+            flex-shrink: 0;
+        }
+
+        .sitemap-links a:hover::before {
+            opacity: 1;
+        }
+
+        /* XML Sitemap Section */
+        .xml-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0 60px;
+            text-align: center;
+        }
+
+        .xml-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .xml-section p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .xml-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            box-shadow: 0 10px 30px rgba(233,69,96,0.3);
+            transition: all 0.3s;
+        }
+
+        .xml-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(233,69,96,0.4);
+        }
+
+        /* Aivora AI Footer Match */
+        .aivora-footer {
+            background: rgba(15,15,26,0.98);
+            border-top: 1px solid var(--border);
+            padding: 60px 0 30px;
+        }
+
+        .aivora-footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--accent); }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 30px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .sitemap-grid { grid-template-columns: 1fr; }
+            .sitemap-stats { grid-template-columns: repeat(2, 1fr); }
+            .aivora-footer-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="particles">
+        <div class="particle" style="left:10%;animation-delay:0s;"></div>
+        <div class="particle" style="left:20%;animation-delay:2s;"></div>
+        <div class="particle" style="left:30%;animation-delay:4s;"></div>
+        <div class="particle" style="left:40%;animation-delay:1s;"></div>
+        <div class="particle" style="left:50%;animation-delay:3s;"></div>
+        <div class="particle" style="left:60%;animation-delay:5s;"></div>
+        <div class="particle" style="left:70%;animation-delay:2.5s;"></div>
+        <div class="particle" style="left:80%;animation-delay:4.5s;"></div>
+        <div class="particle" style="left:90%;animation-delay:1.5s;"></div>
+        <div class="particle" style="left:15%;animation-delay:6s;"></div>
+        <div class="particle" style="left:25%;animation-delay:7s;"></div>
+        <div class="particle" style="left:35%;animation-delay:8s;"></div>
+        <div class="particle" style="left:45%;animation-delay:9s;"></div>
+        <div class="particle" style="left:55%;animation-delay:10s;"></div>
+        <div class="particle" style="left:65%;animation-delay:11s;"></div>
+        <div class="particle" style="left:75%;animation-delay:12s;"></div>
+        <div class="particle" style="left:85%;animation-delay:13s;"></div>
+        <div class="particle" style="left:95%;animation-delay:14s;"></div>
+        <div class="particle" style="left:5%;animation-delay:15s;"></div>
+        <div class="particle" style="left:50%;animation-delay:16s;"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="https://aivoraai.github.io/index.html" class="logo">
+                    <svg viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" stroke="#e94560" stroke-width="2"/>
+                        <path d="M10 16h12M16 10v12" stroke="#e94560" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Aivora AI
+                </a>
+                <ul class="nav-links">
+                    <li><a href="https://aivoraai.github.io/index.html">Home</a></li>
+                    <li><a href="https://aivoraai.github.io/index.html#tools">AI Tools</a></li>
+                    <li><a href="https://aivoraai.github.io/index.html#guides">Guides</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/">Blog</a></li>
+                    <li><a href="https://aivoraai.github.io/index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="https://aivoraai.github.io/index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span>Sitemap</span>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Complete Site Map</h1>
+            <p>Navigate all 259+ pages of Aivora AI. Browse AI tools, guides, blog posts, and resources organized by category.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="sitemap-stats">
+            <div class="stat-box">
+                <span class="number">259+</span>
+                <span class="label">Total Pages</span>
+            </div>
+            <div class="stat-box">
+                <span class="number">200+</span>
+                <span class="label">AI Tools</span>
+            </div>
+            <div class="stat-box">
+                <span class="number">230+</span>
+                <span class="label">Blog Posts</span>
+            </div>
+            <div class="stat-box">
+                <span class="number">60+</span>
+                <span class="label">Countries</span>
+            </div>
+        </div>
+
+        <div class="sitemap-grid">
+            <div class="sitemap-category">
+                <div class="category-header">
+                    <div class="category-icon" style="background:rgba(233,69,96,0.15);">🏠</div>
+                    <div class="category-title">Main Pages</div>
+                    <span class="category-count">4 pages</span>
+                </div>
+                <ul class="sitemap-links">
+                    <li><a href="https://aivoraai.github.io/">Homepage</a></li>
+                    <li><a href="https://aivoraai.github.io/contact.html">Contact</a></li>
+                    <li><a href="https://aivoraai.github.io/about.html">About</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/index.html">Blog Index</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-category">
+                <div class="category-header">
+                    <div class="category-icon" style="background:rgba(255,215,0,0.15);">📦</div>
+                    <div class="category-title">Product Pages</div>
+                    <span class="category-count">10 pages</span>
+                </div>
+                <ul class="sitemap-links">
+                    <li><a href="https://aivoraai.github.io/product.html">Product</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/product.html">Product</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-to-increase-productivity-at-work.html">Ai Tools To Increase Productivity At Work</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-selling-digital-products-online.html">Ai Tools Selling Digital Products Online</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-productivity-tools-remote-workers.html">Ai Productivity Tools Remote Workers</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/master-ai-30-days-productivity-toolkit-review-2026.html">Master Ai 30 Days Productivity Toolkit Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-selling-digital-products-2026.html">Ai Tools For Selling Digital Products 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/sell-digital-products-with-ai-2026.html">Sell Digital Products With Ai 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/clickbank-digital-product-review-2026.html">Clickbank Digital Product Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-selling-digital-products-online-2026.html">Ai Tools For Selling Digital Products Online 2026</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-category">
+                <div class="category-header">
+                    <div class="category-icon" style="background:rgba(0,212,255,0.15);">⭐</div>
+                    <div class="category-title">AI Tools Reviews</div>
+                    <span class="category-count">59 pages</span>
+                </div>
+                <ul class="sitemap-links">
+                    <li><a href="https://aivoraai.github.io/blog/best-budget-hotels-in-pattaya-2026.html">Best Budget Hotels In Pattaya 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-video-creator-review-2026.html">Ai Video Creator Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-resume-builder-2026.html">Best Ai Resume Builder 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/next-level-reels-instagram-course-review-2026.html">Next Level Reels Instagram Course Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-tools-ranked-2026.html">Best Ai Tools Ranked 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/gpt-creator-club-review-2026.html">Gpt Creator Club Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-apps-android-2026.html">Best Ai Apps Android 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-strategies-earn-money-online.html">Best Ai Strategies Earn Money Online</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-websites-daily-use-2026.html">Best Ai Websites Daily Use 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-voice-generator-free-2026.html">Best Ai Voice Generator Free 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-algebra-course-online-algeprime-review-2026.html">Best Algebra Course Online Algeprime Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-copywriting-prompts-2026.html">Best Ai Copywriting Prompts 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-image-generators-business-2026.html">Best Ai Image Generators Business 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-free-ai-coding-assistants-2026.html">Best Free Ai Coding Assistants 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/top-free-ai-websites-2026.html">Top Free Ai Websites 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-chrome-extensions-2026.html">Best Ai Chrome Extensions 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-writing-tools-2026.html">Best Ai Writing Tools 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-free-ai-tools-windows-2026.html">Best Free Ai Tools Windows 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/360-ai-training-online-coaching-review-2026.html">360 Ai Training Online Coaching Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-in-30-program-review-2026.html">Ai In 30 Program Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-seo-extensions-2026.html">Best Ai Seo Extensions 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-chatbots-websites.html">Best Ai Chatbots Websites</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-travel-affiliate-programs-2026.html">Best Travel Affiliate Programs 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-tools-for-affiliate-marketers.html">Best Ai Tools For Affiliate Marketers</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/massive-passive-profits-review-2026.html">Massive Passive Profits Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-prompt-generator.html">Best Ai Prompt Generator</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/grid-phantom-ai-defence-review-2026.html">Grid Phantom Ai Defence Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-chatbots-compared-2026.html">Best Ai Chatbots Compared 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-writing-tools-for-bloggers-2026.html">Best Ai Writing Tools For Bloggers 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-media-machine-review-2026.html">Ai Media Machine Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/reisen-mit-meilen-kurs-review.html">Reisen Mit Meilen Kurs Review</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-tools-youtube-shorts-automation-2026.html">Best Ai Tools Youtube Shorts Automation 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-tools-make-money-2026.html">Best Ai Tools Make Money 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-free-ai-image-generator-2026.html">Best Free Ai Image Generator 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/the-10-best-ai-tools-for-digital-marketers-2026.html">The 10 Best Ai Tools For Digital Marketers 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-tools-for-graphic-designers.html">Best Ai Tools For Graphic Designers</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-daily-life-toolkit-review-2026.html">Ai Daily Life Toolkit Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-free-ai-image-generators-2026.html">Best Free Ai Image Generators 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-chatbots-websites-2026.html">Best Ai Chatbots Websites 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-master-dashboard-business-owners-review-2026.html">Ai Master Dashboard Business Owners Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-note-taking-apps-2026.html">Best Ai Note Taking Apps 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/137-secrets-universe-review-2026.html">137 Secrets Universe Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-business-ideas-beginners-2026.html">Best Ai Business Ideas Beginners 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-blogging-niches-2026.html">Best Blogging Niches 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-media-machine-video-ads-review.html">Ai Media Machine Video Ads Review</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/airalo-esim-review-2026.html">Airalo Esim Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-travel-planner-apps-2026.html">Best Ai Travel Planner Apps 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/lingchat-review-2026.html">Lingchat Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/vip-indicators-review-2026.html">Vip Indicators Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-profit-masterclass-review-2026.html">Ai Profit Masterclass Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-revenue-lab-review-2026.html">Ai Revenue Lab Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-tools-for-coding-2026.html">Best Ai Tools For Coding 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-tools-for-freelancers-on-a-budget-2026.html">Best Ai Tools For Freelancers On A Budget 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-beginner-course-review-2026.html">Ai Beginner Course Review 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-esim-international-travel-2026.html">Best Esim International Travel 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-video-creator-review-2026 (1).html">Ai Video Creator Review 2026 (1)</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-tools-influencers-worldwide.html">Best Ai Tools Influencers Worldwide</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-ai-tools-ecommerce-2026.html">Best Ai Tools Ecommerce 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/best-passive-income-ideas-ai-2026.html">Best Passive Income Ideas Ai 2026</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-category">
+                <div class="category-header">
+                    <div class="category-icon" style="background:rgba(179,71,217,0.15);">⚖️</div>
+                    <div class="category-title">AI Comparisons</div>
+                    <span class="category-count">12 pages</span>
+                </div>
+                <ul class="sitemap-links">
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-vs-microsoft-copilot.html">Kimi Ai Vs Microsoft Copilot</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-content-vs-human-content-seo-2026.html">Ai Content Vs Human Content Seo 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-vs-claude-ai-for-blogging.html">Kimi Ai Vs Claude Ai For Blogging</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/gemini-ai-vs-chatgpt-which-is-better-2026.html">Gemini Ai Vs Chatgpt Which Is Better 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-vs-chatgpt-which-is-better.html">Kimi Ai Vs Chatgpt Which Is Better</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/claude-ai-vs-chatgpt-for-writing.html">Claude Ai Vs Chatgpt For Writing</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/gemini-ai-vs-chatgpt-advertising-2026.html">Gemini Ai Vs Chatgpt Advertising 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-vs-perplexity-ai.html">Kimi Ai Vs Perplexity Ai</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/chatgpt-alternatives-2026.html">Chatgpt Alternatives 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/chatgpt-alternative-free-no-login.html">Chatgpt Alternative Free No Login</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/midjourney-vs-dall-e-vs-stable-diffusion.html">Midjourney Vs Dall E Vs Stable Diffusion</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-vs-gemini-ai-2026.html">Kimi Ai Vs Gemini Ai 2026</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-category">
+                <div class="category-header">
+                    <div class="category-icon" style="background:rgba(0,255,136,0.15);">💰</div>
+                    <div class="category-title">AI Business & Income</div>
+                    <span class="category-count">27 pages</span>
+                </div>
+                <ul class="sitemap-links">
+                    <li><a href="https://aivoraai.github.io/blog/how-to-start-ai-content-writing-business-2026.html">How To Start Ai Content Writing Business 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/earn-dollars-ai-tools-anywhere.html">Earn Dollars Ai Tools Anywhere</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-start-ai-blogging-and-earn-money-2026.html">How To Start Ai Blogging And Earn Money 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-make-money-with-ai-2026.html">How To Make Money With Ai 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-passive-income-tools-2026.html">Ai Passive Income Tools 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/chatgpt-for-business-automation-ideas.html">Chatgpt For Business Automation Ideas</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-make-money-using-ai-tools-2026.html">How To Make Money Using Ai Tools 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/online-business-ideas-usa-ai.html">Online Business Ideas Usa Ai</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-passive-income-2026.html">Ai Tools For Passive Income 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-niches-affiliate-commissions-2026.html">Ai Niches Affiliate Commissions 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-art-course-make-money.html">Ai Art Course Make Money</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/7-ai-side-hustles-earn-80-percent-commission-2026.html">7 Ai Side Hustles Earn 80 Percent Commission 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-business-guide-2026.html">Ai Business Guide 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-online-business-2026.html">Ai Tools Online Business 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/make-money-with-ai-tools-from-anywhere.html">Make Money With Ai Tools From Anywhere</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-business-toolkit-women-40-plus-2026.html">Ai Business Toolkit Women 40 Plus 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-automate-income-using-ai-step-by-step-2026.html">How To Automate Income Using Ai Step By Step 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-side-hustle-ideas-2026.html">Ai Side Hustle Ideas 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-small-business-growth-2026.html">Ai Tools For Small Business Growth 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-small-business-2026.html">Ai Tools For Small Business 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-income-ideas-students-worldwide.html">Ai Income Ideas Students Worldwide</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/chatgpt-business-ideas-beginners.html">Chatgpt Business Ideas Beginners</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/faceless-instagram-business-using-ai-2026.html">Faceless Instagram Business Using Ai 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/passive-income-business-kit.html">Passive Income Business Kit</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/future-of-ai-business-2026.html">Future Of Ai Business 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/chatgpt-for-business-growth.html">Chatgpt For Business Growth</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/passive-income-ai-website-2026.html">Passive Income Ai Website 2026</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-category">
+                <div class="category-header">
+                    <div class="category-icon" style="background:rgba(233,69,96,0.15);">📈</div>
+                    <div class="category-title">AI Marketing & SEO</div>
+                    <span class="category-count">27 pages</span>
+                </div>
+                <ul class="sitemap-links">
+                    <li><a href="https://aivoraai.github.io/blog/ai-affiliate-marketing-guide-2026.html">Ai Affiliate Marketing Guide 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-for-technical-seo-content.html">Kimi Ai For Technical Seo Content</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-pinterest-marketing-2026.html">Ai Tools Pinterest Marketing 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-use-ai-for-keyword-research.html">How To Use Ai For Keyword Research</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-affiliate-marketing-guide- 2026.html">Ai Affiliate Marketing Guide 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-instagram-growth-without-ads-2026.html">Ai Tools For Instagram Growth Without Ads 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/why-my-ai-content-is-not-ranking-2026.html">Why My Ai Content Is Not Ranking 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-digital-marketing-2026.html">Ai Tools Digital Marketing 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/new-ai-ranking-signals-for-ads-2026.html">New Ai Ranking Signals For Ads 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-real-estate-marketing-2026.html">Ai Tools Real Estate Marketing 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-keyword-research-2026.html">Ai Tools Keyword Research 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-grow-blog-traffic-using-ai-tools-2026.html">How To Grow Blog Traffic Using Ai Tools 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-keyword-research-2026.html">Ai Tools For Keyword Research 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-reshaping-seo-2026.html">Ai Reshaping Seo 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/new-2026-ai-assistant-marketing-content.html">New 2026 Ai Assistant Marketing Content</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-backlink-research-2026.html">Ai Tools Backlink Research 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-use-ai-for-seo-optimization.html">How To Use Ai For Seo Optimization</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-pinterest-traffic-2026.html">Ai Tools Pinterest Traffic 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-affiliate-marketing-2026.html">Ai Tools Affiliate Marketing 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-email-marketing-2026.html">Ai Tools Email Marketing 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-for-backlink-outreach-emails.html">Kimi Ai For Backlink Outreach Emails</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-email-marketing-tools-2026.html">Ai Email Marketing Tools 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-seo-tools-free-2026.html">Ai Seo Tools Free 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-website-seo-audit-2026.html">Ai Tools Website Seo Audit 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-ad-ranking-2026.html">Ai Tools For Ad Ranking 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/seo-content-writing-with-ai-2026.html">Seo Content Writing With Ai 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/ai-email-marketing-tools-2026.html">Ai Email Marketing Tools 2026</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-category">
+                <div class="category-header">
+                    <div class="category-icon" style="background:rgba(0,212,255,0.15);">🎨</div>
+                    <div class="category-title">AI for Creators</div>
+                    <span class="category-count">18 pages</span>
+                </div>
+                <ul class="sitemap-links">
+                    <li><a href="https://aivoraai.github.io/blog/ai-video-generator-tools-youtube-automation.html">Ai Video Generator Tools Youtube Automation</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/grow-followers-using-ai-tools-global.html">Grow Followers Using Ai Tools Global</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-linkedin-growth-2026.html">Ai Tools Linkedin Growth 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-tiktok-growth-2026.html">Ai Tools Tiktok Growth 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-social-media-posts-2026.html">Ai Tools Social Media Posts 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-youtube-growth.html">Ai Tools Youtube Growth</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-youtube-automation-2026.html">Ai Tools Youtube Automation 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-faceless-youtube-channels-2026.html">Ai Tools Faceless Youtube Channels 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/next-level-reels-8000.html">Next Level Reels 8000</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-instagram-growth-2026.html">Ai Tools Instagram Growth 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-automate-social-media-posts-with-ai.html">How To Automate Social Media Posts With Ai</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-going-viral-2026.html">Ai Tools Going Viral 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-faceless-youtube-worldwide.html">Ai Tools Faceless Youtube Worldwide</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-youtube-social-media-automation-2026.html">Ai Youtube Social Media Automation 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-linkedin-content-2026.html">Ai Tools Linkedin Content 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/faceless-youtube-channel-with-ai-2026.html">Faceless Youtube Channel With Ai 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/free-ai-tools-for-social-media-content.html">Free Ai Tools For Social Media Content</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-youtube-channel-growth.html">Ai Tools For Youtube Channel Growth</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-category">
+                <div class="category-header">
+                    <div class="category-icon" style="background:rgba(255,215,0,0.15);">📚</div>
+                    <div class="category-title">AI Guides & Tutorials</div>
+                    <span class="category-count">15 pages</span>
+                </div>
+                <ul class="sitemap-links">
+                    <li><a href="https://aivoraai.github.io/blog/how-to-schedule-posts-using-ai-tools-globally.html">How To Schedule Posts Using Ai Tools Globally</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-use-midjourney-for-beginners.html">How To Use Midjourney For Beginners</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-use-perplexity-ai-to-research-anything-10x-faster.html">How To Use Perplexity Ai To Research Anything 10X Faster</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-use-copilot-in-word-and-excel.html">How To Use Copilot In Word And Excel</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-use-ai-to-write-email-campaigns-that-actually-get-opened.html">How To Use Ai To Write Email Campaigns That Actually Get Opened</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-prompt-engineering-guide.html">Kimi Ai Prompt Engineering Guide</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-beginners.html">Ai Tools For Beginners</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/text-to-video-ai-tools-for-beginners-2026.html">Text To Video Ai Tools For Beginners 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-start-blog-using-ai-2026.html">How To Start Blog Using Ai 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-blogging-workflow-2026.html">Ai Blogging Workflow 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-find-cheap-flights-guide-2026.html">How To Find Cheap Flights Guide 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-use-chatgpt-for-homework-help.html">How To Use Chatgpt For Homework Help</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-start-ai-agency-2026.html">How To Start Ai Agency 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-beginners-guide-2026.html">Ai Tools Beginners Guide 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-use-ai-to-write-blog-posts-faster.html">How To Use Ai To Write Blog Posts Faster</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-category">
+                <div class="category-header">
+                    <div class="category-icon" style="background:rgba(179,71,217,0.15);">🎯</div>
+                    <div class="category-title">AI for Specific Niches</div>
+                    <span class="category-count">14 pages</span>
+                </div>
+                <ul class="sitemap-links">
+                    <li><a href="https://aivoraai.github.io/blog/how-to-write-a-resume-with-ai.html">How To Write A Resume With Ai</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-teachers-and-educators.html">Ai Tools For Teachers And Educators</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-remote-work-2027.html">Ai Tools For Remote Work 2027</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-teachers-2026.html">Ai Tools For Teachers 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-travel-bloggers-2026.html">Ai Tools For Travel Bloggers 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-remote-jobs-2026.html">Ai Tools For Remote Jobs 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-powered-weight-loss-fitness-2026.html">Ai Powered Weight Loss Fitness 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-freelancers-2026.html">Ai Tools Freelancers 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-freelancers-2026.html">Ai Tools For Freelancers 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/freeresumepr-ai-resume-builder-2026.html">Freeresumepr Ai Resume Builder 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-resume-builder-free-2026.html">Ai Resume Builder Free 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/free-ai-tools-for-students.html">Free Ai Tools For Students</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-remote-work-2026.html">Ai Tools For Remote Work 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/biblelife-ai-2026.html">Biblelife Ai 2026</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-category">
+                <div class="category-header">
+                    <div class="category-icon" style="background:rgba(0,255,136,0.15);">📝</div>
+                    <div class="category-title">Other Topics</div>
+                    <span class="category-count">65 pages</span>
+                </div>
+                <ul class="sitemap-links">
+                    <li><a href="https://aivoraai.github.io/blog.html">Blog</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-video-shorts-2026.html">Ai Tools For Video Shorts 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/365-elite-prompts-ai-revenue-formula.html">365 Elite Prompts Ai Revenue Formula</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-creating-presentations-fast.html">Ai Tools For Creating Presentations Fast</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/is-claude-ai-free-to-use.html">Is Claude Ai Free To Use</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-daily-life.html">Ai Tools Daily Life</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-for-ai-visibility-strategies.html">Kimi Ai For Ai Visibility Strategies</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-graphic-designers-2026.html">Ai Tools For Graphic Designers 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-logo-design-2026.html">Ai Tools Logo Design 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-content-calendar-generator-2026.html">Ai Content Calendar Generator 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/chatgpt-plugins-for-marketers.html">Chatgpt Plugins For Marketers</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-startup-founders-2026.html">Ai Tools Startup Founders 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/turn-chatgpt-into-daily-cash-flow-2026.html">Turn Chatgpt Into Daily Cash Flow 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/chatgpt-prompts-for-content-creation.html">Chatgpt Prompts For Content Creation</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-to-improve-ad-performance-2026.html">Ai Tools To Improve Ad Performance 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-affiliate-bloggers-2026.html">Ai Tools Affiliate Bloggers 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-creating-online-courses.html">Ai Tools For Creating Online Courses</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/voice-ai-tools-for-content-creators.html">Voice Ai Tools For Content Creators</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/perplexity-ai-for-academic-research.html">Perplexity Ai For Academic Research</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-hashtag-generation-2026.html">Ai Tools For Hashtag Generation 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-solo-entrepreneurs.html">Ai Tools For Solo Entrepreneurs</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-writing-tools-2026.html">Ai Writing Tools 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-ml-ad-optimization-2026.html">Ai Ml Ad Optimization 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-automation-tools-for-ecommerce.html">Ai Automation Tools For Ecommerce</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-liability-shield-2026.html">Ai Liability Shield 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-building-online-brand-2026.html">Ai Tools For Building Online Brand 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-graphic-design-2026.html">Ai Tools For Graphic Design 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-writing-assistant-non-native-speakers.html">Ai Writing Assistant Non Native Speakers</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-dropshipping-automation-2026.html">Ai Tools For Dropshipping Automation 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-video-generator-free-2026.html">Ai Video Generator Free 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-finding-cheap-flights-2026.html">Ai Tools Finding Cheap Flights 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-automation-2026.html">Ai Tools For Automation 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-blogging-2026.html">Ai Tools For Blogging 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-automation-tools.html">Ai Automation Tools</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/smart-bidding-ai-tools-2026.html">Smart Bidding Ai Tools 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-online-courses-2026.html">Ai Tools For Online Courses 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/what-is-agentic-ai-and-how-does-it-work.html">What Is Agentic Ai And How Does It Work</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/is-gemini-better-than-chatgpt-for-math.html">Is Gemini Better Than Chatgpt For Math</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-creating-ebooks-selling-online-2026.html">Ai Tools For Creating Ebooks Selling Online 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-pros-cons-comparison.html">Ai Tools Pros Cons Comparison</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-landing-page-builders-2026.html">Ai Landing Page Builders 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-does-claude-ai-work.html">How Does Claude Ai Work</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-copywriting-2026.html">Ai Tools For Copywriting 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-creative-ad-generation-2026.html">Ai Creative Ad Generation 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-dropshipping-2026.html">Ai Tools Dropshipping 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-personal-finance-2026.html">Ai Tools Personal Finance 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-customer-support-2026.html">Ai Tools For Customer Support 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/free-ai-video-generator-online-2026.html">Free Ai Video Generator Online 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-for-eeat-content-creation.html">Kimi Ai For Eeat Content Creation</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-shopify-stores-2026.html">Ai Tools Shopify Stores 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-content-creators-2026.html">Ai Tools Content Creators 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-dropshipping-2026.html">Ai Tools For Dropshipping 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-video-editing-2026.html">Ai Tools Video Editing 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/course-killing-spokesperson-industry-2026.html">Course Killing Spokesperson Industry 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-video-subtitles-generation.html">Ai Tools Video Subtitles Generation</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-podcast-editing-2026.html">Ai Tools For Podcast Editing 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/chatgpt-prompts-content-creation-2026.html">Chatgpt Prompts Content Creation 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-website-builder-tools-2026.html">Ai Website Builder Tools 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-growth-stack-2026.html">Ai Growth Stack 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-for-podcast-creation-and-editing.html">Ai Tools For Podcast Creation And Editing</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/instant-ai-agency-2026.html">Instant Ai Agency 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-that-save-time-2026.html">Ai Tools That Save Time 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/no-code-ai-agents-2026.html">No Code Ai Agents 2026</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-for-faq-schema-generation.html">Kimi Ai For Faq Schema Generation</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/ai-tools-that-replace-expensive-software.html">Ai Tools That Replace Expensive Software</a></li>
+                </ul>
+            </div>
+            <div class="sitemap-category">
+                <div class="category-header">
+                    <div class="category-icon" style="background:rgba(233,69,96,0.15);">⚙️</div>
+                    <div class="category-title">Utility Pages</div>
+                    <span class="category-count">8 pages</span>
+                </div>
+                <ul class="sitemap-links">
+                    <li><a href="https://aivoraai.github.io/blog/how-to-rank-ai-blogs-google-2026.html">Google Verification</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/kimi-ai-for-topical-authority-building.html">Author Page</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/perplexity-ai-vs-google-which-is-better.html">Google Verification</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-use-gemini-ai-google-ads-2026.html">Google Verification</a></li>
+                    <li><a href="https://aivoraai.github.io/blog/how-to-rank-on-google-with-ai-articles-2026.html">Google Verification</a></li>
+                    <li><a href="https://aivoraai.github.io/google7061fb8c95f025f1.html">Google Verification</a></li>
+                    <li><a href="https://aivoraai.github.io/thank-you.html">Thank You</a></li>
+                    <li><a href="https://aivoraai.github.io/author/varun.html">Author Page</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="xml-section">
+            <h2>XML Sitemap</h2>
+            <p>For search engines, we also provide an XML sitemap that helps Google, Bing, and AI crawlers discover and index all 259+ pages faster.</p>
+            <a href="https://aivoraai.github.io/sitemap.xml" class="xml-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                View XML Sitemap
+            </a>
+        </div>
+    </div>
+
+    <!-- Aivora AI Style Footer -->
+    <footer class="aivora-footer">
+        <div class="container">
+            <div class="aivora-footer-grid">
+                <div class="footer-brand">
+                    <h3>
+                        <svg viewBox="0 0 32 32" fill="none" style="width:24px;height:24px;">
+                            <circle cx="16" cy="16" r="14" stroke="#e94560" stroke-width="2"/>
+                            <path d="M10 16h12M16 10v12" stroke="#e94560" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Aivora AI
+                    </h3>
+                    <p>The world's trusted AI tools directory. Discover, learn & earn with the power of AI. 200+ tools tested, 80k+ monthly readers, 60+ countries served.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="https://aivoraai.github.io/index.html">Home</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#tools">AI Tools</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#guides">Guides</a></li>
+                        <li><a href="https://aivoraai.github.io/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://aivoraai.github.io/index.html#about">About Us</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#contact">Contact</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#faq">FAQ</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#community">Join Community</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#newsletter">Newsletter</a></li>
+                        <li><a href="https://aivoraai.github.io/index.html#affiliate">Affiliate Program</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Aivora AI. All rights reserved. | <a href="https://aivoraai.github.io/index.html">Aivora AI - Best AI Tools Directory 2026</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.sitemap-category, .stat-box').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+
+        // Parallax effect for particles
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelectorAll('.particle').forEach((p, i) => {
+                const speed = 0.5 + (i * 0.1);
+                p.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
