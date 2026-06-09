@@ -3,7 +3,7 @@ name: 🤖 Aivora SEO Mega Fix v3
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:
+  workflow_dispatch:        
     inputs:
       dry_run:
         description: 'Dry run — show what would change, do not commit'
