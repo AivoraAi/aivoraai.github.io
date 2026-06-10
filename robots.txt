@@ -1,11 +1,10 @@
 # robots.txt — Aivora AI
-# Auto-generated: 2026-06-09
+# Auto-generated: 2026-06-10
 
 User-agent: *
 Allow: /
 Disallow: /assets/private/
 Disallow: /_seo_backups/
-Disallow: /drafts/
 
 User-agent: Googlebot
 Allow: /
