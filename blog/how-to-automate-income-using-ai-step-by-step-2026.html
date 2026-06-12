@@ -336,6 +336,14 @@
     .timeline-dot{position:absolute;left:50%;transform:translateX(-50%);width:18px;height:18px;border-radius:50%;background:var(--grad-auto);border:3px solid var(--bg);z-index:2;box-shadow:0 0 0 3px rgba(244,63,94,.3)}
     .timeline-badge{display:inline-block;padding:3px 10px;background:var(--grad-rose);color:#fff;border-radius:100px;font-size:.68rem;font-weight:700;margin-bottom:6px}
     
+    /* TECH STACK DIAGRAM */
+    .tech-stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin: 25px 0; }
+    .tech-item { background: rgba(15,30,38,0.8); border: 1px solid var(--border); border-radius: var(--r2); padding: 15px; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; }
+    .tech-item:hover { transform: translateY(-5px); border-color: var(--cyan); box-shadow: 0 5px 15px rgba(6,182,212,0.2); }
+    .tech-item .tech-icon { font-size: 2rem; margin-bottom: 8px; display: block; }
+    .tech-item h5 { font-family: var(--fh); font-size: 0.9rem; color: var(--text); margin: 0; font-weight: 700; }
+    .tech-item p { font-size: 0.75rem; color: var(--text2); margin: 5px 0 0 0; line-height: 1.4; }
+    
     /* FAQ ACCORDION */
     .faq-item{border:1px solid var(--border);border-radius:var(--r2);margin-bottom:12px;overflow:hidden;background:var(--card)}
     .faq-q{width:100%;background:transparent;border:none;padding:18px 22px;text-align:left;color:var(--text);font-family:var(--fh);font-size:1rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:all .28s}
@@ -653,6 +661,31 @@
     <p><strong>Why it matters:</strong> Automation requires connected tools. A disjointed stack creates manual bottlenecks.</p>
     
     <p><strong>Essential AI Automation Stack:</strong></p>
+    
+    <!-- NEW ANIMATED TECH STACK DIAGRAM -->
+    <div class="tech-stack-grid">
+      <div class="tech-item">
+        <span class="tech-icon">✍️</span>
+        <h5>Content</h5>
+        <p>ChatGPT, Claude, Jasper</p>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">🎨</span>
+        <h5>Design</h5>
+        <p>Midjourney, Canva AI</p>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">🌐</span>
+        <h5>Platform</h5>
+        <p>WordPress, Gumroad</p>
+      </div>
+      <div class="tech-item">
+        <span class="tech-icon">⚡</span>
+        <h5>Automation</h5>
+        <p>Zapier, Make.com</p>
+      </div>
+    </div>
+
     <ul>
       <li><strong>Content Creation:</strong> ChatGPT Plus, Jasper, or Claude for writing & ideation.</li>
       <li><strong>Design & Visuals:</strong> Need graphics for your products? Use the <a href="https://aivoraai.github.io/blog/ai-tools-for-graphic-design-2026.html" class="ilink">best AI tools for graphic design</a> to create stunning covers and social assets in seconds.</li>
