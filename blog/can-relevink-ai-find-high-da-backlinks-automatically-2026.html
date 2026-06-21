@@ -186,16 +186,8 @@
     a.ilink:hover{color:var(--gold);border-bottom-style:solid}
     img{max-width:100%;height:auto;display:block}
 
-    /* COLORFUL NEURAL BACKGROUND */
-    #neural-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; background: radial-gradient(circle at 50% 50%, #0d1b2a 0%, #050a0e 100%); }
-    .node { position: absolute; border-radius: 50%; opacity: 0.7; transition: transform 0.3s ease-out, opacity 0.3s ease; will-change: transform, opacity; }
-    .node.emerald { background: var(--em); box-shadow: 0 0 15px rgba(0,200,150,0.5); }
-    .node.gold { background: var(--gold); box-shadow: 0 0 15px rgba(240,180,41,0.5); }
-    .node.blue { background: var(--blue); box-shadow: 0 0 15px rgba(59,130,246,0.5); }
-    .node.purple { background: var(--purple); box-shadow: 0 0 15px rgba(167,139,250,0.5); }
-    .node.rose { background: var(--rose); box-shadow: 0 0 15px rgba(244,63,94,0.5); }
-    .node.cyan { background: var(--cyan); box-shadow: 0 0 15px rgba(6,182,212,0.5); }
-    .connection { position: absolute; height: 1px; transform-origin: 0 50%; pointer-events: none; will-change: opacity, width, transform; }
+    /* COLORFUL NEURAL BACKGROUND (Container for Canvas) */
+    #neural-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; background: radial-gradient(circle at 50% 50%, #0d1b2a 0%, #050a0e 100%); overflow: hidden; }
 
     #progressBar{position:fixed;top:68px;left:0;height:3px;background:var(--grad-email);z-index:998;transition:width .1s linear;width:0%}
     .nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;background:rgba(5,10,14,.85);backdrop-filter:blur(22px);border-bottom:1px solid transparent;transition:all .28s}
@@ -215,7 +207,9 @@
     .btn-cta:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,200,150,.45)}
     .ham{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer}
     .ham span{display:block;width:22px;height:2.5px;background:var(--text);border-radius:2px;transition:all .28s ease}
-    .mnav{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(5,10,14,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:16px 20px 24px;z-index:999;flex-direction:column;gap:4px}
+    
+    /* FIX: Mobile Menu Overflow */
+    .mnav{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(5,10,14,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:16px 20px 24px;z-index:999;flex-direction:column;gap:4px;max-height:calc(100vh - 68px);overflow-y:auto}
     .mnav.open{display:flex}
     .mnav a{padding:13px 16px;color:var(--text2);font-size:.95rem;border-radius:var(--r1);transition:all .28s ease;display:block}
     .mnav a:hover{color:var(--em);background:rgba(0,200,150,.08)}
@@ -379,7 +373,8 @@
     .sb-btn:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,200,150,.45)}
 
     /* SMALL SIDE POPUP */
-    #sidePopup{position:fixed;bottom:20px;right:20px;z-index:9999;max-width:300px;background:var(--card);border:2px solid transparent;border-image:linear-gradient(135deg,#00c896,#f0b429,#3b82f6) 1;border-radius:var(--r2);box-shadow:0 8px 32px rgba(0,0,0,.4);display:none;flex-direction:column;overflow:hidden;animation:slideIn .3s ease-out, pulseBorder 2s ease-in-out infinite;backdrop-filter:blur(20px)}
+    /* FIX: Prevent popup overflow on short mobile screens */
+    #sidePopup{position:fixed;bottom:20px;right:20px;z-index:9999;max-width:300px;max-height:calc(100vh - 40px);overflow-y:auto;background:var(--card);border:2px solid transparent;border-image:linear-gradient(135deg,#00c896,#f0b429,#3b82f6) 1;border-radius:var(--r2);box-shadow:0 8px 32px rgba(0,0,0,.4);display:none;flex-direction:column;animation:slideIn .3s ease-out, pulseBorder 2s ease-in-out infinite;backdrop-filter:blur(20px)}
     @keyframes slideIn{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
     @keyframes pulseBorder{0%,100%{box-shadow:0 8px 32px rgba(0,200,150,.3)}50%{box-shadow:0 8px 32px rgba(240,180,41,.5)}}
     .popup-header{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:linear-gradient(135deg,rgba(0,200,150,.15),rgba(240,180,41,.1));border-bottom:1px solid var(--border)}
@@ -435,7 +430,30 @@
     /* MOBILE RESPONSIVE */
     @media(max-width:1024px){ .article-wrapper{grid-template-columns:1fr} .sidebar{display:none} .hero-thumbnail{max-height:350px} }
     @media(max-width:768px){ .hero-thumbnail{max-height:300px} .module-grid{grid-template-columns:1fr} .pros-cons{grid-template-columns:1fr} .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; } .footer-bottom { flex-direction: column; text-align: center; } }
-    @media(max-width:680px){ .nav-ul,.btn-cta{display:none} .ham{display:flex} .hero{padding:16px 14px 35px} .hero h1{font-size:1.5rem} .hero-desc{font-size:.92rem} .art{padding:0} .art h2{font-size:1.25rem;margin:32px 0 12px} .art h3{font-size:1rem} .art p,.art li{font-size:.92rem} .breadcrumb{padding:80px 14px 0;font-size:.75rem} .article-wrapper{padding:24px 14px 40px;gap:24px} .snippet-box{padding:18px} .idea-card{padding:18px} .callout{padding:16px 18px} .cta-box{padding:24px 16px} .contact-section{padding:40px 14px} .footer-grid { grid-template-columns: 1fr; text-align: center; } .footer-col h4::after { left: 50%; transform: translateX(-50%); } .footer-socials { justify-content: center; } }
+    
+    /* FIX: Table overflow on mobile screens */
+    @media(max-width:680px){ 
+      .nav-ul,.btn-cta{display:none} 
+      .ham{display:flex} 
+      .hero{padding:16px 14px 35px} 
+      .hero h1{font-size:1.5rem} 
+      .hero-desc{font-size:.92rem} 
+      .art{padding:0} 
+      .art h2{font-size:1.25rem;margin:32px 0 12px} 
+      .art h3{font-size:1rem} 
+      .art p,.art li{font-size:.92rem} 
+      .breadcrumb{padding:80px 14px 0;font-size:.75rem} 
+      .article-wrapper{padding:24px 14px 40px;gap:24px} 
+      .snippet-box{padding:18px} 
+      .idea-card{padding:18px} 
+      .callout{padding:16px 18px} 
+      .cta-box{padding:24px 16px} 
+      .contact-section{padding:40px 14px} 
+      .footer-grid { grid-template-columns: 1fr; text-align: center; } 
+      .footer-col h4::after { left: 50%; transform: translateX(-50%); } 
+      .footer-socials { justify-content: center; }
+      .comp-table { display: block; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+    }
     @media(max-width:480px){ .hero h1{font-size:1.4rem} .hero-thumbnail{max-height:250px} .idea-card{padding:16px} .cta-box{padding:20px 14px} .cta-box h3{font-size:1.2rem} #sidePopup{bottom:14px;right:14px;left:14px;max-width:none} }
   </style>
 </head>
@@ -443,7 +461,7 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<!-- COLORFUL NEURAL NETWORK ANIMATION -->
+<!-- COLORFUL NEURAL NETWORK ANIMATION (Container for Canvas) -->
 <div id="neural-bg" aria-hidden="true"></div>
 <div id="progressBar" aria-hidden="true"></div>
 
@@ -533,7 +551,7 @@
   </div>
 
   <div class="hero-thumbnail">
-    <img src="https://aivoraai.github.io/assets/blog/relevink-ai-backlink-finder.png" alt="Relevink AI dashboard showing automated backlink finder interface" width="1200" height="630" loading="eager" onerror="this.style.display='none';this.nextElementSibling.classList.add('active')"/>
+    <img src="https://aivoraai.github.io/assets/blog/relevink-ai-backlink-finder.png" alt="can relevink ai find high da backlinks automatically showing dashboard interface" width="1200" height="630" loading="eager" onerror="this.style.display='none';this.nextElementSibling.classList.add('active')"/>
     <div class="hero-thumbnail-fallback" role="img" aria-label="Relevink AI Automated Link Building Analysis">
       <span class="fallback-icon" aria-hidden="true">🔗</span>
       <span class="fallback-text">Relevink AI Automated Link Building Analysis</span>
@@ -833,7 +851,7 @@
 
     <!-- AUTHOR BIO -->
     <div class="idea-card" style="display:flex;gap:18px;align-items:center;margin:40px 0 0 0">
-      <img src="https://via.placeholder.com/80x80/0f1e26/00c896?text=VL" alt="Varun Lalwani profile photo" style="width:70px;height:70px;border-radius:50%;margin:0;flex-shrink:0" width="70" height="70" loading="lazy"/>
+      <img src="https://via.placeholder.com/80x80/0f1e26/00c896?text=VL" alt="how to check domain authority for google ai overviews showing author profile" style="width:70px;height:70px;border-radius:50%;margin:0;flex-shrink:0" width="70" height="70" loading="lazy"/>
       <div>
         <h4 style="margin-bottom:4px;color:var(--text)">Written by Varun Lalwani</h4>
         <p style="margin:0;font-size:.88rem">Varun is the founder of <a href="https://aivoraai.github.io/about.html">Aivora AI</a> and a link-building expert who has secured placements on DA 70+ sites using AI automation. Follow him on <a href="https://www.tiktok.com/@varunaivoraai" style="color:var(--rose);font-weight:600">TikTok @varunaivoraai</a> for daily SEO growth hacks.</p>
@@ -1006,127 +1024,100 @@
     return false;
   };
 
-  // COLORFUL NEURAL NETWORK ANIMATION
+  // ==========================================
+  // FIX: COLORFUL NEURAL NETWORK (CANVAS OPTIMIZED)
+  // Replaced DOM manipulation with Canvas to eliminate mobile lag/jank
+  // ==========================================
   var neuralBg = document.getElementById('neural-bg');
-  var isMobile = window.innerWidth < 768;
-  var nodeCount = isMobile ? 30 : 70;
+  var canvas = document.createElement('canvas');
+  canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;';
+  neuralBg.appendChild(canvas);
+  var ctx = canvas.getContext('2d');
+  
+  var width, height;
   var nodes = [];
-  var mouseX = -1000, mouseY = -1000;
-  var animationFrameId = null;
+  var mouse = { x: -1000, y: -1000 };
+  var isMobile = window.innerWidth < 768;
+  var nodeCount = isMobile ? 40 : 80; // Reduced count for better mobile performance
+  var colors = [
+    'rgba(0,200,150,', 'rgba(240,180,41,', 'rgba(59,130,246,',
+    'rgba(167,139,250,', 'rgba(244,63,94,', 'rgba(6,182,212,'
+  ];
 
-  var colors = ['emerald', 'gold', 'blue', 'purple', 'rose', 'cyan'];
+  function resizeCanvas() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
 
-  function getColorRGB(color) {
-    var colorMap = {
-      'emerald': '0,200,150',
-      'gold': '240,180,41',
-      'blue': '59,130,246',
-      'purple': '167,139,250',
-      'rose': '244,63,94',
-      'cyan': '6,182,212'
-    };
-    return colorMap[color] || '167,139,250';
+  for (var i = 0; i < nodeCount; i++) {
+    nodes.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      radius: Math.random() * 2 + 1,
+      color: colors[Math.floor(Math.random() * colors.length)]
+    });
   }
 
-  document.addEventListener('mousemove', function(e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  document.addEventListener('mousemove', function(e) { mouse.x = e.clientX; mouse.y = e.clientY; }, {passive: true});
+  document.addEventListener('touchmove', function(e) { 
+    if(e.touches.length > 0) { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY; }
   }, {passive: true});
 
-  // Initialize nodes
-  for (var i = 0; i < nodeCount; i++) {
-    var node = document.createElement('div');
-    node.classList.add('node');
-    var colorClass = colors[Math.floor(Math.random() * colors.length)];
-    node.classList.add(colorClass);
-
-    var size = Math.random() * 3 + 1.5;
-    node.style.width = size + 'px';
-    node.style.height = size + 'px';
-
-    var x = Math.random() * window.innerWidth;
-    var y = Math.random() * window.innerHeight;
-    var depth = Math.random();
-
-    nodes.push({
-      el: node,
-      x: x,
-      y: y,
-      vx: (Math.random() - 0.5) * 0.2 * (depth + 0.5),
-      vy: (Math.random() - 0.5) * 0.2 * (depth + 0.5),
-      baseSize: size,
-      depth: depth,
-      color: colorClass
-    });
-    neuralBg.appendChild(node);
-  }
-
-  function animateNeural() {
-    var width = window.innerWidth;
-    var height = window.innerHeight;
-    var connectionDist = 200;
-
-    // Remove old connections
-    var existingConns = document.querySelectorAll('.connection');
-    for (var k = 0; k < existingConns.length; k++) {
-      existingConns[k].remove();
+  function drawNetwork() {
+    ctx.clearRect(0, 0, width, height);
+    
+    // Draw connections
+    for (var i = 0; i < nodes.length; i++) {
+      for (var j = i + 1; j < nodes.length; j++) {
+        var dx = nodes[i].x - nodes[j].x;
+        var dy = nodes[i].y - nodes[j].y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 150) {
+          ctx.beginPath();
+          ctx.strokeStyle = nodes[i].color + (0.2 * (1 - dist / 150)) + ')';
+          ctx.lineWidth = 0.5;
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.stroke();
+        }
+      }
     }
 
-    for (var i = 0; i < nodes.length; i++) {
-      var node = nodes[i];
+    // Draw and update nodes
+    for (var k = 0; k < nodes.length; k++) {
+      var node = nodes[k];
       node.x += node.vx;
       node.y += node.vy;
-
-      var dxMouse = mouseX - node.x;
-      var dyMouse = mouseY - node.y;
-      var distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
-      var interactionRadius = 300 * (node.depth + 0.5);
-
-      if (distMouse < interactionRadius) {
-        var force = (interactionRadius - distMouse) / interactionRadius;
-        node.vx += (dxMouse / distMouse) * force * 0.02 * (node.depth + 0.5);
-        node.vy += (dyMouse / distMouse) * force * 0.02 * (node.depth + 0.5);
-        node.el.style.opacity = 0.7 + force * 0.3;
-      } else {
-        node.el.style.opacity = 0.4 + node.depth * 0.4;
-      }
 
       if (node.x < 0 || node.x > width) node.vx *= -1;
       if (node.y < 0 || node.y > height) node.vy *= -1;
 
-      node.el.style.transform = 'translate(' + node.x + 'px, ' + node.y + 'px)';
-
-      for (var j = i + 1; j < nodes.length; j++) {
-        var other = nodes[j];
-        var dx = node.x - other.x;
-        var dy = node.y - other.y;
-        var dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < connectionDist && Math.abs(node.depth - other.depth) < 0.3) {
-          var conn = document.createElement('div');
-          conn.classList.add('connection');
-          var angle = Math.atan2(dy, dx) * 180 / Math.PI;
-          conn.style.width = dist + 'px';
-          conn.style.left = node.x + 'px';
-          conn.style.top = node.y + 'px';
-          conn.style.transform = 'rotate(' + angle + 'deg)';
-
-          var gradient = 'linear-gradient(90deg, transparent, rgba(' + getColorRGB(node.color) + ',0.2), rgba(' + getColorRGB(other.color) + ',0.2), transparent)';
-          conn.style.background = gradient;
-
-          var depthFactor = 1 - Math.abs(node.depth - other.depth);
-          var opacity = (1 - (dist / connectionDist)) * 0.25 * depthFactor;
-          conn.style.opacity = opacity;
-
-          neuralBg.appendChild(conn);
-        }
+      // Mouse interaction
+      var dxM = mouse.x - node.x;
+      var dyM = mouse.y - node.y;
+      var distM = Math.sqrt(dxM * dxM + dyM * dyM);
+      if (distM < 150) {
+        node.x -= dxM * 0.02;
+        node.y -= dyM * 0.02;
       }
+
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+      ctx.fillStyle = node.color + '0.8)';
+      ctx.fill();
+      
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = node.color + '0.5)';
+      ctx.fill();
+      ctx.shadowBlur = 0;
     }
-    animationFrameId = requestAnimationFrame(animateNeural);
+    requestAnimationFrame(drawNetwork);
   }
-  
-  // Start animation
-  animateNeural();
+  drawNetwork();
 
   // Scroll progress bar
   window.addEventListener('scroll', function() {
@@ -1192,7 +1183,6 @@
   var closeBtn = document.getElementById('popupClose');
   var laterBtn = document.getElementById('popupLater');
   var neverBtn = document.getElementById('popupNever');
-  var popupForm = document.getElementById('popupForm');
   var popupDismissed = localStorage.getItem('aivoraPopupDismissed');
 
   if (!popupDismissed && popup) {
@@ -1258,13 +1248,6 @@
       }
     });
   }, {passive: true});
-
-  // Cleanup on page unload
-  window.addEventListener('beforeunload', function() {
-    if (animationFrameId) {
-      cancelAnimationFrame(animationFrameId);
-    }
-  });
 
 })();
 </script>
