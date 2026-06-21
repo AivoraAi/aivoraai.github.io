@@ -444,20 +444,20 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- COLORFUL NEURAL NETWORK ANIMATION -->
-<div id="neural-bg"></div>
+<div id="neural-bg" aria-hidden="true"></div>
 <div id="progressBar" aria-hidden="true"></div>
 
 <!-- SMALL SIDE POPUP -->
-<div id="sidePopup" role="dialog" aria-labelledby="popupTitle" aria-modal="false">
+<div id="sidePopup" role="dialog" aria-labelledby="popupTitle" aria-modal="true" aria-hidden="true">
   <div class="popup-header">
-    <span class="popup-title">🔗 Free Link Building Templates</span>
+    <span class="popup-title" id="popupTitle">🔗 Free Link Building Templates</span>
     <button class="popup-close" id="popupClose" aria-label="Close popup">&times;</button>
   </div>
   <div class="popup-body">
     <p>Get our proven outreach templates: "5 AI Email Scripts That Get High DA Backlinks!"</p>
-    <form class="popup-form" onsubmit="handlePopupSubmit(event)" action="https://formspree.io/f/mreddzgk" method="POST">
-      <input type="text" name="name" placeholder="Your name *" required/>
-      <input type="email" name="email" placeholder="Your email *" required/>
+    <form class="popup-form" id="popupForm" action="https://formspree.io/f/mreddzgk" method="POST">
+      <input type="text" name="name" placeholder="Your name *" required aria-required="true"/>
+      <input type="email" name="email" placeholder="Your email *" required aria-required="true"/>
       <div class="popup-cta">
         <button type="submit" class="popup-btn">Get Templates</button>
         <button type="button" class="popup-btn secondary" id="popupLater">Later</button>
@@ -470,7 +470,7 @@
 </div>
 
 <!-- NAVIGATION -->
-<header class="nav" id="N">
+<header class="nav" id="N" role="banner">
   <div class="nw">
     <a href="../index.html" class="logo" aria-label="Aivora AI Home">
       <img src="../assets/images/aivora-logo.png" alt="Aivora AI Logo" onerror="this.style.display='none'"/>
@@ -479,7 +479,7 @@
         <span class="logo-sub">AI TOOLS & INCOME</span>
       </div>
     </a>
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
       <ul class="nav-ul">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../blog.html" style="color:var(--em)">Blog</a></li>
@@ -490,12 +490,12 @@
     </nav>
     <div style="display:flex;align-items:center;gap:10px">
       <a href="../product.html" class="btn-cta">🤖 Explore AI Tools</a>
-      <button class="ham" id="H" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="ham" id="H" aria-label="Toggle menu" aria-expanded="false" aria-controls="M"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
-<nav class="mnav" id="M" aria-label="Mobile">
+<nav class="mnav" id="M" aria-label="Mobile navigation">
   <a href="../index.html">Home</a>
   <a href="../blog.html">Blog</a>
   <a href="../product.html">AI Tools</a>
@@ -507,9 +507,9 @@
 <!-- BREADCRUMB -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="../index.html">Home</a>
-  <span>›</span>
+  <span aria-hidden="true">›</span>
   <a href="../blog.html">Blog</a>
-  <span>›</span>
+  <span aria-hidden="true">›</span>
   <span style="color:var(--text2)">Relevink AI Backlink Finder</span>
 </nav>
 
@@ -524,8 +524,8 @@
       <span>19 min read</span>
       <span>By <a href="../about.html" style="color:var(--purple)">Varun Lalwani</a></span>
     </div>
-    <div class="rating-badge">
-      <span class="stars">★★★★★</span>
+    <div class="rating-badge" role="img" aria-label="Rating: 4.8 out of 5 stars">
+      <span class="stars" aria-hidden="true">★★★★★</span>
       <span>4.8 / 5</span>
       <span>· Link Building</span>
     </div>
@@ -533,9 +533,9 @@
   </div>
 
   <div class="hero-thumbnail">
-    <img src="https://aivoraai.github.io/assets/blog/relevink-ai-backlink-finder.png" alt="can relevink ai find high da backlinks automatically showing dashboard interface" width="1200" height="630" loading="eager" onerror="this.style.display='none';this.nextElementSibling.classList.add('active')"/>
-    <div class="hero-thumbnail-fallback">
-      <span class="fallback-icon">🔗</span>
+    <img src="https://aivoraai.github.io/assets/blog/relevink-ai-backlink-finder.png" alt="Relevink AI dashboard showing automated backlink finder interface" width="1200" height="630" loading="eager" onerror="this.style.display='none';this.nextElementSibling.classList.add('active')"/>
+    <div class="hero-thumbnail-fallback" role="img" aria-label="Relevink AI Automated Link Building Analysis">
+      <span class="fallback-icon" aria-hidden="true">🔗</span>
       <span class="fallback-text">Relevink AI Automated Link Building Analysis</span>
     </div>
   </div>
@@ -554,15 +554,15 @@
 
     <p>We all know the drill: you write an amazing article, hit "publish," and then... silence. Crickets. No traffic, no rankings, because you lack the authority (backlinks) to compete.</p>
 
-    <p>Enter <strong>Relevink AI</strong>. You’ve probably seen the ads or heard the whispers in SEO masterminds. It promises to revolutionize how we build links by using artificial intelligence to find "warm" leads—sites that are <em>already</em> linking to your competitors.</p>
+    <p>Enter <strong>Relevink AI</strong>. You've probably seen the ads or heard the whispers in SEO masterminds. It promises to revolutionize how we build links by using artificial intelligence to find "warm" leads—sites that are <em>already</em> linking to your competitors.</p>
 
     <p>But the big question remains: <strong>Can Relevink AI find high DA backlinks automatically?</strong></p>
 
     <p>Is it a magic wand that builds your authority while you sleep? Or is it just another overhyped tool that requires just as much manual work as the old methods?</p>
 
-    <p>In this deep-dive review, I’m going to tear down the marketing fluff. I’ll show you exactly how Relevink AI works, the reality of its "automatic" claims, and whether it’s actually worth your money for scaling your SEO in 2026.</p>
+    <p>In this deep-dive review, I'm going to tear down the marketing fluff. I'll show you exactly how Relevink AI works, the reality of its "automatic" claims, and whether it's actually worth your money for scaling your SEO in 2026.</p>
 
-    <p>Let’s get into the matrix.</p>
+    <p>Let's get into the matrix.</p>
 
     <h2 id="what-is-relevink">What is Relevink AI and How Does It Work?</h2>
 
@@ -578,7 +578,7 @@
 
     <div class="idea-card">
       <h4>🧠 The "Warm Lead" Concept</h4>
-      <p>Imagine trying to sell a vegan cookbook to a steakhouse. That’s cold outreach. Now imagine selling it to a vegan blog that just reviewed a similar cookbook. That’s a warm lead. Relevink AI automates the process of finding the "vegan blogs" in your niche.</p>
+      <p>Imagine trying to sell a vegan cookbook to a steakhouse. That's cold outreach. Now imagine selling it to a vegan blog that just reviewed a similar cookbook. That's a warm lead. Relevink AI automates the process of finding the "vegan blogs" in your niche.</p>
       <span class="tag">🔥 High Conversion</span>
     </div>
 
@@ -586,7 +586,7 @@
 
     <h2 id="high-da-reality">The Truth About "High DA" and Automation</h2>
 
-    <p>Let’s address the elephant in the room. Everyone wants a DA 80+ link from a site like Forbes or HubSpot. Can Relevink AI get you those <strong>automatically</strong>?</p>
+    <p>Let's address the elephant in the room. Everyone wants a DA 80+ link from a site like Forbes or HubSpot. Can Relevink AI get you those <strong>automatically</strong>?</p>
 
     <p><strong>The short answer is No.</strong></p>
 
@@ -606,10 +606,10 @@
 
     <h2 id="features">Key Features: Is It Worth The Hype?</h2>
 
-    <p>I’ve tested dozens of link building tools, from expensive enterprise suites to shady Fiverr gigs. Here is how Relevink AI stacks up in 2026.</p>
+    <p>I've tested dozens of link building tools, from expensive enterprise suites to shady Fiverr gigs. Here is how Relevink AI stacks up in 2026.</p>
 
     <h3>1. The "JEs" (Just Eat SEO) Finder</h3>
-    <p>This is their flagship feature. You input your URL, and it finds sites linking to your competitors. But unlike older tools that just gave you a list of URLs, Relevink’s AI analyzes the <em>context</em> of the link. Was it a resource page? A guest post? A news mention? This context helps you tailor your pitch.</p>
+    <p>This is their flagship feature. You input your URL, and it finds sites linking to your competitors. But unlike older tools that just gave you a list of URLs, Relevink's AI analyzes the <em>context</em> of the link. Was it a resource page? A guest post? A news mention? This context helps you tailor your pitch.</p>
 
     <h3>2. AI Personalized Outreach</h3>
     <p>This is where the magic happens. Generic "Dear Webmaster" emails go straight to the trash. Relevink uses LLMs (Large Language Models) to analyze the prospect's website content. It then generates an email that references their specific work.</p>
@@ -762,28 +762,28 @@
     <h2 id="faq">Frequently Asked Questions</h2>
 
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">Can Relevink AI find high DA backlinks automatically? <span class="faq-icon">+</span></button>
-      <div class="faq-a"><p>Relevink AI automatically <em>finds</em> high DA backlink opportunities by analyzing your competitors. It also automates the outreach emails. However, it cannot automatically <em>publish</em> the link; you must manage the communication and agreement with the site owner.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq1">Can Relevink AI find high DA backlinks automatically? <span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq1"><p>Relevink AI automatically <em>finds</em> high DA backlink opportunities by analyzing your competitors. It also automates the outreach emails. However, it cannot automatically <em>publish</em> the link; you must manage the communication and agreement with the site owner.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">How does Relevink AI find these backlinks? <span class="faq-icon">+</span></button>
-      <div class="faq-a"><p>It uses a "competitor backlink sniping" method. It scans the web to see who is linking to your competitors and filters those sites for relevance and authority. This ensures you are targeting sites that are already proven to link out in your niche.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq2">How does Relevink AI find these backlinks? <span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq2"><p>It uses a "competitor backlink sniping" method. It scans the web to see who is linking to your competitors and filters those sites for relevance and authority. This ensures you are targeting sites that are already proven to link out in your niche.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">Is Relevink AI better than manual link building? <span class="faq-icon">+</span></button>
-      <div class="faq-a"><p>For scalability, yes. It speeds up the prospecting phase by 10x and uses AI to write personalized emails. However, for ultra-high-tier sites (DA 90+), a manual, highly customized approach is often still necessary to build the required relationships.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq3">Is Relevink AI better than manual link building? <span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq3"><p>For scalability, yes. It speeds up the prospecting phase by 10x and uses AI to write personalized emails. However, for ultra-high-tier sites (DA 90+), a manual, highly customized approach is often still necessary to build the required relationships.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">What is the cost of Relevink AI? <span class="faq-icon">+</span></button>
-      <div class="faq-a"><p>Relevink typically operates on a subscription model. It is positioned as a mid-tier investment—more expensive than basic free tools but significantly cheaper than hiring a link-building agency. It is best suited for businesses that need to scale link acquisition efficiently.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq4">What is the cost of Relevink AI? <span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq4"><p>Relevink typically operates on a subscription model. It is positioned as a mid-tier investment—more expensive than basic free tools but significantly cheaper than hiring a link-building agency. It is best suited for businesses that need to scale link acquisition efficiently.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">Does Relevink AI guarantee links? <span class="faq-icon">+</span></button>
-      <div class="faq-a"><p>No ethical tool can guarantee links. Link building involves human negotiation. Relevink guarantees that it will find you <em>high-quality opportunities</em> and write <em>persuasive emails</em>, but the final decision rests with the site owner you are pitching.</p></div>
+      <button class="faq-q" aria-expanded="false" aria-controls="faq5">Does Relevink AI guarantee links? <span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq5"><p>No ethical tool can guarantee links. Link building involves human negotiation. Relevink guarantees that it will find you <em>high-quality opportunities</em> and write <em>persuasive emails</em>, but the final decision rests with the site owner you are pitching.</p></div>
     </div>
 
     <!-- RELATED GUIDES -->
@@ -805,26 +805,26 @@
     </div>
 
     <!-- CONTACT SECTION -->
-    <section class="contact-section" id="contact">
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
       <div class="contact-wrap">
-        <h3>Need Help With Your Link Building Strategy?</h3>
+        <h3 id="contact-heading">Need Help With Your Link Building Strategy?</h3>
         <p>Not sure if Relevink is right for you? Message us—we'll help you build a custom outreach strategy that fits your budget.</p>
 
-        <form action="https://formspree.io/f/mreddzgk" method="POST">
+        <form action="https://formspree.io/f/mreddzgk" method="POST" aria-label="Contact form">
           <input type="hidden" name="_subject" value="New Contact: Relevink AI Question"/>
           <input type="hidden" name="_next" value="https://aivoraai.github.io/thank-you.html"/>
 
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your Name"/>
+            <input type="text" id="name" name="name" required placeholder="Your Name" aria-required="true"/>
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="you@example.com"/>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" aria-required="true"/>
           </div>
           <div class="form-group">
             <label for="message">What's your question?</label>
-            <textarea id="message" name="message" required placeholder="I need help with..."></textarea>
+            <textarea id="message" name="message" required placeholder="I need help with..." aria-required="true"></textarea>
           </div>
           <button type="submit" class="form-submit">Send Message ✨</button>
         </form>
@@ -833,7 +833,7 @@
 
     <!-- AUTHOR BIO -->
     <div class="idea-card" style="display:flex;gap:18px;align-items:center;margin:40px 0 0 0">
-      <img src="https://via.placeholder.com/80x80/0f1e26/00c896?text=VL" alt="Varun Lalwani" style="width:70px;height:70px;border-radius:50%;margin:0;flex-shrink:0" width="70" height="70" loading="lazy"/>
+      <img src="https://via.placeholder.com/80x80/0f1e26/00c896?text=VL" alt="Varun Lalwani profile photo" style="width:70px;height:70px;border-radius:50%;margin:0;flex-shrink:0" width="70" height="70" loading="lazy"/>
       <div>
         <h4 style="margin-bottom:4px;color:var(--text)">Written by Varun Lalwani</h4>
         <p style="margin:0;font-size:.88rem">Varun is the founder of <a href="https://aivoraai.github.io/about.html">Aivora AI</a> and a link-building expert who has secured placements on DA 70+ sites using AI automation. Follow him on <a href="https://www.tiktok.com/@varunaivoraai" style="color:var(--rose);font-weight:600">TikTok @varunaivoraai</a> for daily SEO growth hacks.</p>
@@ -843,16 +843,16 @@
   </article>
 
   <!-- SIDEBAR -->
-  <aside class="sidebar">
+  <aside class="sidebar" role="complementary">
     <div class="sidebar-sticky">
       <div class="sb-cta">
-        <div class="icon">🔗</div>
+        <div class="icon" aria-hidden="true">🔗</div>
         <h4>Free Outreach Templates</h4>
         <p>5 AI scripts that get backlinks!</p>
         <a href="../contact.html" class="sb-btn">Get Templates →</a>
       </div>
 
-      <div class="toc-box">
+      <div class="toc-box" role="navigation" aria-label="Table of contents">
         <h3>Contents</h3>
         <ul>
           <li><a href="#what-is-relevink">What is Relevink AI?</a></li>
@@ -867,7 +867,7 @@
       </div>
 
       <div class="widget-box">
-        <h4><span>⭐</span> Quick Stats</h4>
+        <h4><span aria-hidden="true">⭐</span> Quick Stats</h4>
         <div style="padding:14px 0">
           <div style="display:flex;justify-content:space-between;margin-bottom:10px;font-size:.9rem">
             <span style="color:var(--text2)">Automation Level</span>
@@ -889,36 +889,36 @@
       </div>
 
       <div class="widget-box">
-        <h4><span>📚</span> Related Articles</h4>
-        <a href="https://aivoraai.github.io/blog/best-free-ai-tool-check-domain-authority-2026.html" class="related-link">🔍 Best Free DA Checkers</a>
-        <a href="https://aivoraai.github.io/blog/is-search-atlas-ai-domain-authority-checker-free-2026.html" class="related-link">💰 Search Atlas AI Review</a>
-        <a href="https://aivoraai.github.io/about.html" class="related-link">👤 About the Author</a>
+        <h4><span aria-hidden="true">📚</span> Related Articles</h4>
+        <a href="https://aivoraai.github.io/blog/best-free-ai-tool-check-domain-authority-2026.html" class="related-link" style="display:block;padding:6px 0;color:var(--text2);font-size:.85rem">🔍 Best Free DA Checkers</a>
+        <a href="https://aivoraai.github.io/blog/is-search-atlas-ai-domain-authority-checker-free-2026.html" class="related-link" style="display:block;padding:6px 0;color:var(--text2);font-size:.85rem">💰 Search Atlas AI Review</a>
+        <a href="https://aivoraai.github.io/about.html" class="related-link" style="display:block;padding:6px 0;color:var(--text2);font-size:.85rem">👤 About the Author</a>
       </div>
     </div>
   </aside>
 </div>
 
 <!-- ANIMATED COLORFUL FOOTER -->
-<footer class="footer-animated">
+<footer class="footer-animated" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-col footer-about">
       <h4>Aivora AI</h4>
       <p>Empowering creators with honest AI tool reviews, automation guides, and income strategies to build real businesses with AI in 2026.</p>
       <div class="footer-socials">
         <a href="https://www.facebook.com/profile.php?id=61569221487849" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </a>
         <a href="https://www.instagram.com/aivoraai.co/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         </a>
         <a href="https://www.youtube.com/@AivoraAITools" target="_blank" rel="noopener" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
         </a>
         <a href="https://x.com/aivoraai_co" target="_blank" rel="noopener" aria-label="X (Twitter)">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
         <a href="https://www.tiktok.com/@varunaivoraai" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
         </a>
       </div>
     </div>
@@ -964,62 +964,126 @@
 
 <!-- JAVASCRIPT -->
 <script>
+(function() {
+  'use strict';
+  
+  // Make functions globally available for inline handlers
+  window.toggleFaq = function(btn) {
+    var isOpen = btn.classList.contains('open');
+    var faqIcon = btn.querySelector('.faq-icon');
+    var faqAnswer = btn.nextElementSibling;
+    
+    // Close all FAQs
+    document.querySelectorAll('.faq-q.open').forEach(function(b) {
+      b.classList.remove('open');
+      b.setAttribute('aria-expanded', 'false');
+      b.nextElementSibling.style.display = 'none';
+    });
+    
+    // Open clicked FAQ if it wasn't open
+    if (!isOpen) {
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      faqAnswer.style.display = 'block';
+    }
+  };
+
+  window.handlePopupSubmit = function(e) {
+    e.preventDefault();
+    var form = e.target;
+    var name = form.querySelector('input[name="name"]').value.trim();
+    var email = form.querySelector('input[name="email"]').value.trim();
+    
+    if (!name || !email) {
+      alert('Please fill in name and email');
+      return false;
+    }
+    
+    // Form will submit to Formspree
+    alert('Thanks! Check your email for the free Link Building Templates.');
+    document.getElementById('sidePopup').style.display = 'none';
+    localStorage.setItem('aivoraPopupDismissed', 'true');
+    return false;
+  };
+
   // COLORFUL NEURAL NETWORK ANIMATION
-  const neuralBg = document.getElementById('neural-bg');
-  const isMobile = window.innerWidth < 768;
-  const nodeCount = isMobile ? 30 : 70;
-  const nodes = [];
-  let mouseX = -1000, mouseY = -1000;
+  var neuralBg = document.getElementById('neural-bg');
+  var isMobile = window.innerWidth < 768;
+  var nodeCount = isMobile ? 30 : 70;
+  var nodes = [];
+  var mouseX = -1000, mouseY = -1000;
+  var animationFrameId = null;
 
-  const colors = ['emerald', 'gold', 'blue', 'purple', 'rose', 'cyan'];
+  var colors = ['emerald', 'gold', 'blue', 'purple', 'rose', 'cyan'];
 
-  document.addEventListener('mousemove', (e) => {
+  function getColorRGB(color) {
+    var colorMap = {
+      'emerald': '0,200,150',
+      'gold': '240,180,41',
+      'blue': '59,130,246',
+      'purple': '167,139,250',
+      'rose': '244,63,94',
+      'cyan': '6,182,212'
+    };
+    return colorMap[color] || '167,139,250';
+  }
+
+  document.addEventListener('mousemove', function(e) {
     mouseX = e.clientX;
     mouseY = e.clientY;
-  });
+  }, {passive: true});
 
-  for (let i = 0; i < nodeCount; i++) {
-    const node = document.createElement('div');
+  // Initialize nodes
+  for (var i = 0; i < nodeCount; i++) {
+    var node = document.createElement('div');
     node.classList.add('node');
-    const colorClass = colors[Math.floor(Math.random() * colors.length)];
+    var colorClass = colors[Math.floor(Math.random() * colors.length)];
     node.classList.add(colorClass);
 
-    const size = Math.random() * 3 + 1.5;
+    var size = Math.random() * 3 + 1.5;
     node.style.width = size + 'px';
     node.style.height = size + 'px';
 
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight;
-    const depth = Math.random();
+    var x = Math.random() * window.innerWidth;
+    var y = Math.random() * window.innerHeight;
+    var depth = Math.random();
 
     nodes.push({
-      el: node, x: x, y: y,
+      el: node,
+      x: x,
+      y: y,
       vx: (Math.random() - 0.5) * 0.2 * (depth + 0.5),
       vy: (Math.random() - 0.5) * 0.2 * (depth + 0.5),
-      baseSize: size, depth: depth, color: colorClass
+      baseSize: size,
+      depth: depth,
+      color: colorClass
     });
     neuralBg.appendChild(node);
   }
 
   function animateNeural() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const connectionDist = 200;
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var connectionDist = 200;
 
-    const existingConns = document.querySelectorAll('.connection');
-    existingConns.forEach(c => c.remove());
+    // Remove old connections
+    var existingConns = document.querySelectorAll('.connection');
+    for (var k = 0; k < existingConns.length; k++) {
+      existingConns[k].remove();
+    }
 
-    nodes.forEach((node, i) => {
+    for (var i = 0; i < nodes.length; i++) {
+      var node = nodes[i];
       node.x += node.vx;
       node.y += node.vy;
 
-      const dxMouse = mouseX - node.x;
-      const dyMouse = mouseY - node.y;
-      const distMouse = Math.sqrt(dxMouse*dxMouse + dyMouse*dyMouse);
-      const interactionRadius = 300 * (node.depth + 0.5);
+      var dxMouse = mouseX - node.x;
+      var dyMouse = mouseY - node.y;
+      var distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
+      var interactionRadius = 300 * (node.depth + 0.5);
 
       if (distMouse < interactionRadius) {
-        const force = (interactionRadius - distMouse) / interactionRadius;
+        var force = (interactionRadius - distMouse) / interactionRadius;
         node.vx += (dxMouse / distMouse) * force * 0.02 * (node.depth + 0.5);
         node.vy += (dyMouse / distMouse) * force * 0.02 * (node.depth + 0.5);
         node.el.style.opacity = 0.7 + force * 0.3;
@@ -1030,120 +1094,160 @@
       if (node.x < 0 || node.x > width) node.vx *= -1;
       if (node.y < 0 || node.y > height) node.vy *= -1;
 
-      node.el.style.transform = `translate(${node.x}px, ${node.y}px)`;
+      node.el.style.transform = 'translate(' + node.x + 'px, ' + node.y + 'px)';
 
-      for (let j = i + 1; j < nodes.length; j++) {
-        const other = nodes[j];
-        const dx = node.x - other.x;
-        const dy = node.y - other.y;
-        const dist = Math.sqrt(dx*dx + dy*dy);
+      for (var j = i + 1; j < nodes.length; j++) {
+        var other = nodes[j];
+        var dx = node.x - other.x;
+        var dy = node.y - other.y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < connectionDist && Math.abs(node.depth - other.depth) < 0.3) {
-          const conn = document.createElement('div');
+          var conn = document.createElement('div');
           conn.classList.add('connection');
-          const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+          var angle = Math.atan2(dy, dx) * 180 / Math.PI;
           conn.style.width = dist + 'px';
           conn.style.left = node.x + 'px';
           conn.style.top = node.y + 'px';
-          conn.style.transform = `rotate(${angle}deg)`;
+          conn.style.transform = 'rotate(' + angle + 'deg)';
 
-          const gradient = `linear-gradient(90deg, transparent, rgba(${getColorRGB(node.color)},0.2), rgba(${getColorRGB(other.color)},0.2), transparent)`;
+          var gradient = 'linear-gradient(90deg, transparent, rgba(' + getColorRGB(node.color) + ',0.2), rgba(' + getColorRGB(other.color) + ',0.2), transparent)';
           conn.style.background = gradient;
 
-          const depthFactor = 1 - Math.abs(node.depth - other.depth);
-          const opacity = (1 - (dist / connectionDist)) * 0.25 * depthFactor;
+          var depthFactor = 1 - Math.abs(node.depth - other.depth);
+          var opacity = (1 - (dist / connectionDist)) * 0.25 * depthFactor;
           conn.style.opacity = opacity;
 
           neuralBg.appendChild(conn);
         }
       }
-    });
-    requestAnimationFrame(animateNeural);
+    }
+    animationFrameId = requestAnimationFrame(animateNeural);
   }
-
-  function getColorRGB(color) {
-    const colorMap = {
-      'emerald': '0,200,150', 'gold': '240,180,41', 'blue': '59,130,246',
-      'purple': '167,139,250', 'rose': '244,63,94', 'cyan': '6,182,212'
-    };
-    return colorMap[color] || '167,139,250';
-  }
+  
+  // Start animation
   animateNeural();
 
   // Scroll progress bar
-  window.addEventListener('scroll',function(){var h=document.documentElement;var pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;document.getElementById('progressBar').style.width=pct+'%';},{passive:true});
+  window.addEventListener('scroll', function() {
+    var h = document.documentElement;
+    var pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    document.getElementById('progressBar').style.width = pct + '%';
+  }, {passive: true});
 
   // Nav solid on scroll
-  var nav=document.getElementById('N');
-  window.addEventListener('scroll',function(){nav.classList.toggle('solid',window.scrollY>50);},{passive:true});
+  var nav = document.getElementById('N');
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('solid', window.scrollY > 50);
+  }, {passive: true});
 
   // Mobile menu toggle
-  var ham=document.getElementById('H'),mob=document.getElementById('M');
-  ham.addEventListener('click',function(){var open=mob.classList.toggle('open');ham.setAttribute('aria-expanded',open);var s=ham.querySelectorAll('span');if(open){s[0].style.transform='translateY(7px) rotate(45deg)';s[1].style.opacity='0';s[2].style.transform='translateY(-7px) rotate(-45deg)'}else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''}});
+  var ham = document.getElementById('H');
+  var mob = document.getElementById('M');
+  ham.addEventListener('click', function() {
+    var open = mob.classList.toggle('open');
+    ham.setAttribute('aria-expanded', open);
+    var s = ham.querySelectorAll('span');
+    if (open) {
+      s[0].style.transform = 'translateY(7px) rotate(45deg)';
+      s[1].style.opacity = '0';
+      s[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+    } else {
+      s[0].style.transform = '';
+      s[1].style.opacity = '';
+      s[2].style.transform = '';
+    }
+  });
 
   // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();var offset=80;var top=t.getBoundingClientRect().top+window.pageYOffset-offset;window.scrollTo({top:top,behavior:'smooth'})}})});
-
-  // Close mobile menu on link click
-  document.querySelectorAll('.mnav a').forEach(function(link){link.addEventListener('click',function(){mob.classList.remove('open');ham.setAttribute('aria-expanded','false');var s=ham.querySelectorAll('span');s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''})});
-
-  // FAQ Accordion
-  function toggleFaq(btn){var isOpen=btn.classList.contains('open');document.querySelectorAll('.faq-q.open').forEach(function(b){b.classList.remove('open');b.nextElementSibling.style.display='none'});if(!isOpen){btn.classList.add('open');btn.nextElementSibling.style.display='block'}}
-
-  // Popup form handler
-  function handlePopupSubmit(e){
-    e.preventDefault();
-    var name=e.target.querySelector('input[name="name"]').value.trim();
-    var email=e.target.querySelector('input[name="email"]').value.trim();
-    if(!name || !email){ alert('Please fill in name and email'); return false; }
-    alert('Thanks! Check your email for the free Link Building Templates.');
-    document.getElementById('sidePopup').style.display='none';
-    localStorage.setItem('aivoraPopupDismissed','true');
-    return false;
-  }
-
-  // ===== SIDE POPUP LOGIC =====
-  document.addEventListener('DOMContentLoaded', function() {
-    const popup = document.getElementById('sidePopup');
-    const closeBtn = document.getElementById('popupClose');
-    const laterBtn = document.getElementById('popupLater');
-    const neverBtn = document.getElementById('popupNever');
-    const popupDismissed = localStorage.getItem('aivoraPopupDismissed');
-
-    if (!popupDismissed) {
-      setTimeout(() => { popup.style.display = 'flex'; }, 35000); // 35 seconds
-    }
-
-    function closePopup() { popup.style.display = 'none'; }
-    function dismissPopup(permanent = false) {
-      closePopup();
-      if (permanent) { localStorage.setItem('aivoraPopupDismissed', 'true'); }
-    }
-
-    closeBtn.addEventListener('click', () => dismissPopup(false));
-    laterBtn.addEventListener('click', () => dismissPopup(false));
-    neverBtn.addEventListener('click', (e) => { e.preventDefault(); dismissPopup(true); });
-
-    document.addEventListener('click', (e) => {
-      if (window.innerWidth < 600 && popup.style.display === 'flex') {
-        const isClickInside = popup.contains(e.target);
-        if (!isClickInside) { dismissPopup(false); }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var targetId = this.getAttribute('href');
+      if (targetId !== '#') {
+        var t = document.querySelector(targetId);
+        if (t) {
+          e.preventDefault();
+          var offset = 80;
+          var top = t.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({top: top, behavior: 'smooth'});
+        }
       }
     });
   });
 
-  // ===== ACTIVE TOC HIGHLIGHTING =====
-  const tocLinks = document.querySelectorAll('.toc-box a');
-  const sections = document.querySelectorAll('h2[id]');
+  // Close mobile menu on link click
+  document.querySelectorAll('.mnav a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      mob.classList.remove('open');
+      ham.setAttribute('aria-expanded', 'false');
+      var s = ham.querySelectorAll('span');
+      s[0].style.transform = '';
+      s[1].style.opacity = '';
+      s[2].style.transform = '';
+    });
+  });
 
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 150) { current = section.getAttribute('id'); }
+  // ===== SIDE POPUP LOGIC =====
+  var popup = document.getElementById('sidePopup');
+  var closeBtn = document.getElementById('popupClose');
+  var laterBtn = document.getElementById('popupLater');
+  var neverBtn = document.getElementById('popupNever');
+  var popupForm = document.getElementById('popupForm');
+  var popupDismissed = localStorage.getItem('aivoraPopupDismissed');
+
+  if (!popupDismissed && popup) {
+    setTimeout(function() {
+      popup.style.display = 'flex';
+      popup.setAttribute('aria-hidden', 'false');
+    }, 35000); // 35 seconds
+  }
+
+  function closePopup() {
+    if (popup) {
+      popup.style.display = 'none';
+      popup.setAttribute('aria-hidden', 'true');
+    }
+  }
+  
+  function dismissPopup(permanent) {
+    closePopup();
+    if (permanent) {
+      localStorage.setItem('aivoraPopupDismissed', 'true');
+    }
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', function() { dismissPopup(false); });
+  if (laterBtn) laterBtn.addEventListener('click', function() { dismissPopup(false); });
+  if (neverBtn) {
+    neverBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      dismissPopup(true);
+    });
+  }
+
+  document.addEventListener('click', function(e) {
+    if (window.innerWidth < 600 && popup && popup.style.display === 'flex') {
+      var isClickInside = popup.contains(e.target);
+      if (!isClickInside) {
+        dismissPopup(false);
+      }
+    }
+  });
+
+  // ===== ACTIVE TOC HIGHLIGHTING =====
+  var tocLinks = document.querySelectorAll('.toc-box a');
+  var sections = document.querySelectorAll('h2[id]');
+
+  window.addEventListener('scroll', function() {
+    var current = '';
+    sections.forEach(function(section) {
+      var sectionTop = section.offsetTop;
+      if (window.pageYOffset >= sectionTop - 150) {
+        current = section.getAttribute('id');
+      }
     });
 
-    tocLinks.forEach(link => {
+    tocLinks.forEach(function(link) {
       link.style.color = '';
       link.style.borderLeftColor = 'transparent';
       link.style.background = '';
@@ -1154,6 +1258,15 @@
       }
     });
   }, {passive: true});
+
+  // Cleanup on page unload
+  window.addEventListener('beforeunload', function() {
+    if (animationFrameId) {
+      cancelAnimationFrame(animationFrameId);
+    }
+  });
+
+})();
 </script>
 
 </body>
