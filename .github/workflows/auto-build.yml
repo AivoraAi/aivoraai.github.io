@@ -1,0 +1,47 @@
+name: 🚀 Auto Build — Sitemap + Blog Cards
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout ────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ── 2. Set up Node.js ──────────────────────────────────────────────────
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # ── 3. Generate sitemap.xml ────────────────────────────────────────────
+      - name: Generate sitemap.xml
+        run: node scripts/generate-sitemap.js
+
+      # ── 4. Generate blog.html cards from blogs.json ───────────────────────
+      - name: Generate blog cards
+        run: node scripts/generate-blog.js
+
+      # ── 5. Fix known bugs ─────────────────────────────────────────────────
+      - name: Fix HTML bugs
+        run: node scripts/fix-bugs.js
+
+      # ── 6. Commit & push changes ──────────────────────────────────────────
+      - name: Commit generated files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml blog.html
+          git diff --staged --quiet || git commit -m "🤖 Auto: regenerate sitemap + blog cards [skip ci]"
+          git push
