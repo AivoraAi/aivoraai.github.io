@@ -52,6 +52,7 @@ Description: Aivora AI helps creators and entrepreneurs leverage artificial inte
 
 ## Blog
 
+- [Auto-Update Sitemap & llms.txt on GitHub Pages | Aivora AI](https://aivoraai.github.io/blog/auto-update-sitemap-llms-txt-github-pages.html): Free GitHub Actions setup that rebuilds sitemap.xml, sitemap.html and llms.txt on every push and checks all pages for broken links and mobile errors.
 - [Best AI Chatbots for Websites 2026: Top Picks | Aivora AI](https://aivoraai.github.io/blog/best-ai-chatbots-websites-2026.html): Discover the best AI chatbots for websites in 2026. Compare features, pricing, and capabilities. Boost customer support, lead generation, and conversions with AI-powered chatbots.
 - [How to Create Consistent Character AI Images 2026](https://aivoraai.github.io/blog/how-to-create-consistent-character-ai-images-2026.html): Learn how to create consistent character AI images using Midjourney, Leonardo AI, and Stable Diffusion. Step-by-step guide with prompts & tools.
 - [Midjourney Omni Reference (--oref) Guide: Consistent Characters in V7 (2026)](https://aivoraai.github.io/blog/midjourney-omni-reference-oref-consistent-character-2026.html): How to use Midjourney Omni Reference (--oref and --ow) in V7 to keep the same character across images. Exact prompts, weight values, and fixes.
