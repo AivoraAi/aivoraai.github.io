@@ -35,7 +35,7 @@ jobs:
           python-version: "3.12"
 
       - name: Regenerate sitemap.xml, sitemap.html, llms.txt
-        run: python scripts/site_tools.py generate
+        run: python tools/site_tools.py generate
 
       - name: Commit generated files
         run: |
@@ -51,7 +51,7 @@ jobs:
           fi
 
       - name: Check every page (errors, broken links, SEO, mobile)
-        run: python scripts/site_tools.py check
+        run: python tools/site_tools.py check
 
       - name: Upload check report
         if: always()
