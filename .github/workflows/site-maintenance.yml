@@ -1,0 +1,83 @@
+name: Site maintenance (sitemap, llms.txt, bug & mobile check)
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:            # don't loop on files this workflow writes itself
+      - "sitemap.xml"
+      - "sitemap.html"
+      - "llms.txt"
+      - "site_check_report.md"
+  schedule:
+    - cron: "30 2 * * *"     # every day 08:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-maintenance
+  cancel-in-progress: true
+
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout (full history for accurate lastmod dates)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate sitemap.xml, sitemap.html, llms.txt
+        run: python scripts/site_tools.py generate
+
+      - name: Commit generated files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml sitemap.html llms.txt
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "chore: auto-update sitemap.xml, sitemap.html, llms.txt [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Check every page (errors, broken links, SEO, mobile)
+        run: python scripts/site_tools.py check
+
+      - name: Upload check report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-check-report
+          path: site_check_report.md
+
+      - name: Lighthouse mobile audit (report only)
+        if: always()
+        continue-on-error: true
+        run: |
+          npx -y @lhci/cli@0.14.0 autorun \
+            --collect.staticDistDir=. \
+            --collect.url=/index.html \
+            --collect.url=/blog.html \
+            --collect.url=/product.html \
+            --collect.numberOfRuns=1 \
+            --collect.settings.chromeFlags="--no-sandbox" \
+            --upload.target=filesystem \
+            --upload.outputDir=lhci
+
+      - name: Upload Lighthouse results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-mobile
+          path: lhci
+          if-no-files-found: ignore
