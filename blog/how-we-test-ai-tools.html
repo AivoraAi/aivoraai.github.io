@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NWSJTJ3M');</script>
+  <!-- End Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0LH3EN5QE"></script>
+  <script>window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());gtag('config','G-N0LH3EN5QE');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+  <link rel="canonical" href="https://aivoraai.github.io/blog/how-we-test-ai-tools.html"/>
+  <link rel="llms" href="https://aivoraai.github.io/llms.txt" type="text/plain" title="Aivora AI AI Assistant Guidelines">
+
+  <title>How We Test AI Tools: Our Honest Method | Aivora AI</title>
+  <meta name="description" content="See exactly how Aivora AI tests AI tools: our 5-step process, 7-point scorecard, free vs paid rules and a 20-minute checklist you can copy."/>
+  <meta name="author" content="Varun Lalwani – Aivora AI"/>
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1"/>
+
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="How We Test AI Tools: Our Honest Method | Aivora AI"/>
+  <meta property="og:description" content="See exactly how Aivora AI tests AI tools: our 5-step process, 7-point scorecard, free vs paid rules and a 20-minute checklist you can copy."/>
+  <meta property="og:url" content="https://aivoraai.github.io/blog/how-we-test-ai-tools.html"/>
+  <meta property="og:site_name" content="Aivora AI"/>
+  <meta property="og:image" content="https://aivoraai.github.io/assets/images/aivora-logo.png"/>
+  <meta property="article:published_time" content="2026-10-28"/>
+  <meta property="article:modified_time" content="2026-10-28"/>
+  <meta property="article:author" content="Varun Lalwani"/>
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@aivoraai_co"/>
+  <meta name="twitter:creator" content="@aivoraai_co"/>
+  <meta name="twitter:title" content="How We Test AI Tools: Our Honest Method | Aivora AI"/>
+  <meta name="twitter:description" content="See exactly how Aivora AI tests AI tools: our 5-step process, 7-point scorecard, free vs paid rules and a 20-minute checklist you can copy."/>
+  <meta name="twitter:image" content="https://aivoraai.github.io/assets/images/aivora-logo.png"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How We Test AI Tools: Our Honest Method",
+    "description": "See exactly how Aivora AI tests AI tools: our 5-step process, 7-point scorecard, free vs paid rules and a 20-minute checklist you can copy.",
+    "image": "https://aivoraai.github.io/assets/images/aivora-logo.png",
+    "url": "https://aivoraai.github.io/blog/how-we-test-ai-tools.html",
+    "datePublished": "2026-10-28",
+    "dateModified": "2026-10-28",
+    "author": {
+      "@type": "Person",
+      "name": "Varun Lalwani",
+      "url": "https://aivoraai.github.io/about.html",
+      "jobTitle": "AI Tools Reviewer & Digital Marketing Strategist",
+      "sameAs": ["https://x.com/aivoraai_co"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aivora AI",
+      "logo": {"@type": "ImageObject", "url": "https://aivoraai.github.io/assets/images/aivora-logo.png"},
+      "sameAs": [
+        "https://x.com/aivoraai_co",
+        "https://www.facebook.com/profile.php?id=61569221487849",
+        "https://www.instagram.com/aivoraai.co/",
+        "https://www.tiktok.com/@varunaivoraai"
+      ]
+    },
+    "mainEntityOfPage": "https://aivoraai.github.io/blog/how-we-test-ai-tools.html"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "How do you test AI tools?", "acceptedAnswer": {"@type": "Answer", "text": "We follow five steps: define the job, run real tasks, score seven points, re-test later, and update the review. Every tool uses the same scorecard so results can be compared fairly."}},
+      {"@type": "Question", "name": "Do companies pay you for better reviews?", "acceptedAnswer": {"@type": "Answer", "text": "No. We do not accept payment for ratings. Some links are affiliate links, which can earn us a commission, but a commission never changes a score or a ranking."}},
+      {"@type": "Question", "name": "Do you test the free plan or the paid plan?", "acceptedAnswer": {"@type": "Answer", "text": "We test the free plan first because that is where most readers start. We test paid features only when we can use them ourselves, and we label anything we could not test."}},
+      {"@type": "Question", "name": "How often do you update your reviews?", "acceptedAnswer": {"@type": "Answer", "text": "We update a review when pricing, features or privacy terms change, or when a reader reports a verified mistake. Each page shows the date it was last updated."}},
+      {"@type": "Question", "name": "Can I test an AI tool myself?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Use the 20-minute checklist on this page. It covers choosing one job, using the free plan, checking facts, comparing two runs and scoring the result."}},
+      {"@type": "Question", "name": "Do you use AI to write your articles?", "acceptedAnswer": {"@type": "Answer", "text": "We may use AI for outlines or grammar checks. A person decides what goes in, checks every fact and adds hands-on experience before anything is published."}}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aivoraai.github.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aivoraai.github.io/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "How We Test AI Tools", "item": "https://aivoraai.github.io/blog/how-we-test-ai-tools.html"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".snippet-box p", ".hero-desc"]
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="https://aivoraai.github.io/assets/images/aivora-logo.png">
+  <link rel="apple-touch-icon" href="https://aivoraai.github.io/assets/images/aivora-logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{--bg:#030508;--bg2:#090d14;--card:rgba(15,23,42,0.6);--em:#00c896;--gold:#f0b429;--rose:#f43f5e;--blue:#3b82f6;--purple:#a78bfa;--cyan:#06b6d4;--text:#f1f5f9;--text2:#94a3b8;--text3:#475569;--border:rgba(148,163,184,.1);--grad-em:linear-gradient(135deg,#00c896,#0ea5e9);--grad-gold:linear-gradient(135deg,#f0b429,#f97316);--grad-purple:linear-gradient(135deg,#a78bfa,#ec4899);--grad-rose:linear-gradient(135deg,#f43f5e,#ec4899);--grad-auto:linear-gradient(135deg,#06b6d4,#a78bfa,#f43f5e);--r1:8px;--r2:14px;--r3:20px;--r4:28px;--fh:'Outfit',sans-serif;--fb:'Space Grotesk',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:var(--fb);background:radial-gradient(circle at 50% 0%, #0f172a 0%, #030712 50%, #000000 100%);color:var(--text);line-height:1.65;overflow-x:hidden;font-size:16px;min-height:100vh}
+    a{text-decoration:none;color:inherit}
+    a.ilink{color:var(--cyan);border-bottom:1px dotted var(--cyan);transition:all .28s;font-weight:600}
+    a.ilink:hover{color:var(--purple);border-bottom-style:solid}
+    img{max-width:100%;height:auto;display:block}
+
+    #web-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+    .web-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+    .ambient-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: radial-gradient(circle at 10% 90%, rgba(6,182,212,0.08) 0%, transparent 40%), radial-gradient(circle at 90% 10%, rgba(167,139,250,0.08) 0%, transparent 40%), radial-gradient(circle at 50% 50%, rgba(244,63,94,0.04) 0%, transparent 50%); z-index: -1; animation: pulseGlow 12s ease-in-out infinite alternate; }
+    @keyframes pulseGlow { 0% { opacity: 0.6; } 100% { opacity: 1; } }
+
+    #progressBar{position:fixed;top:68px;left:0;height:3px;background:var(--grad-auto);z-index:998;transition:width .1s linear;width:0%;box-shadow:0 0 10px rgba(6,182,212,0.5)}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;background:rgba(3,5,8,.75);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid transparent;transition:all .3s}
+    .nav.solid{background:rgba(3,5,8,.95);border-bottom-color:var(--border);box-shadow:0 4px 30px rgba(0,0,0,.5)}
+    .nw{max-width:1200px;margin:0 auto;height:100%;padding:0 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:800;font-size:1.15rem;color:var(--text);transition:all .28s ease;white-space:nowrap}
+    .logo:hover{opacity:.9}
+    .logo img{width:40px;height:40px;border-radius:50%;object-fit:contain;flex-shrink:0}
+    .logo-text{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+    .logo-main{font-size:1.15rem;letter-spacing:-.02em;display:flex;align-items:center}
+    .logo-sub{font-size:.6rem;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+    .bp{font-size:.5rem;font-weight:800;padding:2px 6px;background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);border-radius:100px;color:var(--cyan);letter-spacing:.07em;margin-left:3px;vertical-align:middle}
+    .nav-ul{display:flex;list-style:none;gap:2px}
+    .nav-ul a{padding:8px 12px;color:var(--text2);font-size:.85rem;font-weight:500;border-radius:var(--r1);transition:all .28s ease;display:flex;align-items:center;gap:5px}
+    .nav-ul a:hover{color:var(--text);background:rgba(6,182,212,.15)}
+    .btn-cta{padding:9px 18px;background:var(--grad-auto);color:#fff;border-radius:var(--r2);font-family:var(--fh);font-weight:700;font-size:.82rem;transition:all .28s ease;white-space:nowrap;box-shadow:0 4px 15px rgba(6,182,212,.4)}
+    .btn-cta:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 6px 20px rgba(167,139,250,.6)}
+    .ham{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer}
+    .ham span{display:block;width:22px;height:2.5px;background:var(--text);border-radius:2px;transition:all .28s ease}
+    .mnav{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(3,5,8,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:16px 20px 24px;z-index:999;flex-direction:column;gap:4px}
+    .mnav.open{display:flex}
+    .mnav a{padding:13px 16px;color:var(--text2);font-size:.95rem;border-radius:var(--r1);transition:all .28s ease;display:block}
+    .mnav a:hover{color:var(--text);background:rgba(6,182,212,.15)}
+
+    .breadcrumb{max-width:1200px;margin:0 auto;padding:85px 16px 0;display:flex;gap:6px;align-items:center;font-size:.8rem;color:var(--text3);flex-wrap:wrap;position:relative;z-index:1}
+    .breadcrumb a{color:var(--text2);transition:color .28s}
+    .breadcrumb a:hover{color:var(--cyan)}
+    .breadcrumb span{color:var(--text3)}
+
+    .hero{padding:20px 16px 45px;border-bottom:1px solid var(--border);position:relative;z-index:1}
+    .hero-inner{max-width:860px;margin:0 auto;text-align:center}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);border-radius:100px;font-size:.7rem;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;backdrop-filter:blur(10px)}
+    .hero h1{font-family:var(--fh);font-size:clamp(1.6rem,5vw,2.5rem);font-weight:800;margin-bottom:16px;line-height:1.15;background:linear-gradient(135deg,#fff 0%,var(--cyan) 50%,var(--purple) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-meta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:18px}
+    .hero-meta span{font-size:.82rem;color:var(--text2);display:flex;align-items:center;gap:5px}
+    .hero-desc{color:var(--text2);font-size:1rem;line-height:1.75;max-width:800px;margin:0 auto}
+
+    .article-wrapper{max-width:1200px;margin:0 auto;padding:30px 16px 50px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:30px;position:relative;z-index:1}
+    .art h2{font-family:var(--fh);font-size:1.4rem;font-weight:800;margin:40px 0 14px;padding-top:20px;border-top:1px solid var(--border);line-height:1.25;color:var(--text)}
+    .art h3{font-family:var(--fh);font-size:1.1rem;font-weight:700;margin:24px 0 10px;color:var(--cyan)}
+    .art p{font-size:.98rem;color:var(--text2);margin-bottom:16px;line-height:1.8}
+    .art ul,.art ol{margin:0 0 18px 22px}
+    .art li{font-size:.95rem;color:var(--text2);line-height:1.75;margin-bottom:9px}
+    .art strong{color:var(--text);font-weight:600}
+    .art code{font-size:.9em;background:rgba(6,182,212,.12);color:var(--cyan);padding:1px 6px;border-radius:4px;overflow-wrap:anywhere}
+    .art pre{overflow-x:auto;background:rgba(0,0,0,.55);border:1px solid var(--border);border-radius:var(--r2);padding:16px;margin:0 0 20px;font-size:.8rem;line-height:1.55;-webkit-overflow-scrolling:touch}
+    .art pre code{background:none;color:#e2e8f0;padding:0;overflow-wrap:normal}
+    .table-wrap{overflow-x:auto;margin:0 0 20px}
+    .art table{border-collapse:collapse;width:100%;min-width:480px}
+    .art th,.art td{border:1px solid var(--border);padding:10px 12px;text-align:left;font-size:.9rem;color:var(--text2);vertical-align:top}
+    .art th{color:var(--text);background:rgba(6,182,212,.1);font-family:var(--fh)}
+
+    .snippet-box{background:rgba(15,23,42,0.6);border:1px solid rgba(6,182,212,.3);border-radius:var(--r3);padding:24px;margin:24px 0;position:relative;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.3)}
+    .snippet-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-auto)}
+    .snippet-box h4{font-family:var(--fh);font-size:.92rem;color:var(--cyan);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+    .snippet-box h4::before{content:'';width:22px;height:2px;background:var(--grad-auto);border-radius:2px}
+    .snippet-box p{font-size:.98rem;color:var(--text);line-height:1.75;margin:0}
+
+    .idea-card{background:rgba(15,23,42,0.5);backdrop-filter:blur(15px);border:1px solid var(--border);border-radius:var(--r2);padding:22px;margin:22px 0;transition:all .3s ease;position:relative;overflow:hidden}
+    .idea-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--grad-gold);transform:scaleX(0);transition:transform 0.3s ease}
+    .idea-card:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 8px 24px rgba(240,180,41,.1)}
+    .idea-card:hover::before{transform:scaleX(1)}
+    .idea-card h4{font-family:var(--fh);font-size:1.1rem;font-weight:700;margin-bottom:10px;color:var(--gold);display:flex;align-items:center;gap:9px}
+    .idea-card p{margin:0 0 8px 0;font-size:.94rem;line-height:1.72}
+    .idea-card .tag{display:inline-block;font-size:.72rem;padding:4px 12px;background:rgba(240,180,41,.15);color:var(--gold);border-radius:100px;margin-top:12px;font-weight:600}
+
+    .callout{border-radius:var(--r2);padding:20px 22px;margin:26px 0;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}
+    .call-gold{background:rgba(240,180,41,.08);border:1px solid rgba(240,180,41,.2);border-left:4px solid var(--gold)}
+    .call-warn{background:rgba(244,63,94,.06);border:1px solid rgba(244,63,94,.18);border-left:4px solid var(--rose)}
+    .call-cyan{background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2);border-left:4px solid var(--cyan)}
+    .callout p{margin:0;font-size:.92rem;color:var(--text2);line-height:1.72}
+    .callout strong{color:var(--text)}
+
+    .cta-box{background:rgba(15,23,42,0.7);border:1px solid rgba(6,182,212,.3);border-radius:var(--r3);padding:32px 24px;text-align:center;margin:40px 0;position:relative;overflow:hidden;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 15px 40px rgba(0,0,0,.4)}
+    .cta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-auto)}
+    .cta-box::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%, rgba(6,182,212,.15),transparent 60%);pointer-events:none}
+    .cta-box h3{font-family:var(--fh);font-size:1.4rem;margin:0 0 12px;position:relative;color:var(--text);z-index:1}
+    .cta-box p{color:var(--text2);margin-bottom:20px;position:relative;font-size:.95rem;z-index:1}
+    .btn{display:inline-block;padding:14px 32px;background:var(--grad-auto);color:#fff;border-radius:var(--r2);font-family:var(--fh);font-weight:700;font-size:.95rem;transition:all .3s;position:relative;text-decoration:none;box-shadow:0 8px 20px rgba(6,182,212,.4);z-index:1}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(167,139,250,.6)}
+
+    .faq-item{border:1px solid var(--border);border-radius:var(--r2);margin-bottom:12px;overflow:hidden;background:rgba(15,23,42,0.6);backdrop-filter:blur(10px);transition:all .3s}
+    .faq-item:hover{border-color:rgba(6,182,212,.3)}
+    .faq-q{width:100%;background:transparent;border:none;padding:18px 22px;text-align:left;color:var(--text);font-family:var(--fh);font-size:1rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:all .28s}
+    .faq-q:hover{background:rgba(6,182,212,.08)}
+    .faq-q.open{color:var(--cyan)}
+    .faq-icon{font-size:1.2rem;color:var(--cyan);transition:transform .28s;flex-shrink:0}
+    .faq-q.open .faq-icon{transform:rotate(45deg)}
+    .faq-a{display:none;padding:0 22px 18px;background:rgba(0,0,0,.3)}
+    .faq-a p{font-size:.95rem;color:var(--text2);line-height:1.82;margin:0}
+
+    .sidebar{position:relative}
+    .sidebar-sticky{position:sticky;top:85px;display:flex;flex-direction:column;gap:16px}
+    .toc-box{background:rgba(15,23,42,0.7);border:1px solid var(--border);border-radius:var(--r2);padding:20px;backdrop-filter:blur(15px)}
+    .toc-box h3{font-family:var(--fh);font-size:.98rem;color:var(--cyan);margin-bottom:12px}
+    .toc-box ul{list-style:none}
+    .toc-box li{margin:5px 0}
+    .toc-box a{color:var(--text2);font-size:.85rem;font-weight:500;display:block;padding:5px 9px;border-radius:var(--r1);border-left:2px solid transparent;transition:all .28s}
+    .toc-box a:hover{color:var(--cyan);background:rgba(6,182,212,.08);border-left-color:var(--cyan)}
+    .widget-box{background:rgba(15,23,42,0.7);border:1px solid var(--border);border-radius:var(--r2);padding:18px;position:relative;overflow:hidden;backdrop-filter:blur(15px)}
+    .widget-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-auto)}
+    .widget-box h4{font-family:var(--fh);font-size:.92rem;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:7px}
+    .related-link{display:block;color:var(--cyan);font-size:.85rem;padding:6px 0;font-weight:500}
+    .related-link:hover{color:var(--purple)}
+
+    .author-box{background:rgba(15,23,42,0.6);border:1px solid rgba(6,182,212,.25);border-radius:var(--r3);padding:24px;margin:30px 0;display:flex;gap:18px;align-items:center;backdrop-filter:blur(15px)}
+    .author-avatar{width:70px;height:70px;border-radius:50%;background:var(--grad-auto);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:1.3rem;font-weight:800;color:#fff;flex-shrink:0;box-shadow:0 8px 20px rgba(6,182,212,.3)}
+    .author-info h4{font-family:var(--fh);font-size:1rem;font-weight:700;color:var(--text);margin-bottom:4px}
+    .author-role{font-size:.78rem;color:var(--cyan);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+    .author-bio{font-size:.88rem;color:var(--text2);line-height:1.65;margin:0}
+    .author-bio a{color:var(--cyan);font-weight:600}
+    .disclosure-box{background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:var(--r1);padding:14px;font-size:.78rem;color:var(--text3);line-height:1.6;margin-top:24px}
+    .disclosure-box strong{color:var(--text2)}
+
+    .footer-premium{background:linear-gradient(135deg,#030508 0%,#0f172a 50%,#030508 100%);background-size:200% 200%;animation:footerGradient 15s ease infinite;border-top:1px solid transparent;border-image:linear-gradient(90deg,var(--cyan),var(--purple),var(--rose)) 1;padding:60px 16px 25px;position:relative;z-index:1;backdrop-filter:blur(10px);overflow:hidden}
+    @keyframes footerGradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px;position:relative;z-index:2}
+    .footer-col h4{font-family:var(--fh);font-size:1rem;color:var(--text);margin-bottom:16px;font-weight:700;position:relative;display:inline-block}
+    .footer-col h4::after{content:'';position:absolute;bottom:-5px;left:0;width:26px;height:2px;background:var(--grad-auto);border-radius:2px}
+    .footer-about p{color:var(--text2);font-size:.88rem;line-height:1.65;margin-bottom:16px}
+    .footer-col ul{list-style:none}
+    .footer-col ul li{margin-bottom:10px}
+    .footer-col ul li a{color:var(--text2);font-size:.88rem;transition:all .3s ease;display:inline-flex;align-items:center;gap:5px;overflow-wrap:anywhere}
+    .footer-col ul li a:hover{color:var(--cyan);transform:translateX(3px)}
+    .footer-socials{display:flex;gap:10px;margin-top:8px}
+    .footer-socials a{width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.3);border-radius:50%;color:var(--text2);transition:all .3s ease}
+    .footer-socials a:hover{background:var(--grad-auto);color:#fff;border-color:transparent;transform:translateY(-3px) rotate(5deg);box-shadow:0 6px 15px rgba(6,182,212,0.5)}
+    .footer-socials svg{width:14px;height:14px}
+    .footer-bottom{max-width:1100px;margin:0 auto;padding-top:20px;border-top:1px solid rgba(6,182,212,0.2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;position:relative;z-index:2}
+    .footer-bottom p{font-size:.8rem;color:var(--text3)}
+
+    @media(max-width:1024px){.article-wrapper{grid-template-columns:minmax(0,1fr)}.sidebar{display:none}}
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:24px}.footer-bottom{flex-direction:column;text-align:center}.author-box{flex-direction:column;text-align:center}}
+    @media(max-width:680px){.nav-ul,.btn-cta{display:none}.ham{display:flex}.hero{padding:16px 14px 35px}.hero h1{font-size:1.5rem}.hero-desc{font-size:.92rem}.art h2{font-size:1.25rem;margin:32px 0 12px}.art h3{font-size:1rem}.art p,.art li{font-size:.92rem}.breadcrumb{padding:80px 14px 0;font-size:.75rem}.article-wrapper{padding:24px 14px 40px;gap:24px}.snippet-box{padding:18px}.callout{padding:16px 18px}.cta-box{padding:24px 16px}.footer-grid{grid-template-columns:1fr;text-align:center}.footer-col h4::after{left:50%;transform:translateX(-50%)}.footer-socials{justify-content:center}}
+    @media(max-width:480px){.hero h1{font-size:1.4rem}.cta-box{padding:20px 14px}.cta-box h3{font-size:1.2rem}}
+    @media(prefers-reduced-motion:reduce){.ambient-glow,.footer-premium{animation:none}html{scroll-behavior:auto}}
+  
+    /* === Colourful upgrade === */
+    :root{--green:#00c896}
+    .art h2{border-top:none;padding:6px 0 6px 14px;border-left:5px solid var(--cyan);border-radius:3px;background:linear-gradient(90deg,rgba(6,182,212,.12),transparent 70%);scroll-margin-top:90px}
+    .art h2:nth-of-type(5n+2){border-left-color:var(--purple);background:linear-gradient(90deg,rgba(167,139,250,.14),transparent 70%)}
+    .art h2:nth-of-type(5n+3){border-left-color:var(--rose);background:linear-gradient(90deg,rgba(244,63,94,.12),transparent 70%)}
+    .art h2:nth-of-type(5n+4){border-left-color:var(--gold);background:linear-gradient(90deg,rgba(240,180,41,.12),transparent 70%)}
+    .art h2:nth-of-type(5n+5){border-left-color:var(--green);background:linear-gradient(90deg,rgba(0,200,150,.12),transparent 70%)}
+    .art h3{background:linear-gradient(90deg,var(--cyan),var(--purple));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
+    .art a.ilink{color:var(--gold);border-bottom-color:var(--gold)}
+    .idea-card{--ac:var(--gold);--acbg:rgba(240,180,41,.15);border-left:4px solid var(--ac)}
+    .idea-card h4{color:var(--ac)} .idea-card .tag{background:var(--acbg);color:var(--ac)}
+    .idea-card:hover{border-color:var(--ac);box-shadow:0 8px 24px var(--acbg)}
+    .c-cyan{--ac:#06b6d4;--acbg:rgba(6,182,212,.16)} .c-purple{--ac:#a78bfa;--acbg:rgba(167,139,250,.16)}
+    .c-rose{--ac:#fb7185;--acbg:rgba(244,63,94,.16)} .c-gold{--ac:#f0b429;--acbg:rgba(240,180,41,.16)} .c-green{--ac:#00c896;--acbg:rgba(0,200,150,.16)}
+    .art th{background:linear-gradient(90deg,rgba(6,182,212,.35),rgba(167,139,250,.35),rgba(244,63,94,.3))}
+    .art tbody tr:nth-child(odd){background:rgba(167,139,250,.07)} .art tbody tr:nth-child(even){background:rgba(6,182,212,.06)}
+    .art-fig{margin:22px 0;border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;background:rgba(15,23,42,.6)}
+    .art-fig img{width:100%;height:auto} .art-fig figcaption{padding:10px 14px;font-size:.8rem;color:var(--text2);text-align:center}
+    #progressBar{background:linear-gradient(90deg,#06b6d4,#a78bfa,#f43f5e,#f0b429,#00c896);height:4px}
+    .chip{background:linear-gradient(90deg,rgba(6,182,212,.2),rgba(244,63,94,.2));border-color:rgba(167,139,250,.5);color:#fff}
+    /* engagement */
+    .takeaways{background:linear-gradient(135deg,rgba(0,200,150,.12),rgba(6,182,212,.1));border:1px solid rgba(0,200,150,.35);border-radius:var(--r3);padding:20px 22px;margin:22px 0}
+    .takeaways h4{font-family:var(--fh);color:var(--green);margin-bottom:10px;font-size:1.05rem}
+    .takeaways ul{margin:0 0 0 20px} .takeaways li{margin-bottom:6px;color:var(--text)}
+    .share-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:18px 0}
+    .share-bar span{font-size:.85rem;color:var(--text2);font-weight:600}
+    .share-bar a,.share-bar button{min-height:44px;display:inline-flex;align-items:center;padding:0 16px;border-radius:100px;border:1px solid rgba(167,139,250,.4);background:rgba(167,139,250,.12);color:var(--text);font:600 .82rem var(--fb);cursor:pointer;transition:.25s}
+    .share-bar a:nth-of-type(1){border-color:rgba(0,200,150,.5);background:rgba(0,200,150,.12)} .share-bar a:nth-of-type(2){border-color:rgba(148,163,184,.5)} .share-bar a:nth-of-type(3){border-color:rgba(59,130,246,.5);background:rgba(59,130,246,.12)}
+    .share-bar a:hover,.share-bar button:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(167,139,250,.3)}
+    .toc-mobile{display:none;background:rgba(15,23,42,.7);border:1px solid rgba(6,182,212,.3);border-radius:var(--r2);padding:4px 16px;margin:16px 0}
+    .toc-mobile summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font:700 .95rem var(--fh);color:var(--cyan)}
+    .toc-mobile ul{list-style:none;margin:0 0 10px} .toc-mobile a{display:block;padding:10px 4px;color:var(--text2);border-top:1px solid var(--border)}
+    .checklist{display:grid;gap:8px;margin:16px 0 8px}
+    .checklist label{display:flex;gap:12px;align-items:flex-start;min-height:44px;padding:12px 14px;border-radius:var(--r1);background:rgba(15,23,42,.6);border:1px solid var(--border);color:var(--text2);cursor:pointer;line-height:1.5;transition:.2s}
+    .checklist label:hover{border-color:var(--purple)} .checklist input{width:22px;height:22px;margin-top:1px;flex-shrink:0;accent-color:#00c896}
+    .checklist label.done{background:rgba(0,200,150,.12);border-color:rgba(0,200,150,.5);color:var(--text);text-decoration:line-through;text-decoration-color:rgba(0,200,150,.6)}
+    .check-progress{font-weight:700;color:var(--green)!important}
+    .vote{margin:30px 0;padding:20px;text-align:center;border-radius:var(--r3);border:1px dashed rgba(244,63,94,.5);background:rgba(244,63,94,.07)}
+    .vote button{min-height:44px;margin:6px;padding:0 22px;border-radius:100px;border:1px solid rgba(167,139,250,.5);background:rgba(167,139,250,.15);color:var(--text);font:600 .95rem var(--fb);cursor:pointer}
+    .vote button:hover{background:var(--grad-auto)} .vote-msg{margin:8px 0 0!important;color:var(--gold)!important}
+    #toTop{position:fixed;right:16px;bottom:16px;width:48px;height:48px;border-radius:50%;border:none;background:var(--grad-auto);color:#fff;font-size:1.3rem;cursor:pointer;z-index:900;opacity:0;pointer-events:none;transition:.3s;box-shadow:0 6px 20px rgba(167,139,250,.5)}
+    #toTop.show{opacity:1;pointer-events:auto}
+    /* animated colourful footer */
+    .footer-premium{background:linear-gradient(120deg,#030508,#1b1145,#05263a,#2e0f2a,#052e26,#030508);background-size:400% 400%;animation:footerGradient 14s ease infinite}
+    .footer-premium::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#06b6d4,#a78bfa,#f43f5e,#f0b429,#00c896,#06b6d4);background-size:200% 100%;animation:slideLine 5s linear infinite;z-index:3}
+    @keyframes slideLine{to{background-position:200% 0}}
+    .footer-orbs{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+    .footer-orbs i{position:absolute;border-radius:50%;filter:blur(40px);opacity:.35;animation:floaty 9s ease-in-out infinite alternate}
+    .footer-orbs i:nth-child(1){width:220px;height:220px;background:#06b6d4;left:5%;top:20%}
+    .footer-orbs i:nth-child(2){width:260px;height:260px;background:#f43f5e;right:8%;top:5%;animation-delay:-3s}
+    .footer-orbs i:nth-child(3){width:200px;height:200px;background:#a78bfa;left:45%;bottom:-60px;animation-delay:-6s}
+    @keyframes floaty{from{transform:translate(0,0) scale(1)}to{transform:translate(40px,-30px) scale(1.2)}}
+    .footer-col:nth-child(2) h4{color:#06b6d4}.footer-col:nth-child(3) h4{color:#f0b429}.footer-col:nth-child(4) h4{color:#fb7185}.footer-about h4{color:#a78bfa}
+    .footer-col:nth-child(2) li a:hover{color:#06b6d4}.footer-col:nth-child(3) li a:hover{color:#f0b429}.footer-col:nth-child(4) li a:hover{color:#fb7185}
+    .footer-socials a:nth-child(1):hover{background:#3b82f6}.footer-socials a:nth-child(2):hover{background:linear-gradient(45deg,#f0b429,#f43f5e,#a78bfa)}.footer-socials a:nth-child(3):hover{background:#111}.footer-socials a:nth-child(4):hover{background:#06b6d4}
+    /* mobile-friendly */
+    html{scroll-padding-top:90px} body{overflow-wrap:break-word}
+    .art li a,.art p a{padding:2px 0}
+    @media(max-width:1024px){.toc-mobile{display:block}}
+    @media(max-width:680px){.art p,.art li{font-size:1rem;line-height:1.75}.nav-ul a,.mnav a,.footer-col li a{min-height:44px}.footer-col ul li a{padding:6px 0}.table-wrap{margin-left:-4px;margin-right:-4px}.takeaways,.vote{padding:16px}.footer-orbs i{opacity:.25}}
+    @media(prefers-reduced-motion:reduce){.footer-orbs i,.footer-premium::before{animation:none}}
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWSJTJ3M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="web-bg"><canvas class="web-canvas" id="webCanvas"></canvas></div>
+<div class="ambient-glow"></div>
+<div id="progressBar" aria-hidden="true"></div>
+
+<header class="nav" id="N">
+  <div class="nw">
+    <a href="../index.html" class="logo" aria-label="Aivora AI Home">
+      <img src="../assets/images/aivora-logo.png" alt="Aivora AI Logo" width="40" height="40"/>
+      <div class="logo-text">
+        <span class="logo-main">Aivora<span class="bp">ai</span></span>
+        <span class="logo-sub">AI TOOLS &amp; INCOME</span>
+      </div>
+    </a>
+    <nav>
+      <ul class="nav-ul">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html" style="color:var(--em)">Blog</a></li>
+        <li><a href="../product.html">AI Tools</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <a href="../product.html" class="btn-cta">🚀 Explore AI Tools</a>
+      <button class="ham" id="H" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mnav" id="M" aria-label="Mobile">
+  <a href="../index.html">Home</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../product.html">AI Tools</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+  <a href="../product.html" style="margin-top:10px;padding:12px;background:var(--grad-auto);color:#fff;border-radius:var(--r2);text-align:center;font-weight:700;font-family:var(--fh)">🚀 Explore AI Tools</a>
+</nav>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="../index.html">Home</a><span>›</span>
+  <a href="../blog.html">Blog</a><span>›</span>
+  <span style="color:var(--text2)">How We Test AI Tools</span>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="chip">🔬 Honest Reviews · Our Method · 2026</span>
+    <h1>How We Test AI Tools: Our Honest, Step-by-Step Method</h1>
+    <div class="hero-meta">
+      <span>📅 Published: October 28, 2026</span>
+      <span>⏱️ 11 min read</span>
+      <span>✍️ By <a href="../about.html" style="color:var(--cyan)">Varun Lalwani</a></span>
+    </div>
+    <p class="hero-desc">Before you trust any AI tool review, you should know how it was made. Here is our full testing process, our scorecard and the rules we follow, so you can judge our reviews for yourself.</p>
+  </div>
+</header>
+
+<div class="article-wrapper">
+  <article class="art">
+
+    <div class="snippet-box">
+      <h4>Quick Answer</h4>
+      <p><strong>Here is how we test AI tools:</strong> we pick one real job, run the tool on real tasks, score it on a 7-point scorecard (output quality, accuracy, ease of use, pricing, privacy, speed and support), re-test later, and update the review when things change. Affiliate links never change a score. You can copy our 20-minute checklist at the end and test any tool yourself.</p>
+    </div>
+
+    <div class="takeaways">
+      <h4>⚡ Key Takeaways</h4>
+      <ul>
+        <li>We test with <strong>real tasks</strong>, not vendor demos or feature lists.</li>
+        <li>Every tool gets the <strong>same 7-point scorecard</strong>, so scores can be compared fairly.</li>
+        <li><strong>Accuracy and output quality</strong> carry the most weight (45% together).</li>
+        <li>Reviews show a <strong>last-tested date</strong> and are updated when plans or features change.</li>
+        <li>You can run our <strong>20-minute checklist</strong> yourself, right on this page.</li>
+      </ul>
+    </div>
+
+    <div class="share-bar" aria-label="Share this article">
+      <span>Share:</span>
+      <button type="button" id="copyLink">🔗 Copy link</button>
+      <a href="https://wa.me/?text=https%3A%2F%2Faivoraai.github.io%2Fblog%2Fhow-we-test-ai-tools.html" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Faivoraai.github.io%2Fblog%2Fhow-we-test-ai-tools.html" target="_blank" rel="noopener">X</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faivoraai.github.io%2Fblog%2Fhow-we-test-ai-tools.html" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+    <details class="toc-mobile"><summary>📑 Jump to a section</summary><ul><li><a href="#why">Why We Publish Our Testing Method</a></li><li><a href="#process">Our 5-Step Testing Process</a></li><li><a href="#scorecard">The 7-Point Scorecard</a></li><li><a href="#tasks">Which Tasks We Use for Each Tool Type</a></li><li><a href="#free-paid">How We Handle Free and Paid Plans</a></li><li><a href="#money">How We Handle Affiliate Links and Money</a></li><li><a href="#accuracy">How We Check Facts and Claims</a></li><li><a href="#ai-use">How We Use AI in Our Own Writing</a></li><li><a href="#red-flags">Red Flags That Lower a Score</a></li><li><a href="#updates">How and When We Update Reviews</a></li><li><a href="#ratings">How to Read Our Ratings</a></li><li><a href="#limits">What Our Testing Cannot Tell You</a></li><li><a href="#checklist">Test Any AI Tool Yourself: Our 20-Minute Checklist</a></li><li><a href="#corrections">Found a Mistake? Tell Us</a></li><li><a href="#faq">Frequently Asked Questions</a></li></ul></details>
+
+    <p>New AI tools launch every week, and almost every one of them claims to be the best. If you have ever signed up for a tool because of a shiny landing page and then felt let down, you already know why a clear testing method matters.</p>
+    <p>This page explains <strong>how we test AI tools</strong> at Aivora AI, step by step. We wrote it so you can judge our reviews for yourself, copy our method for your own use, and hold us to it. If we ever fall short of what is written here, tell us.</p>
+
+    <h2 id="why">Why We Publish Our Testing Method</h2>
+    <p>Most review sites hide how they reach a verdict. You see a score, a list of pros and cons, and a button that says &ldquo;Try it free.&rdquo; You do not see what the reviewer actually did, how long they used the tool, or whether the company paid for the placement.</p>
+    <p>We think that is backwards. A review is only as useful as the method behind it. So we put ours in public. Three promises sit behind everything below:</p>
+    <ul>
+      <li><strong>We test before we recommend.</strong> If we have not used a tool for a real task, we do not rate it.</li>
+      <li><strong>We say what we do not know.</strong> If something could not be verified, we say so instead of guessing.</li>
+      <li><strong>We explain our money.</strong> Some links on this site are affiliate links. They never change a score or a ranking.</li>
+    </ul>
+
+    <h2 id="process">Our 5-Step Testing Process</h2>
+    <p>Every review on Aivora AI follows the same five steps. The order matters, because it keeps us from falling for marketing before we have seen the product work.</p>
+    <figure class="art-fig"><img src="../assets/images/how-we-test-ai-tools-process.svg" alt="how we test ai tools five-step process diagram from defining the job to publishing and updating" width="800" height="250" loading="lazy"/><figcaption>Our five steps, from picking the job to updating the review.</figcaption></figure>
+
+    <div class="idea-card c-cyan"><h4>Step 1: Define the job</h4><p>We start with the problem, not the product. &ldquo;Translate a product page into Spanish&rdquo; is a job. &ldquo;Test Tool X&rdquo; is not. A clear job tells us what a good result looks like before we open the tool.</p><span class="tag">Job first, tool second</span></div>
+    <div class="idea-card c-purple"><h4>Step 2: Run real tasks</h4><p>We use the tool on real work: actual emails, actual documents, actual product pages. We run each task more than once, because AI output can change from one attempt to the next. We also try one hard task on purpose, to see where the tool breaks.</p><span class="tag">Real work, not demos</span></div>
+    <div class="idea-card c-rose"><h4>Step 3: Score the seven points</h4><p>We score the tool on the scorecard below, writing a short note beside every number. A score with no note is not allowed, because it cannot be checked later.</p><span class="tag">Same scorecard for all</span></div>
+    <div class="idea-card c-gold"><h4>Step 4: Re-test later</h4><p>AI tools change fast. We come back to a tool after some time and repeat the key tasks. If the result is better or worse, the review changes.</p><span class="tag">No set-and-forget reviews</span></div>
+    <div class="idea-card c-green"><h4>Step 5: Publish and keep it updated</h4><p>Each review shows when it was last tested. When pricing, features or privacy terms change, we update the page and the date.</p><span class="tag">Dated and maintained</span></div>
+
+    <h2 id="scorecard">The 7-Point Scorecard</h2>
+    <p>The scorecard is the heart of how we test AI tools. Each point gets a score out of 10, and the weights below turn those scores into one overall rating. The weights are not random. They reflect what usually matters most to a regular person who just wants the tool to work.</p>
+    <figure class="art-fig"><img src="../assets/images/how-we-test-ai-tools-scorecard.svg" alt="how we test ai tools scorecard bar chart showing the weight of each of the seven criteria" width="800" height="350" loading="lazy"/><figcaption>How much each point counts toward the final score.</figcaption></figure>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Point</th><th>Weight</th><th>What we check</th></tr></thead>
+        <tbody>
+          <tr><td>Output quality</td><td>25%</td><td>Is the result useful, clear and ready to use with light editing?</td></tr>
+          <tr><td>Accuracy</td><td>20%</td><td>Are facts, names, numbers and translations correct? Does it invent things?</td></tr>
+          <tr><td>Ease of use</td><td>15%</td><td>Can a beginner get a good result in the first 15 minutes without a tutorial?</td></tr>
+          <tr><td>Pricing and value</td><td>15%</td><td>Is the free plan really usable? Are limits and prices easy to understand?</td></tr>
+          <tr><td>Privacy and safety</td><td>10%</td><td>Is it clear what happens to your data? Are there settings to control it?</td></tr>
+          <tr><td>Speed</td><td>10%</td><td>How long does it take to get a finished result, including retries?</td></tr>
+          <tr><td>Support</td><td>5%</td><td>Are there help pages, clear error messages and a way to reach a person?</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Why does accuracy weigh so much? Because a wrong answer that sounds confident is worse than a slow answer. A tool that writes smoothly but gets facts wrong can cost you time, money or trust, so we mark it down hard.</p>
+
+    <h2 id="tasks">Which Tasks We Use for Each Tool Type</h2>
+    <p>A good test uses tasks that match what people really do. Here is what that looks like for the main kinds of tools we cover.</p>
+    <h3>Writing and chat assistants</h3>
+    <p>We ask for a real email, a short summary of a long document, a plan for a busy week, and an explanation of a hard topic in plain words. We then check every fact in the answer against a reliable source.</p>
+    <h3>Translation tools</h3>
+    <p>We translate real text such as a product page, a help article and a casual message, then compare the result with a fluent speaker&rsquo;s version where we can. We look at tone, not only words. A tool can be correct and still sound strange. You can see this approach applied in our guides to <a href="https://aivoraai.github.io/blog/best-ai-wordpress-translation-tools-2026.html" class="ilink">AI WordPress translation tools</a> and <a href="https://aivoraai.github.io/blog/ai-ecommerce-translation-seo-2026.html" class="ilink">AI ecommerce translation for SEO</a>.</p>
+    <h3>Video and voice tools</h3>
+    <p>We check whether the voice sounds natural, whether timing matches the speaker, and whether names and technical words come out right. Our notes on <a href="https://aivoraai.github.io/blog/ai-youtube-video-translation-voice-lipsync-2026.html" class="ilink">AI YouTube video translation, voice and lip-sync tools</a> show how we judge these things.</p>
+    <h3>Document tools</h3>
+    <p>We upload a real PDF with tables, headings and a few tricky pages, then check whether the summary misses key points. We use the same method when we compare <a href="https://aivoraai.github.io/blog/best-free-ai-pdf-summarizer-translator-2026.html" class="ilink">free AI PDF summarizers and translators</a>.</p>
+    <h3>Image and design tools</h3>
+    <p>We give the same short brief to each tool and compare the results for style, text accuracy (AI often garbles letters) and how much cleanup is needed.</p>
+    <h3>Automation tools</h3>
+    <p>We build one simple automation, such as saving email attachments to a folder, and see how long setup takes and how often it fails.</p>
+
+    <h2 id="free-paid">How We Handle Free and Paid Plans</h2>
+    <p>Many AI tools look great on a paid plan and frustrating on the free one. We test the free plan first, because that is where most readers start. If a tool needs a paid plan to do its main job, we say so in the first lines of the review.</p>
+    <ul>
+      <li><strong>Free plan first.</strong> We note limits such as daily use, file size and watermarks.</li>
+      <li><strong>Paid plan second.</strong> We test paid features only when we can use the plan ourselves, and we label anything we could not test.</li>
+      <li><strong>No price promises.</strong> Prices change often, so we tell you to check the official page before paying.</li>
+    </ul>
+
+    <h2 id="money">How We Handle Affiliate Links and Money</h2>
+    <p>Aivora AI may earn a commission if you buy through some links on this site, at no extra cost to you. That is how we keep the site running. It is also a conflict of interest, so we use clear rules to keep it from shaping our reviews:</p>
+    <div class="idea-card c-gold"><h4>Our money rules</h4><p>1. A commission never changes a score or a ranking.<br/>2. We do not accept payment for a better rating.<br/>3. If a tool was given to us free, we say so in the review.<br/>4. We write about weak points even for tools that pay us.<br/>5. Our full wording is on the <a href='../disclosure.html' class='ilink'>affiliate disclosure page</a>.</p><span class="tag">Transparent by default</span></div>
+
+    <h2 id="accuracy">How We Check Facts and Claims</h2>
+    <p>AI tools love big numbers: &ldquo;saves 10 hours a week,&rdquo; &ldquo;95% accurate,&rdquo; &ldquo;used by millions.&rdquo; We treat those the way you should treat any advertising claim, with polite doubt.</p>
+    <ul>
+      <li>We prefer <strong>official sources</strong> such as the tool&rsquo;s own help pages, pricing page and privacy policy.</li>
+      <li>We repeat a vendor&rsquo;s claim only when we can say where it came from.</li>
+      <li>We never invent statistics, case studies or customer quotes.</li>
+      <li>When two sources disagree, we say so instead of picking the one we like.</li>
+    </ul>
+
+    <h2 id="ai-use">How We Use AI in Our Own Writing</h2>
+    <p>It would be odd to review AI tools without using any, so here is our honest position. We may use AI to brainstorm outlines, check grammar or tidy a draft. A person decides what goes in, checks every fact, adds hands-on experience, and takes responsibility for the final page.</p>
+    <p>If you want to see our thinking on this topic, read our guide to <a href="https://aivoraai.github.io/blog/how-to-write-long-form-ai-blog-posts-pass-ai-detection-2026.html" class="ilink">writing long-form AI blog posts that pass AI detection</a>. The short version: quality, accuracy and real experience matter more than any detector score.</p>
+
+    <h2 id="red-flags">Red Flags That Lower a Score</h2>
+    <p>Some problems make us trust a tool less, no matter how good the demo looks:</p>
+    <ul>
+      <li><strong>Hidden pricing</strong> or surprise charges after sign-up.</li>
+      <li><strong>No clear privacy policy</strong>, or terms that let the company reuse your private files without saying so.</li>
+      <li><strong>Fake urgency</strong> such as countdown timers and &ldquo;only 3 spots left.&rdquo;</li>
+      <li><strong>No way to cancel</strong> or delete your account.</li>
+      <li><strong>Invented reviews</strong> or claims we cannot find a source for.</li>
+      <li><strong>Output that is confidently wrong</strong> and gives no way to check it.</li>
+    </ul>
+
+    <h2 id="updates">How and When We Update Reviews</h2>
+    <p>A review that is a year old can be wrong today. We update a page when a tool changes its pricing or limits, adds or removes a major feature, changes its privacy terms, or when a reader points out something we missed. The date at the top of each review shows when we last changed it.</p>
+
+    <h2 id="ratings">How to Read Our Ratings</h2>
+    <p>Our overall rating comes from the weighted scorecard, shown as stars. Use it as a starting point, not a final answer.</p>
+    <ul>
+      <li><strong>5 stars:</strong> excellent across the board. We would use it ourselves.</li>
+      <li><strong>4 stars:</strong> very good, with minor drawbacks.</li>
+      <li><strong>3 stars:</strong> fine for some people, but check the &ldquo;watch out&rdquo; notes first.</li>
+      <li><strong>2 stars or less:</strong> real problems. We explain why and suggest alternatives.</li>
+    </ul>
+    <p>A 4-star tool that fits your job beats a 5-star tool that does something else, so always read the &ldquo;best for&rdquo; line.</p>
+
+    <h2 id="limits">What Our Testing Cannot Tell You</h2>
+    <p>Honesty includes limits. We cannot test every feature of every tool. AI output varies, so your results may differ from ours. Plans and prices change. And our tests reflect the tasks we chose, which may not match yours. That is why we show our notes and encourage you to run a short test of your own.</p>
+
+    <div class="cta-box">
+      <h3>🚀 See Our Method in Action</h3>
+      <p>Browse our latest guides and see the scorecard applied to real tools.</p>
+      <a href="../blog.html" class="btn">Read the Blog →</a>
+    </div>
+
+    <h2 id="checklist">Test Any AI Tool Yourself: Our 20-Minute Checklist</h2>
+    <p>You do not need a lab to test an AI tool. Tick each item as you go. Your progress is saved in this browser.</p>
+    <div class="checklist" id="checklistBox">
+      <label><input type="checkbox"/> Write down the one job you want the tool to do.</label>
+      <label><input type="checkbox"/> Sign up using the free plan only.</label>
+      <label><input type="checkbox"/> Read the pricing page and privacy policy for two minutes.</label>
+      <label><input type="checkbox"/> Run your task with a real example, not a sample.</label>
+      <label><input type="checkbox"/> Run the same task a second time and compare results.</label>
+      <label><input type="checkbox"/> Check three facts, names or numbers in the output.</label>
+      <label><input type="checkbox"/> Note how long it took to get a usable result.</label>
+      <label><input type="checkbox"/> Try one hard task to see where it breaks.</label>
+      <label><input type="checkbox"/> Find out how to cancel or delete your account.</label>
+      <label><input type="checkbox"/> Give it a score from 1 to 10 and write one sentence why.</label>
+    </div>
+    <p class="check-progress" id="checkProgress">0 of 10 done</p>
+
+    <h2 id="corrections">Found a Mistake? Tell Us</h2>
+    <p>We get things wrong sometimes. If you spot an error, an outdated price or a tool you think we scored unfairly, please <a href="../contact.html" class="ilink">contact us</a>. We read every message, and we fix verified mistakes and note the change on the page.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do you test AI tools? <span class="faq-icon">+</span></button><div class="faq-a"><p>We follow five steps: define the job, run real tasks, score seven points, re-test later, and update the review. Every tool uses the same scorecard so results can be compared fairly.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do companies pay you for better reviews? <span class="faq-icon">+</span></button><div class="faq-a"><p>No. We do not accept payment for ratings. Some links are affiliate links, which can earn us a commission, but a commission never changes a score or a ranking.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you test the free plan or the paid plan? <span class="faq-icon">+</span></button><div class="faq-a"><p>We test the free plan first because that is where most readers start. We test paid features only when we can use them ourselves, and we label anything we could not test.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How often do you update your reviews? <span class="faq-icon">+</span></button><div class="faq-a"><p>We update a review when pricing, features or privacy terms change, or when a reader reports a verified mistake. Each page shows the date it was last updated.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I test an AI tool myself? <span class="faq-icon">+</span></button><div class="faq-a"><p>Yes. Use the 20-minute checklist on this page. It covers choosing one job, using the free plan, checking facts, comparing two runs and scoring the result.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you use AI to write your articles? <span class="faq-icon">+</span></button><div class="faq-a"><p>We may use AI for outlines or grammar checks. A person decides what goes in, checks every fact and adds hands-on experience before anything is published.</p></div></div>
+
+    <div class="vote" id="vote">
+      <p><strong>Was this page helpful?</strong></p>
+      <button type="button" data-v="yes">👍 Yes</button>
+      <button type="button" data-v="no">👎 Not really</button>
+      <p class="vote-msg" id="voteMsg" role="status"></p>
+    </div>
+
+    <h2>Related Guides</h2>
+    <ul>
+      <li><a href="https://aivoraai.github.io/blog/best-ai-wordpress-translation-tools-2026.html" class="ilink">AI WordPress translation tools</a>: translation tools compared for WordPress sites.</li>
+      <li><a href="https://aivoraai.github.io/blog/ai-youtube-video-translation-voice-lipsync-2026.html" class="ilink">AI YouTube video translation, voice and lip-sync tools</a>: dubbing, voice cloning and lip-sync, explained.</li>
+      <li><a href="https://aivoraai.github.io/blog/ai-ecommerce-translation-seo-2026.html" class="ilink">AI ecommerce translation for SEO</a>: reach new markets without losing your rankings.</li>
+      <li><a href="https://aivoraai.github.io/blog/best-free-ai-pdf-summarizer-translator-2026.html" class="ilink">free AI PDF summarizers and translators</a>: summarize and translate documents quickly.</li>
+      <li><a href="https://aivoraai.github.io/blog/how-to-write-long-form-ai-blog-posts-pass-ai-detection-2026.html" class="ilink">writing long-form AI blog posts that pass AI detection</a>: a practical guide to quality writing with AI.</li>
+    </ul>
+
+    <div class="author-box">
+      <div class="author-avatar">VL</div>
+      <div class="author-info">
+        <h4>Written by Varun Lalwani</h4>
+        <div class="author-role">AI Tools Reviewer &amp; Digital Marketing Strategist</div>
+        <p class="author-bio">Varun is the founder of <a href="../index.html">Aivora AI</a>. He writes practical guides on AI tools, automation and SEO. <a href="../about.html">Read more about Varun →</a></p>
+      </div>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-sticky">
+      <div class="toc-box">
+        <h3>Contents</h3>
+        <ul><li><a href="#why">Why We Publish Our Testing Method</a></li><li><a href="#process">Our 5-Step Testing Process</a></li><li><a href="#scorecard">The 7-Point Scorecard</a></li><li><a href="#tasks">Which Tasks We Use for Each Tool Type</a></li><li><a href="#free-paid">How We Handle Free and Paid Plans</a></li><li><a href="#money">How We Handle Affiliate Links and Money</a></li><li><a href="#accuracy">How We Check Facts and Claims</a></li><li><a href="#ai-use">How We Use AI in Our Own Writing</a></li><li><a href="#red-flags">Red Flags That Lower a Score</a></li><li><a href="#updates">How and When We Update Reviews</a></li><li><a href="#ratings">How to Read Our Ratings</a></li><li><a href="#limits">What Our Testing Cannot Tell You</a></li><li><a href="#checklist">Test Any AI Tool Yourself: Our 20-Minute Checklist</a></li><li><a href="#corrections">Found a Mistake? Tell Us</a></li><li><a href="#faq">Frequently Asked Questions</a></li></ul>
+      </div>
+      <div class="widget-box">
+        <h4><span>🔗</span> Related Articles</h4>
+        <a href="https://aivoraai.github.io/blog/best-ai-chatbots-websites.html" class="related-link">💬 Best AI Chatbots for Websites</a>
+        <a href="https://aivoraai.github.io/blog/ai-tools-for-non-technical-people.html" class="related-link">🧰 AI Tools for Non-Technical People</a>
+        <a href="https://aivoraai.github.io/blog/best-ai-business-ideas-beginners-2026.html" class="related-link">💡 Best AI Business Ideas</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer-premium">
+  <div class="footer-orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="footer-grid">
+    <div class="footer-col footer-about">
+      <h4>Aivora AI</h4>
+      <p>Empowering businesses with honest AI tool reviews, automation strategies, and the latest trends in AI to help you build profitable online businesses.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/profile.php?id=61569221487849" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://www.instagram.com/aivoraai.co/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://x.com/aivoraai_co" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.tiktok.com/@varunaivoraai" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../product.html">AI Tools</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="https://aivoraai.github.io/sitemap.html">Sitemap</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Top Guides</h4>
+      <ul>
+        <li><a href="https://aivoraai.github.io/blog/best-ai-business-ideas-beginners-2026.html">Best AI Business Ideas</a></li>
+        <li><a href="https://aivoraai.github.io/blog/how-to-write-a-resume-with-ai.html">Write Resume with AI</a></li>
+        <li><a href="https://aivoraai.github.io/blog/free-ai-tools-for-students.html">Free AI Tools for Students</a></li>
+        <li><a href="https://aivoraai.github.io/blog/how-to-automate-social-media-posts-with-ai.html">Automate Social Media</a></li>
+        <li><a href="https://aivoraai.github.io/blog/best-ai-chatbots-websites.html">Best AI Chatbots</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="../privacy.html">Privacy Policy</a></li>
+        <li><a href="../terms.html">Terms of Service</a></li>
+        <li><a href="../disclosure.html">Affiliate Disclosure</a></li>
+        <li><a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Aivora AI | Director: Varun Lalwani | India 🇮🇳</p>
+    <p>Made with 💬 for businesses worldwide</p>
+  </div>
+</footer>
+
+<script>
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canvas = document.getElementById('webCanvas');
+  var ctx = canvas.getContext('2d');
+  var particles = [], mouseX = -1000, mouseY = -1000;
+  function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  document.addEventListener('mousemove', function(e){mouseX=e.clientX;mouseY=e.clientY});
+  var particleCount = window.innerWidth < 768 ? 40 : 100;
+  var colors = ['#06b6d4','#a78bfa','#f43f5e','#00c896','#f0b429'];
+  for (var i=0;i<particleCount;i++){
+    particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.3,radius:Math.random()*2+0.8,color:colors[Math.floor(Math.random()*colors.length)],pulse:Math.random()*Math.PI*2});
+  }
+  function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(function(p,i){
+      p.x+=p.vx;p.y+=p.vy;p.pulse+=0.015;
+      if(p.x<0||p.x>canvas.width)p.vx*=-1;
+      if(p.y<0||p.y>canvas.height)p.vy*=-1;
+      var dx=mouseX-p.x,dy=mouseY-p.y,dist=Math.sqrt(dx*dx+dy*dy);
+      if(dist<120){p.x-=dx*0.005;p.y-=dy*0.005}
+      var r=p.radius+Math.sin(p.pulse)*0.4;
+      ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fillStyle=p.color;ctx.globalAlpha=0.8;ctx.shadowBlur=12;ctx.shadowColor=p.color;ctx.fill();ctx.shadowBlur=0;
+      for(var j=i+1;j<particles.length;j++){
+        var p2=particles[j],dx2=p.x-p2.x,dy2=p.y-p2.y,d2=Math.sqrt(dx2*dx2+dy2*dy2);
+        if(d2<140){var g=ctx.createLinearGradient(p.x,p.y,p2.x,p2.y);g.addColorStop(0,p.color);g.addColorStop(1,p2.color);ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p2.x,p2.y);ctx.strokeStyle=g;ctx.globalAlpha=(1-d2/140)*0.5;ctx.lineWidth=1;ctx.stroke()}
+      }
+    });
+    ctx.globalAlpha=1;
+    if(!reduce)requestAnimationFrame(animate);
+  }
+  animate();
+
+  window.addEventListener('scroll',function(){var h=document.documentElement;var pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;document.getElementById('progressBar').style.width=pct+'%'},{passive:true});
+  var nav=document.getElementById('N');
+  window.addEventListener('scroll',function(){nav.classList.toggle('solid',window.scrollY>50)},{passive:true});
+  var ham=document.getElementById('H'),mob=document.getElementById('M');
+  ham.addEventListener('click',function(){var open=mob.classList.toggle('open');ham.setAttribute('aria-expanded',open);var s=ham.querySelectorAll('span');if(open){s[0].style.transform='translateY(7px) rotate(45deg)';s[1].style.opacity='0';s[2].style.transform='translateY(-7px) rotate(-45deg)'}else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''}});
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();var top=t.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:top,behavior:'smooth'})}})});
+  document.querySelectorAll('.mnav a').forEach(function(l){l.addEventListener('click',function(){mob.classList.remove('open');ham.setAttribute('aria-expanded','false');var s=ham.querySelectorAll('span');s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''})});
+  function toggleFaq(btn){var isOpen=btn.classList.contains('open');document.querySelectorAll('.faq-q.open').forEach(function(b){b.classList.remove('open');b.nextElementSibling.style.display='none'});if(!isOpen){btn.classList.add('open');btn.nextElementSibling.style.display='block'}}
+  var tocLinks=document.querySelectorAll('.toc-box a'),secs=document.querySelectorAll('h2[id]');
+  window.addEventListener('scroll',function(){var cur='';secs.forEach(function(s){if(window.scrollY>=s.offsetTop-150)cur=s.getAttribute('id')});tocLinks.forEach(function(l){var on=l.getAttribute('href').substring(1)===cur;l.style.color=on?'var(--cyan)':'';l.style.borderLeftColor=on?'var(--cyan)':'transparent';l.style.background=on?'rgba(6,182,212,.08)':''})},{passive:true});
+</script>
+<button id="toTop" aria-label="Back to top">↑</button>
+<script>
+(function(){
+  var KEY='aivora:'+location.pathname;
+  function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  var top=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){top.classList.toggle('show',window.scrollY>600)},{passive:true});
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+  var cp=document.getElementById('copyLink');
+  if(cp)cp.addEventListener('click',function(){var u=location.href.split('#')[0];(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){cp.textContent='✅ Copied!'},function(){window.prompt('Copy this link:',u)});setTimeout(function(){cp.textContent='🔗 Copy link'},2000)});
+  var boxes=document.querySelectorAll('#checklistBox input'),prog=document.getElementById('checkProgress');
+  if(boxes.length){var saved=[];try{saved=JSON.parse(get(KEY+':c')||'[]')}catch(e){}
+    function upd(){var n=0;boxes.forEach(function(b,i){b.parentNode.classList.toggle('done',b.checked);if(b.checked)n++});prog.textContent=n+' of '+boxes.length+' done'+(n===boxes.length?' 🎉 Great job!':'');set(KEY+':c',JSON.stringify(Array.prototype.map.call(boxes,function(b){return b.checked})))}
+    boxes.forEach(function(b,i){b.checked=!!saved[i];b.addEventListener('change',upd)});upd()}
+  var vote=document.getElementById('vote'),msg=document.getElementById('voteMsg');
+  if(vote){var v=get(KEY+':v');if(v)msg.textContent='Thanks for your feedback!';
+    vote.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){set(KEY+':v',b.dataset.v);msg.textContent=b.dataset.v==='yes'?'Great! Thanks for letting us know. 💚':'Thanks. Please tell us what to improve on our contact page.'})})}
+})();
+</script>
+</body>
+</html>
