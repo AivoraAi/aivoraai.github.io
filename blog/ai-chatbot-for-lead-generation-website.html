@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -148,6 +148,56 @@
 
     /* CONTAINER */
     .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+  
+    /* RICH FOOTER UPGRADE */
+    .footer{border-top:1px solid var(--border);padding:3rem 0 1.5rem;position:relative;z-index:1;margin-top:2rem}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:2rem;margin-bottom:2rem;max-width:1200px;margin-left:auto;margin-right:auto;padding:0 1.5rem}
+    .footer-brand .logo-wrap{display:flex;align-items:center;gap:0.5rem;text-decoration:none;margin-bottom:0.75rem}
+    .footer-brand .logo-txt{font-size:1.15rem;font-weight:700;background:linear-gradient(135deg,#0ea5e9,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .footer-brand p{color:var(--muted);font-size:0.85rem;line-height:1.6;margin-bottom:1rem}
+    .social-links{display:flex;gap:0.6rem}
+    .social-links a{width:34px;height:34px;border-radius:8px;background:rgba(14,165,233,0.08);border:1px solid rgba(14,165,233,0.2);display:flex;align-items:center;justify-content:center;color:var(--primary);text-decoration:none;font-size:0.8rem;font-weight:700;transition:all 0.2s}
+    .social-links a:hover{background:rgba(14,165,233,0.2);transform:translateY(-2px)}
+    .footer-col h4{font-size:0.8rem;font-weight:700;color:var(--text);margin-bottom:1rem;text-transform:uppercase;letter-spacing:1.5px}
+    .footer-col ul{list-style:none}
+    .footer-col ul li{margin-bottom:0.5rem}
+    .footer-col ul li a{color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s;display:flex;align-items:center;gap:0.4rem}
+    .footer-col ul li a:hover{color:var(--primary)}
+    .footer-newsletter p{color:var(--muted);font-size:0.83rem;margin-bottom:0.75rem;line-height:1.5}
+    .footer-form{display:flex;gap:0.4rem;flex-wrap:wrap}
+    .footer-form input{flex:1;min-width:130px;background:rgba(14,165,233,0.05);border:1px solid rgba(14,165,233,0.2);border-radius:8px;padding:0.5rem 0.75rem;color:var(--text);font-family:var(--font);font-size:0.83rem;outline:none}
+    .footer-form input:focus{border-color:var(--primary)}
+    .footer-form input::placeholder{color:var(--muted)}
+    .footer-form button{background:linear-gradient(135deg,#0ea5e9,#22c55e);border:none;border-radius:8px;padding:0.5rem 0.9rem;color:#020c1b;font-weight:700;cursor:pointer;font-size:1rem;transition:all 0.2s}
+    .footer-form button:hover{transform:scale(1.05)}
+    .footer-bottom{border-top:1px solid rgba(14,165,233,0.1);padding:1.25rem 1.5rem 0;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
+    .footer-bottom p{color:var(--muted);font-size:0.78rem}
+    @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr}}
+    @media(max-width:520px){.footer-top{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}}
+
+    /* ENHANCED MOBILE OPTIMIZATION */
+    @media(max-width:768px){
+      .post-hero{padding:5.5rem 0 2rem}
+      .post-title{font-size:clamp(1.5rem,5vw,2.2rem)}
+      .post-lead{font-size:0.97rem}
+      .post-body{padding:1.5rem 1rem 3rem}
+      .post-body h2{font-size:clamp(1.25rem,4vw,1.7rem)}
+      .post-body h3{font-size:clamp(1rem,3vw,1.3rem)}
+      .post-img-container{border-radius:10px;margin:1rem auto}
+    }
+    @media(max-width:600px){
+      .comparison-table{font-size:0.78rem;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+      .comparison-table th,.comparison-table td{padding:0.5rem 0.6rem;white-space:nowrap}
+      .callout{padding:0.875rem 1rem}
+      .tool-card{padding:0.875rem}
+      .pros-cons{grid-template-columns:1fr}
+      .cta-box{padding:1.25rem}
+      .cta-box h3{font-size:1.15rem}
+      .related-grid{grid-template-columns:1fr!important}
+      .chat-window{width:calc(100vw - 1rem);right:0.5rem;bottom:4.5rem}
+      .chat-btn{bottom:1rem;right:1rem;width:48px;height:48px;font-size:1.2rem}
+      .post-body pre{font-size:0.75rem;padding:1rem}
+    }
   </style>
 </head>
 <body>
@@ -431,16 +481,53 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
-      <p class="footer-copy">© 2026 Aivora AI · Honest AI tool reviews for everyone.</p>
-      <ul class="footer-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="logo-wrap">
+        <img src="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png" alt="Aivora AI" style="height:30px;filter:drop-shadow(0 0 8px rgba(14,165,233,0.5))">
+        <span class="logo-txt">Aivora AI</span>
+      </a>
+      <p>Honest, in-depth AI tool reviews &mdash; no sponsored bias, just real verdicts you can trust.</p>
+      <div class="social-links">
+        <a href="https://twitter.com/aivoraai" aria-label="Twitter/X" title="Follow on X">&#x1D54F;</a>
+        <a href="https://linkedin.com/company/aivoraai" aria-label="LinkedIn" title="LinkedIn">in</a>
+        <a href="https://youtube.com/@aivoraai" aria-label="YouTube" title="YouTube">&#9654;</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">&#8594; Home</a></li>
+        <li><a href="/about.html">&#8594; About Us</a></li>
+        <li><a href="/blog.html">&#8594; All Articles</a></li>
+        <li><a href="/contact.html">&#8594; Contact</a></li>
       </ul>
     </div>
-  </footer>
+    <div class="footer-col">
+      <h4>Top Guides</h4>
+      <ul>
+        <li><a href="/blog/best-ai-writing-tools-bloggers-2026.html">&#8594; AI Writing Tools 2026</a></li>
+        <li><a href="/blog/ai-chatbot-wordpress-free-plugin.html">&#8594; WordPress AI Chatbots</a></li>
+        <li><a href="/blog/ai-chatbot-for-lead-generation-website.html">&#8594; AI Lead Generation</a></li>
+        <li><a href="/blog/ai-customer-support-chatbot-startups.html">&#8594; Startup AI Support</a></li>
+        <li><a href="/blog/ai-chatbot-vs-live-chat-small-business.html">&#8594; Chatbot vs Live Chat</a></li>
+        <li><a href="/blog/ai-chatbot-portfolio-website.html">&#8594; Portfolio Chatbot</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Get weekly AI tool reviews and guides delivered to your inbox. No spam, ever.</p>
+      <form class="footer-form" onsubmit="this.innerHTML='<p style=\'color:var(--secondary);font-size:0.85rem\'>&#10003; You\'re subscribed!</p>';return false">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit">&#8594;</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Aivora AI &middot; All rights reserved. Built with &#10084; for the AI community.</p>
+    <p>Honest reviews &middot; No sponsorships &middot; Real results</p>
+  </div>
+</footer>
 
   <!-- CHATBOT -->
   <button class="chat-btn" id="chatBtn" title="Chat with Aivora AI">🤖</button>
