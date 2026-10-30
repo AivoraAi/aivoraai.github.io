@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Add a Free AI Chatbot to Your GitHub Pages Site (2026 Guide) | Aivora AI</title>
+  <meta name="description" content="Learn how to add a free AI chatbot to your GitHub Pages site in 2026. Step-by-step tutorial with code snippets. No server required!">
+  <meta name="keywords" content="how to add ai chatbot to github pages site, ai tools, aivora ai">
+  <link rel="canonical" href="https://aivoraai.github.io/blog/how-to-add-ai-chatbot-github-pages.html">
+  <link rel="icon" href="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#020c1b;--bg2:#041828;--card:rgba(14,165,233,0.05);
+      --border:rgba(14,165,233,0.18);--glow:rgba(14,165,233,0.25);
+      --primary:#0ea5e9;--secondary:#22c55e;--accent:#06b6d4;
+      --text:#e2f0ff;--muted:#7db0c4;
+      --font:'Space Grotesk',sans-serif;
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--font);overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 80% 60% at 20% 10%,rgba(14,165,233,0.1) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 80% 80%,rgba(34,197,94,0.06) 0%,transparent 60%);pointer-events:none}
+
+    /* NAV */
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2rem;transition:all 0.3s}
+    .navbar.scrolled{background:rgba(2,12,27,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0.6rem 2rem}
+    .nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none}
+    .logo-text{font-size:1.2rem;font-weight:700;background:linear-gradient(135deg,#0ea5e9,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+    .nav-links a{color:var(--text);text-decoration:none;font-weight:500;font-size:0.9rem;transition:color 0.2s;position:relative}
+    .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--primary);transition:width 0.3s}
+    .nav-links a:hover::after{width:100%}
+    .nav-links a:hover{color:var(--primary)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{width:24px;height:2px;background:var(--text);transition:all 0.3s;display:block}
+    .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    .hamburger.active span:nth-child(2){opacity:0}
+    .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav-links{position:fixed;top:0;right:-100%;width:70%;max-width:280px;height:100vh;background:rgba(4,24,40,0.98);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;gap:2rem;padding:2rem;border-left:1px solid var(--border);transition:right 0.35s;z-index:999;list-style:none}
+      .nav-links.open{right:0}
+      .nav-links a{font-size:1.1rem}
+    }
+
+    /* POST HERO */
+    .post-hero{padding:8rem 0 3rem;position:relative;z-index:1}
+    .post-meta-top{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+    .post-tag{background:rgba(14,165,233,0.15);border:1px solid rgba(14,165,233,0.3);color:var(--primary);padding:0.3rem 0.9rem;border-radius:50px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+    .post-date,.post-read{font-size:0.85rem;color:var(--muted)}
+    .post-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;line-height:1.2;margin-bottom:1.25rem;max-width:800px}
+    .post-lead{font-size:1.1rem;color:var(--muted);line-height:1.7;max-width:750px;margin-bottom:1.5rem}
+    .post-author{display:flex;align-items:center;gap:0.75rem}
+    .author-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#22c55e);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+    .post-author strong{display:block;font-size:0.9rem;font-weight:700}
+    .post-author span{font-size:0.8rem;color:var(--muted)}
+
+    /* FEATURED IMAGE */
+    .post-img-container{margin:2rem auto;max-width:900px;border-radius:16px;overflow:hidden;border:1px solid var(--border)}
+    .post-img-container img{width:100%;height:auto;display:block;max-height:420px;object-fit:cover}
+    .post-img-placeholder{height:320px;background:linear-gradient(135deg,rgba(14,165,233,0.2),rgba(34,197,94,0.1));display:flex;align-items:center;justify-content:center;font-size:4rem}
+
+    /* ARTICLE BODY */
+    .post-body{max-width:780px;margin:0 auto;padding:2rem 1.5rem 4rem;position:relative;z-index:1;line-height:1.8}
+    .post-body h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;margin:2.5rem 0 1rem;color:var(--text)}
+    .post-body h3{font-size:clamp(1.1rem,2vw,1.4rem);font-weight:700;margin:2rem 0 0.75rem;color:var(--primary)}
+    .post-body p{margin-bottom:1.25rem;color:var(--text);font-size:1rem}
+    .post-body ul,.post-body ol{padding-left:1.5rem;margin-bottom:1.25rem}
+    .post-body li{margin-bottom:0.5rem;color:var(--text)}
+    .post-body strong{color:var(--primary)}
+    .post-body a{color:var(--primary);text-decoration:none}
+    .post-body a:hover{text-decoration:underline}
+    .callout{background:rgba(14,165,233,0.08);border-left:3px solid var(--primary);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .callout-tip{border-color:var(--secondary);background:rgba(34,197,94,0.08)}
+    .callout h4{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;color:var(--primary)}
+    .callout-tip h4{color:var(--secondary)}
+    .callout p{margin:0;font-size:0.95rem}
+    .tool-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin:1.25rem 0;display:flex;gap:1rem;align-items:flex-start}
+    .tool-card-icon{font-size:2rem;flex-shrink:0}
+    .tool-card h4{font-size:1.1rem;font-weight:700;margin-bottom:0.25rem}
+    .tool-card p{font-size:0.9rem;color:var(--muted);margin:0}
+    .tool-tag{display:inline-block;padding:0.2rem 0.6rem;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);border-radius:50px;font-size:0.75rem;color:var(--secondary);margin-right:0.3rem;margin-top:0.3rem}
+    .cta-box{background:linear-gradient(135deg,rgba(14,165,233,0.1),rgba(34,197,94,0.05));border:1px solid rgba(14,165,233,0.25);border-radius:16px;padding:2rem;text-align:center;margin:2rem 0}
+    .cta-box h3{font-size:1.4rem;margin-bottom:0.75rem}
+    .cta-box p{color:var(--muted);margin-bottom:1.25rem}
+    .btn-primary{background:linear-gradient(135deg,#0ea5e9,#22c55e);color:#020c1b;padding:0.75rem 1.75rem;border-radius:50px;font-weight:700;font-size:0.95rem;text-decoration:none;border:none;cursor:pointer;transition:all 0.3s;display:inline-block}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(14,165,233,0.4);text-decoration:none}
+    pre{background:rgba(4,24,40,0.95);border:1px solid var(--border);border-radius:10px;padding:1.2rem;overflow-x:auto;margin:1.5rem 0;font-size:0.875rem;line-height:1.6}
+    code{font-family:'Courier New',Courier,monospace;color:var(--accent)}
+    pre code{color:#a5f3fc;background:none;padding:0}
+    p code,li code{background:rgba(14,165,233,0.1);padding:0.15rem 0.4rem;border-radius:4px;border:1px solid rgba(14,165,233,0.2)}
+
+    /* RELATED POSTS */
+    .related-posts{padding:4rem 0;border-top:1px solid var(--border);position:relative;z-index:1}
+    .section-h2{font-size:1.6rem;font-weight:800;margin-bottom:1.5rem}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    @media(max-width:768px){.related-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){.related-grid{grid-template-columns:1fr}}
+    .rel-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;display:block;transition:all 0.3s}
+    .rel-card:hover{transform:translateY(-4px);border-color:rgba(14,165,233,0.3);box-shadow:0 10px 30px rgba(14,165,233,0.1)}
+    .rel-card img{width:100%;height:120px;object-fit:cover}
+    .rel-card-ph{height:120px;background:linear-gradient(135deg,rgba(14,165,233,0.15),rgba(34,197,94,0.08));display:flex;align-items:center;justify-content:center;font-size:2rem}
+    .rel-card-body{padding:0.875rem}
+    .rel-card-body span{font-size:0.72rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:1px}
+    .rel-card-body h4{font-size:0.9rem;font-weight:700;color:var(--text);margin-top:0.25rem;line-height:1.4}
+
+    /* FOOTER */
+    .footer{border-top:1px solid var(--border);padding:2.5rem 0 1.5rem;position:relative;z-index:1}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-links{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;transition:color 0.2s}
+    .footer-links a:hover{color:var(--primary)}
+    .footer-copy{color:var(--muted);font-size:0.85rem}
+
+    /* CHATBOT */
+    .chat-btn{position:fixed;bottom:2rem;right:2rem;z-index:9999;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#22c55e);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:0 4px 20px rgba(14,165,233,0.4);transition:all 0.3s}
+    .chat-btn:hover{transform:scale(1.1)}
+    .chat-btn::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(14,165,233,0.35);animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.2);opacity:0.4}}
+    .chat-window{position:fixed;bottom:5.5rem;right:2rem;z-index:9998;width:330px;max-width:calc(100vw - 2rem);background:rgba(4,24,40,0.97);border:1px solid rgba(14,165,233,0.25);border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);transform:translateY(20px) scale(0.95);opacity:0;pointer-events:none;transition:all 0.3s}
+    .chat-window.open{transform:translateY(0) scale(1);opacity:1;pointer-events:all}
+    .chat-header{padding:0.875rem 1rem;background:linear-gradient(135deg,rgba(14,165,233,0.15),rgba(34,197,94,0.08));border-bottom:1px solid rgba(14,165,233,0.15);display:flex;align-items:center;gap:0.6rem}
+    .chat-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#22c55e);display:flex;align-items:center;justify-content:center;font-size:1rem}
+    .chat-header h4{font-size:0.875rem;font-weight:700}
+    .chat-status{font-size:0.72rem;color:#22c55e}
+    .chat-close{margin-left:auto;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1rem}
+    .chat-messages{height:260px;overflow-y:auto;padding:0.875rem;display:flex;flex-direction:column;gap:0.6rem}
+    .msg{max-width:85%;padding:0.6rem 0.875rem;border-radius:12px;font-size:0.85rem;line-height:1.5;animation:msgIn 0.25s ease}
+    @keyframes msgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+    .msg.bot{background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.15);align-self:flex-start;border-bottom-left-radius:3px}
+    .msg.user{background:rgba(14,165,233,0.2);align-self:flex-end;border-bottom-right-radius:3px}
+    .typing{display:flex;gap:4px;align-items:center;padding:0.6rem 0.875rem;background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.15);border-radius:12px;border-bottom-left-radius:3px;align-self:flex-start}
+    .typing span{width:6px;height:6px;border-radius:50%;background:var(--primary);animation:td 1.2s infinite}
+    .typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+    @keyframes td{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+    .chat-quick{padding:0.4rem 0.875rem;display:flex;gap:0.4rem;flex-wrap:wrap;border-top:1px solid rgba(14,165,233,0.1)}
+    .quick-btn{background:rgba(14,165,233,0.08);border:1px solid rgba(14,165,233,0.2);color:var(--primary);padding:0.25rem 0.65rem;border-radius:50px;font-size:0.72rem;cursor:pointer;transition:background 0.2s;font-family:inherit}
+    .quick-btn:hover{background:rgba(14,165,233,0.18)}
+    .chat-input-row{padding:0.65rem 0.875rem;border-top:1px solid rgba(14,165,233,0.1);display:flex;gap:0.4rem}
+    .chat-input-row input{flex:1;background:rgba(14,165,233,0.05);border:1px solid rgba(14,165,233,0.2);border-radius:50px;padding:0.45rem 0.875rem;color:var(--text);font-family:inherit;font-size:0.85rem;outline:none}
+    .chat-input-row input:focus{border-color:var(--primary)}
+    .chat-input-row input::placeholder{color:var(--muted)}
+    .chat-send{background:linear-gradient(135deg,#0ea5e9,#22c55e);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#020c1b;font-size:0.9rem}
+
+    /* CONTAINER */
+    .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png" alt="Aivora AI" style="height:32px;filter:drop-shadow(0 0 8px rgba(14,165,233,0.5))">
+        <span class="logo-text">Aivora AI</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="ham" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- BLOG POST HERO -->
+  <section class="post-hero">
+    <div class="container">
+      <div class="post-meta-top">
+        <span class="post-tag">GitHub & Dev Tools</span>
+        <span class="post-date">October 30, 2026</span>
+        <span class="post-read">📖 6 min read</span>
+      </div>
+      <h1 class="post-title">How to Add a Free AI Chatbot to Your GitHub Pages Site (2026 Guide)</h1>
+      <p class="post-lead">GitHub Pages offers free, blistering-fast static site hosting for developers, projects, and portfolios. But without a backend server, how do you embed an intelligent conversational assistant? Here is our comprehensive implementation guide.</p>
+      <div class="post-author">
+        <div class="author-avatar">⚡</div>
+        <div>
+          <strong>Rohan Verma</strong>
+          <span>Tech Reviewer · Aivora AI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED IMAGE -->
+  <div class="post-img-container container">
+    <div class="post-img-placeholder">⚡</div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <article class="post-body container">
+    <h2>The Challenge of Chatbots on Static GitHub Pages</h2>
+    <p>GitHub Pages is one of the most popular platforms for publishing developer portfolios, project documentation, open-source landing pages, and personal blogs. Because GitHub Pages serves static files (HTML, CSS, JavaScript, and static assets generated via Jekyll or Vite), developers assume they cannot host an interactive AI chatbot without paying for a cloud server or container instance on AWS or Render.</p>
+    
+    <p>That assumption is outdated. In 2026, understanding <strong>how to add ai chatbot to github pages site</strong> comes down to two highly effective strategies: integrating lightweight cloud-hosted asynchronous embed scripts, or writing a pure client-side JavaScript conversational widget that runs directly inside the visitor's browser. Both approaches require zero backend infrastructure and take under 10 minutes to deploy.</p>
+
+    <div class="callout callout-tip">
+      <h4>💡 Serverless Advantage</h4>
+      <p>Because static sites don't run PHP or Node runtimes, your GitHub Pages chatbot cannot crash your server, cannot suffer SQL injection, and costs precisely $0.00 to host indefinitely.</p>
+    </div>
+
+    <h2>Why GitHub Pages Sites Benefit Immensely from Chatbots</h2>
+    <p>Whether you are showcasing your software engineering portfolio or hosting technical documentation for an open-source library, a conversational assistant delivers measurable advantages:</p>
+    
+    <ul>
+      <li><strong>Instant Technical Documentation Search:</strong> Instead of forcing readers to hunt through lengthy markdown files, a chatbot can immediately point users to installation flags, API endpoints, and configuration parameters.</li>
+      <li><strong>Portfolio Recruiter Engagement:</strong> Hiring managers often spend under 45 seconds reviewing engineering portfolios. A proactive interactive bot that summarizes your tech stack, recent projects, and availability immediately sets your resume apart from hundreds of generic PDF submissions.</li>
+      <li><strong>24/7 Freelance & Client Lead Capture:</strong> If you accept contract work or consulting requests, a chatbot can collect prospective client emails, project scopes, and budget estimates while you sleep.</li>
+      <li><strong>Zero Server Maintenance:</strong> Static hosting means no database migrations, security patches, or server restarts. Your bot runs reliably across global GitHub CDN edges.</li>
+    </ul>
+
+    <h2>The 4 Best Chatbot Options for GitHub Pages</h2>
+    <p>Depending on your technical preferences and project goals, here are the four premier options for static hosting:</p>
+
+    <div class="tool-card">
+      <div class="tool-card-icon">🤖</div>
+      <div>
+        <h4>1. Tidio Embed Script (Easiest Cloud AI)</h4>
+        <p>Provides a ready-made floating widget powered by Lyro AI. Simply copy a single script tag and paste it before the closing body tag. Ideal for developers who want GPT-grade responses without writing conversational UI logic.</p>
+        <span class="tool-tag">Free 50 Chats/mo</span>
+        <span class="tool-tag">Zero Server Setup</span>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon">💬</div>
+      <div>
+        <h4>2. Crisp Chat Widget (Clean Developer Design)</h4>
+        <p>Offers an ultra-modern, minimalist chat drawer with desktop and mobile companion apps. Its free tier provides two operator seats and lightning-quick asynchronous CDN delivery.</p>
+        <span class="tool-tag">Free 2 Seats</span>
+        <span class="tool-tag">Minimal Payload</span>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon">🦉</div>
+      <div>
+        <h4>3. Tawk.to (Completely Unlimited)</h4>
+        <p>If you anticipate high traffic and refuse to hit monthly conversation caps, Tawk.to offers 100% free unlimited messaging on GitHub Pages with customizable appearance settings.</p>
+        <span class="tool-tag">100% Free Forever</span>
+        <span class="tool-tag">No Conversation Cap</span>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-card-icon">💻</div>
+      <div>
+        <h4>4. Custom Pure HTML/CSS/JS Widget (Full Control)</h4>
+        <p>No third-party cookies, no external tracking scripts, and absolute aesthetic control. You embed a lightweight JavaScript object that parses queries client-side or routes requests to an external API (like OpenAI or Groq) securely.</p>
+        <span class="tool-tag">Zero Dependencies</span>
+        <span class="tool-tag">Ultra Fast</span>
+      </div>
+    </div>
+
+    <h2>Method 1: Adding a Cloud Chatbot (Tidio) to GitHub Pages</h2>
+    <p>If you want a full-featured AI assistant with automated training on your existing pages, Tidio is the quickest third-party solution:</p>
+
+    <ol>
+      <li>Sign up for a free account at <strong>tidio.com</strong>.</li>
+      <li>In the onboarding wizard, select <strong>HTML / Custom Website</strong> as your platform.</li>
+      <li>Copy your personalized JavaScript snippet, which looks like this:</li>
+    </ol>
+
+    <pre><code>&lt;!-- Tidio Chatbot Embed Script for GitHub Pages --&gt;
+&lt;script src="//code.tidio.co/your_unique_project_key.js" async&gt;&lt;/script&gt;</code></pre>
+
+    <p>Open your repository's <code>index.html</code> (or <code>_layouts/default.html</code> if using Jekyll), paste this script tag right before the closing <code>&lt;/body&gt;</code> tag, and commit your changes. Within two minutes, GitHub Actions will publish the updated build, and your bot will float in the bottom right corner of your site.</p>
+
+    <h2>Method 2: Building a Complete Custom AI Chatbot Widget (Pure HTML/CSS/JS)</h2>
+    <p>For developers who want a self-contained, lightning-fast solution with zero tracking scripts—identical to the native experience here on Aivora AI—you can build a custom widget in under 50 lines of code. Here is a fully functional snippet ready to drop into your GitHub Pages project:</p>
+
+    <pre><code>&lt;!-- 1. Floating Launcher Button --&gt;
+&lt;button id="aiChatLauncher" style="position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:#0ea5e9;border:none;color:#fff;font-size:24px;cursor:pointer;box-shadow:0 4px 20px rgba(14,165,233,0.4);z-index:9999;"&gt;💬&lt;/button&gt;
+
+&lt;!-- 2. Chat Window Container --&gt;
+&lt;div id="aiChatBox" style="display:none;position:fixed;bottom:90px;right:24px;width:320px;max-width:calc(100vw - 32px);background:#020c1b;border:1px solid rgba(14,165,233,0.3);border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.6);z-index:9999;font-family:sans-serif;"&gt;
+  &lt;div style="background:#041828;padding:12px 16px;border-bottom:1px solid rgba(14,165,233,0.2);display:flex;justify-content:space-between;align-items:center;"&gt;
+    &lt;span style="color:#e2f0ff;font-weight:bold;font-size:14px;"&gt;⚡ DevBot Assistant&lt;/span&gt;
+    &lt;button id="aiCloseBtn" style="background:none;border:none;color:#7db0c4;cursor:pointer;font-size:16px;"&gt;✕&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div id="aiLogs" style="height:240px;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;font-size:13px;"&gt;
+    &lt;div style="background:rgba(14,165,233,0.15);color:#e2f0ff;padding:8px 12px;border-radius:10px;align-self:flex-start;"&gt;
+      👋 Hi there! Ask me about my projects, stack, or how to get in touch.
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style="padding:10px;border-top:1px solid rgba(14,165,233,0.2);display:flex;gap:6px;"&gt;
+    &lt;input id="aiPrompt" type="text" placeholder="Type a question..." style="flex:1;background:#041828;border:1px solid rgba(14,165,233,0.3);border-radius:20px;padding:6px 12px;color:#fff;outline:none;font-size:13px;" /&gt;
+    &lt;button id="aiSend" style="background:#22c55e;border:none;border-radius:50%;width:30px;height:30px;color:#000;cursor:pointer;font-weight:bold;"&gt;➤&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 3. Client-Side Conversational Logic --&gt;
+&lt;script&gt;
+(function(){
+  const launcher = document.getElementById('aiChatLauncher');
+  const box = document.getElementById('aiChatBox');
+  const closeBtn = document.getElementById('aiCloseBtn');
+  const sendBtn = document.getElementById('aiSend');
+  const promptInput = document.getElementById('aiPrompt');
+  const logs = document.getElementById('aiLogs');
+
+  launcher.addEventListener('click', () =&gt; {
+    box.style.display = box.style.display === 'none' ? 'block' : 'none';
+  });
+  closeBtn.addEventListener('click', () =&gt; { box.style.display = 'none'; });
+
+  // Developer Knowledge Base
+  const responses = {
+    'stack': '🛠️ My tech stack includes React, TypeScript, Node.js, and GitHub Actions.',
+    'projects': '💻 Check out my latest repositories in the Projects section above!',
+    'contact': '📬 You can email me directly or connect on LinkedIn / GitHub.',
+    'hire': '🚀 I am currently open to freelance opportunities and senior engineering roles!',
+    'default': '🤖 Thanks for reaching out! Leave your email and I will get back to you shortly.'
+  };
+
+  function appendMsg(text, sender) {
+    const bubble = document.createElement('div');
+    bubble.textContent = text;
+    bubble.style.padding = '8px 12px';
+    bubble.style.borderRadius = '10px';
+    bubble.style.maxWidth = '85%';
+    bubble.style.lineHeight = '1.4';
+    if(sender === 'user') {
+      bubble.style.background = '#0ea5e9';
+      bubble.style.color = '#fff';
+      bubble.style.alignSelf = 'flex-end';
+    } else {
+      bubble.style.background = 'rgba(14,165,233,0.15)';
+      bubble.style.color = '#e2f0ff';
+      bubble.style.alignSelf = 'flex-start';
+    }
+    logs.appendChild(bubble);
+    logs.scrollTop = logs.scrollHeight;
+  }
+
+  function handleSend() {
+    const q = promptInput.value.trim().toLowerCase();
+    if(!q) return;
+    appendMsg(promptInput.value, 'user');
+    promptInput.value = '';
+
+    let matched = responses.default;
+    for(const [key, val] of Object.entries(responses)) {
+      if(q.includes(key)) { matched = val; break; }
+    }
+
+    setTimeout(() =&gt; appendMsg(matched, 'bot'), 400);
+  }
+
+  sendBtn.addEventListener('click', handleSend);
+  promptInput.addEventListener('keydown', (e) =&gt; { if(e.key === 'Enter') handleSend(); });
+})();
+&lt;/script&gt;</code></pre>
+
+    <div class="callout">
+      <h4>🔒 Security Note on Third-Party APIs</h4>
+      <p>Never paste raw OpenAI or Anthropic API secret keys directly inside static JavaScript code on GitHub Pages! Public repositories expose code to anyone. If you want live LLM capabilities, proxy user requests through a free serverless function (such as Cloudflare Workers or Vercel Edge Functions) that protects your API credentials.</p>
+    </div>
+
+    <h2>How to Deploy Your Changes to GitHub Pages</h2>
+    <p>Deploying updates to your GitHub Pages repository is simple. You can use your terminal Git workflow or GitHub's web interface:</p>
+
+    <h3>Option A: Via Git Terminal Commands</h3>
+    <pre><code># Check modified files
+git status
+
+# Stage the updated index.html
+git add index.html
+
+# Commit the new chatbot implementation
+git commit -m "Add responsive AI chatbot widget to GitHub Pages"
+
+# Push to your deployment branch (usually main or gh-pages)
+git push origin main</code></pre>
+
+    <h3>Option B: Via GitHub Web Interface</h3>
+    <ol>
+      <li>Navigate to your repository on <strong>github.com</strong>.</li>
+      <li>Locate and click <code>index.html</code>.</li>
+      <li>Click the pencil icon (<strong>Edit this file</strong>).</li>
+      <li>Paste your chatbot snippet before <code>&lt;/body&gt;</code>.</li>
+      <li>Scroll down, type a commit message, and click <strong>Commit changes</strong>.</li>
+    </ol>
+    <p>Check the <strong>Actions</strong> tab of your repository. In 60 to 90 seconds, the GitHub Pages deployment job will succeed and your live site will reflect the chatbot immediately.</p>
+
+    <h2>Testing and Debugging Your GitHub Pages Chatbot</h2>
+    <p>Before sharing your updated site, test these essential factors:</p>
+    
+    <ul>
+      <li><strong>Hard Refresh to Bypass CDN Cache:</strong> GitHub Pages utilizes aggressive Fastly CDN caching. Press <code>Ctrl + F5</code> (Windows) or <code>Cmd + Shift + R</code> (Mac) to fetch the freshest bundle.</li>
+      <li><strong>Mobile Viewport Responsiveness:</strong> Open Chrome DevTools (F12) and toggle device emulation for iPhone and Pixel screens. Verify that the chat drawer does not spill outside screen boundaries or block navigation taps.</li>
+      <li><strong>Console Error Inspection:</strong> Check the browser Console tab. Ensure there are no Content Security Policy (CSP) or mixed-content (HTTP vs HTTPS) warnings blocking widget execution.</li>
+    </ul>
+
+    <h2>Best Practices for Chatbots on Static Web Pages</h2>
+    <p>To deliver an exceptional user experience without cluttering your developer layout, follow these design principles:</p>
+    
+    <ol>
+      <li><strong>Respect Dark Mode:</strong> If your static blog features a dark/light toggle, ensure your chatbot drawer uses CSS custom variables (such as <code>var(--bg)</code> and <code>var(--text)</code>) so it adapts dynamically to user preferences.</li>
+      <li><strong>Prevent Layout Shift:</strong> Set explicit height and width containers for floating launchers so the browser layout engine never stutters during initial render.</li>
+      <li><strong>Asynchronous Script Loading:</strong> When using third-party providers like Tidio or Crisp, always retain the <code>async</code> attribute on the <code>&lt;script&gt;</code> tag to maintain a perfect 100 PageSpeed score on Google Lighthouse.</li>
+    </ol>
+
+    <div class="cta-box">
+      <h3>Ready to Build Smarter Web Applications?</h3>
+      <p>Explore our deep-dive reviews on AI development tools, prompt engineering frameworks, and no-code automation.</p>
+      <a href="/blog.html" class="btn-primary">Explore Aivora AI Guides →</a>
+    </div>
+  </article>
+
+  <!-- RELATED POSTS -->
+  <section class="related-posts">
+    <div class="container">
+      <h2 class="section-h2">Related Articles</h2>
+      <div class="related-grid">
+        <a href="/blog/ai-chatbot-wordpress-free-plugin.html" class="rel-card">
+          <div class="rel-card-ph">🤖</div>
+          <div class="rel-card-body">
+            <span>WordPress Tools</span>
+            <h4>7 Best Free AI Chatbot Plugins for WordPress in 2026</h4>
+          </div>
+        </a>
+        <a href="/blog/ai-chatbot-portfolio-website.html" class="rel-card">
+          <div class="rel-card-ph">💼</div>
+          <div class="rel-card-body">
+            <span>Portfolio Tools</span>
+            <h4>AI Chatbot for Portfolio Website: Stand Out to Recruiters</h4>
+          </div>
+        </a>
+        <a href="/blog/ai-chatbot-vs-live-chat-small-business.html" class="rel-card">
+          <div class="rel-card-ph">💬</div>
+          <div class="rel-card-body">
+            <span>Customer Service</span>
+            <h4>AI Chatbot vs Live Chat: Which Is Best for Small Business?</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Aivora AI · Honest AI tool reviews for everyone.</p>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- CHATBOT -->
+  <button class="chat-btn" id="chatBtn" title="Chat with Aivora AI">🤖</button>
+  <div class="chat-window" id="chatWin">
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div><h4>Aivora AI</h4><div class="chat-status">● Online</div></div>
+      <button class="chat-close" id="chatClose">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMsgs">
+      <div class="msg bot">👋 Hi! Ask me about AI tools, chatbots, writing assistants and more!</div>
+    </div>
+    <div class="chat-quick" id="quickBtns">
+      <button class="quick-btn">Best AI chatbots</button>
+      <button class="quick-btn">Free AI tools</button>
+      <button class="quick-btn">AI writing tools</button>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Ask anything..." autocomplete="off">
+      <button class="chat-send" id="chatSend">➤</button>
+    </div>
+  </div>
+
+  <script>
+    const nav=document.getElementById('navbar');
+    window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50));
+    const ham=document.getElementById('ham');
+    const nl=document.getElementById('navLinks');
+    function toggleNav(){ham.classList.toggle('active');nl.classList.toggle('open')}
+    // Chatbot
+    const KB={
+      'writing':['writing','write','jasper','copy.ai','grammarly','rytr','writesonic'],
+      'chatbot':['chatbot','chat bot','bot','widget','assistant'],
+      'free':['free','budget','no cost'],
+      'affiliate':['affiliate','commission','earn','monetize'],
+      'aivora':['aivora','about','who are'],
+      'seo':['seo','rank','search engine','backlink'],
+      'blog':['blog','blogging','content','article'],
+      'wordpress':['wordpress','wp','plugin'],
+      'github':['github','pages','static site'],
+      'lead':['lead','generation','capture','convert'],
+      'startup':['startup','business','company','support'],
+      'portfolio':['portfolio','personal','developer site']
+    };
+    const ANS={
+      'writing':"📝 Top AI writing tools: Jasper, Copy.ai, Writesonic, Rytr & Grammarly. <a href='/blog.html' style='color:var(--primary)'>See our reviews →</a>",
+      'chatbot':"🤖 AI chatbots can boost engagement by 300%! Check out our chatbot guides on the blog.",
+      'free':"💚 Many great AI tools have free plans — we track them all on our blog!",
+      'affiliate':"💰 AI tools are great for affiliate marketing. Check our blog for recommendations!",
+      'aivora':"👋 Aivora AI provides honest, unbiased AI tool reviews. No sponsorships, just real verdicts!",
+      'seo':"🔍 We review AI SEO tools like Surfer SEO, Semrush AI, and more on our blog.",
+      'blog':"📚 Browse <a href='/blog.html' style='color:var(--primary)'>our blog</a> for AI tool reviews, tutorials and guides!",
+      'wordpress':"🔌 Great news! We have a full guide on the best free AI chatbot plugins for WordPress. Check our blog!",
+      'github':"⚡ Adding a chatbot to GitHub Pages is easy with Tidio or custom JS widgets. We have a full guide!",
+      'lead':"📈 AI chatbots can capture leads 24/7. We cover the best lead-gen chatbot strategies on our blog!",
+      'startup':"🚀 Startups love AI support chatbots — they cut support costs by 60%! See our startup chatbot guide.",
+      'portfolio':"🎨 Adding a chatbot to your portfolio makes it stand out! We have a step-by-step guide on the blog.",
+      'default':"💡 Check our <a href='/blog.html' style='color:var(--primary)'>blog</a> for in-depth AI guides, or <a href='/contact.html' style='color:var(--primary)'>contact us</a>!"
+    };
+    const chatBtn=document.getElementById('chatBtn');
+    const chatWin=document.getElementById('chatWin');
+    const chatMsgs=document.getElementById('chatMsgs');
+    const chatInput=document.getElementById('chatInput');
+    const quickBtns=document.getElementById('quickBtns');
+    function addMsg(t,r){const d=document.createElement('div');d.className=`msg ${r}`;d.innerHTML=t;chatMsgs.appendChild(d);chatMsgs.scrollTop=chatMsgs.scrollHeight}
+    function botReply(inp){const l=inp.toLowerCase();for(const[k,v] of Object.entries(KB)){if(v.some(t=>l.includes(t)))return ANS[k]}return ANS.default}
+    function sendMsg(){const v=chatInput.value.trim();if(!v)return;addMsg(v,'user');chatInput.value='';if(quickBtns)quickBtns.style.display='none';const ty=document.createElement('div');ty.className='typing';ty.id='typing';ty.innerHTML='<span></span><span></span><span></span>';chatMsgs.appendChild(ty);chatMsgs.scrollTop=chatMsgs.scrollHeight;setTimeout(()=>{const t=document.getElementById('typing');if(t)t.remove();addMsg(botReply(v),'bot')},900)}
+    if(chatBtn){
+      chatBtn.addEventListener('click',()=>chatWin.classList.toggle('open'));
+      document.getElementById('chatClose').addEventListener('click',()=>chatWin.classList.remove('open'));
+      chatInput.addEventListener('keydown',e=>{if(e.key==='Enter')sendMsg()});
+      document.getElementById('chatSend').addEventListener('click',sendMsg);
+      document.querySelectorAll('.quick-btn').forEach(b=>b.addEventListener('click',()=>{chatInput.value=b.textContent;sendMsg()}));
+    }
+  </script>
+</body>
+</html>
