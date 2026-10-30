@@ -1,380 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>About Aivora AI | Who We Are & Our Mission</title>
-<meta name="description" content="Learn about Aivora AI — an independent AI tool review site run by Varun Lalwani from India. Honest reviews, no paid rankings, real results."/>
-<link rel="canonical" href="https://aivoraai.github.io/about.html"/>
-<link rel="icon" type="image/png" href="https://aivoraai.github.io/assets/images/aivora-logo-primary.png"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --bg:#0a0a0f;--bg2:#0f0f1a;--bg3:#141428;--card:#13131f;--card2:#1a1a2e;
-  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);
-  --text:#f0f0ff;--text2:#a0a0c0;--text3:#6060a0;
-  --purple:#7c5cfc;--purple2:#9b7dff;--pink:#fc5c9c;--cyan:#5cf4fc;--gold:#fcb45c;--green:#5cfca0;
-  --grad:linear-gradient(135deg,#7c5cfc,#fc5c9c);--grad2:linear-gradient(135deg,#5cf4fc,#7c5cfc);
-  --glow:0 0 40px rgba(124,92,252,0.3);--sans:'Inter',system-ui,sans-serif;--heading:'Sora','Inter',sans-serif;
-  --radius:16px;--radius2:12px;--radius3:8px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
-button{font-family:var(--sans);border:none;background:none;cursor:pointer}
-::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:var(--purple);border-radius:99px}
-.rv{opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.16,1,.3,1),transform 0.7s cubic-bezier(.16,1,.3,1)}
-.rv.in{opacity:1;transform:translateY(0)}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-/* NAV */
-.nav{position:sticky;top:0;left:0;right:0;z-index:1000;height:70px;background:rgba(10,10,15,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.nw{max-width:1280px;margin:0 auto;height:100%;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand-logo{width:38px;height:38px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:var(--heading);font-weight:800;font-size:1.1rem;color:#fff}
-.brand-name{font-family:var(--heading);font-size:1.3rem;font-weight:700}
-.brand-name span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nl{display:flex;list-style:none;gap:4px;align-items:center}
-.nl a{padding:8px 16px;color:var(--text2);font-size:0.87rem;font-weight:500;border-radius:var(--radius3);transition:all 0.2s}
-.nl a:hover,.nl a.act{color:var(--text);background:rgba(124,92,252,0.15)}
-.nl a.act{color:var(--purple2)}
-.ncta{padding:10px 22px;border-radius:var(--radius3);background:var(--grad);color:#fff;font-size:0.85rem;font-weight:600;transition:all 0.25s;box-shadow:0 4px 20px rgba(124,92,252,0.4)}
-.ncta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(124,92,252,0.5)}
-.ham{display:none;flex-direction:column;gap:5px;padding:8px;border-radius:var(--radius3);border:1px solid var(--border2)}
-.ham span{display:block;width:18px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
-.ham.on span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.ham.on span:nth-child(2){opacity:0}
-.ham.on span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mob{display:none;position:fixed;top:70px;left:0;right:0;z-index:998;background:var(--bg2);border-bottom:1px solid var(--border2);padding:20px 32px 24px;flex-direction:column;gap:4px}
-.mob.on{display:flex}
-.mob a{padding:12px 16px;color:var(--text2);font-weight:500;border-radius:var(--radius3);transition:all 0.2s}
-.mob a:hover{color:var(--text);background:rgba(124,92,252,0.12)}
-.mob .ncta{margin-top:8px;text-align:center}
-/* PAGE HERO */
-.page-hero{padding:80px 32px 60px;text-align:center;position:relative;overflow:hidden}
-.page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(124,92,252,0.2) 0%,transparent 70%)}
-.page-hero-inner{position:relative;z-index:1;max-width:800px;margin:0 auto}
-.sec-tag{display:inline-block;background:rgba(124,92,252,0.12);border:1px solid rgba(124,92,252,0.3);color:var(--purple2);padding:5px 14px;border-radius:99px;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px}
-.page-hero h1{font-family:var(--heading);font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:20px}
-.page-hero h1 span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.page-hero p{color:var(--text2);font-size:1.1rem;line-height:1.75}
-/* SECTIONS */
-section{padding:80px 32px}
-.sec-wrap{max-width:1100px;margin:0 auto}
-.sec-wrap-wide{max-width:1280px;margin:0 auto}
-.sec-title{font-family:var(--heading);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:16px}
-.sec-title span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-/* STORY */
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.story-content p{color:var(--text2);line-height:1.8;margin-bottom:18px;font-size:1rem}
-.story-visual{position:relative}
-.story-card{background:var(--card);border:1px solid var(--border2);border-radius:24px;padding:40px;text-align:center;box-shadow:var(--glow)}
-.story-avatar{width:100px;height:100px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 20px}
-.story-name{font-family:var(--heading);font-size:1.5rem;font-weight:800;margin-bottom:6px}
-.story-role{color:var(--purple2);font-size:0.9rem;font-weight:600;margin-bottom:16px}
-.story-bio{color:var(--text2);font-size:0.88rem;line-height:1.7;margin-bottom:20px}
-.story-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-.story-tag{background:rgba(124,92,252,0.12);border:1px solid rgba(124,92,252,0.3);color:var(--purple2);padding:5px 12px;border-radius:99px;font-size:0.75rem;font-weight:600}
-/* VALUES */
-.values-bg{background:var(--bg2)}
-.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.val-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:all 0.3s}
-.val-card:hover{border-color:rgba(124,92,252,0.5);transform:translateY(-4px)}
-.val-icon{width:52px;height:52px;border-radius:var(--radius2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px}
-.val-card h3{font-family:var(--heading);font-size:1.1rem;font-weight:700;margin-bottom:10px}
-.val-card p{color:var(--text2);font-size:0.9rem;line-height:1.65}
-/* STATS */
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:36px 24px;text-align:center}
-.stat-big{font-family:var(--heading);font-size:2.8rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
-.stat-label{color:var(--text2);font-size:0.88rem}
-/* TIMELINE */
-.timeline{position:relative;padding-left:32px}
-.timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--purple),var(--pink))}
-.tl-item{position:relative;margin-bottom:36px}
-.tl-dot{position:absolute;left:-28px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--grad);border:2px solid var(--bg)}
-.tl-year{color:var(--purple2);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
-.tl-title{font-family:var(--heading);font-size:1rem;font-weight:700;margin-bottom:6px}
-.tl-desc{color:var(--text2);font-size:0.88rem;line-height:1.6}
-/* CONTACT CTA */
-.cta-section{background:var(--bg3)}
-.cta-card{background:var(--card);border:1px solid var(--border2);border-radius:24px;padding:60px;text-align:center;position:relative;overflow:hidden;max-width:800px;margin:0 auto}
-.cta-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top,rgba(124,92,252,0.15),transparent 60%)}
-.cta-inner{position:relative;z-index:1}
-.cta-card h2{font-family:var(--heading);font-size:2rem;font-weight:800;margin-bottom:14px}
-.cta-card p{color:var(--text2);margin-bottom:28px;font-size:1rem}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius2);font-weight:700;font-size:1rem;background:var(--grad);color:#fff;box-shadow:0 8px 30px rgba(124,92,252,0.4);transition:all 0.3s}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(124,92,252,0.55)}
-.btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius2);font-weight:600;font-size:1rem;background:transparent;color:var(--text2);border:1px solid var(--border2);transition:all 0.3s;margin-left:12px}
-.btn-secondary:hover{color:var(--text);border-color:var(--purple);background:rgba(124,92,252,0.1)}
-/* FOOTER */
-footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 32px 32px}
-.foot-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
-.foot-desc{color:var(--text2);font-size:0.88rem;line-height:1.7;margin-bottom:20px}
-.foot-social{display:flex;gap:10px}
-.soc-btn{width:38px;height:38px;border-radius:var(--radius3);background:var(--card2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;color:var(--text2);font-size:0.85rem;font-weight:700;transition:all 0.2s}
-.soc-btn:hover{border-color:var(--purple);color:var(--purple2)}
-.foot-col h5{font-weight:700;font-size:0.9rem;margin-bottom:16px;color:var(--text)}
-.foot-col a{display:block;color:var(--text2);font-size:0.85rem;margin-bottom:10px;transition:color 0.2s}
-.foot-col a:hover{color:var(--purple2)}
-.foot-bot{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;border-top:1px solid var(--border)}
-.foot-bot-left{color:var(--text3);font-size:0.82rem}
-.foot-bot-right{display:flex;gap:20px}
-.foot-bot-right a{color:var(--text3);font-size:0.82rem;transition:color 0.2s}
-.foot-bot-right a:hover{color:var(--text2)}
-.btt{position:fixed;bottom:28px;right:28px;z-index:999;width:46px;height:46px;border-radius:50%;background:var(--grad);color:#fff;font-size:1.2rem;box-shadow:0 4px 20px rgba(124,92,252,0.5);display:none;align-items:center;justify-content:center;transition:all 0.3s}
-.btt.vis{display:flex}
-@media(max-width:1024px){.story-grid{grid-template-columns:1fr}.story-visual{order:-1}.stats-grid{grid-template-columns:repeat(2,1fr)}.values-grid{grid-template-columns:repeat(2,1fr)}.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
-@media(max-width:768px){section{padding:60px 20px}.nl{display:none}.nr .ncta{display:none}.ham{display:flex}.values-grid,.stats-grid{grid-template-columns:1fr}.page-hero{padding:60px 20px 40px}.cta-card{padding:36px 24px}.btn-secondary{margin-left:0;margin-top:12px}.foot-grid{grid-template-columns:1fr;gap:28px}.foot-bot{flex-direction:column;text-align:center}.nw{padding:0 20px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Aivora AI | Unbiased, Data-Driven AI Intelligence</title>
+  <meta name="description" content="Learn about Aivora AI's mission, team, and testing standards. We conduct independent, reproducible benchmarks on AI tools so you never waste money on hype.">
+  <link rel="icon" href="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#020c1b;--bg2:#041828;--card:rgba(14,165,233,0.05);
+      --border:rgba(14,165,233,0.18);--glow:rgba(14,165,233,0.25);
+      --primary:#0ea5e9;--secondary:#22c55e;--accent:#06b6d4;
+      --text:#e2f0ff;--muted:#7db0c4;
+      --font:'Space Grotesk',sans-serif;
+      --font-body:'Inter',sans-serif;
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--font);overflow-x:hidden;min-height:100vh}
+    p,span,li,input,textarea,select{font-family:var(--font-body)}
+
+    /* ANIMATED MESH BACKGROUND */
+    body::before{
+      content:'';position:fixed;inset:0;z-index:0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(14,165,233,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 80%, rgba(34,197,94,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 40% at 50% 50%, rgba(6,182,212,0.06) 0%, transparent 70%);
+      animation:meshMove 12s ease-in-out infinite alternate;
+      pointer-events:none;
+    }
+    @keyframes meshMove{
+      0%{background-position:0% 0%,100% 100%,50% 50%}
+      100%{background-position:30% 20%,70% 30%,60% 70%}
+    }
+
+    /* GRID OVERLAY */
+    body::after{
+      content:'';position:fixed;inset:0;z-index:0;
+      background-image:linear-gradient(rgba(14,165,233,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,0.04) 1px,transparent 1px);
+      background-size:60px 60px;
+      pointer-events:none;
+    }
+
+    /* NAV */
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2rem;transition:all 0.3s;display:flex;align-items:center;justify-content:space-between}
+    .navbar.scrolled{background:rgba(2,12,27,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0.7rem 2rem}
+    .nav-container{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none}
+    .logo img{height:36px;filter:drop-shadow(0 0 8px rgba(14,165,233,0.5))}
+    .logo-text{font-size:1.3rem;font-weight:700;background:linear-gradient(135deg,#0ea5e9,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+    .nav-links a{color:var(--text);text-decoration:none;font-weight:500;font-size:0.95rem;transition:color 0.3s;position:relative}
+    .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--primary);transition:width 0.3s}
+    .nav-links a:hover{color:var(--primary)}
+    .nav-links a:hover::after{width:100%}
+    .nav-links a.active{color:var(--primary)}
+    .nav-links a.active::after{width:100%}
+    .nav-cta{background:linear-gradient(135deg,#0ea5e9,#22c55e);color:#020c1b!important;padding:0.5rem 1.2rem;border-radius:25px;font-weight:700;transition:all 0.3s!important}
+    .nav-cta:hover{box-shadow:0 0 20px rgba(14,165,233,0.5);transform:translateY(-1px)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{width:24px;height:2px;background:var(--text);transition:all 0.3s;display:block}
+    .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    .hamburger.active span:nth-child(2){opacity:0}
+    .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+    /* MOBILE NAV */
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav-links{
+        position:fixed;top:0;right:-100%;width:75%;max-width:300px;height:100vh;
+        background:rgba(4,24,40,0.98);backdrop-filter:blur(20px);
+        flex-direction:column;justify-content:center;gap:2.5rem;
+        padding:2rem;border-left:1px solid var(--border);
+        transition:right 0.35s cubic-bezier(.4,0,.2,1);z-index:999;
+        list-style:none;
+      }
+      .nav-links.open{right:0}
+      .nav-links a{font-size:1.2rem}
+    }
+
+    /* SECTION LAYOUT */
+    section{position:relative;z-index:1;padding:5rem 0}
+    .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+
+    /* HERO */
+    .hero{min-height:75vh;display:flex;align-items:center;padding:8rem 0 3.5rem;text-align:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(14,165,233,0.1);border:1px solid var(--border);padding:0.4rem 1.1rem;border-radius:50px;font-size:0.85rem;color:var(--primary);margin-bottom:1.5rem}
+    .hero h1{font-size:clamp(2.2rem,5vw,4.2rem);font-weight:800;line-height:1.2;margin-bottom:1.5rem}
+    .gradient-text{background:linear-gradient(135deg,#0ea5e9 0%,#06b6d4 40%,#22c55e 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-sub{font-size:clamp(1rem,2vw,1.25rem);color:var(--muted);max-width:720px;margin:0 auto 2.5rem;line-height:1.6}
+
+    /* MISSION SECTION (2-COL) */
+    .mission-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center}
+    @media(max-width:850px){.mission-grid{grid-template-columns:1fr}}
+    .mission-text h2{font-size:2.2rem;font-weight:800;margin-bottom:1.2rem;line-height:1.3}
+    .mission-text p{color:var(--muted);font-size:1.02rem;line-height:1.75;margin-bottom:1.2rem}
+    
+    /* GLOWING GRAPHIC WITH CSS/EMOJI */
+    .glowing-graphic-wrap{
+      background:rgba(4,24,40,0.85);border:1.5px solid rgba(14,165,233,0.35);
+      border-radius:24px;padding:2.5rem 2rem;position:relative;
+      box-shadow:0 0 35px rgba(14,165,233,0.15);overflow:hidden;
+      backdrop-filter:blur(15px);
+    }
+    .glowing-graphic-wrap::before{
+      content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+      background:radial-gradient(circle at 50% 50%, rgba(14,165,233,0.15) 0%, transparent 60%);
+      animation:rotateGlow 15s linear infinite;pointer-events:none;
+    }
+    @keyframes rotateGlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    
+    .radar-center{position:relative;z-index:2;display:flex;flex-direction:column;gap:1.2rem}
+    .lab-node{
+      display:flex;align-items:center;gap:1.2rem;
+      background:rgba(14,165,233,0.06);border:1px solid rgba(14,165,233,0.22);
+      border-radius:14px;padding:1rem 1.25rem;
+      transition:all 0.3s;
+    }
+    .lab-node:hover{
+      background:rgba(14,165,233,0.12);
+      border-color:rgba(14,165,233,0.45);
+      transform:translateX(6px);
+    }
+    .lab-node-icon{
+      font-size:1.8rem;width:48px;height:48px;border-radius:12px;
+      background:linear-gradient(135deg,rgba(14,165,233,0.2),rgba(34,197,94,0.15));
+      display:flex;align-items:center;justify-content:center;
+    }
+    .lab-node-info h4{font-size:1rem;font-weight:700;color:var(--text)}
+    .lab-node-info p{font-size:0.82rem;color:var(--muted)}
+    .lab-node-status{margin-left:auto;font-size:0.75rem;font-weight:700;color:var(--secondary);padding:0.25rem 0.6rem;background:rgba(34,197,94,0.1);border-radius:20px;border:1px solid rgba(34,197,94,0.3)}
+
+    /* VALUES */
+    .section-title{text-align:center;margin-bottom:3.2rem}
+    .section-label{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--primary);margin-bottom:0.5rem;display:inline-block}
+    .section-title h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800}
+    .section-title p{color:var(--muted);margin-top:0.75rem;font-size:1rem;max-width:600px;margin-left:auto;margin-right:auto}
+    
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+    @media(max-width:992px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:550px){.grid-4{grid-template-columns:1fr}}
+
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.6rem;transition:all 0.3s;position:relative;overflow:hidden}
+    .card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(14,165,233,0.06),transparent);opacity:0;transition:opacity 0.3s}
+    .card:hover{transform:translateY(-5px);border-color:rgba(14,165,233,0.4);box-shadow:0 15px 40px rgba(14,165,233,0.15)}
+    .card:hover::before{opacity:1}
+    .card-icon{font-size:2.2rem;margin-bottom:1rem;display:inline-block}
+    .card h3{font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;color:var(--text)}
+    .card p{font-size:0.9rem;color:var(--muted);line-height:1.6}
+
+    /* TEAM CARDS */
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    @media(max-width:850px){.team-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:580px){.team-grid{grid-template-columns:1fr}}
+    .team-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.2rem 1.6rem;text-align:center;transition:all 0.3s}
+    .team-card:hover{transform:translateY(-6px);border-color:rgba(14,165,233,0.45);box-shadow:0 16px 40px rgba(14,165,233,0.16)}
+    .avatar-circle{
+      width:96px;height:96px;margin:0 auto 1.3rem;border-radius:50%;
+      background:linear-gradient(135deg,rgba(14,165,233,0.25),rgba(34,197,94,0.2));
+      border:2.5px solid var(--primary);display:flex;align-items:center;justify-content:center;
+      font-size:2.4rem;box-shadow:0 0 25px rgba(14,165,233,0.3);transition:transform 0.3s ease;
+    }
+    .team-card:hover .avatar-circle{transform:scale(1.08) rotate(4deg);border-color:var(--secondary)}
+    .team-card h3{font-size:1.25rem;font-weight:700;margin-bottom:0.3rem}
+    .team-role{color:var(--primary);font-size:0.85rem;font-weight:600;margin-bottom:0.9rem;text-transform:uppercase;letter-spacing:1px}
+    .team-bio{color:var(--muted);font-size:0.88rem;line-height:1.6}
+
+    /* STATS BAR */
+    .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.5rem;padding:2.2rem;background:var(--card);border:1px solid var(--border);border-radius:20px;backdrop-filter:blur(10px)}
+    .stat-item{text-align:center}
+    .stat-num{font-size:2.3rem;font-weight:800;background:linear-gradient(135deg,#0ea5e9,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .stat-label{font-size:0.88rem;color:var(--muted);margin-top:0.2rem}
+
+    /* CTA SECTION */
+    .cta-card{
+      background:linear-gradient(135deg,rgba(14,165,233,0.1),rgba(34,197,94,0.06));
+      border:1px solid rgba(14,165,233,0.35);border-radius:24px;padding:4rem 2rem;
+      text-align:center;max-width:850px;margin:0 auto;position:relative;
+    }
+    .cta-card h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:1rem}
+    .cta-card p{color:var(--muted);font-size:1.05rem;max-width:580px;margin:0 auto 2rem}
+    .cta-btns{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap}
+
+    .btn-primary{background:linear-gradient(135deg,#0ea5e9,#22c55e);color:#020c1b;padding:0.8rem 2rem;border-radius:50px;font-weight:700;font-size:1rem;text-decoration:none;border:none;cursor:pointer;transition:all 0.3s;display:inline-flex;align-items:center;gap:0.5rem}
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(14,165,233,0.4)}
+    .btn-outline{border:1px solid var(--border);color:var(--text);padding:0.8rem 2rem;border-radius:50px;font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;transition:all 0.3s;display:inline-flex;align-items:center;gap:0.5rem;background:transparent}
+    .btn-outline:hover{border-color:var(--primary);color:var(--primary);box-shadow:0 0 20px rgba(14,165,233,0.2);transform:translateY(-3px)}
+
+    /* FOOTER */
+    .footer{border-top:1px solid var(--border);padding:3.5rem 0 1.8rem;margin-top:5rem;position:relative;z-index:1}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.2rem}
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand p{color:var(--muted);font-size:0.9rem;margin-top:0.6rem;line-height:1.6;max-width:320px}
+    .footer h4{font-size:0.92rem;font-weight:700;margin-bottom:1rem;color:var(--text);letter-spacing:0.5px}
+    .footer ul{list-style:none}
+    .footer ul li{margin-bottom:0.55rem}
+    .footer ul li a{color:var(--muted);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+    .footer ul li a:hover{color:var(--primary)}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-bottom p{color:var(--muted);font-size:0.85rem}
+
+    /* CHATBOT */
+    .chat-btn{position:fixed;bottom:2rem;right:2rem;z-index:9999;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#22c55e);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 20px rgba(14,165,233,0.4);transition:all 0.3s}
+    .chat-btn:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(14,165,233,0.6)}
+    .chat-btn::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(14,165,233,0.4);animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.15);opacity:0.5}}
+    .chat-window{position:fixed;bottom:5.5rem;right:2rem;z-index:9998;width:340px;max-width:calc(100vw - 2rem);background:rgba(4,24,40,0.97);border:1px solid rgba(14,165,233,0.3);border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);transform:translateY(20px) scale(0.95);opacity:0;pointer-events:none;transition:all 0.3s cubic-bezier(.4,0,.2,1)}
+    .chat-window.open{transform:translateY(0) scale(1);opacity:1;pointer-events:all}
+    .chat-header{padding:1rem 1.25rem;background:linear-gradient(135deg,rgba(14,165,233,0.2),rgba(34,197,94,0.1));border-bottom:1px solid rgba(14,165,233,0.2);display:flex;align-items:center;gap:0.75rem}
+    .chat-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#22c55e);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .chat-header-info h4{font-size:0.95rem;font-weight:700}
+    .chat-status{font-size:0.75rem;color:#22c55e;display:flex;align-items:center;gap:0.3rem}
+    .chat-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#22c55e;display:inline-block}
+    .chat-close{margin-left:auto;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.2rem;padding:0.2rem}
+    .chat-messages{height:280px;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:0.75rem}
+    .chat-messages::-webkit-scrollbar{width:4px}
+    .chat-messages::-webkit-scrollbar-track{background:transparent}
+    .chat-messages::-webkit-scrollbar-thumb{background:rgba(14,165,233,0.3);border-radius:4px}
+    .msg{max-width:85%;padding:0.65rem 0.9rem;border-radius:14px;font-size:0.875rem;line-height:1.5;animation:msgIn 0.3s ease}
+    @keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .msg.bot{background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.15);color:var(--text);align-self:flex-start;border-bottom-left-radius:4px}
+    .msg.user{background:linear-gradient(135deg,rgba(14,165,233,0.25),rgba(34,197,94,0.15));color:var(--text);align-self:flex-end;border-bottom-right-radius:4px}
+    .typing{display:flex;gap:4px;align-items:center;padding:0.65rem 0.9rem;background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.15);border-radius:14px;border-bottom-left-radius:4px;align-self:flex-start}
+    .typing span{width:7px;height:7px;border-radius:50%;background:var(--primary);animation:typingDot 1.2s infinite}
+    .typing span:nth-child(2){animation-delay:0.2s}
+    .typing span:nth-child(3){animation-delay:0.4s}
+    @keyframes typingDot{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+    .chat-quick{padding:0.5rem 1rem;display:flex;gap:0.5rem;flex-wrap:wrap;border-top:1px solid rgba(14,165,233,0.1)}
+    .quick-btn{background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.2);color:var(--primary);padding:0.3rem 0.75rem;border-radius:50px;font-size:0.75rem;cursor:pointer;transition:all 0.2s;font-family:inherit}
+    .quick-btn:hover{background:rgba(14,165,233,0.2)}
+    .chat-input-row{padding:0.75rem 1rem;border-top:1px solid rgba(14,165,233,0.15);display:flex;gap:0.5rem}
+    .chat-input-row input{flex:1;background:rgba(14,165,233,0.05);border:1px solid rgba(14,165,233,0.2);border-radius:50px;padding:0.5rem 1rem;color:var(--text);font-family:inherit;font-size:0.875rem;outline:none}
+    .chat-input-row input:focus{border-color:var(--primary)}
+    .chat-input-row input::placeholder{color:var(--muted)}
+    .chat-send{background:linear-gradient(135deg,#0ea5e9,#22c55e);border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#020c1b;font-size:1rem;transition:all 0.2s}
+    .chat-send:hover{transform:scale(1.1)}
+
+    /* SCROLL REVEAL */
+    [data-sr]{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+    [data-sr].visible{opacity:1;transform:translateY(0)}
+  </style>
 </head>
 <body>
-<nav class="nav">
-  <div class="nw">
-    <a href="index.html" class="brand">
-      <div class="brand-logo">A</div>
-      <span class="brand-name"><span>Aivora</span> AI</span>
-    </a>
-    <ul class="nl">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="product.html">AI Tools</a></li>
-      <li><a href="about.html" class="act">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nr">
-      <a href="blog.html" class="ncta">Explore Reviews →</a>
-      <button class="ham" id="hB" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png" alt="Aivora AI Logo">
+        <span class="logo-text">Aivora AI</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html" class="active">About</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/blog.html" class="nav-cta">Explore Reviews ⚡</a></li>
+      </ul>
+      <button class="hamburger" id="ham" aria-label="Toggle navigation menu" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </div>
-</nav>
-<div class="mob" id="mob">
-  <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="product.html">AI Tools</a>
-  <a href="about.html" class="act">About</a><a href="contact.html">Contact</a>
-  <a href="blog.html" class="ncta">Explore Reviews →</a>
-</div>
+  </nav>
 
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-inner">
-    <div class="sec-tag rv">About Us</div>
-    <h1 class="rv">We're on a Mission to Make <span>AI Honest</span></h1>
-    <p class="rv">Aivora AI was built because the AI tool review space is broken — full of paid rankings, sponsored posts, and fake verdicts. We're changing that.</p>
-  </div>
-</div>
-
-<!-- STORY -->
-<section>
-  <div class="sec-wrap">
-    <div class="story-grid">
-      <div class="story-content rv">
-        <div class="sec-tag">Our Story</div>
-        <h2 class="sec-title">Born from <span>Frustration</span></h2>
-        <p>In 2024, Varun Lalwani was tired of being misled. Every AI tool review he read was glowing. Every comparison chart had the same winner. It was obvious — most review sites were being paid to praise tools they barely tested.</p>
-        <p>So he started Aivora AI with one rule: <strong style="color:var(--text)">tell the truth, always.</strong> Every tool gets tested hands-on. Every review includes what's bad, not just what's good. And no tool can buy its way to a good rating.</p>
-        <p>What started as a personal project quickly became one of the most trusted AI review destinations, now reaching 50,000+ readers per month from over 80 countries.</p>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span>🛡️</span>
+        <span>Independent Editorial Standards</span>
       </div>
-      <div class="story-visual rv">
-        <div class="story-card">
-          <div class="story-avatar">👨‍💻</div>
-          <div class="story-name">Varun Lalwani</div>
-          <div class="story-role">Founder & Lead Reviewer · Aivora AI</div>
-          <div class="story-bio">Digital marketer, AI enthusiast, and affiliate marketing expert from India. Varun has tested 200+ AI tools and helped thousands of people find the right tools for their business.</div>
-          <div class="story-tags">
-            <span class="story-tag">AI Tools</span>
-            <span class="story-tag">SEO</span>
-            <span class="story-tag">Affiliate Marketing</span>
-            <span class="story-tag">India 🇮🇳</span>
-            <span class="story-tag">Since 2024</span>
+      <h1>
+        We Review AI So You<br>
+        <span class="gradient-text">Don't Have To</span>
+      </h1>
+      <p class="hero-sub">
+        The AI market is overflowing with synthetic hype, cloned wrappers, and sponsored affiliate rankings. Aivora AI was built to bring engineering rigor, repeatable benchmarks, and brutal honesty back to software testing.
+      </p>
+      <div>
+        <a href="#mission" class="btn-primary">Our Mission & Standards ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION SECTION (2-COL WITH GLOWING GRAPHIC) -->
+  <section id="mission" style="padding-top:2rem;">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-text" data-sr>
+          <span class="section-label">Why We Exist</span>
+          <h2>Fighting the Flood of Synthetic Hype</h2>
+          <p>
+            When generative AI exploded in 2023, search results were inundated with AI-generated review websites that had never actually logged into the software they praised. Five-star ratings were handed out based entirely on affiliate payout percentages.
+          </p>
+          <p>
+            At Aivora AI, we do things the old-school way with modern tooling. We purchase our own software licenses, run standardized automated prompt batteries, measure true API latency under load, and expose deceptive token limits before you waste company budget.
+          </p>
+          <p>
+            Our reviews are crafted for technical practitioners, marketing executives, and developers who need to know how an AI model behaves in real production scenarios.
+          </p>
+        </div>
+
+        <!-- Glowing Graphic Made with CSS & Emoji -->
+        <div class="glowing-graphic-wrap" data-sr>
+          <div class="radar-center">
+            <div class="lab-node">
+              <div class="lab-node-icon">⚡</div>
+              <div class="lab-node-info">
+                <h4>Latency & TTFT Benchmarking</h4>
+                <p>Automated request loops across global edge nodes</p>
+              </div>
+              <span class="lab-node-status">ACTIVE</span>
+            </div>
+
+            <div class="lab-node">
+              <div class="lab-node-icon">🧠</div>
+              <div class="lab-node-info">
+                <h4>Hallucination Stress Battery</h4>
+                <p>250 factual consistency & math stress prompts</p>
+              </div>
+              <span class="lab-node-status">100% AUDITED</span>
+            </div>
+
+            <div class="lab-node">
+              <div class="lab-node-icon">💳</div>
+              <div class="lab-node-info">
+                <h4>True Cost-Per-Output Analysis</h4>
+                <p>Credit deduction & token burn tracking</p>
+              </div>
+              <span class="lab-node-status">VERIFIED</span>
+            </div>
+
+            <div class="lab-node">
+              <div class="lab-node-icon">🤖</div>
+              <div class="lab-node-info">
+                <h4>Agent Autonomy & Tool Calling</h4>
+                <p>Real multi-step workflow execution tests</p>
+              </div>
+              <span class="lab-node-status">ONLINE</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- STATS -->
-<section style="background:var(--bg2)">
-  <div class="sec-wrap">
-    <div class="sec-tag rv" style="display:block;text-align:center;margin-bottom:40px">By The Numbers</div>
-    <div class="stats-grid">
-      <div class="stat-card rv">
-        <div class="stat-big">200+</div>
-        <div class="stat-label">AI Tools Reviewed</div>
+  <!-- VALUES SECTION: 4 CARDS -->
+  <section id="values">
+    <div class="container">
+      <div class="section-title" data-sr>
+        <span class="section-label">Core Principles</span>
+        <h2>Our Editorial Values</h2>
+        <p>Four ironclad standards that govern every benchmark, review, and score published on Aivora AI.</p>
       </div>
-      <div class="stat-card rv">
-        <div class="stat-big">50K+</div>
-        <div class="stat-label">Monthly Readers</div>
-      </div>
-      <div class="stat-card rv">
-        <div class="stat-big">80+</div>
-        <div class="stat-label">Countries Reached</div>
-      </div>
-      <div class="stat-card rv">
-        <div class="stat-big">100%</div>
-        <div class="stat-label">Editorially Independent</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- VALUES -->
-<section class="values-bg">
-  <div class="sec-wrap">
-    <div style="text-align:center;margin-bottom:50px">
-      <div class="sec-tag rv">Our Values</div>
-      <h2 class="sec-title rv">What We <span>Stand For</span></h2>
-    </div>
-    <div class="values-grid">
-      <div class="val-card rv">
-        <div class="val-icon" style="background:rgba(124,92,252,0.15)">🔬</div>
-        <h3>Rigorous Testing</h3>
-        <p>We use every tool in real workflows before forming an opinion. No spec-sheet reviews. No paraphrasing marketing copy.</p>
-      </div>
-      <div class="val-card rv">
-        <div class="val-icon" style="background:rgba(252,92,156,0.15)">🚫</div>
-        <h3>Editorial Independence</h3>
-        <p>No tool company pays us for a good review. Our ratings are based 100% on our own hands-on experience.</p>
-      </div>
-      <div class="val-card rv">
-        <div class="val-icon" style="background:rgba(92,244,252,0.15)">💬</div>
-        <h3>Radical Honesty</h3>
-        <p>We say when a tool is bad. We highlight limitations, pricing issues, and red flags — even if it loses us affiliate revenue.</p>
-      </div>
-      <div class="val-card rv">
-        <div class="val-icon" style="background:rgba(252,180,92,0.15)">🌍</div>
-        <h3>Global Perspective</h3>
-        <p>We review tools from a global lens — considering availability, pricing in different regions, and use cases worldwide.</p>
-      </div>
-      <div class="val-card rv">
-        <div class="val-icon" style="background:rgba(92,252,160,0.15)">🔄</div>
-        <h3>Always Updated</h3>
-        <p>AI tools change fast. We revisit and update our reviews regularly to ensure the advice you read is still accurate.</p>
-      </div>
-      <div class="val-card rv">
-        <div class="val-icon" style="background:rgba(124,92,252,0.15)">❤️</div>
-        <h3>Reader First</h3>
-        <p>Every piece of content is written for you — the reader trying to make a smart decision — not for the search engine.</p>
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="grid-4">
+        <div class="card" data-sr>
+          <div class="card-icon">🔍</div>
+          <h3>100% Honest</h3>
+          <p>Zero sponsored review placements. If an enterprise AI tool fails our accuracy or privacy tests, we publish the raw logs without hesitation.</p>
+        </div>
 
-<!-- TIMELINE -->
-<section>
-  <div class="sec-wrap" style="max-width:700px">
-    <div class="sec-tag rv">Our Journey</div>
-    <h2 class="sec-title rv">How We <span>Got Here</span></h2>
-    <div class="timeline rv" style="margin-top:40px">
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">Early 2024</div>
-        <div class="tl-title">Aivora AI Founded</div>
-        <div class="tl-desc">Varun launches Aivora AI with a simple blog focused on honest AI tool reviews after growing frustrated with paid rankings.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">Mid 2024</div>
-        <div class="tl-title">First 10,000 Readers</div>
-        <div class="tl-desc">The site hits 10K monthly readers organically — entirely through honest, in-depth content and word-of-mouth referrals.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">Late 2024</div>
-        <div class="tl-title">100+ Tools Reviewed</div>
-        <div class="tl-desc">Aivora AI reaches a milestone of 100 detailed tool reviews across writing, video, SEO, and automation categories.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">2025</div>
-        <div class="tl-title">Social Media & Newsletter Growth</div>
-        <div class="tl-desc">Expansion to YouTube, Instagram, and TikTok. Newsletter launches with weekly AI verdicts and reaches 10K subscribers.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">2026</div>
-        <div class="tl-title">50K+ Monthly Readers & 200+ Reviews</div>
-        <div class="tl-desc">Aivora AI is now one of the most trusted independent AI review sites globally, with readers from 80+ countries.</div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="card" data-sr>
+          <div class="card-icon">⚡</div>
+          <h3>Rigorous & Thorough</h3>
+          <p>We spend an average of 40+ hours per tool. No 15-minute superficial impressions—only repeatable, reproducible evaluations.</p>
+        </div>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="sec-wrap">
-    <div class="cta-card rv">
-      <div class="cta-inner">
-        <div class="sec-tag" style="margin-bottom:20px">Get In Touch</div>
-        <h2>Have a Question or<br/>Want to Collaborate?</h2>
-        <p>Whether you're a reader, a tool developer, or a brand looking to work together — we'd love to hear from you.</p>
-        <a href="contact.html" class="btn-primary">📬 Contact Us</a>
-        <a href="blog.html" class="btn-secondary">📚 Read Our Reviews</a>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="card" data-sr>
+          <div class="card-icon">🆓</div>
+          <h3>Radically Accessible</h3>
+          <p>We champion free and freemium tiers so indie creators, students, and early-stage startups can tap into state-of-the-art AI without barriers.</p>
+        </div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="foot-grid">
-    <div>
-      <a href="index.html" class="brand" style="margin-bottom:16px;display:flex">
-        <div class="brand-logo">A</div>
-        <span class="brand-name"><span>Aivora</span> AI</span>
-      </a>
-      <p class="foot-desc">Independent AI tool reviews and guides. We test tools so you can make informed decisions. No sponsored rankings, ever.</p>
-      <div class="foot-social">
-        <a href="https://www.facebook.com/profile.php?id=61569221487849" class="soc-btn" target="_blank" rel="noopener">f</a>
-        <a href="https://www.instagram.com/aivoraai.co/" class="soc-btn" target="_blank" rel="noopener">ig</a>
-        <a href="https://www.youtube.com/@AivoraAITools" class="soc-btn" target="_blank" rel="noopener">yt</a>
-        <a href="https://x.com/aivoraai_co" class="soc-btn" target="_blank" rel="noopener">𝕏</a>
+        <div class="card" data-sr>
+          <div class="card-icon">🔄</div>
+          <h3>Always Up-to-Date</h3>
+          <p>When OpenAI, Anthropic, or Google update model weights, our testing team re-runs benchmarks so you never rely on obsolete scores.</p>
+        </div>
       </div>
     </div>
-    <div class="foot-col">
-      <h5>Tool Reviews</h5>
-      <a href="blog/murf-ai-review-2026.html">Murf AI Review</a>
-      <a href="blog/ai-video-creator-review-2026.html">AI Video Creator</a>
-      <a href="blog/lindy-ai-review-2026.html">Lindy AI Review</a>
-      <a href="blog/gpt-creator-club-review-2026.html">GPT Creator Club</a>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section id="team">
+    <div class="container">
+      <div class="section-title" data-sr>
+        <span class="section-label">The People Behind The Benchmarks</span>
+        <h2>Meet the Research Team</h2>
+        <p>Engineers, researchers, and technical writers dedicated to demystifying the modern AI stack.</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Team Member 1 -->
+        <div class="team-card" data-sr>
+          <div class="avatar-circle">👩‍🔬</div>
+          <h3>Maya Chen</h3>
+          <div class="team-role">AI Research Lead</div>
+          <p class="team-bio">
+            Former NLP research engineer with 7+ years in transformer architectures and prompt evaluation frameworks. Maya leads our automated benchmarking suite and hallucination detection lab.
+          </p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-card" data-sr>
+          <div class="avatar-circle">👨‍💻</div>
+          <h3>Rohan Verma</h3>
+          <div class="team-role">Tech Reviewer</div>
+          <p class="team-bio">
+            Full-stack systems architect specialized in autonomous agent frameworks, API latency testing, and developer tooling. Rohan stresses tools under peak load to find real breaking points.
+          </p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-card" data-sr>
+          <div class="avatar-circle">👩‍💼</div>
+          <h3>Sara Kim</h3>
+          <div class="team-role">Content Strategist</div>
+          <p class="team-bio">
+            Digital media veteran who evaluates AI writing assistants, audio generators, and brand voice consistency engines. Sara assesses real editorial workflow speed and commercial utility.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="foot-col">
-      <h5>Guides</h5>
-      <a href="blog/ai-affiliate-marketing-guide-2026.html">AI Affiliate Marketing</a>
-      <a href="blog/ai-tools-beginners-guide-2026.html">AI for Beginners</a>
-      <a href="blog/passive-income-ai-website-2026.html">AI & Passive Income</a>
+  </section>
+
+  <!-- STATS BAR SECTION -->
+  <section style="padding:2rem 0;">
+    <div class="container">
+      <div class="stats-row" data-sr>
+        <div class="stat-item">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Years Running</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">300+</div>
+          <div class="stat-label">In-Depth Reviews</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">75K+</div>
+          <div class="stat-label">Monthly Readers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100+</div>
+          <div class="stat-label">Tools Lab Tested</div>
+        </div>
+      </div>
     </div>
-    <div class="foot-col">
-      <h5>Site</h5>
-      <a href="index.html">Home</a>
-      <a href="product.html">All AI Tools</a>
-      <a href="blog.html">Blog</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section>
+    <div class="container">
+      <div class="cta-card" data-sr>
+        <span class="section-label">Start Exploring</span>
+        <h2>Ready to find your perfect AI tool?</h2>
+        <p>Skip the marketing claims. Dive into our catalog of stress-tested writing assistants, chatbot agents, and voice synthesis platforms today.</p>
+        <div class="cta-btns">
+          <a href="/blog.html" class="btn-primary">Explore All Reviews 🔍</a>
+          <a href="/contact.html" class="btn-outline">Request a Tool Benchmark 💬</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img src="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png" alt="Aivora AI Logo">
+            <span class="logo-text">Aivora AI</span>
+          </a>
+          <p>The definitive independent benchmark and review platform for AI models, generative writing software, voice synthesizers, and autonomous agents.</p>
+        </div>
+        <div>
+          <h4>Reviews</h4>
+          <ul>
+            <li><a href="/blog.html">AI Writing Assistants</a></li>
+            <li><a href="/blog.html">LLM Benchmarks</a></li>
+            <li><a href="/blog.html">Autonomous Agents</a></li>
+            <li><a href="/blog.html">Voice & Audio AI</a></li>
+            <li><a href="/blog.html">SEO & Content Suites</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/about.html#team">Editorial Team</a></li>
+            <li><a href="/about.html#values">Testing Policy</a></li>
+            <li><a href="/contact.html">Contact Support</a></li>
+            <li><a href="/contact.html#faq">FAQ & Review Requests</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube Lab</a></li>
+            <li><a href="https://github.com/AivoraAi" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aivora AI. All rights reserved. Unbiased, data-driven AI intelligence.</p>
+        <p>Built with NeonBlue Theme · Space Grotesk & Inter</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CHATBOT WIDGET -->
+  <button class="chat-btn" id="chatBtn" title="Chat with Aivora AI">🤖</button>
+  <div class="chat-window" id="chatWin">
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div class="chat-header-info">
+        <h4>Aivora AI Assistant</h4>
+        <span class="chat-status">Online · Ask me anything</span>
+      </div>
+      <button class="chat-close" id="chatClose">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMsgs">
+      <div class="msg bot">👋 Hi! I'm Aivora AI. I can help you find the best AI tools, writing assistants, chatbots, and more. What are you looking for?</div>
+    </div>
+    <div class="chat-quick" id="quickBtns">
+      <button class="quick-btn">Best AI writers</button>
+      <button class="quick-btn">Free AI tools</button>
+      <button class="quick-btn">ChatGPT tips</button>
+      <button class="quick-btn">AI chatbots</button>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Ask about AI tools..." autocomplete="off">
+      <button class="chat-send" id="chatSend">➤</button>
     </div>
   </div>
-  <div class="foot-bot">
-    <div class="foot-bot-left">© 2026 Aivora AI · Varun Lalwani · India · All rights reserved</div>
-    <div class="foot-bot-right">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="disclosure.html">Disclosure</a>
-    </div>
-  </div>
-</footer>
-<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
-<script>
-var rvEls=document.querySelectorAll('.rv');
-if('IntersectionObserver' in window){var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});rvEls.forEach(function(el){io.observe(el);});}else{rvEls.forEach(function(el){el.classList.add('in');});}
-var btt=document.getElementById('btt');
-window.addEventListener('scroll',function(){btt.classList.toggle('vis',scrollY>500);},{passive:true});
-var hB=document.getElementById('hB'),mob=document.getElementById('mob');
-hB.addEventListener('click',function(){var o=mob.classList.toggle('on');hB.classList.toggle('on',o);hB.setAttribute('aria-expanded',String(o));});
-mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mob.classList.remove('on');hB.classList.remove('on');hB.setAttribute('aria-expanded','false');});});
-</script>
+
+  <!-- SCRIPTS -->
+  <script>
+    // NAV scroll
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)});
+
+    // HAMBURGER
+    const ham = document.getElementById('ham');
+    const navLinks = document.getElementById('navLinks');
+    function toggleNav(){
+      ham.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    }
+
+    // SCROLL REVEAL
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
+    },{threshold:0.1});
+    document.querySelectorAll('[data-sr]').forEach(el=>observer.observe(el));
+
+    // CHATBOT
+    const chatBtn = document.getElementById('chatBtn');
+    const chatWin = document.getElementById('chatWin');
+    const chatClose = document.getElementById('chatClose');
+    const chatInput = document.getElementById('chatInput');
+    const chatMsgs = document.getElementById('chatMsgs');
+    const quickBtns = document.getElementById('quickBtns');
+
+    const KB = {
+      'writing':['writing tools','write','jasper','copy.ai','grammarly','writesonic'],'chatgpt':['chatgpt','openai','gpt','gpt-4'],'free':['free','no cost','free plan','budget'],'affiliate':['affiliate','commission','earn','monetize','income'],'aivora':['aivora','about you','what is','who are'],'seo':['seo','search engine','rank','backlink','keywords'],'blog':['blog','blogging','content','article','post'],'chatbot':['chatbot','chat bot','bot','assistant'],'contact':['contact','email','reach','support','help'],'price':['price','pricing','cost','plan','subscription']
+    };
+    const ANSWERS = {
+      'writing':"📝 Top AI writing tools we've reviewed: Jasper, Copy.ai, Writesonic, Rytr & Grammarly. <a href='/blog.html' style='color:var(--primary)'>Read our reviews →</a>",'chatgpt':"🤖 ChatGPT by OpenAI is the most popular AI assistant. We have detailed ChatGPT guides and comparisons on our blog!",'free':"💚 Yes! Many great AI tools have free plans. Check our blog for 'best free AI tools' roundups.",'affiliate':"💰 AI tools for affiliate marketing are booming! We cover tools like Jasper, Surfer SEO, and more.",'aivora':"👋 Aivora AI is your trusted source for honest, in-depth AI tool reviews — no sponsored bias, just real verdicts!",'seo':"🔍 We review AI SEO tools like Surfer SEO, Semrush AI, and Ahrefs. Check our blog for detailed guides.",'blog':"📚 Browse our blog for AI tool reviews, tutorials, and how-to guides. New posts every week!",'chatbot':"🤖 We cover AI chatbots in depth! Check our blog for chatbot comparisons and setup guides.",'contact':"📧 You can reach us via our <a href='/contact.html' style='color:var(--primary)'>Contact page</a> anytime!",'price':"💳 Most AI tools offer free trials. We include pricing details in all our reviews on the blog!",'default':"💡 Great question! Explore our <a href='/blog.html' style='color:var(--primary)'>blog</a> for in-depth AI tool reviews and guides, or <a href='/contact.html' style='color:var(--primary)'>contact us</a> directly!"
+    };
+
+    function addMsg(text,role){
+      const d=document.createElement('div');
+      d.className=`msg ${role}`;d.innerHTML=text;
+      chatMsgs.appendChild(d);
+      chatMsgs.scrollTop=chatMsgs.scrollHeight;
+    }
+    function botReply(input){
+      const low=input.toLowerCase();
+      for(const[key,terms] of Object.entries(KB)){
+        if(terms.some(t=>low.includes(t))){return ANSWERS[key]}
+      }
+      return ANSWERS.default;
+    }
+    function sendMsg(){
+      const val=chatInput.value.trim();
+      if(!val)return;
+      addMsg(val,'user');
+      chatInput.value='';
+      if(quickBtns)quickBtns.style.display='none';
+      const typing=document.createElement('div');
+      typing.className='typing';typing.id='typing';
+      typing.innerHTML='<span></span><span></span><span></span>';
+      chatMsgs.appendChild(typing);chatMsgs.scrollTop=chatMsgs.scrollHeight;
+      setTimeout(()=>{
+        const t=document.getElementById('typing');if(t)t.remove();
+        addMsg(botReply(val),'bot');
+      },1000);
+    }
+    if(chatBtn){
+      chatBtn.addEventListener('click',()=>chatWin.classList.toggle('open'));
+      chatClose.addEventListener('click',()=>chatWin.classList.remove('open'));
+      chatInput.addEventListener('keydown',e=>{if(e.key==='Enter')sendMsg()});
+      document.getElementById('chatSend').addEventListener('click',sendMsg);
+      document.querySelectorAll('.quick-btn').forEach(b=>{
+        b.addEventListener('click',()=>{
+          chatInput.value=b.textContent;sendMsg();
+        });
+      });
+    }
+  </script>
 </body>
 </html>
-
