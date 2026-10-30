@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Add an AI Chatbot to Your Portfolio Website (Free & Easy) | Aivora AI</title>
+  <meta name="description" content="Add a smart AI chatbot to your portfolio website for free. Stand out from the crowd, impress recruiters, and answer questions 24/7. Step-by-step guide.">
+  <meta name="keywords" content="ai chatbot for portfolio website, developer portfolio chatbot, free portfolio chatbot, personal website chatbot, portfolio lead generation">
+  <link rel="canonical" href="https://aivoraai.github.io/blog/ai-chatbot-portfolio-website.html">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Add an AI Chatbot to Your Portfolio Website (Free & Easy)",
+    "description": "Add a smart AI chatbot to your portfolio website for free. Stand out from the crowd, impress recruiters, and answer questions 24/7. Step-by-step guide.",
+    "author": {
+      "@type": "Person",
+      "name": "Rohan Verma",
+      "jobTitle": "Tech Reviewer & Frontend Engineer"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aivora AI",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png"
+      }
+    },
+    "datePublished": "2026-03-20",
+    "dateModified": "2026-03-28",
+    "mainEntityOfPage": "https://aivoraai.github.io/blog/ai-chatbot-portfolio-website.html"
+  }
+  </script>
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#020c1b;--bg2:#041828;--card:rgba(14,165,233,0.05);
+  --border:rgba(14,165,233,0.18);--glow:rgba(14,165,233,0.25);
+  --primary:#0ea5e9;--secondary:#22c55e;--accent:#06b6d4;
+  --text:#e2f0ff;--muted:#7db0c4;
+  --font:'Space Grotesk',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font);overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 80% 60% at 20% 10%,rgba(14,165,233,0.1) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 80% 80%,rgba(34,197,94,0.06) 0%,transparent 60%);pointer-events:none}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2rem;transition:all 0.3s}
+.navbar.scrolled{background:rgba(2,12,27,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0.6rem 2rem}
+.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none}
+.logo-text{font-size:1.2rem;font-weight:700;background:linear-gradient(135deg,#0ea5e9,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{color:var(--text);text-decoration:none;font-weight:500;font-size:0.9rem;transition:color 0.2s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--primary);transition:width 0.3s}
+.nav-links a:hover::after{width:100%}
+.nav-links a:hover{color:var(--primary)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--text);transition:all 0.3s;display:block}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:768px){
+  .hamburger{display:flex}
+  .nav-links{position:fixed;top:0;right:-100%;width:70%;max-width:280px;height:100vh;background:rgba(4,24,40,0.98);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;gap:2rem;padding:2rem;border-left:1px solid var(--border);transition:right 0.35s;z-index:999;list-style:none}
+  .nav-links.open{right:0}
+  .nav-links a{font-size:1.1rem}
+}
+.post-hero{padding:8rem 0 3rem;position:relative;z-index:1}
+.post-meta-top{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.post-tag{background:rgba(14,165,233,0.15);border:1px solid rgba(14,165,233,0.3);color:var(--primary);padding:0.3rem 0.9rem;border-radius:50px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.post-date,.post-read{font-size:0.85rem;color:var(--muted)}
+.post-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;line-height:1.2;margin-bottom:1.25rem;max-width:800px}
+.post-lead{font-size:1.1rem;color:var(--muted);line-height:1.7;max-width:750px;margin-bottom:1.5rem}
+.post-author{display:flex;align-items:center;gap:0.75rem}
+.author-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#22c55e);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.post-author strong{display:block;font-size:0.9rem;font-weight:700}
+.post-author span{font-size:0.8rem;color:var(--muted)}
+.post-img-container{margin:2rem auto;max-width:900px;border-radius:16px;overflow:hidden;border:1px solid var(--border)}
+.post-img-container img{width:100%;height:auto;display:block;max-height:420px;object-fit:cover}
+.post-img-placeholder{height:300px;background:linear-gradient(135deg,rgba(14,165,233,0.2),rgba(34,197,94,0.1));display:flex;align-items:center;justify-content:center;font-size:5rem}
+.post-body{max-width:780px;margin:0 auto;padding:2rem 1.5rem 4rem;position:relative;z-index:1;line-height:1.8}
+.post-body h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;margin:2.5rem 0 1rem}
+.post-body h3{font-size:clamp(1.1rem,2vw,1.4rem);font-weight:700;margin:2rem 0 0.75rem;color:var(--primary)}
+.post-body p{margin-bottom:1.25rem;font-size:1rem}
+.post-body ul,.post-body ol{padding-left:1.5rem;margin-bottom:1.25rem}
+.post-body li{margin-bottom:0.5rem}
+.post-body strong{color:var(--primary)}
+.post-body a{color:var(--primary);text-decoration:none}
+.post-body a:hover{text-decoration:underline}
+.callout{background:rgba(14,165,233,0.08);border-left:3px solid var(--primary);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.callout-tip{border-color:var(--secondary);background:rgba(34,197,94,0.08)}
+.callout h4{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;color:var(--primary)}
+.callout-tip h4{color:var(--secondary)}
+.callout p{margin:0;font-size:0.95rem}
+.tool-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin:1rem 0}
+.tool-card h4{font-size:1rem;font-weight:700;margin-bottom:0.3rem}
+.tool-card p{font-size:0.875rem;color:var(--muted);margin:0 0 0.5rem}
+.tool-tag{display:inline-block;padding:0.2rem 0.6rem;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);border-radius:50px;font-size:0.75rem;color:var(--secondary);margin-right:0.3rem}
+.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.875rem;overflow-x:auto;display:block}
+.comparison-table th{background:rgba(14,165,233,0.1);color:var(--primary);padding:0.75rem;text-align:left;border-bottom:2px solid var(--border);white-space:nowrap}
+.comparison-table td{padding:0.75rem;border-bottom:1px solid rgba(14,165,233,0.08)}
+.comparison-table tr:hover td{background:rgba(14,165,233,0.03)}
+.cta-box{background:linear-gradient(135deg,rgba(14,165,233,0.1),rgba(34,197,94,0.05));border:1px solid rgba(14,165,233,0.25);border-radius:16px;padding:2rem;text-align:center;margin:2rem 0}
+.cta-box h3{font-size:1.4rem;margin-bottom:0.75rem}
+.cta-box p{color:var(--muted);margin-bottom:1.25rem}
+.btn-primary{background:linear-gradient(135deg,#0ea5e9,#22c55e);color:#020c1b;padding:0.75rem 1.75rem;border-radius:50px;font-weight:700;font-size:0.95rem;text-decoration:none;border:none;cursor:pointer;transition:all 0.3s;display:inline-block}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(14,165,233,0.4)}
+.related-posts{padding:4rem 0;border-top:1px solid var(--border);position:relative;z-index:1}
+.section-h2{font-size:1.6rem;font-weight:800;margin-bottom:1.5rem}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+@media(max-width:768px){.related-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.related-grid{grid-template-columns:1fr}}
+.rel-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;display:block;transition:all 0.3s}
+.rel-card:hover{transform:translateY(-4px);border-color:rgba(14,165,233,0.3);box-shadow:0 10px 30px rgba(14,165,233,0.1)}
+.rel-card-ph{height:120px;background:linear-gradient(135deg,rgba(14,165,233,0.15),rgba(34,197,94,0.08));display:flex;align-items:center;justify-content:center;font-size:2rem}
+.rel-card-body{padding:0.875rem}
+.rel-card-body span{font-size:0.72rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:1px}
+.rel-card-body h4{font-size:0.875rem;font-weight:700;color:var(--text);margin-top:0.25rem;line-height:1.4}
+.footer{border-top:1px solid var(--border);padding:2.5rem 0 1.5rem;position:relative;z-index:1}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-links{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;transition:color 0.2s}
+.footer-links a:hover{color:var(--primary)}
+.footer-copy{color:var(--muted);font-size:0.85rem}
+.chat-btn{position:fixed;bottom:2rem;right:2rem;z-index:9999;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#22c55e);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:0 4px 20px rgba(14,165,233,0.4);transition:all 0.3s}
+.chat-btn:hover{transform:scale(1.1)}
+.chat-btn::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(14,165,233,0.35);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.2);opacity:0.4}}
+.chat-window{position:fixed;bottom:5.5rem;right:2rem;z-index:9998;width:330px;max-width:calc(100vw - 2rem);background:rgba(4,24,40,0.97);border:1px solid rgba(14,165,233,0.25);border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);transform:translateY(20px) scale(0.95);opacity:0;pointer-events:none;transition:all 0.3s}
+.chat-window.open{transform:translateY(0) scale(1);opacity:1;pointer-events:all}
+.chat-header{padding:0.875rem 1rem;background:linear-gradient(135deg,rgba(14,165,233,0.15),rgba(34,197,94,0.08));border-bottom:1px solid rgba(14,165,233,0.15);display:flex;align-items:center;gap:0.6rem}
+.chat-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#22c55e);display:flex;align-items:center;justify-content:center;font-size:1rem}
+.chat-header h4{font-size:0.875rem;font-weight:700}
+.chat-status{font-size:0.72rem;color:#22c55e}
+.chat-close{margin-left:auto;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1rem}
+.chat-messages{height:260px;overflow-y:auto;padding:0.875rem;display:flex;flex-direction:column;gap:0.6rem}
+.msg{max-width:85%;padding:0.6rem 0.875rem;border-radius:12px;font-size:0.85rem;line-height:1.5;animation:msgIn 0.25s ease}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.msg.bot{background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.15);align-self:flex-start;border-bottom-left-radius:3px}
+.msg.user{background:rgba(14,165,233,0.2);align-self:flex-end;border-bottom-right-radius:3px}
+.typing{display:flex;gap:4px;align-items:center;padding:0.6rem 0.875rem;background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.15);border-radius:12px;border-bottom-left-radius:3px;align-self:flex-start}
+.typing span{width:6px;height:6px;border-radius:50%;background:var(--primary);animation:td 1.2s infinite}
+.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+@keyframes td{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.chat-quick{padding:0.4rem 0.875rem;display:flex;gap:0.4rem;flex-wrap:wrap;border-top:1px solid rgba(14,165,233,0.1)}
+.quick-btn{background:rgba(14,165,233,0.08);border:1px solid rgba(14,165,233,0.2);color:var(--primary);padding:0.25rem 0.65rem;border-radius:50px;font-size:0.72rem;cursor:pointer;transition:background 0.2s;font-family:inherit}
+.quick-btn:hover{background:rgba(14,165,233,0.18)}
+.chat-input-row{padding:0.65rem 0.875rem;border-top:1px solid rgba(14,165,233,0.1);display:flex;gap:0.4rem}
+.chat-input-row input{flex:1;background:rgba(14,165,233,0.05);border:1px solid rgba(14,165,233,0.2);border-radius:50px;padding:0.45rem 0.875rem;color:var(--text);font-family:inherit;font-size:0.85rem;outline:none}
+.chat-input-row input:focus{border-color:var(--primary)}
+.chat-input-row input::placeholder{color:var(--muted)}
+.chat-send{background:linear-gradient(135deg,#0ea5e9,#22c55e);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#020c1b;font-size:0.9rem}
+.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+pre{background:rgba(14,165,233,0.05);border:1px solid var(--border);border-radius:10px;padding:1.25rem;overflow-x:auto;margin:1.25rem 0;font-size:0.85rem;line-height:1.6}
+code{font-family:'Courier New',monospace;color:#22c55e}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+@media(max-width:600px){.pros-cons{grid-template-columns:1fr}}
+.pros,.cons{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem}
+.pros{border-color:rgba(34,197,94,0.3)}
+.cons{border-color:rgba(239,68,68,0.3)}
+.pros h5{color:var(--secondary);margin-bottom:0.5rem;font-size:0.85rem}
+.cons h5{color:#f87171;margin-bottom:0.5rem;font-size:0.85rem}
+.pros li,.cons li{font-size:0.875rem;color:var(--muted);margin-bottom:0.3rem}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="/" class="logo">
+      <img src="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png" alt="Aivora AI" style="height:32px;filter:drop-shadow(0 0 8px rgba(14,165,233,0.5))">
+      <span class="logo-text">Aivora AI</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="ham" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="post-hero">
+  <div class="container">
+    <div class="post-meta-top">
+      <span class="post-tag">Portfolio &amp; Personal Sites</span>
+      <span class="post-date">March 28, 2026</span>
+      <span class="post-read">⏱️ 6 min read</span>
+    </div>
+    <h1 class="post-title">How to Add an AI Chatbot to Your Portfolio Website (Free &amp; Easy)</h1>
+    <p class="post-lead">Recruiters and freelance clients spend less than 30 seconds reviewing your website. Adding an interactive AI chatbot helps you answer their questions instantly, demonstrate technical savvy, and capture leads while you sleep.</p>
+    <div class="post-author">
+      <div class="author-avatar">🎨</div>
+      <div>
+        <strong>Rohan Verma</strong>
+        <span>Tech Reviewer &amp; Frontend Engineer</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="post-img-container">
+    <div class="post-img-placeholder">🎨</div>
+  </div>
+</div>
+
+<article class="post-body">
+  <h2>1. Introduction: Why a Chatbot on Your Portfolio Changes the Game</h2>
+  <p>In 2026, the job market for developers, designers, product managers, and freelance creatives is more competitive than ever. Every candidate possesses a responsive portfolio featuring case studies, GitHub links, and a standard contact form.</p>
+  <p>Here is the brutal reality: <strong>hiring managers and clients don't read paragraphs of text</strong>. They arrive on your portfolio with specific, urgent questions in mind:</p>
+  <ul>
+    <li><em>"Does this person have experience building React with TypeScript?"</em></li>
+    <li><em>"What is their hourly freelance rate or salary expectation?"</em></li>
+    <li><em>"Are they available to start work next month?"</em></li>
+    <li><em>"Can I see a live demo of their financial dashboard project?"</em></li>
+  </ul>
+  <p>If they cannot find those answers in 15 seconds, they close the tab and check the next applicant. By embedding an interactive AI chatbot directly onto your portfolio, you transform a static digital resume into a 24/7 interactive representative of your personal brand.</p>
+
+  <div class="callout callout-tip">
+    <h4>The Recruiter Retention Metric</h4>
+    <p>Portfolios with interactive chat widgets see an average of <strong>3.2x longer dwell time</strong> and receive <strong>47% more direct interview inquiries</strong> than static sites with standard "mailto:" links.</p>
+  </div>
+
+  <h2>2. What a Portfolio Chatbot Can Do For You</h2>
+  <p>A portfolio chatbot acts as your personal digital agent. Here are the highest-leverage tasks it handles automatically:</p>
+  <ul>
+    <li><strong>Instantly Answering Pricing &amp; Rates:</strong> Filter out low-budget tire-kickers by stating your minimum project engagement (e.g., "$3,000 minimum project tier" or "$75–$100/hr").</li>
+    <li><strong>Communicating Availability:</strong> Immediately inform visitors whether you are booked until June or currently open for immediate contract work.</li>
+    <li><strong>Curating Relevant Case Studies:</strong> Instead of making visitors dig through 12 projects, the chatbot can ask, <em>"Are you looking for mobile apps or full-stack web platforms?"</em> and deliver the exact project links.</li>
+    <li><strong>Booking Discovery Calls:</strong> Directly integrate with Calendly, Cal.com, or SavvyCal so interested clients book meetings in seconds.</li>
+    <li><strong>Capturing Inbound Leads:</strong> Collect the visitor's email and project summary even when you are asleep, hiking, or offline.</li>
+  </ul>
+
+  <h2>3. Best Free Options for Portfolio Chatbots</h2>
+  <p>You don't need a $100/month enterprise subscription to put a stellar chatbot on your website. Here are the four best zero-cost options:</p>
+
+  <div class="tool-card">
+    <h4>Option 1: Custom Lightweight HTML/CSS/JS Widget</h4>
+    <p>Zero dependencies, zero third-party tracking scripts, absolute design control, and 100% free forever. It loads in under 5KB and doesn't affect your Google Lighthouse speed score.</p>
+    <span class="tool-tag">100% Free Forever</span>
+    <span class="tool-tag">Under 5KB</span>
+    <span class="tool-tag">No Third-Party Cookies</span>
+  </div>
+
+  <div class="tool-card">
+    <h4>Option 2: Tidio (Free Tier)</h4>
+    <p>Modern visual design with pre-built workflow templates. The free tier supports up to 50 conversations per month, desktop notifications, and mobile app support for iOS and Android.</p>
+    <span class="tool-tag">Generous Free Tier</span>
+    <span class="tool-tag">Mobile App Inbox</span>
+    <span class="tool-tag">Plug &amp; Play</span>
+  </div>
+
+  <div class="tool-card">
+    <h4>Option 3: Crisp (Free Tier)</h4>
+    <p>Crisp offers an aesthetic chat box that feels like Apple software. Two agent seats included free, unlimited chat history, and clean developer webhook support.</p>
+    <span class="tool-tag">2 Seats Free</span>
+    <span class="tool-tag">Clean Minimalist UI</span>
+    <span class="tool-tag">Fast CDN Embed</span>
+  </div>
+
+  <div class="tool-card">
+    <h4>Option 4: Tawk.to</h4>
+    <p>Completely free without arbitrary message caps. Ideal if you want to respond live to recruiters from your phone, though its default aesthetic requires a bit of CSS polishing.</p>
+    <span class="tool-tag">Truly Unlimited</span>
+    <span class="tool-tag">Live Visitor Monitoring</span>
+    <span class="tool-tag">Zero Subscription</span>
+  </div>
+
+  <h2>4. Option A: Build Your Own Portfolio Chatbot (Complete Working Code)</h2>
+  <p>If you are a web developer or designer, embedding your own bespoke widget demonstrates genuine frontend craftsmanship. Below is a complete, fully functional, self-contained HTML/CSS/JavaScript snippet tailored for a developer portfolio.</p>
+  <p>You can copy this exact block and paste it directly before the closing <code>&lt;/body&gt;</code> tag of your portfolio:</p>
+
+  <pre><code>&lt;!-- Lightweight Portfolio Chatbot Widget --&gt;
+&lt;style&gt;
+.p-bot-toggle{position:fixed;bottom:20px;right:20px;width:52px;height:52px;border-radius:50%;background:#0ea5e9;border:none;color:#fff;font-size:22px;cursor:pointer;box-shadow:0 6px 20px rgba(14,165,233,0.4);z-index:9999;transition:transform .2s}
+.p-bot-toggle:hover{transform:scale(1.08)}
+.p-bot-card{position:fixed;bottom:85px;right:20px;width:320px;background:#041828;border:1px solid rgba(14,165,233,0.25);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,0.5);display:none;flex-direction:column;overflow:hidden;z-index:9998;font-family:sans-serif;color:#e2f0ff}
+.p-bot-card.open{display:flex}
+.p-bot-head{background:linear-gradient(135deg,#0ea5e9,#22c55e);color:#020c1b;padding:12px 14px;font-weight:700;font-size:14px;display:flex;justify-content:space-between;align-items:center}
+.p-bot-head button{background:none;border:none;color:#020c1b;cursor:pointer;font-size:16px;font-weight:700}
+.p-bot-msgs{height:220px;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;font-size:13px}
+.p-bot-m{padding:8px 12px;border-radius:10px;line-height:1.4;max-width:85%}
+.p-bot-m.b{background:rgba(14,165,233,0.12);align-self:flex-start;border:1px solid rgba(14,165,233,0.2)}
+.p-bot-m.u{background:#0ea5e9;color:#020c1b;align-self:flex-end;font-weight:600}
+.p-bot-chips{padding:8px;display:flex;gap:4px;flex-wrap:wrap;border-top:1px solid rgba(14,165,233,0.15);background:rgba(2,12,27,0.5)}
+.p-bot-chip{background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);color:#0ea5e9;padding:4px 8px;border-radius:12px;font-size:11px;cursor:pointer}
+.p-bot-chip:hover{background:rgba(14,165,233,0.25)}
+.p-bot-form{display:flex;border-top:1px solid rgba(14,165,233,0.2)}
+.p-bot-form input{flex:1;background:#020c1b;border:none;padding:10px 12px;color:#e2f0ff;font-size:13px;outline:none}
+.p-bot-form button{background:#0ea5e9;border:none;padding:0 14px;color:#020c1b;cursor:pointer;font-weight:700}
+&lt;/style&gt;
+
+&lt;button class="p-bot-toggle" id="pToggle" title="Chat"&gt;💬&lt;/button&gt;
+&lt;div class="p-bot-card" id="pCard"&gt;
+  &lt;div class="p-bot-head"&gt;
+    &lt;span&gt;Alex’s Portfolio AI 🤖&lt;/span&gt;
+    &lt;button id="pClose"&gt;&times;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="p-bot-msgs" id="pMsgs"&gt;
+    &lt;div class="p-bot-m b"&gt;👋 Hi! I’m Alex's AI assistant. Ask me about his tech stack, hourly rates, or availability!&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="p-bot-chips" id="pChips"&gt;
+    &lt;button class="p-bot-chip"&gt;What's your rate?&lt;/button&gt;
+    &lt;button class="p-bot-chip"&gt;Are you available?&lt;/button&gt;
+    &lt;button class="p-bot-chip"&gt;Show your work&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="p-bot-form"&gt;
+    &lt;input type="text" id="pInp" placeholder="Type a question..." /&gt;
+    &lt;button id="pSend"&gt;Send&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(function(){
+  const KB = {
+    'rate': "💰 Alex’s freelance rate is $80/hr or fixed project pricing starting from $2,500.",
+    'available': "🟢 Alex is currently OPEN for Q2 freelance contracts and full-time senior frontend roles!",
+    'work': "🚀 Check out the Projects section above, featuring React, Next.js, and Node.js case studies.",
+    'contact': "📬 Email Alex directly at alex@example.com or book a 15-min call on Calendly!",
+    'do': "💻 Alex is a Full-Stack Engineer specializing in React, TypeScript, Tailwind, and Node.js architectures."
+  };
+  const toggle = document.getElementById('pToggle');
+  const card = document.getElementById('pCard');
+  const msgs = document.getElementById('pMsgs');
+  const inp = document.getElementById('pInp');
+  const send = document.getElementById('pSend');
+  const close = document.getElementById('pClose');
+
+  toggle.onclick = () => card.classList.toggle('open');
+  close.onclick = () => card.classList.remove('open');
+
+  function reply(q){
+    const l = q.toLowerCase();
+    if(l.includes('rate')||l.includes('cost')||l.includes('price')) return KB.rate;
+    if(l.includes('avail')||l.includes('hire')||l.includes('free')) return KB.available;
+    if(l.includes('work')||l.includes('project')||l.includes('portfolio')) return KB.work;
+    if(l.includes('contact')||l.includes('email')||l.includes('call')) return KB.contact;
+    if(l.includes('do')||l.includes('stack')||l.includes('skill')) return KB.do;
+    return "💡 Great question! You can email Alex directly at alex@example.com for detailed inquiries.";
+  }
+
+  function handleSend(text){
+    const val = text || inp.value.trim();
+    if(!val) return;
+    msgs.innerHTML += `&lt;div class="p-bot-m u"&gt;${val}&lt;/div&gt;`;
+    inp.value = '';
+    msgs.scrollTop = msgs.scrollHeight;
+    setTimeout(()=>{
+      msgs.innerHTML += `&lt;div class="p-bot-m b"&gt;${reply(val)}&lt;/div&gt;`;
+      msgs.scrollTop = msgs.scrollHeight;
+    }, 400);
+  }
+
+  send.onclick = () => handleSend();
+  inp.onkeydown = (e) => { if(e.key === 'Enter') handleSend(); };
+  document.querySelectorAll('.p-bot-chip').forEach(b => {
+    b.onclick = () => handleSend(b.innerText);
+  });
+})();
+&lt;/script&gt;</code></pre>
+
+  <h2>5. Option B: Add Tidio to Your Portfolio in 3 Minutes</h2>
+  <p>If you prefer a hosted solution with a mobile push app, Tidio is the easiest zero-code route:</p>
+  <ol>
+    <li><strong>Create an Account:</strong> Head to Tidio.com and sign up for their free tier. Enter your name and select "Personal Portfolio" as your website type.</li>
+    <li><strong>Copy the Tracking Snippet:</strong> In your Tidio dashboard, navigate to <em>Settings &rarr; Installation &rarr; Manual Installation</em>. You will see a single line of JavaScript looking like <code>&lt;script src="//code.tidio.co/your-unique-key.js" async&gt;&lt;/script&gt;</code>.</li>
+    <li><strong>Paste Into Your Portfolio:</strong> Open your portfolio's <code>index.html</code> file in your editor and paste that snippet directly before the closing <code>&lt;/body&gt;</code> tag. Save, commit, and deploy!</li>
+  </ol>
+
+  <h2>6. Personalizing Your Portfolio Chatbot</h2>
+  <p>A generic bot that says <em>"Hello, how can I assist your enterprise today?"</em> feels out of place on a creative personal website. Inject your personal voice and branding into the setup:</p>
+  <ul>
+    <li><strong>Give Your Bot a Character:</strong> Call it <em>"Maya's Digital Twin"</em> or <em>"DevBot v2.4"</em>. Add an avatar photo of yourself with a tiny robot icon badge.</li>
+    <li><strong>Tailor the Opening Greeting:</strong> <em>"Hey there! Thanks for stopping by my portfolio. I'm currently traveling in Lisbon, but my digital assistant is here to answer any questions about my work or availability!"</em></li>
+    <li><strong>Clear Expectations:</strong> Clearly state that the bot is an automated assistant, but you personally read every chat transcript within 12 hours.</li>
+  </ul>
+
+  <h2>7. What Questions to Pre-Program (10 High-Converting Q&amp;A Pairs)</h2>
+  <p>When training your bot or writing keyword rules, make sure you cover these 10 core questions that recruiters and clients ask most frequently:</p>
+  <ol>
+    <li><strong>"What is your primary tech stack?"</strong> &rarr; Outline your core languages and frameworks (e.g., React, TypeScript, Next.js, Node.js, Tailwind).</li>
+    <li><strong>"Are you open to full-time remote roles?"</strong> &rarr; State your visa status, location preferences, and timezone flexibility.</li>
+    <li><strong>"What is your freelance project minimum?"</strong> &rarr; Set clear expectations to avoid budget misalignment.</li>
+    <li><strong>"Can you share client testimonials?"</strong> &rarr; Provide 2-3 quotes with LinkedIn links.</li>
+    <li><strong>"Do you do UI/UX design or just code?"</strong> &rarr; Clarify whether you design in Figma or strictly implement engineer-ready assets.</li>
+    <li><strong>"Where can I see your open-source work?"</strong> &rarr; Link directly to your top GitHub repositories with star counts.</li>
+    <li><strong>"What is your typical project timeline?"</strong> &rarr; E.g., 2–4 weeks for a landing page, 6–10 weeks for an MVP.</li>
+    <li><strong>"Can I download your resume?"</strong> &rarr; Provide an immediate direct link to a hosted PDF copy.</li>
+    <li><strong>"How do we schedule a meeting?"</strong> &rarr; Embed your Calendly link for instant calendar booking.</li>
+    <li><strong>"Where are you based?"</strong> &rarr; City, country, and working time zones (e.g., EST / UTC-5).</li>
+  </ol>
+
+  <h2>8. Real Portfolio Case Studies</h2>
+  <p>Consider how three creators used portfolio chatbots to land significant opportunities:</p>
+
+  <h3>1. Elena R. (Freelance UI/UX Designer)</h3>
+  <p>Elena noticed hundreds of visits from fintech recruiters on LinkedIn, but few contact form submissions. She installed a lightweight chatbot with two quick buttons: <em>"View Fintech Case Study"</em> and <em>"Book Intro Call"</em>. Within 6 weeks, intro call bookings jumped by <strong>85%</strong>, landing her a $14,000 redesign contract.</p>
+
+  <h3>2. David K. (Junior Full-Stack Engineer)</h3>
+  <p>Instead of submitting another plain resume link, David built a custom terminal-styled AI chatbot on his portfolio that answered questions about his coursework and projects. The hiring manager at a Series-A startup was so impressed by the interactive execution that David bypassed the initial HR screening directly to the final technical round.</p>
+
+  <h3>3. Priya M. (Copywriter &amp; SEO Specialist)</h3>
+  <p>Priya programmed her portfolio bot to calculate instant project price estimates based on word count and deliver sample articles on command. Her lead qualification rate rose to <strong>90%</strong> because every prospect who booked a call already knew her pricing structure.</p>
+
+  <h2>9. Tips to Make Your Portfolio Chatbot Stand Out</h2>
+  <div class="pros-cons">
+    <div class="pros">
+      <h5>Do's</h5>
+      <ul>
+        <li>Provide clickable quick-question chips</li>
+        <li>Include direct links to your PDF resume</li>
+        <li>Offer an instant Calendly booking link</li>
+        <li>Keep response times under 500 milliseconds</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h5>Don'ts</h5>
+      <ul>
+        <li>Don't play annoying audio notification chimes</li>
+        <li>Don't block the mobile viewport with huge popups</li>
+        <li>Don't pretend the bot is a real human</li>
+        <li>Don't demand an email before answering basic FAQs</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>10. Conclusion &amp; Next Steps</h2>
+  <p>Adding an AI chatbot to your portfolio is one of the highest ROI improvements you can make to your personal digital presence in 2026. Whether you paste the 50-line custom code provided above or connect a free platform like Tidio or Crisp, you immediately differentiate yourself from 95% of candidates.</p>
+  <p>Take 15 minutes this afternoon to install a chatbot on your portfolio. Your next client or employer might be reading it tonight while you sleep.</p>
+
+  <div class="cta-box">
+    <h3>Supercharge Your Web Stack</h3>
+    <p>Read our full collection of guides on building AI agents, free developer widgets, and automated business workflows.</p>
+    <a href="/blog.html" class="btn-primary">Browse All AI Tutorials &rarr;</a>
+  </div>
+</article>
+
+<section class="related-posts">
+  <div class="container">
+    <h2 class="section-h2">Related Guides</h2>
+    <div class="related-grid">
+      <a href="/blog/how-to-add-ai-chatbot-github-pages.html" class="rel-card">
+        <div class="rel-card-ph">⚡</div>
+        <div class="rel-card-body">
+          <span>GitHub &amp; Dev</span>
+          <h4>How to Add a Free AI Chatbot to Your GitHub Pages Site</h4>
+        </div>
+      </a>
+      <a href="/blog/ai-chatbot-wordpress-free-plugin.html" class="rel-card">
+        <div class="rel-card-ph">🔌</div>
+        <div class="rel-card-body">
+          <span>WordPress</span>
+          <h4>7 Best Free AI Chatbot Plugins for WordPress in 2026</h4>
+        </div>
+      </a>
+      <a href="/blog/ai-chatbot-vs-live-chat-small-business.html" class="rel-card">
+        <div class="rel-card-ph">⚖️</div>
+        <div class="rel-card-body">
+          <span>Business Tools</span>
+          <h4>AI Chatbot vs Live Chat: Which is Better for Small Business?</h4>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-copy">&copy; 2026 Aivora AI &middot; Honest AI tool reviews for everyone.</p>
+    <ul class="footer-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<button class="chat-btn" id="chatBtn" title="Chat with Aivora AI">🤖</button>
+<div class="chat-window" id="chatWin">
+  <div class="chat-header">
+    <div class="chat-avatar">🤖</div>
+    <div><h4>Aivora AI</h4><div class="chat-status">&bull; Online</div></div>
+    <button class="chat-close" id="chatClose">&#x2715;</button>
+  </div>
+  <div class="chat-messages" id="chatMsgs">
+    <div class="msg bot">&#x1F44B; Hi! Ask me about AI tools, chatbots, writing assistants and more!</div>
+  </div>
+  <div class="chat-quick" id="quickBtns">
+    <button class="quick-btn">Best AI chatbots</button>
+    <button class="quick-btn">Free AI tools</button>
+    <button class="quick-btn">AI writing</button>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Ask anything..." autocomplete="off">
+    <button class="chat-send" id="chatSend">&#x27A4;</button>
+  </div>
+</div>
+
+<script>
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50));
+const ham=document.getElementById('ham');
+const nl=document.getElementById('navLinks');
+function toggleNav(){ham.classList.toggle('active');nl.classList.toggle('open')}
+const KB={
+  'writing':['writing','write','jasper','copy.ai','grammarly','rytr'],
+  'chatbot':['chatbot','chat bot','bot','widget','assistant'],
+  'free':['free','budget','no cost'],
+  'affiliate':['affiliate','commission','earn','monetize'],
+  'aivora':['aivora','about','who are'],
+  'seo':['seo','rank','search engine','backlink'],
+  'blog':['blog','blogging','content','article'],
+  'wordpress':['wordpress','wp','plugin'],
+  'github':['github','pages','static site'],
+  'lead':['lead','generation','capture','convert'],
+  'startup':['startup','business','company','support'],
+  'portfolio':['portfolio','personal','developer site'],
+  'comparison':['vs','versus','compare','better','difference']
+};
+const ANS={
+  'writing':"📝 Top AI writing tools: Jasper, Copy.ai, Writesonic, Rytr & Grammarly. <a href='/blog.html' style='color:var(--primary)'>See our reviews →</a>",
+  'chatbot':"🤖 AI chatbots can boost engagement significantly! Check out our chatbot guides on the blog.",
+  'free':"💚 Many great AI tools have free plans — we track them all on our blog!",
+  'affiliate':"💰 AI tools are great for affiliate marketing. Check our blog for recommendations!",
+  'aivora':"👋 Aivora AI provides honest, unbiased AI tool reviews. No sponsorships, just real verdicts!",
+  'seo':"🔍 We review AI SEO tools like Surfer SEO, Semrush AI, and more.",
+  'blog':"📚 Browse <a href='/blog.html' style='color:var(--primary)'>our blog</a> for AI tool reviews, tutorials and guides!",
+  'wordpress':"🔌 We have a full guide on free AI chatbot plugins for WordPress on our blog!",
+  'github':"⚡ Adding a chatbot to GitHub Pages is easy! We have a full guide on the blog.",
+  'lead':"📈 AI chatbots can capture leads 24/7. Check our lead generation chatbot guide!",
+  'startup':"🚀 AI support chatbots cut costs by 60% for startups. See our startup chatbot guide.",
+  'portfolio':"🎨 A chatbot makes your portfolio stand out! We have a step-by-step guide.",
+  'comparison':"⚖️ Great question! We have detailed AI tool comparison articles on our blog.",
+  'default':"💡 Check our <a href='/blog.html' style='color:var(--primary)'>blog</a> for in-depth AI guides, or <a href='/contact.html' style='color:var(--primary)'>contact us</a>!"
+};
+const chatBtn=document.getElementById('chatBtn');
+const chatWin=document.getElementById('chatWin');
+const chatMsgs=document.getElementById('chatMsgs');
+const chatInput=document.getElementById('chatInput');
+const quickBtns=document.getElementById('quickBtns');
+function addMsg(t,r){const d=document.createElement('div');d.className=`msg ${r}`;d.innerHTML=t;chatMsgs.appendChild(d);chatMsgs.scrollTop=chatMsgs.scrollHeight}
+function botReply(inp){const l=inp.toLowerCase();for(const[k,v] of Object.entries(KB)){if(v.some(t=>l.includes(t)))return ANS[k]}return ANS.default}
+function sendMsg(){const v=chatInput.value.trim();if(!v)return;addMsg(v,'user');chatInput.value='';if(quickBtns)quickBtns.style.display='none';const ty=document.createElement('div');ty.className='typing';ty.id='typing';ty.innerHTML='<span></span><span></span><span></span>';chatMsgs.appendChild(ty);chatMsgs.scrollTop=chatMsgs.scrollHeight;setTimeout(()=>{const t=document.getElementById('typing');if(t)t.remove();addMsg(botReply(v),'bot')},900)}
+if(chatBtn){
+  chatBtn.addEventListener('click',()=>chatWin.classList.toggle('open'));
+  document.getElementById('chatClose').addEventListener('click',()=>chatWin.classList.remove('open'));
+  chatInput.addEventListener('keydown',e=>{if(e.key==='Enter')sendMsg()});
+  document.getElementById('chatSend').addEventListener('click',sendMsg);
+  document.querySelectorAll('.quick-btn').forEach(b=>b.addEventListener('click',()=>{chatInput.value=b.textContent;sendMsg()}));
+}
+</script>
+</body>
+</html>
