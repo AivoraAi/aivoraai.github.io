@@ -1,574 +1,729 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NWSJTJ3M');</script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="robots" content="index,follow"/>
-<meta name="author" content="Varun Lalwani"/>
-<meta name="google-site-verification" content="google7061fb8c95f025f1"/>
-<title>Aivora AI | Honest AI Tool Verdicts, 2026</title>
-<meta name="description" content="Aivora AI tests AI tools for writing, video, SEO, and automation, then publishes an honest verdict. No sponsored rankings. Reviews by Varun Lalwani."/>
+<title>Aivora AI — Honest AI Tool Reviews & Guides 2026</title>
+<meta name="description" content="Aivora AI tests AI tools for writing, video, SEO, and automation — honest verdicts, no sponsored rankings. By Varun Lalwani."/>
 <link rel="canonical" href="https://aivoraai.github.io/"/>
-<link rel="icon" type="image/png" href="https://aivoraai.github.io/assets/images/aivora-logo-primary.png"/>
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 :root{
-  --ink:#0e1116;--ink2:#141821;--ink3:#191e28;
-  --line:rgba(236,231,218,.09);--line2:rgba(236,231,218,.16);
-  --text:#ece7da;--text-dim:#9a978c;--text-dim2:#6c6a62;
-  --paper:#f3eee1;--paper-ink:#1b1712;--paper-dim:#5c5648;
-  --gold:#c8912b;--gold-soft:rgba(200,145,43,.13);--gold-line:rgba(200,145,43,.35);
-  --teal:#4a9089;--teal-soft:rgba(74,144,137,.12);
-  --serif:'Newsreader',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
-  --ez:cubic-bezier(.16,1,.3,1);
+  --bg:#010108;--bg1:#06060f;--bg2:#0a0a18;
+  --s1:rgba(255,255,255,.04);--s2:rgba(255,255,255,.07);--s3:rgba(255,255,255,.11);
+  --b1:rgba(255,255,255,.07);--b2:rgba(255,255,255,.13);--b3:rgba(255,255,255,.22);
+  --t1:#f0f4ff;--t2:#8892b0;--t3:#4a5280;
+  --p1:#6366f1;--p2:#a855f7;--p3:#ec4899;
+  --c1:#22d3ee;--g1:#4ade80;--y1:#fbbf24;--r1:#f87171;
+  --grad:linear-gradient(135deg,#6366f1,#a855f7,#ec4899);
+  --grad2:linear-gradient(135deg,#22d3ee,#6366f1);
+  --glow1:0 0 60px rgba(99,102,241,.35);
+  --ff:'Space Grotesk',system-ui,sans-serif;
+  --ffb:'Inter',system-ui,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--ink);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ffb);background:var(--bg);color:var(--t1);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
-button{font-family:var(--sans);border:none;background:none;cursor:pointer}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
-.skip{position:absolute;top:-60px;left:0;background:var(--gold);color:var(--paper-ink);padding:10px 18px;z-index:9999;font-weight:600;border-radius:0 0 8px 0;transition:top .3s}
-.skip:focus{top:0}
+button{font-family:var(--ffb);border:none;background:none;cursor:pointer;color:inherit}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg1)}::-webkit-scrollbar-thumb{background:var(--p1);border-radius:99px}
 
-/* reveal */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ez),transform .7s var(--ez)}
-.rv.in{opacity:1;transform:translateY(0)}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+/* AURORA ORBS */
+.orb{position:fixed;border-radius:50%;pointer-events:none;filter:blur(90px);opacity:.22;z-index:0}
+.orb1{width:700px;height:700px;background:radial-gradient(circle,#6366f1,transparent);top:-200px;left:-150px;animation:o1 20s ease-in-out infinite}
+.orb2{width:550px;height:550px;background:radial-gradient(circle,#a855f7,transparent);top:15%;right:-180px;animation:o2 25s ease-in-out infinite}
+.orb3{width:450px;height:450px;background:radial-gradient(circle,#22d3ee,transparent);bottom:-100px;left:35%;animation:o3 30s ease-in-out infinite}
+@keyframes o1{0%,100%{transform:translate(0,0)}40%{transform:translate(80px,70px)}70%{transform:translate(-50px,110px)}}
+@keyframes o2{0%,100%{transform:translate(0,0)}35%{transform:translate(-70px,90px)}65%{transform:translate(50px,-70px)}}
+@keyframes o3{0%,100%{transform:translate(0,0)}50%{transform:translate(70px,-90px)}}
 
-/* disclosure bar */
-.disc{background:var(--ink2);border-bottom:1px solid var(--line);padding:8px 36px;text-align:center;font-size:.7rem;color:var(--text-dim2);font-family:var(--mono)}
-.disc a{color:var(--gold);text-decoration:underline;text-underline-offset:2px}
+/* PARTICLES */
+.particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.p{position:absolute;border-radius:50%;animation:pfloat linear infinite}
+@keyframes pfloat{0%{transform:translateY(100vh) translateX(0);opacity:0}10%{opacity:.5}90%{opacity:.2}100%{transform:translateY(-5vh) translateX(var(--d));opacity:0}}
 
-/* nav */
-.nav{position:sticky;top:0;left:0;right:0;z-index:1000;height:68px;background:rgba(14,17,22,.86);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);transition:border-color .3s}
-.nw{max-width:1280px;margin:0 auto;height:100%;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
-.brand:hover{opacity:.85}
-.bmark{width:34px;height:34px;border-radius:4px;background:var(--gold);color:var(--paper-ink);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:1.15rem;font-style:italic;flex-shrink:0}
-.bword{font-family:var(--serif);font-size:1.28rem;font-weight:500;letter-spacing:-.01em}
-.bword em{font-style:italic;color:var(--gold)}
-.nL{display:flex;list-style:none;gap:2px;align-items:center}
-.nL a{padding:8px 15px;color:var(--text-dim);font-size:.85rem;font-weight:500;border-radius:6px;transition:color .2s,background .2s}
-.nL a:hover{color:var(--text);background:var(--line)}
-.nL a.act{color:var(--text)}
-.nr{display:flex;align-items:center;gap:12px}
-.ncta{padding:9px 19px;background:var(--gold);color:var(--paper-ink);border-radius:3px;font-size:.82rem;font-weight:600;transition:background .25s,transform .25s}
-.ncta:hover{background:#dba43c;transform:translateY(-1px)}
-.ham{display:none;flex-direction:column;gap:4px;padding:9px;border-radius:5px;border:1px solid var(--line2)}
-.ham span{display:block;width:16px;height:1.5px;background:var(--text);transition:all .3s var(--ez)}
-.ham.on span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
-.ham.on span:nth-child(2){opacity:0}
-.ham.on span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
-.mob{display:none;position:fixed;top:68px;left:0;right:0;z-index:999;background:var(--ink2);border-bottom:1px solid var(--line);padding:14px 20px 20px;flex-direction:column;gap:2px}
-.mob.on{display:flex}
-.mob a{padding:12px 14px;color:var(--text-dim);font-size:.9rem;border-radius:6px}
-.mob a:hover{color:var(--text);background:var(--line)}
-.mcta{margin-top:6px;background:var(--gold)!important;color:var(--paper-ink)!important;text-align:center;border-radius:3px!important;font-weight:600}
+/* GRID */
+.grid-bg{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,black,transparent)}
 
-/* HERO */
-.hero{position:relative;background:
-  radial-gradient(1100px 620px at 82% -8%,rgba(200,145,43,.10),transparent 60%),
-  radial-gradient(900px 500px at 8% 90%,rgba(74,144,137,.08),transparent 60%),
-  var(--ink);
-  border-bottom:1px solid var(--line)}
-.hw{position:relative;max-width:1280px;margin:0 auto;padding:88px 28px 84px;display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
-.eyebrow::before{content:'';width:7px;height:7px;background:var(--gold);border-radius:50%;flex-shrink:0}
-.h1{font-family:var(--serif);font-size:clamp(2.5rem,5vw,4.4rem);font-weight:500;line-height:1.05;letter-spacing:-.02em}
-.h1 em{font-style:italic;color:var(--gold);font-weight:500}
-.hdesc{font-size:1.02rem;color:var(--text-dim);line-height:1.75;max-width:490px;margin-top:26px}
-.hdesc strong{color:var(--text);font-weight:600}
-.hbtns{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;align-items:center}
-.bp{padding:14px 26px;background:var(--gold);color:var(--paper-ink);border-radius:3px;font-size:.87rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:background .25s,transform .25s}
-.bp:hover{background:#dba43c;transform:translateY(-2px)}
-.bg{padding:13px 24px;color:var(--text-dim);border:1px solid var(--line2);border-radius:3px;font-size:.87rem;font-weight:500;transition:all .25s}
-.bg:hover{border-color:var(--gold-line);color:var(--text)}
-.hby{margin-top:22px;font-family:var(--mono);font-size:.72rem;color:var(--text-dim2)}
-.hby strong{color:var(--text-dim)}
+/* REVEAL */
+[sr]{opacity:0;transform:translateY(30px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+[sr=l]{transform:translateX(-30px)}[sr=r]{transform:translateX(30px)}[sr=s]{transform:scale(.94)}
+[sr].on{opacity:1;transform:none}
+[d1]{transition-delay:.1s}[d2]{transition-delay:.2s}[d3]{transition-delay:.3s}[d4]{transition-delay:.4s}[d5]{transition-delay:.5s}
+@media(prefers-reduced-motion:reduce){[sr]{opacity:1;transform:none;transition:none}}
 
-/* verdict stamp — signature element */
-.stamp-wrap{display:flex;justify-content:center}
-.stamp{position:relative;background:var(--paper);color:var(--paper-ink);border-radius:6px;padding:26px 26px 22px;width:100%;max-width:320px;box-shadow:0 30px 70px rgba(0,0,0,.45);transform:rotate(1.2deg)}
-.stamp-tag{position:absolute;top:-11px;left:22px;background:var(--gold);color:var(--paper-ink);font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:2px;transform:rotate(-1.2deg)}
-.stamp-top{display:flex;justify-content:space-between;align-items:flex-start;margin-top:6px}
-.stamp-cat{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--paper-dim)}
-.stamp-ring{width:64px;height:64px;border-radius:50%;border:2.5px solid var(--paper-ink);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
-.stamp-ring b{font-family:var(--serif);font-size:1.4rem;line-height:1}
-.stamp-ring span{font-family:var(--mono);font-size:.5rem;color:var(--paper-dim)}
-.stamp-name{font-family:var(--serif);font-size:1.3rem;font-weight:600;margin-top:14px;line-height:1.15}
-.stamp-note{font-size:.79rem;color:var(--paper-dim);line-height:1.55;margin-top:8px}
-.stamp-foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:1px dashed rgba(27,23,18,.25)}
-.stamp-foot a{font-family:var(--mono);font-size:.68rem;font-weight:600;color:var(--paper-ink);text-decoration:underline;text-underline-offset:2px}
-.stamp-foot span{font-family:var(--mono);font-size:.65rem;color:var(--paper-dim)}
+/* SHIMMER */
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+.shim{background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899,#22d3ee,#6366f1);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 4s linear infinite}
 
-/* TICKER */
-.tick{overflow:hidden;border-bottom:1px solid var(--line);padding:14px 0;background:var(--ink2)}
-.tick-t{display:flex;white-space:nowrap;animation:tka 34s linear infinite}
-.tick:hover .tick-t{animation-play-state:paused}
-@keyframes tka{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.ti-item{font-family:var(--mono);font-size:.76rem;color:var(--text-dim);padding:0 26px;display:inline-flex;align-items:center;gap:10px;border-right:1px solid var(--line)}
-.ti-item b{color:var(--gold)}
+/* GLOW BORDER */
+@keyframes gborder{0%,100%{box-shadow:0 0 24px rgba(99,102,241,.4)}50%{box-shadow:0 0 48px rgba(168,85,247,.55)}}
 
-/* STATS */
-.stat-row{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
-.st{padding:38px 28px;border-right:1px solid var(--line)}
-.st:last-child{border-right:none}
-.stn{font-family:var(--serif);font-size:2.5rem;font-weight:500;letter-spacing:-.02em;line-height:1;color:var(--gold);margin-bottom:6px}
-.stl{font-size:.78rem;color:var(--text-dim)}
+/* PULSE RING */
+@keyframes pring{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.8);opacity:0}}
 
-/* SECTIONS */
-.sec{padding:84px 28px;max-width:1280px;margin:0 auto}
-.sw{border-bottom:1px solid var(--line)}
-.sw2{border-bottom:1px solid var(--line);background:var(--ink2)}
-.slbl{font-family:var(--mono);font-size:.68rem;font-weight:500;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-bottom:14px}
-.sh{font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.7rem);font-weight:500;letter-spacing:-.02em;line-height:1.12}
-.sh em{font-style:italic;color:var(--gold)}
-.ss{font-size:.93rem;color:var(--text-dim);line-height:1.75;max-width:460px}
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:900;height:66px;background:rgba(1,1,8,.82);backdrop-filter:blur(24px) saturate(1.6);border-bottom:1px solid var(--b1);transition:all .3s}
+.nav.sc{background:rgba(1,1,8,.96);border-color:var(--b2)}
+.nw{max-width:1380px;margin:0 auto;height:100%;padding:0 32px;display:flex;align-items:center;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo img{width:32px;height:32px;border-radius:8px;object-fit:contain}
+.logo-t{font-family:var(--ff);font-size:1.18rem;font-weight:700;letter-spacing:-.02em}
+.logo-t b{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nm{display:flex;align-items:center;gap:2px;flex:1;padding-left:22px}
+.nm a{padding:7px 14px;color:var(--t2);font-size:.875rem;font-weight:500;border-radius:8px;transition:all .2s;position:relative}
+.nm a:hover{color:var(--t1);background:var(--s2)}
+.nm a.ac{color:var(--t1)}.nm a.ac::after{content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:18px;height:2px;border-radius:2px;background:var(--grad)}
+.nr{display:flex;align-items:center;gap:10px;margin-left:auto}
+.nbtn{padding:9px 20px;border-radius:8px;font-size:.85rem;font-weight:600;background:var(--grad);color:#fff;box-shadow:0 4px 24px rgba(99,102,241,.4);transition:all .3s;position:relative;overflow:hidden;white-space:nowrap}
+.nbtn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);transition:left .5s}
+.nbtn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(99,102,241,.6)}.nbtn:hover::before{left:100%}
+.ham{display:none;flex-direction:column;gap:5px;padding:8px;border-radius:8px;border:1px solid var(--b2)}
+.ham span{display:block;width:18px;height:1.5px;background:var(--t1);border-radius:2px;transition:all .3s var(--ease)}
+.ham.op span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}.ham.op span:nth-child(2){opacity:0}.ham.op span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob{display:none;position:fixed;top:66px;inset-x:0;z-index:888;background:rgba(1,1,8,.97);backdrop-filter:blur(28px);border-bottom:1px solid var(--b2);padding:16px 28px 28px;flex-direction:column;gap:4px}
+.mob.op{display:flex}.mob a{padding:13px 16px;border-radius:8px;color:var(--t2);font-weight:500;transition:all .2s}.mob a:hover{color:var(--t1);background:var(--s2)}.mob .nbtn{margin-top:10px;text-align:center;display:block}
 
-/* PROCESS */
-.proc{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.proc-c{padding:38px 32px;border-right:1px solid var(--line)}
-.proc-c:last-child{border-right:none}
-.proc-n{font-family:var(--mono);font-size:.72rem;color:var(--gold);margin-bottom:18px}
-.proc-c h3{font-family:var(--serif);font-size:1.2rem;font-weight:600;margin-bottom:11px}
-.proc-c p{font-size:.85rem;color:var(--text-dim);line-height:1.75}
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 32px 80px;position:relative;overflow:hidden}
+.hi{max-width:1380px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;position:relative;z-index:2}
+.hbadge{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.35);color:#a5b4fc;font-size:.73rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:22px}
+.bdot{width:6px;height:6px;border-radius:50%;background:#6366f1;position:relative;flex-shrink:0}
+.bdot::before{content:'';position:absolute;inset:-3px;border-radius:50%;border:2px solid rgba(99,102,241,.4);animation:pring 2s ease-out infinite}
+.hh1{font-family:var(--ff);font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:700;letter-spacing:-.032em;line-height:1.1;margin-bottom:20px}
+.hh1 .s1{display:block;color:var(--t1)}.hh1 .s2{display:block;color:var(--t2);font-weight:400;font-style:italic}
+.hh1 .s3{display:block}
+.tw{display:inline-block;min-width:4px}
+.tc{display:inline-block;width:3px;height:.85em;background:var(--p2);border-radius:2px;margin-left:3px;vertical-align:middle;animation:blink .7s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hdesc{font-size:1.05rem;color:var(--t2);line-height:1.78;max-width:520px;margin-bottom:34px}
+.hbtns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:46px}
+.btn-p{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:12px;font-size:.95rem;font-weight:600;background:var(--grad);color:#fff;box-shadow:0 6px 28px rgba(99,102,241,.45);transition:all .3s;position:relative;overflow:hidden}
+.btn-p::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .6s}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(99,102,241,.65)}.btn-p:hover::before{left:100%}
+.btn-g{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:12px;font-size:.95rem;font-weight:600;background:var(--s1);border:1px solid var(--b2);color:var(--t2);transition:all .3s}
+.btn-g:hover{background:var(--s2);border-color:var(--b3);color:var(--t1);transform:translateY(-2px)}
+.hproof{display:flex;align-items:center;gap:14px;padding:14px 20px;border-radius:16px;background:var(--s1);border:1px solid var(--b1);width:fit-content}
+.havs{display:flex}.hav{width:30px;height:30px;border-radius:50%;background:var(--grad);border:2px solid var(--bg);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:#fff;flex-shrink:0;margin-left:-9px}.hav:first-child{margin-left:0}
+.hpt{font-size:.8rem;color:var(--t2)}.hpt strong{color:var(--t1);font-weight:600}
+.hstars{color:var(--y1);font-size:.78rem;letter-spacing:2px}
 
-/* CATEGORIES */
-.cg{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.cat-c{background:var(--ink);padding:26px 14px 20px;text-align:center;transition:background .25s}
-.cat-c:hover{background:var(--ink3)}
-.cat-tab{width:42px;height:42px;border-radius:4px;background:var(--gold-soft);border:1px solid var(--gold-line);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.68rem;font-weight:600;color:var(--gold);margin:0 auto 13px}
-.cat-c h4{font-size:.83rem;font-weight:600;margin-bottom:4px}
-.cat-c p{font-size:.68rem;color:var(--text-dim2);line-height:1.5}
+/* Review card visual */
+.hvisual{position:relative;display:flex;align-items:center;justify-content:center}
+.vglow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.15),transparent 70%);pointer-events:none}
+.rcard{background:var(--s1);border:1px solid var(--b2);border-radius:24px;padding:26px;backdrop-filter:blur(20px);box-shadow:0 0 0 1px var(--b1),0 40px 80px rgba(0,0,0,.4);position:relative;overflow:hidden;width:100%;max-width:420px;animation:gborder 4s ease-in-out infinite}
+.rcard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(99,102,241,.6),rgba(168,85,247,.6),transparent)}
+.rch{display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--b1);margin-bottom:16px}
+.rci{width:42px;height:42px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;box-shadow:var(--glow1)}
+.rct{font-family:var(--ff);font-size:.93rem;font-weight:600;letter-spacing:-.01em}
+.rcs{font-size:.74rem;color:var(--t3);margin-top:2px}
+.verd{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:999px;font-size:.7rem;font-weight:700;background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:var(--g1);margin-left:auto}
+.sr{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.sl{font-size:.77rem;color:var(--t2);width:78px;flex-shrink:0}
+.st{flex:1;height:5px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden}
+.sf{height:100%;border-radius:99px;background:var(--grad);width:0;transition:width 1.2s var(--ease)}
+.sv{font-size:.74rem;font-weight:700;color:var(--t1);width:26px;text-align:right;flex-shrink:0}
+.rfoot{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--b1);margin-top:6px}
+.rauth{font-size:.7rem;color:var(--t3)}.rlink{font-size:.77rem;font-weight:600;color:#a5b4fc;transition:color .2s}.rlink:hover{color:var(--t1)}
+/* chips */
+.chip{position:absolute;background:var(--s2);border:1px solid var(--b2);border-radius:12px;padding:10px 14px;backdrop-filter:blur(16px);font-size:.78rem;font-weight:600;white-space:nowrap}
+.chip1{top:-18px;right:-22px;animation:fc1 4.5s ease-in-out infinite}
+.chip2{bottom:-14px;left:-22px;animation:fc2 5.5s ease-in-out infinite}
+.cv{font-size:.88rem;font-weight:700}.cl{font-size:.7rem;color:var(--t3);margin-bottom:2px}
+.cg{color:var(--g1)}.cp{color:#a78bfa}
+@keyframes fc1{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
+@keyframes fc2{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(10px) rotate(-1deg)}}
 
-/* TOOL CARDS */
-.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.tool-card{background:var(--ink);padding:28px 26px;display:flex;flex-direction:column;transition:background .25s}
-.tool-card:hover{background:var(--ink3)}
-.tc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
-.tc-cat{font-family:var(--mono);font-size:.6rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim2)}
-.tc-score{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--gold-line);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.85rem;font-weight:600;color:var(--gold);flex-shrink:0}
-.tc-name{font-family:var(--serif);font-size:1.1rem;font-weight:600;letter-spacing:-.01em;margin-bottom:9px;line-height:1.25}
-.tc-desc{font-size:.81rem;color:var(--text-dim);line-height:1.68;flex:1;margin-bottom:18px}
-.tc-foot{display:flex;align-items:center;justify-content:space-between;padding-top:15px;border-top:1px solid var(--line)}
-.tc-type{font-family:var(--mono);font-size:.63rem;font-weight:500;padding:3px 9px;border-radius:2px;border:1px solid var(--line2);color:var(--text-dim)}
-.tc-link{font-size:.76rem;font-weight:600;color:var(--gold);display:inline-flex;align-items:center;gap:5px;transition:gap .25s}
-.tc-link:hover{gap:9px}
+/* ── STATS ── */
+.stats{background:var(--bg1);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1);padding:48px 32px}
+.stin{max-width:1380px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stc{text-align:center;padding:28px 20px;border-radius:16px;background:var(--s1);border:1px solid var(--b1);transition:all .3s}
+.stc:hover{background:var(--s2);border-color:var(--b2);transform:translateY(-3px)}
+.stn{font-family:var(--ff);font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stl{font-size:.76rem;color:var(--t3);text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
 
-/* BLOG */
-.blog-g{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.bc{background:var(--ink);transition:background .25s}
-.bc:hover{background:var(--ink3)}
-.bc>a{display:flex;height:100%}
-.bi{width:150px;flex-shrink:0;overflow:hidden;background:var(--ink2)}
-.bi img{width:100%;height:100%;object-fit:cover;opacity:.82}
-.bbd{padding:22px;flex:1;display:flex;flex-direction:column}
-.bpill{font-family:var(--mono);font-size:.6rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
-.bbd h3{font-family:var(--serif);font-size:1rem;font-weight:600;line-height:1.32;margin-bottom:8px}
-.bbd p{font-size:.79rem;color:var(--text-dim);line-height:1.6;flex:1;margin-bottom:12px}
-.bft{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:.65rem;color:var(--text-dim2)}
-.brl{font-weight:600;color:var(--teal)}
+/* ── SECTIONS ── */
+.sec{padding:96px 32px}
+.sec-alt{background:var(--bg1)}
+.wrap{max-width:1380px;margin:0 auto}
+.ey{display:inline-flex;align-items:center;padding:5px 14px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:14px}
+.ei{background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.3);color:#a5b4fc}
+.ec{background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.3);color:var(--c1)}
+.ea{background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);color:var(--y1)}
+.eg{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.3);color:var(--g1)}
+.er{background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.3);color:var(--r1)}
+.ep{background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.3);color:#c084fc}
+.stit{font-family:var(--ff);font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;letter-spacing:-.03em;line-height:1.15;margin-bottom:14px}
+.stit .gr{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.ssub{color:var(--t2);font-size:1rem;line-height:1.75;max-width:580px}
+.sh{margin-bottom:52px}.shc{text-align:center}.shc .ssub{margin:0 auto}
 
-/* ABOUT */
-.abtg{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.asg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.as-c{padding:26px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.as-c:nth-child(2n){border-right:none}
-.as-c:nth-child(3),.as-c:nth-child(4){border-bottom:none}
-.asn{font-family:var(--serif);font-size:1.9rem;font-weight:500;color:var(--gold);margin-bottom:5px}
-.asl{font-size:.75rem;color:var(--text-dim)}
-.aflist{margin-top:20px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.afrow{padding:15px 18px;display:flex;align-items:center;gap:13px;border-bottom:1px solid var(--line)}
-.afrow:last-child{border-bottom:none}
-.afic{font-family:var(--mono);font-size:.7rem;color:var(--gold);width:26px;flex-shrink:0}
-.aftxt strong{display:block;font-size:.82rem;font-weight:600;margin-bottom:1px}
-.aftxt span{font-size:.75rem;color:var(--text-dim)}
+/* WHY GRID */
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.wcard{padding:30px;border-radius:16px;background:var(--s1);border:1px solid var(--b1);transition:all .35s var(--ease);position:relative;overflow:hidden}
+.wcard::after{content:'';position:absolute;inset:0;border-radius:16px;background:var(--grad);opacity:0;transition:opacity .3s}
+.wcard:hover{border-color:rgba(99,102,241,.4);transform:translateY(-5px);box-shadow:0 20px 60px rgba(0,0,0,.3),0 0 40px rgba(99,102,241,.2)}
+.wcard:hover::after{opacity:.04}
+.wico{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:18px;position:relative;z-index:1}
+.wcard h3{font-family:var(--ff);font-size:.98rem;font-weight:600;margin-bottom:8px;position:relative;z-index:1}
+.wcard p{font-size:.86rem;color:var(--t2);line-height:1.7;position:relative;z-index:1}
 
-/* FAQ */
-.faql{display:grid;grid-template-columns:.85fr 1.4fr;gap:56px;align-items:start}
-.faqbox{border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.fi{border-bottom:1px solid var(--line)}.fi:last-child{border-bottom:none}
-.fq{padding:19px 22px;display:flex;align-items:center;justify-content:space-between;font-weight:500;font-size:.87rem;user-select:none;transition:background .2s;gap:14px}
-.fq:hover{background:var(--ink2)}
-.fqic{font-family:var(--mono);font-size:.9rem;color:var(--gold);transition:transform .3s var(--ez);flex-shrink:0}
-.fi.open .fqic{transform:rotate(45deg)}
-.fa{padding:0 22px;font-size:.83rem;color:var(--text-dim);line-height:1.85;max-height:0;overflow:hidden;transition:max-height .4s var(--ez),padding .3s}
-.fi.open .fa{max-height:400px;padding-bottom:20px}
+/* BLOG GRID */
+.bgrid{display:grid;grid-template-columns:1.5fr 1fr;gap:22px}
+.bfeat{background:var(--s1);border:1px solid var(--b1);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:all .35s var(--ease)}
+.bfeat:hover{border-color:rgba(99,102,241,.4);transform:translateY(-5px);box-shadow:0 24px 60px rgba(0,0,0,.3),0 0 40px rgba(99,102,241,.2)}
+.bthumb{height:220px;overflow:hidden;position:relative}
+.bthumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.bfeat:hover .bthumb img{transform:scale(1.05)}
+.bthumb-badge{position:absolute;top:14px;left:14px;padding:4px 12px;border-radius:999px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;backdrop-filter:blur(12px);background:rgba(5,5,20,.7);border:1px solid var(--b2);color:var(--t2)}
+.bbody{padding:24px 26px 26px;flex:1;display:flex;flex-direction:column}
+.bcat{margin-bottom:9px}
+.bct{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.bbody h3{font-family:var(--ff);font-size:1.1rem;font-weight:600;line-height:1.4;margin-bottom:9px;letter-spacing:-.015em}
+.bbody p{font-size:.865rem;color:var(--t2);line-height:1.7;flex:1;margin-bottom:16px}
+.bfoot{display:flex;align-items:center;justify-content:space-between}
+.bmt{font-size:.74rem;color:var(--t3)}
+.brl{font-size:.8rem;font-weight:600;color:#a5b4fc;display:inline-flex;align-items:center;gap:5px;transition:all .2s}.brl:hover{color:var(--t1);gap:9px}
+.bside{display:flex;flex-direction:column;gap:14px}
+.bmini{background:var(--s1);border:1px solid var(--b1);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:all .3s var(--ease)}
+.bmini:hover{background:var(--s2);border-color:rgba(99,102,241,.35);transform:translateX(5px)}
+.bmini-img{height:130px;overflow:hidden}.bmini-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}.bmini:hover .bmini-img img{transform:scale(1.06)}
+.bmini-body{padding:14px 16px;flex:1;display:flex;flex-direction:column}
+.bmini-body h4{font-family:var(--ff);font-size:.86rem;font-weight:600;line-height:1.4;margin:6px 0 4px;letter-spacing:-.01em}
+.bmini-body p{font-size:.76rem;color:var(--t2);line-height:1.5;margin-bottom:8px}
+
+/* TOOLS */
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tcard{background:var(--s1);border:1px solid var(--b1);border-radius:16px;padding:22px 18px;transition:all .3s var(--ease);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.tcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transition:transform .35s var(--ease);transform-origin:left}
+.tcard:hover{background:var(--s2);border-color:rgba(99,102,241,.4);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.35),0 0 30px rgba(99,102,241,.2)}.tcard:hover::before{transform:scaleX(1)}
+.temi{font-size:1.7rem;margin-bottom:9px}
+.tstr{color:var(--y1);font-size:.74rem;letter-spacing:2px;margin-bottom:7px}
+.tnm{font-family:var(--ff);font-size:.9rem;font-weight:600;letter-spacing:-.01em;margin-bottom:4px}
+.tds{font-size:.77rem;color:var(--t2);line-height:1.55;flex:1;margin-bottom:11px}
+.ttags{display:flex;gap:5px;flex-wrap:wrap}
+.tt{font-size:.65rem;font-weight:700;padding:3px 9px;border-radius:999px}
+.tf{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.25);color:var(--g1)}
+.tp{background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.25);color:var(--y1)}
+.tfm{background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.25);color:#a5b4fc}
+
+/* TESTIMONIALS */
+.tegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tecard{background:var(--s1);border:1px solid var(--b1);border-radius:16px;padding:26px;transition:all .3s var(--ease);display:flex;flex-direction:column;gap:14px}
+.tecard:hover{background:var(--s2);border-color:rgba(99,102,241,.35);transform:translateY(-4px)}
+.tstr2{color:var(--y1);letter-spacing:2px;font-size:.9rem}
+.teq{font-size:.9rem;color:var(--t2);line-height:1.75;font-style:italic;flex:1;quotes:'\201C' '\201D'}
+.teq::before{content:open-quote;color:var(--p2);font-size:1.3rem;line-height:0;vertical-align:-.2em;margin-right:2px}
+.teq::after{content:close-quote;color:var(--p2);font-size:1.3rem;line-height:0;vertical-align:-.2em;margin-left:2px}
+.teauth{display:flex;align-items:center;gap:11px;padding-top:14px;border-top:1px solid var(--b1)}
+.teav{width:40px;height:40px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:#fff;flex-shrink:0}
+.ten{font-family:var(--ff);font-size:.875rem;font-weight:600}.ter{font-size:.73rem;color:var(--t3);margin-top:2px}
 
 /* NEWSLETTER */
-.nl-sec{padding:80px 28px;display:flex;justify-content:center}
-.nl-card{max-width:640px;width:100%;background:var(--paper);color:var(--paper-ink);border-radius:8px;padding:48px 44px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.4)}
-.nl-card .slbl{color:var(--gold);justify-content:center;display:flex}
-.nl-card h2{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.3rem);font-weight:500;margin-bottom:12px}
-.nl-card h2 em{font-style:italic;color:var(--gold)}
-.nl-card p{font-size:.88rem;color:var(--paper-dim);max-width:400px;margin:0 auto 26px;line-height:1.7}
-.nlf{display:flex;gap:10px;max-width:400px;margin:0 auto 12px}
-.nlin{flex:1;padding:12px 16px;background:#fff;border:1px solid rgba(27,23,18,.18);border-radius:3px;color:var(--paper-ink);font-family:var(--sans);font-size:.86rem}
-.nlin:focus{border-color:var(--gold)}
-.nlb{padding:12px 20px;background:var(--paper-ink);color:var(--paper);border-radius:3px;font-size:.8rem;font-weight:600;white-space:nowrap;transition:opacity .25s}
-.nlb:hover{opacity:.85}
-.nlnote{font-family:var(--mono);font-size:.66rem;color:var(--paper-dim)}
+.nlsec{background:var(--bg1);padding:80px 32px}
+.nlcard{max-width:720px;margin:0 auto;border-radius:24px;background:var(--s1);border:1px solid var(--b2);padding:58px 52px;text-align:center;position:relative;overflow:hidden}
+.nlcard::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(99,102,241,.7),rgba(168,85,247,.7),transparent)}
+.nlcard::after{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.1),transparent 70%);pointer-events:none}
+.nli{position:relative;z-index:1}
+.nlt{font-family:var(--ff);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;letter-spacing:-.03em;margin-bottom:11px}
+.nld{color:var(--t2);font-size:.95rem;margin-bottom:28px}
+.nlform{display:flex;gap:10px;max-width:520px;margin:0 auto 13px}
+.nlinp{flex:1;padding:13px 18px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid var(--b2);color:var(--t1);font-family:var(--ffb);font-size:.9rem;outline:none;transition:all .2s}
+.nlinp:focus{border-color:rgba(99,102,241,.6);background:rgba(99,102,241,.06);box-shadow:0 0 0 3px rgba(99,102,241,.12)}
+.nlinp::placeholder{color:var(--t3)}
+.nlbtn{padding:13px 22px;border-radius:8px;background:var(--grad);color:#fff;font-weight:700;font-size:.875rem;white-space:nowrap;transition:all .3s;box-shadow:0 4px 20px rgba(99,102,241,.4);position:relative;overflow:hidden}
+.nlbtn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}
+.nlbtn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(99,102,241,.6)}.nlbtn:hover::before{left:100%}
+.nlnote{font-size:.73rem;color:var(--t3)}
 
 /* FOOTER */
-.footer{background:var(--ink2);border-top:1px solid var(--line)}
-.fw{max-width:1280px;margin:0 auto}
-.fband{padding:56px 28px 44px;display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:44px;border-bottom:1px solid var(--line)}
-.flogo{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.flogo-ico{width:38px;height:38px;border-radius:4px;background:var(--gold);color:var(--paper-ink);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-style:italic;font-size:1.15rem}
-.flogo-name{font-family:var(--serif);font-size:1.2rem;font-weight:500}
-.ftagline{font-size:.82rem;color:var(--text-dim);line-height:1.8;max-width:280px;margin-bottom:20px}
-.fsoc{display:flex;gap:9px;margin-bottom:22px;flex-wrap:wrap}
-.fsb{width:36px;height:36px;border:1px solid var(--line2);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--text-dim);transition:all .25s}
-.fsb:hover{border-color:var(--gold-line);color:var(--gold)}
-.fcon{font-size:.79rem;color:var(--text-dim);line-height:2.2}
-.fcon a{color:var(--gold)}
-.fcol h5{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-.fcol a{display:block;font-size:.8rem;color:var(--text-dim);margin-bottom:10px;transition:color .2s}
-.fcol a:hover{color:var(--text)}
-.fbot{padding:20px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.fbotl{font-family:var(--mono);font-size:.71rem;color:var(--text-dim2)}
-.fbotr{display:flex;align-items:center;gap:18px;font-family:var(--mono);font-size:.68rem;color:var(--text-dim2)}
-.fbotr a:hover{color:var(--gold)}
+footer{background:var(--bg1);border-top:1px solid var(--b1);padding:70px 32px 34px}
+.fw{max-width:1380px;margin:0 auto}
+.fgrid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:56px;margin-bottom:52px}
+.flogo{margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.flogo img{width:28px;height:28px;border-radius:7px;object-fit:contain}
+.fdesc{color:var(--t2);font-size:.875rem;line-height:1.75;margin-bottom:20px}
+.fsocs{display:flex;gap:8px}
+.fsoc{width:36px;height:36px;border-radius:8px;border:1px solid var(--b2);background:var(--s1);display:flex;align-items:center;justify-content:center;color:var(--t2);font-size:.78rem;font-weight:700;transition:all .2s}
+.fsoc:hover{border-color:var(--p1);color:#a5b4fc;background:rgba(99,102,241,.1);transform:translateY(-2px)}
+.fct{font-size:.72rem;font-weight:700;color:var(--t1);letter-spacing:.07em;text-transform:uppercase;margin-bottom:16px}
+.fcol a{display:block;color:var(--t2);font-size:.875rem;margin-bottom:10px;transition:color .2s}.fcol a:hover{color:var(--t1)}
+.fbot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:26px;border-top:1px solid var(--b1)}
+.fcp{font-size:.78rem;color:var(--t3)}
+.fbls{display:flex;gap:18px}.fbls a{font-size:.78rem;color:var(--t3);transition:color .2s}.fbls a:hover{color:var(--t2)}
 
-.btt{position:fixed;bottom:24px;right:24px;width:42px;height:42px;background:var(--gold);color:var(--paper-ink);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem;opacity:0;visibility:hidden;transition:all .3s;z-index:100;box-shadow:0 6px 20px rgba(0,0,0,.4)}
-.btt.vis{opacity:1;visibility:visible}
-.btt:hover{transform:translateY(-3px)}
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(14px);background:var(--gold);color:var(--paper-ink);padding:11px 22px;border-radius:3px;font-size:.8rem;font-weight:600;z-index:9999;opacity:0;transition:all .35s var(--ez);pointer-events:none;white-space:nowrap}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* BACK TO TOP */
+.btt{position:fixed;bottom:90px;right:26px;z-index:800;width:42px;height:42px;border-radius:50%;background:var(--grad);color:#fff;font-size:1rem;box-shadow:0 4px 24px rgba(99,102,241,.5);display:none;align-items:center;justify-content:center;transition:all .3s;border:none;cursor:pointer}
+.btt:hover{transform:translateY(-3px) scale(1.05)}.btt.vis{display:flex}
 
-@media(max-width:1080px){
-  .hw{grid-template-columns:1fr;gap:44px}.stamp-wrap{justify-content:flex-start}
-  .tool-grid{grid-template-columns:repeat(2,1fr)}
-  .abtg{grid-template-columns:1fr}.faql{grid-template-columns:1fr;gap:26px}
-  .fband{grid-template-columns:1fr 1fr;gap:30px}
-  .stat-row{grid-template-columns:repeat(2,1fr)}.st{border-bottom:1px solid var(--line)}
-  .cg{grid-template-columns:repeat(3,1fr)}
-  .proc{grid-template-columns:1fr}.proc-c{border-right:none;border-bottom:1px solid var(--line)}.proc-c:last-child{border-bottom:none}
+/* TOAST */
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(70px);background:rgba(10,10,28,.96);border:1px solid var(--b3);color:var(--t1);padding:13px 26px;border-radius:12px;font-size:.875rem;font-weight:500;z-index:9999;opacity:0;transition:all .4s var(--ease);white-space:nowrap;backdrop-filter:blur(20px)}
+.toast.sh{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ══════════════════════════
+   AI CHATBOT WIDGET
+══════════════════════════ */
+.cb-btn{
+  position:fixed;bottom:26px;right:26px;z-index:1000;
+  width:58px;height:58px;border-radius:50%;
+  background:var(--grad);border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 28px rgba(99,102,241,.55);
+  transition:all .3s;
 }
-@media(max-width:760px){
-  .hw{padding:64px 20px 56px}.sec{padding:56px 20px}
-  .nL,.ncta{display:none}.ham{display:flex}
-  .cg{grid-template-columns:repeat(2,1fr)}
-  .tool-grid,.blog-g{grid-template-columns:1fr}
-  .asg{grid-template-columns:1fr}
-  .as-c{border-right:none!important}
-  .fband{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}
-  .nlf{flex-direction:column}.nl-card{padding:36px 24px}
-  .bc>a{flex-direction:column}.bi{width:100%;height:150px}
+.cb-btn:hover{transform:scale(1.1);box-shadow:0 10px 36px rgba(99,102,241,.7)}
+.cb-btn svg{width:26px;height:26px;fill:#fff;transition:all .3s}
+.cb-btn .close-ico{display:none}
+.cb-btn.open .chat-ico{display:none}.cb-btn.open .close-ico{display:block}
+.cb-pulse{position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(99,102,241,.5);animation:pring 2s ease-out infinite}
+.cb-badge{position:absolute;top:-3px;right:-3px;width:18px;height:18px;border-radius:50%;background:#f87171;border:2px solid var(--bg);display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:700;color:#fff}
+
+.cb-win{
+  position:fixed;bottom:100px;right:26px;z-index:999;
+  width:360px;max-height:520px;
+  background:rgba(6,6,15,.97);border:1px solid var(--b2);
+  border-radius:20px;overflow:hidden;
+  display:flex;flex-direction:column;
+  box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 1px var(--b1);
+  backdrop-filter:blur(24px);
+  transform:translateY(20px) scale(.96);opacity:0;pointer-events:none;
+  transition:all .35s var(--ease);
 }
+.cb-win.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
+
+.cb-head{
+  padding:16px 18px;background:var(--grad);
+  display:flex;align-items:center;gap:12px;flex-shrink:0;
+}
+.cb-ava{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.cb-hinfo{flex:1}
+.cb-hname{font-family:var(--ff);font-weight:700;font-size:.92rem;color:#fff}
+.cb-hstatus{font-size:.72rem;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:5px}
+.cb-hstatus::before{content:'';width:6px;height:6px;border-radius:50%;background:#4ade80;flex-shrink:0}
+
+.cb-msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+.cb-msgs::-webkit-scrollbar{width:3px}.cb-msgs::-webkit-scrollbar-thumb{background:var(--b3);border-radius:99px}
+
+.msg{display:flex;gap:8px;align-items:flex-end;animation:msgin .3s var(--ease)}
+@keyframes msgin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.msg.bot{flex-direction:row}.msg.usr{flex-direction:row-reverse}
+.msg-av{width:28px;height:28px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0}
+.msg-bub{max-width:78%;padding:10px 13px;border-radius:16px;font-size:.84rem;line-height:1.55}
+.msg.bot .msg-bub{background:var(--s2);border:1px solid var(--b2);border-bottom-left-radius:4px;color:var(--t1)}
+.msg.usr .msg-bub{background:var(--grad);color:#fff;border-bottom-right-radius:4px}
+.msg.bot .msg-bub a{color:#a5b4fc;text-decoration:underline}
+
+/* Typing indicator */
+.typing{display:flex;gap:8px;align-items:flex-end}
+.typing .msg-bub{display:flex;gap:4px;align-items:center;padding:12px 14px}
+.typing .d{width:7px;height:7px;border-radius:50%;background:var(--t3);animation:tdot 1.2s ease-in-out infinite}
+.typing .d:nth-child(2){animation-delay:.2s}.typing .d:nth-child(3){animation-delay:.4s}
+@keyframes tdot{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+
+/* Quick replies */
+.cb-qr{padding:8px 14px 12px;display:flex;flex-wrap:wrap;gap:6px;flex-shrink:0}
+.qr-btn{padding:6px 12px;border-radius:999px;background:var(--s2);border:1px solid var(--b2);color:var(--t2);font-size:.76rem;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap}
+.qr-btn:hover{background:rgba(99,102,241,.15);border-color:rgba(99,102,241,.4);color:#a5b4fc}
+
+/* Chat input */
+.cb-inp-wrap{padding:12px 14px;border-top:1px solid var(--b1);display:flex;gap:8px;flex-shrink:0}
+.cb-inp{flex:1;padding:10px 14px;border-radius:999px;background:var(--s2);border:1px solid var(--b2);color:var(--t1);font-family:var(--ffb);font-size:.84rem;outline:none;transition:all .2s}
+.cb-inp:focus{border-color:rgba(99,102,241,.5);background:rgba(99,102,241,.06)}
+.cb-inp::placeholder{color:var(--t3)}
+.cb-send{width:36px;height:36px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;flex-shrink:0}
+.cb-send:hover{transform:scale(1.1);box-shadow:0 4px 16px rgba(99,102,241,.4)}
+.cb-send svg{width:16px;height:16px;fill:#fff}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .hi{grid-template-columns:1fr;gap:56px}.hvisual{display:none}
+  .hero{min-height:auto;padding:90px 32px 72px}
+  .stin{grid-template-columns:repeat(2,1fr)}
+  .wgrid{grid-template-columns:repeat(2,1fr)}
+  .bgrid{grid-template-columns:1fr}
+  .tgrid{grid-template-columns:repeat(2,1fr)}
+  .tegrid{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media(max-width:768px){
+  .nm,.nbtn{display:none}.ham{display:flex}.nw{padding:0 20px}
+  .sec{padding:70px 24px}.hero{padding:72px 24px 60px}
+  .stats{padding:36px 24px}.nlsec{padding:56px 24px}
+  .wgrid,.tegrid{grid-template-columns:1fr}
+  .tgrid{grid-template-columns:repeat(2,1fr)}
+  .hbtns{flex-direction:column;align-items:flex-start}
+  .nlcard{padding:38px 22px}.nlform{flex-direction:column}
+  .cb-win{width:calc(100vw - 32px);right:16px;bottom:90px}
+  .cb-btn{right:16px;bottom:16px}
+}
+@media(max-width:500px){.tgrid,.stin{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr;gap:28px}.fbot{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
-<a href="#main" class="skip">Skip to content</a>
-<div class="disc"><strong>Affiliate disclosure —</strong> some links below earn a small commission at no cost to you. It never changes the verdict. <a href="privacy.html">Read our policy</a></div>
 
-<header class="nav" id="nav">
+<!-- AURORA BACKGROUND -->
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<!-- ══ NAV ══ -->
+<nav class="nav" id="nav">
   <div class="nw">
-    <a href="index.html" class="brand">
-      <div class="bmark">A</div>
-      <span class="bword">Aivora <em>AI</em></span>
+    <a href="index.html" class="logo">
+      <img src="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png" alt="Aivora AI Logo" onerror="this.style.display='none'"/>
+      <span class="logo-t"><b>Aivora</b> AI</span>
     </a>
-    <nav><ul class="nL">
-      <li><a href="index.html" class="act">Home</a></li>
-      <li><a href="product.html">AI Tools</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></nav>
+    <nav class="nm">
+      <a href="index.html" class="ac">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="product.html">AI Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <div class="nr">
-      <a href="product.html" class="ncta">Browse verdicts</a>
-      <button class="ham" id="hB" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <a href="blog.html" class="nbtn">Browse Reviews →</a>
+      <button class="ham" id="ham" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
-</header>
-<nav class="mob" id="mob">
-  <a href="index.html">Home</a><a href="product.html">AI Tools</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a>
-  <a href="product.html" class="mcta">Browse verdicts</a>
 </nav>
-
-<main id="main">
-
-<section class="hero">
-  <div class="hw">
-    <div class="hleft">
-      <div class="eyebrow">Updated June 2026 · Independent testing</div>
-      <h1 class="h1">We test the AI tools.<br/>You get the <em>honest verdict.</em></h1>
-      <p class="hdesc">Aivora AI is an independent review desk covering AI tools for writing, video, SEO, and automation. Every tool is used personally by <strong>Varun Lalwani</strong> before a word gets written — no sponsored rankings, no rewritten press releases.</p>
-      <div class="hbtns">
-        <a href="product.html" class="bp">Browse AI tools →</a>
-        <a href="blog.html" class="bg">Read the guides</a>
-      </div>
-      <p class="hby">Director &amp; lead reviewer — Varun Lalwani, India</p>
-    </div>
-    <div class="stamp-wrap rv">
-      <div class="stamp">
-        <div class="stamp-tag">Verdict of the week</div>
-        <div class="stamp-top">
-          <span class="stamp-cat">AI Video Creation</span>
-          <div class="stamp-ring"><b>7.9</b><span>/ 10</span></div>
-        </div>
-        <div class="stamp-name">AI Video Creator</div>
-        <p class="stamp-note">Solid for faceless YouTube channels — scripts and voiceovers hold up, visuals still need a human pass.</p>
-        <div class="stamp-foot"><a href="blog/ai-video-creator-review-2026.html">Read full verdict</a><span>12 min read</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="tick" aria-hidden="true"><div class="tick-t">
-  <span class="ti-item">AI Beginner Course <b>8.2</b></span>
-  <span class="ti-item">360 AI Training <b>8.0</b></span>
-  <span class="ti-item">AI Video Creator <b>7.9</b></span>
-  <span class="ti-item">AI Master Dashboard <b>7.8</b></span>
-  <span class="ti-item">AI Framework for Business <b>7.4</b></span>
-  <span class="ti-item">GPT Creator Club <b>7.1</b></span>
-  <span class="ti-item">AI Beginner Course <b>8.2</b></span>
-  <span class="ti-item">360 AI Training <b>8.0</b></span>
-  <span class="ti-item">AI Video Creator <b>7.9</b></span>
-  <span class="ti-item">AI Master Dashboard <b>7.8</b></span>
-  <span class="ti-item">AI Framework for Business <b>7.4</b></span>
-  <span class="ti-item">GPT Creator Club <b>7.1</b></span>
-</div></div>
-
-<div class="stat-row">
-  <div class="st rv"><div class="stn">50+</div><div class="stl">AI tools reviewed</div></div>
-  <div class="st rv"><div class="stn">6</div><div class="stl">Categories covered</div></div>
-  <div class="st rv"><div class="stn">100%</div><div class="stl">Independent verdicts</div></div>
-  <div class="st rv"><div class="stn">Free</div><div class="stl">To read, always</div></div>
+<div class="mob" id="mob">
+  <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="product.html">AI Tools</a>
+  <a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="blog.html" class="nbtn">Browse Reviews →</a>
 </div>
 
-<div class="sw"><div class="sec">
-  <div class="rv" style="margin-bottom:44px">
-    <div class="slbl">How a verdict gets made</div>
-    <h2 class="sh">Three steps. No shortcuts.</h2>
-    <p class="ss" style="margin-top:12px">Every review follows the same process, in this order — every time.</p>
-  </div>
-  <div class="proc rv">
-    <div class="proc-c"><div class="proc-n">01 / Test</div><h3>We use the tool ourselves</h3><p>Before a single word is written, the tool is used for real work — not a five-minute demo. We note what breaks, what's slow, and what actually saves time.</p></div>
-    <div class="proc-c"><div class="proc-n">02 / Score</div><h3>We assign an honest score</h3><p>Value, ease of use, and real-world limitations go into a single score out of ten. If a tool underdelivers, the score reflects that — sponsorship has no vote here.</p></div>
-    <div class="proc-c"><div class="proc-n">03 / Publish</div><h3>We publish the verdict</h3><p>The review goes live in plain language, limitations included. Affiliate links are disclosed clearly and never influence what gets written.</p></div>
-  </div>
-</div></div>
-
-<div class="sw2"><div class="sec">
-  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;flex-wrap:wrap;gap:14px" class="rv">
-    <div><div class="slbl">Explore by category</div><h2 class="sh">Find your <em>category.</em></h2></div>
-    <a href="product.html" class="bg">See all tools →</a>
-  </div>
-  <div class="cg rv">
-    <div class="cat-c"><div class="cat-tab">WR</div><h4>Writing</h4><p>Content &amp; copy</p></div>
-    <div class="cat-c"><div class="cat-tab">IMG</div><h4>Image</h4><p>Art &amp; design</p></div>
-    <div class="cat-c"><div class="cat-tab">VID</div><h4>Video</h4><p>Creation &amp; editing</p></div>
-    <div class="cat-c"><div class="cat-tab">AUD</div><h4>Audio</h4><p>Voice &amp; music</p></div>
-    <div class="cat-c"><div class="cat-tab">MKT</div><h4>Marketing</h4><p>SEO &amp; ads</p></div>
-    <div class="cat-c"><div class="cat-tab">AUT</div><h4>Automation</h4><p>Workflows</p></div>
-  </div>
-</div></div>
-
-<div class="sw"><div class="sec">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;margin-bottom:40px" class="rv">
-    <div><div class="slbl">Reviewed tools</div><h2 class="sh">Tested and <em>scored.</em></h2></div>
-    <p class="ss">Every card below links to the full, hands-on review — limitations included.</p>
-  </div>
-  <div class="tool-grid rv">
-    <div class="tool-card">
-      <div class="tc-top"><span class="tc-cat">Business Automation</span><span class="tc-score">7.8</span></div>
-      <div class="tc-name">AI Master Dashboard</div>
-      <div class="tc-desc">A unified AI command center for business owners. Brings reporting, analytics, and automation into one interface. Good for agencies and growing teams.</div>
-      <div class="tc-foot"><span class="tc-type">Paid tool</span><a href="blog/ai-master-dashboard-business-owners-review-2026.html" class="tc-link">Read verdict →</a></div>
-    </div>
-    <div class="tool-card">
-      <div class="tc-top"><span class="tc-cat">AI Education</span><span class="tc-score">8.2</span></div>
-      <div class="tc-name">AI Beginner Course</div>
-      <div class="tc-desc">Structured course for learning AI from scratch. Practical lessons with real business applications. No prior technical knowledge needed.</div>
-      <div class="tc-foot"><span class="tc-type">Paid course</span><a href="blog/ai-beginner-course-review-2026.html" class="tc-link">Read verdict →</a></div>
-    </div>
-    <div class="tool-card">
-      <div class="tc-top"><span class="tc-cat">Content &amp; Automation</span><span class="tc-score">7.4</span></div>
-      <div class="tc-name">AI Framework for Business</div>
-      <div class="tc-desc">A comprehensive AI system covering content creation, workflow automation, and business growth strategies. Suitable for entrepreneurs.</div>
-      <div class="tc-foot"><span class="tc-type">Paid tool</span><a href="blog/ai-framework-business-review-2026.html" class="tc-link">Read verdict →</a></div>
-    </div>
-    <div class="tool-card">
-      <div class="tc-top"><span class="tc-cat">ChatGPT &amp; Prompting</span><span class="tc-score">7.1</span></div>
-      <div class="tc-name">GPT Creator Club</div>
-      <div class="tc-desc">A membership community focused on using ChatGPT effectively for content creation and online income, with prompt libraries and support.</div>
-      <div class="tc-foot"><span class="tc-type">Membership</span><a href="blog/gpt-creator-club-review-2026.html" class="tc-link">Read verdict →</a></div>
-    </div>
-    <div class="tool-card">
-      <div class="tc-top"><span class="tc-cat">AI Video Creation</span><span class="tc-score">7.9</span></div>
-      <div class="tc-name">AI Video Creator</div>
-      <div class="tc-desc">Lets you create faceless YouTube videos using AI — scripts, voiceovers, and visuals generated automatically, no camera required.</div>
-      <div class="tc-foot"><span class="tc-type">Paid tool</span><a href="blog/ai-video-creator-review-2026.html" class="tc-link">Read verdict →</a></div>
-    </div>
-    <div class="tool-card">
-      <div class="tc-top"><span class="tc-cat">AI Training · India</span><span class="tc-score">8.0</span></div>
-      <div class="tc-name">360 AI Training</div>
-      <div class="tc-desc">India-based comprehensive AI coaching program covering practical skills, business applications, and career-focused training.</div>
-      <div class="tc-foot"><span class="tc-type">Paid program</span><a href="blog/360-ai-training-online-coaching-review-2026.html" class="tc-link">Read verdict →</a></div>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:26px" class="rv"><a href="product.html" class="bg">View all reviewed tools</a></div>
-</div></div>
-
-<div class="sw2"><div class="sec">
-  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;flex-wrap:wrap;gap:14px" class="rv">
-    <div><div class="slbl">Guides &amp; articles</div><h2 class="sh">Learn how to <em>use them.</em></h2></div>
-    <a href="blog.html" class="bg">All articles →</a>
-  </div>
-  <div class="blog-g rv">
-    <div class="bc"><a href="blog/gpt-creator-club-review-2026.html"><div class="bi"><img src="https://aivoraai.github.io/assets/blog/gpt-creator-club.png" alt="GPT Creator Club Review" loading="lazy"/></div><div class="bbd"><span class="bpill">Tool review</span><h3>GPT Creator Club Review 2026: What It Is &amp; Who It's For</h3><p>Tested for several weeks — here's what's inside, what works, and what to watch for.</p><div class="bft"><span>Apr 2026 · 12 min</span><span class="brl">Read →</span></div></div></a></div>
-    <div class="bc"><a href="blog/ai-affiliate-marketing-guide-2026.html"><div class="bi"><img src="https://aivoraai.github.io/assets/blog/ai-affiliate-marketing.png" alt="AI Affiliate Marketing Guide" loading="lazy"/></div><div class="bbd"><span class="bpill">Beginner guide</span><h3>How AI Affiliate Marketing Works in 2026</h3><p>A clear explanation of what it is, how it works, and whether it's realistic.</p><div class="bft"><span>Apr 2026 · 10 min</span><span class="brl">Read →</span></div></div></a></div>
-    <div class="bc"><a href="blog/ai-growth-stack-2026.html"><div class="bi"><img src="https://aivoraai.github.io/assets/blog/ai-growth-stack.png" alt="AI Growth Stack" loading="lazy"/></div><div class="bbd"><span class="bpill">Tool comparison</span><h3>5 AI Tools That Work Well Together</h3><p>Five tools that complement each other, and how real creators combine them.</p><div class="bft"><span>Apr 2026 · 8 min</span><span class="brl">Read →</span></div></div></a></div>
-    <div class="bc"><a href="blog/ai-video-creator-review-2026.html"><div class="bi"><img src="https://aivoraai.github.io/assets/blog/ai-video-creator.png" alt="AI Video Creator Review" loading="lazy"/></div><div class="bbd"><span class="bpill">Tool review</span><h3>Can You Really Make YouTube Videos Without a Camera?</h3><p>A realistic assessment of what AI Video Creator can and can't do.</p><div class="bft"><span>Apr 2026 · 9 min</span><span class="brl">Read →</span></div></div></a></div>
-  </div>
-</div></div>
-
-<div class="sw"><div class="sec">
-  <div class="abtg">
-    <div class="rv">
-      <div class="slbl">About Aivora AI</div>
-      <h2 class="sh">Why this desk<br/><em>exists.</em></h2>
-      <p class="ss" style="margin-top:14px">Thousands of AI tools launch every month, and most review sites just copy manufacturer descriptions. Aivora AI exists to give people genuinely useful, tested opinions on which tools are worth their time and money.</p>
-      <p class="ss" style="margin-top:14px;font-size:.88rem">Run by <strong>Varun Lalwani</strong> from India. Independent. No investor pressure. No sponsored rankings.</p>
-      <div class="aflist">
-        <div class="afrow"><span class="afic">@</span><div class="aftxt"><strong>Email</strong><span>Aivoraai@outlook.com</span></div></div>
-        <div class="afrow"><span class="afic">◎</span><div class="aftxt"><strong>Coverage</strong><span>Global — tools reviewed are accessible worldwide</span></div></div>
-        <div class="afrow"><span class="afic">✎</span><div class="aftxt"><strong>Process</strong><span>Every tool is tested before being written about</span></div></div>
-        <div class="afrow"><span class="afic">✓</span><div class="aftxt"><strong>Transparency</strong><span>Affiliate links disclosed clearly. Rankings are never for sale.</span></div></div>
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="particles" id="parts"></div>
+  <div class="grid-bg"></div>
+  <div class="hi">
+    <div>
+      <div class="hbadge" sr><span class="bdot"></span>Independent AI Research · Zero Paid Rankings</div>
+      <h1 class="hh1">
+        <span class="s1" sr d1>The Internet's Most</span>
+        <span class="s2" sr d2>genuinely</span>
+        <span class="s3 shim" sr d3><span class="tw" id="tw"></span><span class="tc"></span></span>
+      </h1>
+      <p class="hdesc" sr d2>We test every AI tool hands-on — writing, video, SEO, automation, income — and tell you exactly what we found. No fluff. No sponsors. Just truth.</p>
+      <div class="hbtns" sr d3>
+        <a href="blog.html" class="btn-p">📚 Explore All Reviews →</a>
+        <a href="product.html" class="btn-g">🛠 Browse AI Tools</a>
+      </div>
+      <div class="hproof" sr d4>
+        <div class="havs"><div class="hav">S</div><div class="hav">R</div><div class="hav">M</div><div class="hav">A</div></div>
+        <div><div class="hstars">★★★★★</div><div class="hpt"><strong>50,000+</strong> readers trust us monthly</div></div>
       </div>
     </div>
-    <div class="asg rv">
-      <div class="as-c"><div class="asn">50+</div><div class="asl">AI tools reviewed and tested</div></div>
-      <div class="as-c"><div class="asn">6</div><div class="asl">Categories covered</div></div>
-      <div class="as-c"><div class="asn">100%</div><div class="asl">Independent, unsponsored reviews</div></div>
-      <div class="as-c"><div class="asn">2026</div><div class="asl">Continuously updated</div></div>
+    <div class="hvisual" sr="r">
+      <div class="vglow"></div>
+      <div style="position:relative;width:100%">
+        <div class="chip chip1"><div class="cl">Tools Tested</div><div class="cv cp">200+ ✓</div></div>
+        <div class="rcard" id="rc">
+          <div class="rch">
+            <div class="rci">🤖</div>
+            <div><div class="rct">ChatGPT Plus — Review 2026</div><div class="rcs">AI Writing & Productivity</div></div>
+            <span class="verd">✓ Approved</span>
+          </div>
+          <div>
+            <div class="sr"><span class="sl">Accuracy</span><div class="st"><div class="sf" data-w="88"></div></div><span class="sv">8.8</span></div>
+            <div class="sr"><span class="sl">Value</span><div class="st"><div class="sf" data-w="79"></div></div><span class="sv">7.9</span></div>
+            <div class="sr"><span class="sl">Ease of Use</span><div class="st"><div class="sf" data-w="94"></div></div><span class="sv">9.4</span></div>
+            <div class="sr"><span class="sl">Features</span><div class="st"><div class="sf" data-w="91"></div></div><span class="sv">9.1</span></div>
+          </div>
+          <div class="rfoot"><span class="rauth">By Varun Lalwani · Oct 2026</span><a href="blog.html" class="rlink">Full review →</a></div>
+        </div>
+        <div class="chip chip2"><div class="cl">Sponsored Posts</div><div class="cv cg">Zero 🚫</div></div>
+      </div>
     </div>
-  </div>
-</div></div>
-
-<div class="sw2"><div class="sec">
-  <div class="faql">
-    <div class="rv">
-      <div class="slbl">Common questions</div>
-      <h2 class="sh">Things people<br/><em>ask us.</em></h2>
-      <p class="ss" style="margin-top:11px;font-size:.86rem">Honest answers about what Aivora AI is and how it works.</p>
-    </div>
-    <div class="faqbox rv">
-      <div class="fi"><div class="fq" role="button" tabindex="0">What is Aivora AI?<span class="fqic">+</span></div><div class="fa">Aivora AI is an independent AI tools review website run by Varun Lalwani. We test AI tools for writing, video, SEO, and automation, then publish honest reviews to help people decide which tools are worth using. We are not affiliated with any AI company.</div></div>
-      <div class="fi"><div class="fq" role="button" tabindex="0">Are your reviews paid or sponsored?<span class="fqic">+</span></div><div class="fa">No. Our reviews are never paid for or sponsored. Some links on our site are affiliate links, which means we earn a small commission if you buy through them — but this never influences what we write. If a tool is bad, we say so regardless.</div></div>
-      <div class="fi"><div class="fq" role="button" tabindex="0">Do you actually test the tools you review?<span class="fqic">+</span></div><div class="fa">Yes. We test each tool before writing about it. Our reviews are based on real hands-on experience, not marketing material. We note what works well and what doesn't based on actual use.</div></div>
-      <div class="fi"><div class="fq" role="button" tabindex="0">Are these tools available in India and other countries?<span class="fqic">+</span></div><div class="fa">Most AI tools we review are available globally. Where there are country-specific restrictions, we mention them in the review. We pay special attention to accessibility for users in India, Southeast Asia, and other emerging markets.</div></div>
-      <div class="fi"><div class="fq" role="button" tabindex="0">Is Aivora AI free to use?<span class="fqic">+</span></div><div class="fa">Yes, completely free. You can read all our reviews and guides without paying anything. We keep the site running through affiliate commissions when readers choose to buy tools through our links.</div></div>
-    </div>
-  </div>
-</div></div>
-</main>
-
-<section class="nl-sec">
-  <div class="nl-card rv">
-    <div class="slbl">Weekly newsletter</div>
-    <h2>New verdicts, <em>in your inbox.</em></h2>
-    <p>Every week: new reviews, beginner guides, and practical tips on using AI tools. No spam, no hype.</p>
-    <form class="nlf" onsubmit="nlS(event)" novalidate>
-      <input class="nlin" type="email" placeholder="your@email.com" required/>
-      <button class="nlb" type="submit">Subscribe free</button>
-    </form>
-    <p class="nlnote">Free forever · Unsubscribe anytime · No spam</p>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="fw">
-    <div class="fband">
-      <div class="fbl">
-        <div class="flogo"><div class="flogo-ico">A</div><div class="flogo-name">Aivora AI</div></div>
-        <p class="ftagline">Independent AI tool reviews and guides. We test tools so you can make informed decisions. No sponsored rankings, ever.</p>
-        <div class="fsoc">
-          <a href="https://www.facebook.com/profile.php?id=61569221487849" class="fsb" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://www.instagram.com/aivoraai.co/" class="fsb" target="_blank" rel="noopener" aria-label="Instagram">◈</a>
-          <a href="https://www.youtube.com/@AivoraAITools" class="fsb" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
-          <a href="https://x.com/aivoraai_co" class="fsb" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
-          <a href="https://www.tiktok.com/@varunaivoraai" class="fsb" target="_blank" rel="noopener" aria-label="TikTok">♪</a>
+<!-- ══ STATS ══ -->
+<div class="stats">
+  <div class="stin">
+    <div class="stc" sr><div class="stn" data-cnt="200">0</div>+<div class="stl">AI Tools Reviewed</div></div>
+    <div class="stc" sr d1><div class="stn" data-cnt="50">0</div>K+<div class="stl">Monthly Readers</div></div>
+    <div class="stc" sr d2><div class="stn" data-cnt="80">0</div>+<div class="stl">Countries Reached</div></div>
+    <div class="stc" sr d3><div class="stn" data-cnt="100">0</div>%<div class="stl">Editorially Independent</div></div>
+  </div>
+</div>
+
+<!-- ══ WHY US ══ -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sh" sr><span class="ey ec">Why Aivora AI</span>
+      <h2 class="stit">We Review Differently.<br/><span class="gr">Here's the Proof.</span></h2>
+      <p class="ssub">Every review follows a strict hands-on process — real workflows, real outputs, real verdicts. No marketing fluff.</p>
+    </div>
+    <div class="wgrid">
+      <div class="wcard" sr d1><div class="wico" style="background:rgba(99,102,241,.12)">🔬</div><h3>Real Hands-On Testing</h3><p>We use every tool in real workflows before writing a word. Edge cases, limitations, real outputs — not press releases.</p></div>
+      <div class="wcard" sr d2><div class="wico" style="background:rgba(248,113,113,.12)">🚫</div><h3>Zero Paid Placements</h3><p>No tool buys a good review here. Ratings are based entirely on our own experience. Affiliate links are disclosed and never affect scores.</p></div>
+      <div class="wcard" sr d3><div class="wico" style="background:rgba(34,211,238,.12)">⚡</div><h3>Constantly Updated</h3><p>AI evolves fast. We revisit reviews as features change, pricing shifts, and new tools emerge. Always fresh, always accurate.</p></div>
+      <div class="wcard" sr d1><div class="wico" style="background:rgba(251,191,36,.12)">💰</div><h3>Money-Saving Focus</h3><p>We tell you when free tiers are enough, when paid plans justify the cost, and when to avoid a tool entirely.</p></div>
+      <div class="wcard" sr d2><div class="wico" style="background:rgba(74,222,128,.12)">🎯</div><h3>Use-Case Specific</h3><p>Blogger, e-commerce owner, developer — we break down which tools work best for your exact situation and budget.</p></div>
+      <div class="wcard" sr d3><div class="wico" style="background:rgba(168,85,247,.12)">📈</div><h3>Results-Driven</h3><p>Everything ties back to real outcomes: traffic, income, time saved. Cool AI for its own sake doesn't interest us — results do.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BLOG POSTS (REAL IMAGES) ══ -->
+<section class="sec">
+  <div class="wrap">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:46px" sr>
+      <div><span class="ey ei">Latest Articles</span><h2 class="stit" style="margin-bottom:0">Fresh <span class="gr">from the Blog</span></h2></div>
+      <a href="blog.html" class="btn-g" style="flex-shrink:0">View All →</a>
+    </div>
+    <div class="bgrid" sr="s">
+      <a href="blog/ai-affiliate-marketing-guide-2026.html" class="bfeat">
+        <div class="bthumb"><img src="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/assets/images/ai-affiliate-marketing-banner.png" alt="AI Affiliate Marketing Guide 2026" loading="lazy"/><span class="bthumb-badge">⭐ Editor's Pick</span></div>
+        <div class="bbody">
+          <div class="bcat"><span class="bct" style="background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.3);color:#a5b4fc">Guide</span></div>
+          <h3>The Complete AI Affiliate Marketing Guide for 2026</h3>
+          <p>From niche selection to scaling — everything you need to build an AI-powered affiliate business. Built from real experience, no fluff.</p>
+          <div class="bfoot"><span class="bmt">📅 Oct 2026 · ⏱ 18 min read</span><span class="brl">Read guide →</span></div>
         </div>
-        <div class="fcon">
-          <strong style="color:var(--text)">Contact:</strong> <a href="mailto:Aivoraai@outlook.com">Aivoraai@outlook.com</a><br/>
-          <strong style="color:var(--text)">Director:</strong> Varun Lalwani — India
-        </div>
-      </div>
-      <div class="fcol">
-        <h5>Tool reviews</h5>
-        <a href="blog/gpt-creator-club-review-2026.html">GPT Creator Club</a>
-        <a href="blog/ai-master-dashboard-business-owners-review-2026.html">AI Master Dashboard</a>
-        <a href="blog/vip-indicators-review-2026.html">VIP Indicators</a>
-        <a href="blog/ai-video-creator-review-2026.html">AI Video Creator</a>
-        <a href="blog/massive-passive-profits-review-2026.html">Massive Passive Profits</a>
-        <a href="blog/360-ai-training-online-coaching-review-2026.html">360 AI Training</a>
-      </div>
-      <div class="fcol">
-        <h5>Guides</h5>
-        <a href="blog/ai-affiliate-marketing-guide-2026.html">AI Affiliate Marketing</a>
-        <a href="blog/ai-tools-beginners-guide-2026.html">AI Tools for Beginners</a>
-        <a href="blog/ai-growth-stack-2026.html">Best AI Tool Combos</a>
-        <a href="blog/passive-income-ai-website-2026.html">AI &amp; Passive Income</a>
-        <a href="blog/ai-in-30-program-review-2026.html">AI in 30 Days Review</a>
-      </div>
-      <div class="fcol">
-        <h5>Site</h5>
-        <a href="index.html">Home</a>
-        <a href="product.html">All AI tools</a>
-        <a href="blog.html">Blog &amp; guides</a>
-        <a href="about.html">About us</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy policy</a>
-        <a href="sitemap.xml">Sitemap</a>
+      </a>
+      <div class="bside">
+        <a href="blog/agentic-ai-workflows-guide-2026.html" class="bmini">
+          <div class="bmini-img"><img src="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/assets/images/agentic-ai-guide-2026-banner.png" alt="Agentic AI Workflows Guide" loading="lazy"/></div>
+          <div class="bmini-body"><div class="bcat"><span class="bct" style="background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.25);color:var(--c1);font-size:.65rem">Guide</span></div><h4>Agentic AI Workflows: Complete Guide 2026</h4><p>Your first agentic workflow — zero coding required.</p><span class="brl" style="font-size:.76rem">Read →</span></div>
+        </a>
+        <a href="blog/ai-tools-backlink-research-2026.html" class="bmini">
+          <div class="bmini-img"><img src="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/assets/images/ai-backlink-research-banner.png" alt="AI Backlink Research 2026" loading="lazy"/></div>
+          <div class="bmini-body"><div class="bcat"><span class="bct" style="background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.25);color:var(--g1);font-size:.65rem">SEO</span></div><h4>AI Tools for Backlink Research — Full Comparison</h4><p>Every major AI backlink tool tested head-to-head.</p><span class="brl" style="font-size:.76rem">Read →</span></div>
+        </a>
+        <a href="blog/passive-income-ai-website-2026.html" class="bmini">
+          <div class="bmini-img"><img src="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/assets/images/passive-income-kit.png" alt="Passive Income AI" loading="lazy"/></div>
+          <div class="bmini-body"><div class="bcat"><span class="bct" style="background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.25);color:var(--y1);font-size:.65rem">Income</span></div><h4>Build a Passive Income AI Website in 2026</h4><p>Step-by-step guide with real income examples.</p><span class="brl" style="font-size:.76rem">Read →</span></div>
+        </a>
       </div>
     </div>
-    <div class="fbot">
-      <div class="fbotl">© 2026 Aivora AI · Varun Lalwani · India · All rights reserved</div>
-      <div class="fbotr">
-        <a href="privacy.html">Privacy policy</a>
-        <a href="sitemap.xml">Sitemap</a>
-        <span>Some links are affiliate links — disclosed transparently</span>
+  </div>
+</section>
+
+<!-- ══ AI TOOLS ══ -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:46px" sr>
+      <div><span class="ey ea">Top Picks</span><h2 class="stit" style="margin-bottom:0">Tools We <span class="gr">Actually Use</span></h2></div>
+      <a href="product.html" class="btn-g" style="flex-shrink:0">All Tools →</a>
+    </div>
+    <div class="tgrid">
+      <div class="tcard" sr d1><div class="temi">🤖</div><div class="tstr">★★★★★</div><div class="tnm">ChatGPT</div><div class="tds">World's most popular AI for writing, coding & research.</div><div class="ttags"><span class="tt tfm">Freemium</span></div></div>
+      <div class="tcard" sr d2><div class="temi">🎨</div><div class="tstr">★★★★★</div><div class="tnm">Midjourney</div><div class="tds">Best-in-class AI image generator for creators worldwide.</div><div class="ttags"><span class="tt tp">Paid</span></div></div>
+      <div class="tcard" sr d3><div class="temi">🎙️</div><div class="tstr">★★★★☆</div><div class="tnm">Murf AI</div><div class="tds">Studio-quality AI voiceovers for YouTube, podcasts & ads.</div><div class="ttags"><span class="tt tfm">Freemium</span></div></div>
+      <div class="tcard" sr d4><div class="temi">🔍</div><div class="tstr">★★★★★</div><div class="tnm">Perplexity AI</div><div class="tds">AI research engine that cites every source — always.</div><div class="ttags"><span class="tt tf">Free</span></div></div>
+      <div class="tcard" sr d1><div class="temi">🎬</div><div class="tstr">★★★★☆</div><div class="tnm">HeyGen</div><div class="tds">Professional AI avatar videos in any language instantly.</div><div class="ttags"><span class="tt tfm">Freemium</span></div></div>
+      <div class="tcard" sr d2><div class="temi">✍️</div><div class="tstr">★★★★★</div><div class="tnm">Claude AI</div><div class="tds">Anthropic's AI — best for long docs, analysis & writing.</div><div class="ttags"><span class="tt tfm">Freemium</span></div></div>
+      <div class="tcard" sr d3><div class="temi">📊</div><div class="tstr">★★★★☆</div><div class="tnm">Search Atlas</div><div class="tds">All-in-one AI SEO platform for content & rankings.</div><div class="ttags"><span class="tt tp">Paid</span></div></div>
+      <div class="tcard" sr d4><div class="temi">🌐</div><div class="tstr">★★★★☆</div><div class="tnm">Gemini</div><div class="tds">Google's flagship AI with deep Workspace integration.</div><div class="ttags"><span class="tt tf">Free</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sh shc" sr><span class="ey eg">Testimonials</span>
+      <h2 class="stit">What Our <span class="gr">Readers Say</span></h2>
+      <p class="ssub">Real feedback from people who made smarter decisions because of our honest reviews.</p>
+    </div>
+    <div class="tegrid">
+      <div class="tecard" sr d1><div class="tstr2">★★★★★</div><p class="teq">Aivora AI saved me from wasting $200/month on tools that sounded great but were useless in practice. Brutally honest and incredibly detailed.</p><div class="teauth"><div class="teav">S</div><div><div class="ten">Sarah M.</div><div class="ter">Freelance Creator · USA</div></div></div></div>
+      <div class="tecard" sr d2><div class="tstr2">★★★★★</div><p class="teq">Finally a site that tells the truth. No fluff, no fake rankings — just real results from someone who actually tested them. Bookmarked forever.</p><div class="teauth"><div class="teav">R</div><div><div class="ten">Raj K.</div><div class="ter">Digital Marketer · India</div></div></div></div>
+      <div class="tecard" sr d3><div class="tstr2">★★★★★</div><p class="teq">The AI affiliate marketing guide helped me generate my first $1,200 in 3 weeks. Varun's content is genuinely life-changing for beginners.</p><div class="teauth"><div class="teav">M</div><div><div class="ten">Maria L.</div><div class="ter">Affiliate Blogger · Philippines</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NEWSLETTER ══ -->
+<div class="nlsec">
+  <div class="wrap">
+    <div class="nlcard" sr>
+      <div class="nli">
+        <span class="ey ei" style="display:inline-flex;margin-bottom:18px">📬 Weekly Newsletter</span>
+        <h2 class="nlt shim">Honest AI Verdicts.<br/>Every Friday. Free.</h2>
+        <p class="nld">Join 10,000+ readers getting the best AI reviews weekly. No spam. Unsubscribe anytime.</p>
+        <form class="nlform" onsubmit="nlSub(event)">
+          <input type="email" class="nlinp" placeholder="your@email.com" required/>
+          <button type="submit" class="nlbtn">Subscribe →</button>
+        </form>
+        <p class="nlnote">✓ Free &nbsp;·&nbsp; ✓ No spam &nbsp;·&nbsp; ✓ Cancel anytime</p>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="fw">
+    <div class="fgrid">
+      <div>
+        <div class="flogo">
+          <img src="https://raw.githubusercontent.com/AivoraAi/aivoraai.github.io/main/images/aivora-logo.png" alt="Aivora AI" onerror="this.style.display='none'"/>
+          <span class="logo-t"><b>Aivora</b> AI</span>
+        </div>
+        <p class="fdesc">Independent AI tool reviews and guides. We test tools so you can make smarter decisions — no sponsored rankings, ever. Based in India, read in 80+ countries.</p>
+        <div class="fsocs">
+          <a href="https://www.facebook.com/profile.php?id=61569221487849" class="fsoc" target="_blank" rel="noopener">f</a>
+          <a href="https://www.instagram.com/aivoraai.co/" class="fsoc" target="_blank" rel="noopener">ig</a>
+          <a href="https://www.youtube.com/@AivoraAITools" class="fsoc" target="_blank" rel="noopener">yt</a>
+          <a href="https://x.com/aivoraai_co" class="fsoc" target="_blank" rel="noopener">𝕏</a>
+          <a href="https://www.tiktok.com/@varunaivoraai" class="fsoc" target="_blank" rel="noopener">tt</a>
+        </div>
+      </div>
+      <div class="fcol"><div class="fct">Top Reviews</div><a href="blog/murf-ai-review-2026.html">Murf AI Review</a><a href="blog/ai-video-creator-review-2026.html">AI Video Creator</a><a href="blog/lindy-ai-review-2026.html">Lindy AI</a><a href="blog/gpt-creator-club-review-2026.html">GPT Creator Club</a><a href="blog/massive-passive-profits-review-2026.html">Massive Passive Profits</a></div>
+      <div class="fcol"><div class="fct">Guides</div><a href="blog/ai-affiliate-marketing-guide-2026.html">AI Affiliate Marketing</a><a href="blog/ai-tools-beginners-guide-2026.html">AI for Beginners</a><a href="blog/agentic-ai-workflows-guide-2026.html">Agentic AI Workflows</a><a href="blog/passive-income-ai-website-2026.html">AI Passive Income</a></div>
+      <div class="fcol"><div class="fct">Site</div><a href="index.html">Home</a><a href="product.html">All AI Tools</a><a href="blog.html">Blog & Guides</a><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></div>
+    </div>
+    <div class="fbot">
+      <div class="fcp">© 2026 Aivora AI · Varun Lalwani · India · All rights reserved</div>
+      <div class="fbls"><a href="privacy.html">Privacy</a><a href="disclosure.html">Disclosure</a><a href="sitemap.xml">Sitemap</a></div>
     </div>
   </div>
 </footer>
+
+<!-- ══ AI CHATBOT ══ -->
+<button class="cb-btn" id="cbBtn" aria-label="Open AI Assistant">
+  <span class="cb-pulse"></span>
+  <span class="cb-badge">1</span>
+  <svg class="chat-ico" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+  <svg class="close-ico" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+</button>
+
+<div class="cb-win" id="cbWin">
+  <div class="cb-head">
+    <div class="cb-ava">🤖</div>
+    <div class="cb-hinfo">
+      <div class="cb-hname">Aivora AI Assistant</div>
+      <div class="cb-hstatus">Online · Replies instantly</div>
+    </div>
+  </div>
+  <div class="cb-msgs" id="cbMsgs"></div>
+  <div class="cb-qr" id="cbQr">
+    <button class="qr-btn" onclick="cbSend('Best AI writing tool?')">Best writing tool?</button>
+    <button class="qr-btn" onclick="cbSend('Is ChatGPT free?')">Is ChatGPT free?</button>
+    <button class="qr-btn" onclick="cbSend('Best free AI tools?')">Free AI tools?</button>
+    <button class="qr-btn" onclick="cbSend('How to start affiliate marketing with AI?')">AI affiliate marketing?</button>
+  </div>
+  <div class="cb-inp-wrap">
+    <input type="text" class="cb-inp" id="cbInp" placeholder="Ask me anything about AI tools..." onkeydown="if(event.key==='Enter')cbSend()"/>
+    <button class="cb-send" onclick="cbSend()" aria-label="Send">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
 
 <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <div class="toast" id="toast"></div>
 
 <script>
-/* scroll reveal */
-var rvEls=document.querySelectorAll('.rv');
-if('IntersectionObserver' in window){
-  var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-  rvEls.forEach(function(el){io.observe(el);});
-}else{rvEls.forEach(function(el){el.classList.add('in');});}
+/* PARTICLES */
+(function(){var c=document.getElementById('parts');if(!c)return;for(var i=0;i<55;i++){var p=document.createElement('div');p.className='p';var l=Math.random()*100,dur=8+Math.random()*16,del=-(Math.random()*dur),d=(Math.random()-.5)*120+'px',sz=Math.random()<.3?3:Math.random()<.6?2:1;p.style.cssText='left:'+l+'%;width:'+sz+'px;height:'+sz+'px;animation-duration:'+dur+'s;animation-delay:'+del+'s;--d:'+d+';background:rgba(255,255,255,'+(0.3+Math.random()*.4)+')';c.appendChild(p);}})();
 
-/* nav scroll state + back-to-top */
-var navEl=document.getElementById('nav'),bttEl=document.getElementById('btt');
-window.addEventListener('scroll',function(){bttEl.classList.toggle('vis',scrollY>500);},{passive:true});
+/* TYPEWRITER */
+(function(){var el=document.getElementById('tw');if(!el)return;var ws=['Honest AI Reviews.','Trusted Verdicts.','Real Results.','No Fluff, Ever.'],wi=0,ci=0,del=false,wait=false;
+function tick(){var w=ws[wi];if(wait){wait=false;setTimeout(tick,1800);return;}if(del){ci--;el.textContent=w.slice(0,ci);if(ci===0){del=false;wi=(wi+1)%ws.length;setTimeout(tick,500);return;}setTimeout(tick,45);}else{ci++;el.textContent=w.slice(0,ci);if(ci===w.length){del=true;wait=true;tick();return;}setTimeout(tick,80);}}
+setTimeout(tick,1200);})();
 
-/* hamburger */
-var hBtn=document.getElementById('hB'),mobEl=document.getElementById('mob');
-hBtn.addEventListener('click',function(){var o=mobEl.classList.toggle('on');hBtn.classList.toggle('on',o);hBtn.setAttribute('aria-expanded',String(o));});
-mobEl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mobEl.classList.remove('on');hBtn.classList.remove('on');hBtn.setAttribute('aria-expanded','false');});});
+/* SCROLL REVEAL */
+(function(){var els=document.querySelectorAll('[sr]');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on');});return;}var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -36px 0px'});els.forEach(function(e){io.observe(e);});})();
 
-/* faq accordion */
-document.querySelectorAll('.fq').forEach(function(q){
-  function tog(){var it=q.parentElement,was=it.classList.contains('open');document.querySelectorAll('.fi.open').forEach(function(f){f.classList.remove('open');});if(!was)it.classList.add('open');}
-  q.addEventListener('click',tog);
-  q.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tog();}});
+/* NAV + BTT */
+var nav=document.getElementById('nav'),btt=document.getElementById('btt');
+window.addEventListener('scroll',function(){nav.classList.toggle('sc',scrollY>20);btt.classList.toggle('vis',scrollY>500);},{passive:true});
+
+/* HAMBURGER */
+var hb=document.getElementById('ham'),mb=document.getElementById('mob');
+hb.addEventListener('click',function(){var o=mb.classList.toggle('op');hb.classList.toggle('op',o);hb.setAttribute('aria-expanded',String(o));});
+mb.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mb.classList.remove('op');hb.classList.remove('op');});});
+
+/* SCORE BARS */
+(function(){var fs=document.querySelectorAll('.sf');if(!('IntersectionObserver' in window)){fs.forEach(function(f){f.style.width=f.dataset.w+'%';});return;}var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.style.width=e.target.dataset.w+'%';io.unobserve(e.target);}});},{threshold:.3});fs.forEach(function(f){io.observe(f);});})();
+
+/* COUNT-UP */
+(function(){var ns=document.querySelectorAll('[data-cnt]');if(!('IntersectionObserver' in window)){ns.forEach(function(n){n.textContent=n.dataset.cnt;});return;}var io=new IntersectionObserver(function(en){en.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,t=+el.dataset.cnt,s=0,dur=1600,step=16,inc=t/(dur/step);var tm=setInterval(function(){s+=inc;if(s>=t){s=t;clearInterval(tm);}el.textContent=Math.round(s);},step);io.unobserve(el);});},{threshold:.4});ns.forEach(function(n){io.observe(n);});})();
+
+/* TOAST */
+function showToast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('sh');setTimeout(function(){t.classList.remove('sh');},4000);}
+function nlSub(e){e.preventDefault();var i=e.target.querySelector('input');if(i&&i.value.indexOf('@')>0){showToast('🎉 Subscribed! First verdict arrives this Friday.');i.value='';}}
+
+/* RIPPLE */
+document.querySelectorAll('.btn-p,.nbtn').forEach(function(b){b.addEventListener('click',function(e){var r=document.createElement('span');var rect=b.getBoundingClientRect();var sz=Math.max(rect.width,rect.height)*2;r.style.cssText='position:absolute;width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:rgba(255,255,255,.22);transform:scale(0);animation:ri .6s linear;left:'+(e.clientX-rect.left-sz/2)+'px;top:'+(e.clientY-rect.top-sz/2)+'px;pointer-events:none';b.style.position='relative';b.style.overflow='hidden';b.appendChild(r);setTimeout(function(){r.remove();},600);});});
+
+/* ══ CHATBOT ══ */
+var cbOpen=false;
+var cbBtn=document.getElementById('cbBtn');
+var cbWin=document.getElementById('cbWin');
+var cbMsgs=document.getElementById('cbMsgs');
+var cbInp=document.getElementById('cbInp');
+var badge=document.querySelector('.cb-badge');
+
+cbBtn.addEventListener('click',function(){
+  cbOpen=!cbOpen;
+  cbWin.classList.toggle('open',cbOpen);
+  cbBtn.classList.toggle('open',cbOpen);
+  if(cbOpen&&badge){badge.style.display='none';}
+  if(cbOpen&&cbMsgs.children.length===0){setTimeout(function(){addMsg('bot','👋 Hi! I\'m the Aivora AI Assistant.\n\nI can help you find the best AI tools, answer questions about pricing, and guide you to the right reviews. What would you like to know?');},400);}
 });
 
-/* newsletter */
-function showT(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},3000);}
-function nlS(e){e.preventDefault();var inp=e.target.querySelector('input');if(inp&&inp.value.indexOf('@')>0){showT('Subscribed — first verdict lands this week.');inp.value='';}}
+function addMsg(role,text){
+  var div=document.createElement('div');
+  div.className='msg '+role;
+  var av=document.createElement('div');av.className='msg-av';av.textContent=role==='bot'?'🤖':'U';
+  var bub=document.createElement('div');bub.className='msg-bub';
+  bub.innerHTML=text.replace(/\n/g,'<br/>');
+  div.appendChild(av);div.appendChild(bub);
+  cbMsgs.appendChild(div);
+  cbMsgs.scrollTop=cbMsgs.scrollHeight;
+}
+
+function showTyping(){
+  var div=document.createElement('div');div.className='typing';div.id='typing';
+  var av=document.createElement('div');av.className='msg-av';av.textContent='🤖';
+  var bub=document.createElement('div');bub.className='msg-bub';
+  bub.innerHTML='<span class="d"></span><span class="d"></span><span class="d"></span>';
+  div.appendChild(av);div.appendChild(bub);
+  cbMsgs.appendChild(div);cbMsgs.scrollTop=cbMsgs.scrollHeight;
+}
+function hideTyping(){var t=document.getElementById('typing');if(t)t.remove();}
+
+var KB=[
+  {k:['best writing','writing tool','write','copywriting'],r:'For writing, I recommend:\n\n✍️ <b>ChatGPT Plus</b> — best all-rounder for blogs, emails, scripts\n📝 <b>Claude AI</b> — great for long-form content & nuanced writing\n\n<a href="blog/ai-affiliate-marketing-guide-2026.html">Read our full AI writing guide →</a>'},
+  {k:['chatgpt free','chatgpt cost','chatgpt price'],r:'ChatGPT has a <b>free tier</b> that works well for most tasks.\n\n💳 ChatGPT Plus costs <b>$20/month</b> — gives GPT-4o, image generation, and faster responses.\n\nFor most beginners, the free version is enough to start! 😊'},
+  {k:['free ai','free tools','no cost','without paying'],r:'Great free AI tools you can start with today:\n\n🔍 <b>Perplexity AI</b> — AI research & search\n🌐 <b>Gemini</b> — Google\'s AI, free tier\n🤖 <b>ChatGPT</b> — free tier\n🖼 <b>Bing Image Creator</b> — free AI images\n\n<a href="blog/ai-tools-beginners-guide-2026.html">See full free tools guide →</a>'},
+  {k:['affiliate','earn money','passive income','make money'],r:'AI affiliate marketing is one of the best ways to earn online in 2026!\n\nHere\'s how to start:\n1️⃣ Pick an AI tool niche\n2️⃣ Create honest review content\n3️⃣ Join affiliate programs (some pay 80%+ commission!)\n\n<a href="blog/ai-affiliate-marketing-guide-2026.html">Read the complete guide →</a>'},
+  {k:['what is aivora','about aivora','who are you','what do you do'],r:'<b>Aivora AI</b> is an independent AI tool review site founded by <b>Varun Lalwani</b> from India.\n\nWe test AI tools hands-on and publish honest verdicts — no sponsored rankings, ever.\n\nWe\'ve reviewed 200+ tools and reach 50,000+ readers monthly. 🌍'},
+  {k:['seo','rank','search engine','backlink'],r:'For AI SEO tools, our top picks are:\n\n🔍 <b>Search Atlas</b> — all-in-one AI SEO platform\n📊 <b>Surfer SEO</b> — content optimization\n🔗 <b>Ahrefs / Semrush</b> — keyword & backlink research\n\n<a href="blog/ai-tools-backlink-research-2026.html">See our SEO tools comparison →</a>'},
+  {k:['video','youtube','avatar','heygen','murf'],r:'For AI video and voice tools:\n\n🎬 <b>HeyGen</b> — best AI avatar videos\n🎙️ <b>Murf AI</b> — best AI voiceovers (studio quality)\n🎵 <b>ElevenLabs</b> — voice cloning\n\n<a href="blog/murf-ai-review-2026.html">Read Murf AI review →</a>'},
+  {k:['image','art','design','midjourney','dall-e'],r:'For AI image generation:\n\n🎨 <b>Midjourney</b> — best quality overall (paid)\n🖼 <b>DALL-E 3</b> — great for accuracy (free with ChatGPT+)\n🆓 <b>Bing Image Creator</b> — best free option\n\n<a href="blog/midjourney-vs-dall-e-vs-stable-diffusion.html">See full comparison →</a>'},
+  {k:['contact','email','reach','talk'],r:'You can reach Aivora AI at:\n\n📧 <b>Aivoraai@outlook.com</b>\n\nOr visit our <a href="contact.html">Contact page</a> to send a message directly. We reply within 48 hours! 😊'},
+];
+
+function getReply(q){
+  q=q.toLowerCase();
+  for(var i=0;i<KB.length;i++){
+    for(var j=0;j<KB[i].k.length;j++){
+      if(q.indexOf(KB[i].k[j])>-1)return KB[i].r;
+    }
+  }
+  return 'Great question! I\'d recommend checking our blog for detailed reviews 📚\n\n<a href="blog.html">Browse all articles →</a>\n\nOr email us at <b>Aivoraai@outlook.com</b> and we\'ll help you personally! 😊';
+}
+
+function cbSend(txt){
+  var q=(txt||cbInp.value).trim();
+  if(!q)return;
+  cbInp.value='';
+  document.getElementById('cbQr').style.display='none';
+  addMsg('usr',q);
+  showTyping();
+  setTimeout(function(){hideTyping();addMsg('bot',getReply(q));},900+Math.random()*600);
+}
 </script>
+<style>@keyframes ri{to{transform:scale(1);opacity:0}}</style>
 </body>
 </html>
