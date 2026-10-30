@@ -39,7 +39,7 @@ Description: Aivora AI helps creators and entrepreneurs leverage artificial inte
 <!-- AUTO-START -->
 ## Pages
 
-- [About Aivora AI | Who We Are & Our Mission](https://aivoraai.github.io/about.html): Learn about Aivora AI — an independent AI tool review site run by Varun Lalwani from India. Honest reviews, no paid rankings, real results.
+- [About Us — Aivora AI | Unbiased, Data-Driven AI Intelligence](https://aivoraai.github.io/about.html): Learn about Aivora AI's mission, team, and testing standards. We conduct independent, reproducible benchmarks on AI tools so you never waste money on hype.
 - [Best AI Email Marketing Tools 2026: Top 15 Platforms Reviewed | Aivora AI](https://aivoraai.github.io/blog/ai-email-marketing-tools-2026.html): Discover the best AI email marketing tools in 2026. Compare features, pricing, and automation capabilities. Boost open rates, click-throughs, and conversions with AI-powered email marketing.
 - [Varun Lalwani – AI Tools Reviewer | Aivora AI](https://aivoraai.github.io/author/varun.html): Meet Varun Lalwani, founder of Aivora AI. Independent AI tools reviewer since 2019. Expert in AI writing, video editing, SEO, affiliate marketing, and YouTube automation.
 - [Blog — AI Tool Reviews & Guides | Aivora AI](https://aivoraai.github.io/blog.html): Browse 200+ honest AI tool reviews, guides, and tutorials by Aivora AI. Find the best tools for writing, video, SEO, automation, and more.
