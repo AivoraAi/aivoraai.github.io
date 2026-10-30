@@ -39,13 +39,13 @@ Description: Aivora AI helps creators and entrepreneurs leverage artificial inte
 <!-- AUTO-START -->
 ## Pages
 
-- [About Us — Aivora AI | Varun Lalwani](https://aivoraai.github.io/about.html): Learn about Aivora AI — your trusted directory for AI tools, courses, and digital products. Founded by Varun Lalwani. We test every product so you don't have to.
+- [About Aivora AI | Who We Are & Our Mission](https://aivoraai.github.io/about.html): Learn about Aivora AI — an independent AI tool review site run by Varun Lalwani from India. Honest reviews, no paid rankings, real results.
 - [Best AI Email Marketing Tools 2026: Top 15 Platforms Reviewed | Aivora AI](https://aivoraai.github.io/blog/ai-email-marketing-tools-2026.html): Discover the best AI email marketing tools in 2026. Compare features, pricing, and automation capabilities. Boost open rates, click-throughs, and conversions with AI-powered email marketing.
 - [Varun Lalwani – AI Tools Reviewer | Aivora AI](https://aivoraai.github.io/author/varun.html): Meet Varun Lalwani, founder of Aivora AI. Independent AI tools reviewer since 2019. Expert in AI writing, video editing, SEO, affiliate marketing, and YouTube automation.
-- [Blog – Aivora AI | 315+ AI Guides, Reviews & Income Strategies 2026](https://aivoraai.github.io/blog.html): All 315 AI blog posts from Aivora AI — tool reviews, affiliate marketing guides, passive income strategies and AI earning tutorials for 2026. Updated weekly by Varun Lalwani.
-- [Contact Us — Aivora AI | Varun Lalwani](https://aivoraai.github.io/contact.html): Contact Aivora AI for AI tool listings, partnerships, affiliate opportunities, or support. Director: Varun Lalwani. Email: Aivoraai@outlook.com. We reply within 24 hours.
+- [Blog — AI Tool Reviews & Guides | Aivora AI](https://aivoraai.github.io/blog.html): Browse 200+ honest AI tool reviews, guides, and tutorials by Aivora AI. Find the best tools for writing, video, SEO, automation, and more.
+- [Contact Aivora AI | Get In Touch](https://aivoraai.github.io/contact.html): Contact Aivora AI — reach Varun Lalwani for questions, collaborations, tool submissions, or feedback. We read every message.
 - [Affiliate Disclosure | Aivora AI](https://aivoraai.github.io/disclosure.html): Aivora AI affiliate disclosure. We earn commissions from some links at no extra cost to you. All reviews are honest and independent.
-- [Aivora AI | Honest AI Tool Verdicts, 2026](https://aivoraai.github.io/): Aivora AI tests AI tools for writing, video, SEO, and automation, then publishes an honest verdict. No sponsored rankings. Reviews by Varun Lalwani.
+- [Aivora AI — Honest AI Tool Reviews & Guides 2026](https://aivoraai.github.io/): Aivora AI tests AI tools for writing, video, SEO, and automation — honest verdicts, no sponsored rankings. By Varun Lalwani.
 - [Privacy Policy & Affiliate Disclosure | Aivora AI](https://aivoraai.github.io/privacy.html): Privacy Policy, Disclaimer & Affiliate Disclosure for Aivora AI. Learn how we protect your data, our affiliate relationships, and your rights.
 - [AI Tools & Products | Aivora AI — Best AI Products to Make Money Online 2026](https://aivoraai.github.io/product.html): Browse 37+ Aivora AI recommended products: AI starter kits, YouTube automation tools, TikTok growth, content creation, courses, ebooks, and social media automation. Worldwide digital delivery.
 - [Terms of Service | Aivora AI](https://aivoraai.github.io/terms.html): Terms of Service for Aivora AI. Read our terms before using our website, content, and AI tools reviews.
